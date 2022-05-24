@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
 
         btnEntrar();
 
+
+
     }
 
     private void defineFullscreen() {
