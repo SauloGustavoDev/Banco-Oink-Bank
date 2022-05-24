@@ -50,4 +50,6 @@
     <string name="editar">Editar</string>
     <string name="excluir">Excluir</string>
     <string name="confirmar_edicao">Confirmar edição</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
