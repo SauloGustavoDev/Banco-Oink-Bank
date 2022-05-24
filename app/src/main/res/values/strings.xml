@@ -1,3 +1,53 @@
 <resources>
     <string name="app_name">IntegrationProject</string>
+
+    <!-- Main -->
+    <string name="entre_conta">Entre na sua conta</string>
+    <string name="criar_conta">Criar uma conta</string>
+
+    <!-- Entar -->
+    <string name="agencia_digito">Agência com dígito</string>
+    <string name="agencia_digito_exemplo">0000-0</string>
+    <string name="conta_digito">Conta com dígito</string>
+    <string name="conta_digito_exemplo">00000000-0</string>
+    <string name="senha_entrar">Senha(6 Dígitos)</string>
+    <string name="senha_entrar_exemplo">******</string>
+    <string name="entrar">Entrar</string>
+
+    <!-- Cadastrar -->
+    <string name="cadastrar">Cadastrar</string>
+    <string name="nome">Nome</string>
+    <string name="nome_exemplo">Ex.: João da Silva</string>
+    <string name="cpf">CPF</string>
+    <string name="cpf_exemplo">Ex.:000.000.000-00</string>
+    <string name="data_nascimento">Data de Nascimento</string>
+    <string name="email">E-mail</string>
+    <string name="email_exemplo">Ex.: joao.silva@email.com</string>
+    <string name="renda_mensal">Renda Mensal</string>
+    <string name="patrimonio_liquido">Patrimônio Líquido</string>
+    <string name="patrimonio_liquido_exemplo">Ex.: R$999,99</string>
+    <string name="senha_cadastrar">Senha</string>
+    <string name="senha_exemplo">Ex.: ******</string>
+    <string name="confirmar_senha">Confirmar Senha</string>
+    <string name="selecionar">Selecionar</string>
+
+    <!-- Home -->
+    <string name="ola">Olá,</string>
+    <string name="saldo">Saldo:</string>
+    <string name="agencia_home">Agência:</string>
+    <string name="conta_home">Conta:</string>
+    <string name="pix">Pix</string>
+    <string name="pagar">Pagar</string>
+    <string name="transferir">Transferir</string>
+    <string name="meus_cartoes">Meus Cartões</string>
+    <string name="emprestimo">Empréstimo</string>
+    <string name="recarga_celular">Recarga de celular</string>
+    <string name="fourshopping">FourShopping</string>
+    <string name="seguro">Seguro</string>
+    <string name="editar_dados">Editar Dados</string>
+    <string name="sair">sair</string>
+        <!-- Home-Editar -->
+        <string name="editar">Editar</string>
+        <string name="excluir">Excluir</string>
+        <string name="confirmar_edicao">Confirmar edição</string>
 </resources>
