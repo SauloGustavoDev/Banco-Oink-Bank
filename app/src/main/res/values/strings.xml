@@ -46,8 +46,8 @@
     <string name="seguro">Seguro</string>
     <string name="editar_dados">Editar Dados</string>
     <string name="sair">sair</string>
-        <!-- Home-Editar -->
-        <string name="editar">Editar</string>
-        <string name="excluir">Excluir</string>
-        <string name="confirmar_edicao">Confirmar edição</string>
+    <!-- Home-Editar -->
+    <string name="editar">Editar</string>
+    <string name="excluir">Excluir</string>
+    <string name="confirmar_edicao">Confirmar edição</string>
 </resources>

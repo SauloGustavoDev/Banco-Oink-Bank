@@ -8,7 +8,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <!-- Cores que serão utilizadass -->
+    <color name="rosa">#FF2C55</color>
+    <color name="rosaClaro">#FF3660</color>
+    <color name="cinza">#D6D7DE</color>
+    <color name="cinzaClaro">#F7F3F7</color>
 
-    <color name="rosa">#FF2D55</color>
-    <color name="outro_rosa">#FF375F</color>
 </resources>
