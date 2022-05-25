@@ -13,8 +13,6 @@
     <string name="senha_entrar">Senha(6 Dígitos)</string>
     <string name="senha_entrar_exemplo">******</string>
     <string name="entrar">Entrar</string>
-    <string name="content_description">logo login</string>
-    <string name="BankApp">BankApp</string>
 
     <!-- Cadastrar -->
     <string name="cadastrar">Cadastrar</string>
@@ -22,15 +20,15 @@
     <string name="nome_exemplo">Ex.: João da Silva</string>
     <string name="cpf">CPF</string>
     <string name="cpf_exemplo">Ex.:000.000.000-00</string>
-    <string name="data_nascimento">Data de Nascimento</string>
+    <string name="data_nascimento">Data de \nNascimento</string>
     <string name="email">E-mail</string>
     <string name="email_exemplo">Ex.: joao.silva@email.com</string>
     <string name="renda_mensal">Renda Mensal</string>
-    <string name="patrimonio_liquido">Patrimônio Líquido</string>
+    <string name="patrimonio_liquido">Patrimônio\nLíquido</string>
     <string name="patrimonio_liquido_exemplo">Ex.: R$999,99</string>
     <string name="senha_cadastrar">Senha</string>
     <string name="senha_exemplo">Ex.: ******</string>
-    <string name="confirmar_senha">Confirmar Senha</string>
+    <string name="confirmar_senha">Confirmar\nSenha</string>
     <string name="selecionar">Selecionar</string>
 
     <!-- Home -->
@@ -46,12 +44,23 @@
     <string name="recarga_celular">Recarga de celular</string>
     <string name="fourshopping">FourShopping</string>
     <string name="seguro">Seguro</string>
-    <string name="editar_dados">Editar dados</string>
+    <string name="editar_dados">Editar Dados</string>
     <string name="sair">sair</string>
     <!-- Home-Editar -->
     <string name="editar">Editar</string>
     <string name="excluir">Excluir</string>
     <string name="confirmar_edicao">Confirmar edição</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Minhas chaves -->
+    <string name="minhas_chaves">Minhas chaves PIX</string>
+    <string name="visualize">Visualize, adicione ou exclua chaves Pix:</string>
+    <string name="telefone">Telefone</string>
+    <string name="chave_aleatoria">Chave Aleatória</string>
+    <string name="cadastrar_nova_chave">Cadastrar nova chave</string>
+    <string name="sem_cadastro">S/Cadastro</string>
+
 
     <!-- Cadastrar Chave Pix -->
     <string name="cadastrar_chave_pix">Cadastrar Chave PIX</string>

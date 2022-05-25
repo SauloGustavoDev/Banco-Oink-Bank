@@ -3,26 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/luconstantino/AndroidStudioProjects/Projeto-secretamente-secreto/app/src/main/res/drawable/background_iconepix.xml" value="0.2595" />
-        <entry key="..\:/Users/luconstantino/AndroidStudioProjects/Projeto-secretamente-secreto/app/src/main/res/drawable/ic_celular.xml" value="0.2595" />
-        <entry key="..\:/Users/luconstantino/AndroidStudioProjects/Projeto-secretamente-secreto/app/src/main/res/drawable/ic_chave.xml" value="0.2595" />
-        <entry key="..\:/Users/luconstantino/AndroidStudioProjects/Projeto-secretamente-secreto/app/src/main/res/drawable/ic_copiaecola.xml" value="0.2595" />
-        <entry key="..\:/Users/luconstantino/AndroidStudioProjects/Projeto-secretamente-secreto/app/src/main/res/drawable/ic_cpf.xml" value="0.2595" />
-        <entry key="..\:/Users/luconstantino/AndroidStudioProjects/Projeto-secretamente-secreto/app/src/main/res/drawable/ic_email.xml" value="0.2595" />
-        <entry key="..\:/Users/luconstantino/AndroidStudioProjects/Projeto-secretamente-secreto/app/src/main/res/drawable/ic_key.xml" value="0.1935" />
-        <entry key="..\:/Users/luconstantino/AndroidStudioProjects/Projeto-secretamente-secreto/app/src/main/res/drawable/ic_qrcode.xml" value="0.2595" />
-        <entry key="..\:/Users/luconstantino/AndroidStudioProjects/Projeto-secretamente-secreto/app/src/main/res/drawable/ic_transferir.xml" value="0.2595" />
-        <entry key="..\:/Users/luconstantino/AndroidStudioProjects/Projeto-secretamente-secreto/app/src/main/res/layout/activity_home.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/luconstantino/AndroidStudioProjects/Projeto-secretamente-secreto/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/luconstantino/AndroidStudioProjects/Projeto-secretamente-secreto/app/src/main/res/layout/activity_pix.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/luconstantino/AndroidStudioProjects/Projeto-secretamente-secreto/app/src/main/res/layout/activity_register.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/luconstantino/AndroidStudioProjects/Projeto-secretamente-secreto/app/src/main/res/layout/fragment_area_pix.xml" value="0.264" />
-        <entry key="..\:/Users/luconstantino/AndroidStudioProjects/Projeto-secretamente-secreto/app/src/main/res/layout/fragment_edit.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/luconstantino/AndroidStudioProjects/Projeto-secretamente-secreto/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/pearaujo/AndroidStudioProjects/Projeto-secretamente-secreto/app/src/main/res/layout/activity_home.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/pearaujo/AndroidStudioProjects/Projeto-secretamente-secreto/app/src/main/res/layout/activity_login.xml" value="0.24010416666666667" />
-        <entry key="..\:/Users/pearaujo/AndroidStudioProjects/Projeto-secretamente-secreto/app/src/main/res/layout/activity_register.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/pearaujo/AndroidStudioProjects/Projeto-secretamente-secreto/app/src/main/res/layout/fragment_edit.xml" value="0.4" />
+        <entry key="..\:/Users/rodsousa/AndroidStudioProjects/Projeto-secretamente-secreto/app/src/main/res/layout/activity_home.xml" value="0.3359375" />
+        <entry key="..\:/Users/rodsousa/AndroidStudioProjects/Projeto-secretamente-secreto/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Users/rodsousa/AndroidStudioProjects/Projeto-secretamente-secreto/app/src/main/res/layout/activity_main.xml" value="0.15729166666666666" />
+        <entry key="..\:/Users/rodsousa/AndroidStudioProjects/Projeto-secretamente-secreto/app/src/main/res/layout/activity_register.xml" value="0.33" />
+        <entry key="..\:/Users/rodsousa/AndroidStudioProjects/Projeto-secretamente-secreto/app/src/main/res/layout/fragment_edit.xml" value="0.33" />
+        <entry key="..\:/Users/rodsousa/AndroidStudioProjects/Projeto-secretamente-secreto/app/src/main/res/layout/fragment_home.xml" value="0.22" />
+        <entry key="..\:/Users/rodsousa/AndroidStudioProjects/Projeto-secretamente-secreto/app/src/main/res/layout/fragment_minhas_chaves.xml" value="0.33" />
+        <entry key="..\:/Users/rodsousa/AndroidStudioProjects/Projeto-secretamente-secreto/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.259" />
       </map>
     </option>
   </component>
