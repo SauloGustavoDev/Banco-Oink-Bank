@@ -34,6 +34,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <View
+        android:background="@color/white"
         android:id="@+id/viewFundo"
         android:layout_width="match_parent"
         android:layout_height="440dp"
@@ -359,7 +360,7 @@
         android:textColor="@color/white"
         android:layout_marginEnd="30dp"
         android:text="@string/cadastrar"
-        android:background="@color/rosa"
+        android:background="@drawable/btn_rosa"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/viewFundo" />

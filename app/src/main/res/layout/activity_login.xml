@@ -4,6 +4,127 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activity.LoginActivity">
+    tools:context=".ui.activity.LoginActivity"
+    android:backgroundTint="@color/rosa">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="152dp"
+        android:src="@drawable/icon_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/rosa"
+        android:text="BankApp"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+
+    <EditText
+        android:layout_width="168dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/edit_text_login"
+        android:hint="00000000-0"
+        android:paddingLeft="5dp"
+        android:textColorHint="@color/cinza"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="168dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/edit_text_login"
+        android:hint="0000-0"
+        android:paddingLeft="5dp"
+        android:textColorHint="@color/cinza"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="48dp"
+        android:backgroundTint="@color/rosa"
+        android:text="Agência com dígito"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="70dp"
+        android:backgroundTint="@color/rosa"
+        android:text="Conta com dígito"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="6dp"
+        android:backgroundTint="@color/rosa"
+        android:text="Senha(6 Dígitos)"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="350dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/edit_text_login"
+        android:hint="******"
+        android:paddingTop="5dp"
+        android:paddingLeft="5dp"
+        android:textColorHint="@color/cinza"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <android.widget.Button
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_text_login"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="70dp"
+        android:text="Entrar"
+        android:textColor="@color/rosa"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
