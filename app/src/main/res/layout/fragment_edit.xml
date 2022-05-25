@@ -1,249 +1,257 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".ui.fragment.EditFragment">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.40" />
-
-    <TextView
-        android:id="@+id/editar_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="5dp"
-        android:gravity="center"
-        android:text="Editar"
-        android:textColor="@color/black"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/excluir_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="15dp"
-        android:text="Excluir"
-        android:textColor="@color/rosa"
-        android:textSize="19sp"
-        app:layout_constraintBottom_toBottomOf="@id/editar_txt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/editar_txt" />
-
-    <com.google.android.material.divider.MaterialDivider
-        android:id="@+id/divider1"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="5dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editar_txt" />
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/nome_txt"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:text="Nome"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@id/divider2"
-        app:layout_constraintEnd_toEndOf="@id/guideline"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/divider1" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.40" />
 
-    <EditText
-        android:id="@+id/nome_edt"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="15dp"
-        app:layout_constraintBottom_toTopOf="@id/divider2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/guideline"
-        app:layout_constraintTop_toBottomOf="@id/divider1" />
+        <TextView
+            android:id="@+id/editar_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="Editar"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.divider.MaterialDivider
-        android:id="@+id/divider2"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nome_edt" />
+        <TextView
+            android:id="@+id/excluir_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:text="Excluir"
+            android:textColor="@color/rosa"
+            android:textSize="19sp"
+            app:layout_constraintBottom_toBottomOf="@id/editar_txt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/editar_txt" />
 
-    <TextView
-        android:id="@+id/cpf_txt"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="CPF"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@id/divider3"
-        app:layout_constraintEnd_toStartOf="@id/guideline"
-        app:layout_constraintStart_toStartOf="@id/nome_txt"
-        app:layout_constraintTop_toBottomOf="@id/divider2" />
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editar_txt" />
 
-    <EditText
-        android:id="@+id/cpf_edt"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:clickable="false"
-        android:layout_marginTop="5dp"
-        app:layout_constraintEnd_toEndOf="@id/nome_edt"
-        app:layout_constraintStart_toStartOf="@id/nome_edt"
-        app:layout_constraintTop_toBottomOf="@id/divider2" />
+        <TextView
+            android:id="@+id/nome_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="Nome"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/divider2"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider1" />
 
-    <com.google.android.material.divider.MaterialDivider
-        android:id="@+id/divider3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        app:layout_constraintEnd_toEndOf="@id/divider2"
-        app:layout_constraintStart_toStartOf="@id/divider2"
-        app:layout_constraintTop_toBottomOf="@id/cpf_edt" />
+        <EditText
+            android:id="@+id/nome_edt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintBottom_toTopOf="@id/divider2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/divider1" />
 
-    <TextView
-        android:id="@+id/data_txt"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Data de nascimento"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@id/divider4"
-        app:layout_constraintEnd_toEndOf="@id/guideline"
-        app:layout_constraintStart_toStartOf="@id/cpf_txt"
-        app:layout_constraintTop_toBottomOf="@id/divider3" />
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nome_edt" />
 
-    <EditText
-        android:id="@+id/data_edt"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        app:layout_constraintEnd_toEndOf="@id/cpf_edt"
-        app:layout_constraintStart_toStartOf="@id/cpf_edt"
-        app:layout_constraintTop_toBottomOf="@id/divider3" />
+        <TextView
+            android:id="@+id/cpf_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="CPF"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/divider3"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="@id/nome_txt"
+            app:layout_constraintTop_toBottomOf="@id/divider2" />
 
-    <com.google.android.material.divider.MaterialDivider
-        android:id="@+id/divider4"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginTop="5dp"
-        app:layout_constraintEnd_toEndOf="@id/divider3"
-        app:layout_constraintStart_toStartOf="@id/divider3"
-        app:layout_constraintTop_toBottomOf="@id/data_edt" />
+        <EditText
+            android:id="@+id/cpf_edt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:clickable="false"
+            app:layout_constraintEnd_toEndOf="@id/nome_edt"
+            app:layout_constraintStart_toStartOf="@id/nome_edt"
+            app:layout_constraintTop_toBottomOf="@id/divider2" />
 
-    <TextView
-        android:id="@+id/email_txt"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="E-mail"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@id/divider5"
-        app:layout_constraintEnd_toEndOf="@id/guideline"
-        app:layout_constraintStart_toStartOf="@id/data_txt"
-        app:layout_constraintTop_toBottomOf="@id/divider4" />
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="@id/divider2"
+            app:layout_constraintStart_toStartOf="@id/divider2"
+            app:layout_constraintTop_toBottomOf="@id/cpf_edt" />
 
-    <EditText
-        android:id="@+id/email_edt"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="@id/data_edt"
-        app:layout_constraintStart_toStartOf="@id/data_edt"
-        app:layout_constraintTop_toBottomOf="@id/divider4" />
+        <TextView
+            android:id="@+id/data_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Data de nascimento"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/divider4"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="@id/cpf_txt"
+            app:layout_constraintTop_toBottomOf="@id/divider3" />
 
-    <com.google.android.material.divider.MaterialDivider
-        android:id="@+id/divider5"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        app:layout_constraintEnd_toEndOf="@id/divider4"
-        app:layout_constraintStart_toStartOf="@id/divider4"
-        app:layout_constraintTop_toBottomOf="@id/email_edt" />
+        <EditText
+            android:id="@+id/data_edt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="@id/cpf_edt"
+            app:layout_constraintStart_toStartOf="@id/cpf_edt"
+            app:layout_constraintTop_toBottomOf="@id/divider3" />
 
-    <TextView
-        android:id="@+id/renda_txt"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Rensa mensal"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@id/divider6"
-        app:layout_constraintEnd_toEndOf="@id/guideline"
-        app:layout_constraintStart_toStartOf="@id/email_txt"
-        app:layout_constraintTop_toBottomOf="@id/divider5" />
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider4"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="@id/divider3"
+            app:layout_constraintStart_toStartOf="@id/divider3"
+            app:layout_constraintTop_toBottomOf="@id/data_edt" />
 
-    <EditText
-        android:id="@+id/renda_edt"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="@id/email_edt"
-        app:layout_constraintStart_toStartOf="@id/email_edt"
-        app:layout_constraintTop_toBottomOf="@id/divider5" />
+        <TextView
+            android:id="@+id/email_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="E-mail"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/divider5"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="@id/data_txt"
+            app:layout_constraintTop_toBottomOf="@id/divider4" />
 
-    <com.google.android.material.divider.MaterialDivider
-        android:id="@+id/divider6"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        app:layout_constraintEnd_toEndOf="@id/divider5"
-        app:layout_constraintStart_toStartOf="@id/divider5"
-        app:layout_constraintTop_toBottomOf="@id/renda_edt" />
+        <EditText
+            android:id="@+id/email_edt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/data_edt"
+            app:layout_constraintStart_toStartOf="@id/data_edt"
+            app:layout_constraintTop_toBottomOf="@id/divider4" />
 
-    <TextView
-        android:id="@+id/patrimonio_txt"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Patrimônio líquido"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@id/divider7"
-        app:layout_constraintEnd_toEndOf="@id/guideline"
-        app:layout_constraintStart_toStartOf="@id/renda_txt"
-        app:layout_constraintTop_toBottomOf="@id/divider6" />
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="@id/divider4"
+            app:layout_constraintStart_toStartOf="@id/divider4"
+            app:layout_constraintTop_toBottomOf="@id/email_edt" />
 
-    <EditText
-        android:id="@+id/patrimonio_edt"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        app:layout_constraintEnd_toEndOf="@id/renda_edt"
-        app:layout_constraintStart_toStartOf="@id/renda_edt"
-        app:layout_constraintTop_toBottomOf="@id/divider6" />
+        <TextView
+            android:id="@+id/renda_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Rensa mensal"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/divider6"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="@id/email_txt"
+            app:layout_constraintTop_toBottomOf="@id/divider5" />
 
-    <com.google.android.material.divider.MaterialDivider
-        android:id="@+id/divider7"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginTop="5dp"
-        app:layout_constraintEnd_toEndOf="@id/divider6"
-        app:layout_constraintStart_toStartOf="@id/divider6"
-        app:layout_constraintTop_toBottomOf="@id/patrimonio_edt" />
+        <EditText
+            android:id="@+id/renda_edt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/email_edt"
+            app:layout_constraintStart_toStartOf="@id/email_edt"
+            app:layout_constraintTop_toBottomOf="@id/divider5" />
 
-    <android.widget.Button
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="15dp"
-        android:background="@drawable/btn_rosa"
-        android:text="Confirmar edição"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/divider7" />
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="@id/divider5"
+            app:layout_constraintStart_toStartOf="@id/divider5"
+            app:layout_constraintTop_toBottomOf="@id/renda_edt" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/patrimonio_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Patrimônio líquido"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/divider7"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="@id/renda_txt"
+            app:layout_constraintTop_toBottomOf="@id/divider6" />
+
+        <EditText
+            android:id="@+id/patrimonio_edt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="@id/renda_edt"
+            app:layout_constraintStart_toStartOf="@id/renda_edt"
+            app:layout_constraintTop_toBottomOf="@id/divider6" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider7"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="@id/divider6"
+            app:layout_constraintStart_toStartOf="@id/divider6"
+            app:layout_constraintTop_toBottomOf="@id/patrimonio_edt" />
+
+        <android.widget.Button
+            android:id="@+id/confirmar_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/btn_rosa"
+            android:text="Confirmar edição"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider7" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
