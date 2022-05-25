@@ -101,11 +101,14 @@
             app:layout_constraintStart_toStartOf="@id/nome_txt"
             app:layout_constraintTop_toBottomOf="@id/divider2" />
 
-        <EditText
+        <com.santalu.maskara.widget.MaskEditText
             android:id="@+id/cpf_edt"
+            app:mask="___.___.___-__"
+            app:maskCharacter="_"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            app:maskStyle="completable"
             android:clickable="false"
             app:layout_constraintEnd_toEndOf="@id/nome_edt"
             app:layout_constraintStart_toStartOf="@id/nome_edt"
@@ -132,10 +135,13 @@
             app:layout_constraintStart_toStartOf="@id/cpf_txt"
             app:layout_constraintTop_toBottomOf="@id/divider3" />
 
-        <EditText
+        <com.santalu.maskara.widget.MaskEditText
+            app:maskCharacter="_"
+            app:mask="__/__/____"
             android:id="@+id/data_edt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            app:maskStyle="completable"
             android:layout_marginTop="5dp"
             app:layout_constraintEnd_toEndOf="@id/cpf_edt"
             app:layout_constraintStart_toStartOf="@id/cpf_edt"
@@ -241,10 +247,10 @@
         <android.widget.Button
             android:id="@+id/confirmar_btn"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="15dp"
+            android:layout_marginEnd="30dp"
             android:background="@drawable/btn_rosa"
             android:text="Confirmar edição"
             android:textColor="@color/white"

@@ -44,12 +44,22 @@
     <string name="recarga_celular">Recarga de celular</string>
     <string name="fourshopping">FourShopping</string>
     <string name="seguro">Seguro</string>
-    <string name="editar_dados">Editar Dados</string>
+    <string name="editar_dados">Editar dados</string>
     <string name="sair">sair</string>
     <!-- Home-Editar -->
     <string name="editar">Editar</string>
     <string name="excluir">Excluir</string>
     <string name="confirmar_edicao">Confirmar edição</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Cadastrar Chave Pix -->
+    <string name="cadastrar_chave_pix">Cadastrar Chave PIX</string>
+    <string name="selecionar_tipo_chave">Selecionar o tipo de chave desejada:</string>
+    <string name="sua_chave">Sua chave:</string>
+    <string-array name="tipos_de_chaves">
+        <item>Selecionar</item>
+        <item>Email</item>
+        <item>CPF</item>
+        <item>Celular</item>
+        <item>Aleatório</item>
+    </string-array>
 </resources>
