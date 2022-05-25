@@ -39,7 +39,6 @@
         android:layout_marginTop="8dp"
         android:text="@string/criar_conta"
         android:textColor="@color/white"
-        android:background=""
         app:layout_constraintEnd_toEndOf="@+id/btnEntrar"
         app:layout_constraintStart_toStartOf="@+id/btnEntrar"
         app:layout_constraintTop_toBottomOf="@+id/btnEntrar" />
