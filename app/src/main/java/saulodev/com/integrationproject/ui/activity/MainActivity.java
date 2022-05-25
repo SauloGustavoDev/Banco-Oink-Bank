@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 
 import saulodev.com.integrationproject.R;
 import saulodev.com.integrationproject.databinding.ActivityMainBinding;
@@ -19,10 +20,17 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        defineFullscreen();
+
         btnRegistrar();
 
         btnEntrar();
 
+    }
+
+    private void defineFullscreen() {
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 
     private void btnEntrar() {

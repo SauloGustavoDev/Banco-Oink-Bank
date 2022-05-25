@@ -8,7 +8,7 @@
     tools:context=".ui.activity.RegisterActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/btnVoltar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -31,7 +31,7 @@
         android:textSize="28dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/btnVoltar" />
 
     <View
         android:background="@color/white"
@@ -381,6 +381,7 @@
         app:layout_constraintTop_toBottomOf="@+id/view8" />
 
     <android.widget.Button
+        android:id="@+id/btnCadastrar"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginTop="10dp"

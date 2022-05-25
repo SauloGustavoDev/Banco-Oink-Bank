@@ -2,6 +2,7 @@ package saulodev.com.integrationproject.ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -22,8 +23,26 @@ public class RegisterActivity extends AppCompatActivity {
         View view = binding.getRoot();
         setContentView(view);
 
+        btnVoltarMain();
+
+        btnCadastrarCliente();
+
         initialMaskMoney();
 
+    }
+
+    private void btnCadastrarCliente() {
+        binding.btnCadastrar.setOnClickListener(view -> {
+            startActivity(new Intent(RegisterActivity.this, HomeActivity.class));
+            finish();
+        });
+    }
+
+    private void btnVoltarMain() {
+        binding.btnVoltar.setOnClickListener(view -> {
+            startActivity(new Intent(RegisterActivity.this, MainActivity.class));
+            finish();
+        });
     }
 
     private void initialMaskMoney(){
