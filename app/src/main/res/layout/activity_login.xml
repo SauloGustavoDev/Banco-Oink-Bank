@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.activity.LoginActivity"
-    android:backgroundTint="@color/rosa">
+    android:background="@color/rosa">
 
     <ImageView
         android:id="@+id/imageView"
@@ -124,7 +124,5 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText2" />
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
