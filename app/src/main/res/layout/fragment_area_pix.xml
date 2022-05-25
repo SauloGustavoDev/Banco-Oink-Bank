@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.AreaPixFragment">
+
+    <ImageView
+        android:id="@+id/btn_voltar_pix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/cinzaClaro"
+        android:src="@drawable/ic_seta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/areapix_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nunito_extrabold"
+        android:text="@string/area_pix_titulo"
+        android:textColor="@color/black"
+        android:textSize="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_voltar_pix" />
+
+    <TextView
+        android:id="@+id/areapix_descricao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/nunito_semibold"
+        android:text="@string/area_pix_descricao"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/areapix_titulo" />
+
+    <LinearLayout
+        android:id="@+id/linear_pix_qrcode"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/background_iconepix"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/linear_pix_celular"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/areapix_descricao"
+        tools:ignore="MissingConstraints,Orientation">
+
+        <ImageView
+            android:id="@+id/icon_pix_qrcode"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_qrcode" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_pix_QRCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_regular"
+        android:text="@string/qr_code"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/linear_pix_qrcode"
+        app:layout_constraintStart_toStartOf="@+id/linear_pix_qrcode"
+        app:layout_constraintTop_toBottomOf="@+id/linear_pix_qrcode" />
+
+    <LinearLayout
+        android:id="@+id/linear_pix_celular"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/background_iconepix"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/linear_pix_email"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/linear_pix_qrcode"
+        app:layout_constraintTop_toBottomOf="@+id/areapix_descricao"
+        tools:ignore="MissingConstraints,Orientation">
+
+        <ImageView
+            android:id="@+id/icon_pix_celular"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_celular" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_pix_celular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_regular"
+        android:text="@string/pix_celular"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/linear_pix_celular"
+        app:layout_constraintStart_toStartOf="@+id/linear_pix_celular"
+        app:layout_constraintTop_toBottomOf="@+id/linear_pix_celular" />
+
+    <LinearLayout
+        android:id="@+id/linear_pix_email"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/background_iconepix"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/linear_pix_cpf"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/linear_pix_celular"
+        app:layout_constraintTop_toBottomOf="@+id/areapix_descricao"
+        tools:ignore="MissingConstraints,Orientation">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_email" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_pix_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_regular"
+        android:text="@string/pix_email"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/linear_pix_email"
+        app:layout_constraintStart_toStartOf="@+id/linear_pix_email"
+        app:layout_constraintTop_toBottomOf="@+id/linear_pix_email" />
+
+    <LinearLayout
+        android:id="@+id/linear_pix_cpf"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:background="@drawable/background_iconepix"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/linear_pix_email"
+        app:layout_constraintTop_toBottomOf="@+id/areapix_descricao"
+        tools:ignore="MissingConstraints,Orientation">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_cpf" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_regular"
+        android:text="@string/pix_cpf"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/linear_pix_cpf"
+        app:layout_constraintStart_toStartOf="@+id/linear_pix_cpf"
+        app:layout_constraintTop_toBottomOf="@+id/linear_pix_cpf" />
+
+    <LinearLayout
+        android:id="@+id/linear_pix_chaveAleatoria"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/background_iconepix"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/linear_pix_qrcode"
+        app:layout_constraintStart_toStartOf="@+id/linear_pix_qrcode"
+        app:layout_constraintTop_toBottomOf="@+id/text_pix_QRCode"
+        tools:ignore="MissingConstraints,Orientation">
+
+        <ImageView
+            android:id="@+id/icon_pix_chave"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_key" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_pix_chaveAleatoria"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_regular"
+        android:text="@string/pix_chaveAleatoria"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/linear_pix_chaveAleatoria"
+        app:layout_constraintStart_toStartOf="@+id/linear_pix_chaveAleatoria"
+        app:layout_constraintTop_toBottomOf="@+id/linear_pix_chaveAleatoria" />
+
+    <LinearLayout
+        android:id="@+id/linear_pix_copiaeCola"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:background="@drawable/background_iconepix"
+        app:layout_constraintEnd_toEndOf="@+id/linear_pix_celular"
+        app:layout_constraintStart_toStartOf="@+id/linear_pix_celular"
+        app:layout_constraintTop_toBottomOf="@+id/txt_pix_celular"
+        tools:ignore="MissingConstraints,Orientation">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_copiaecola" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_pix_copiaeCola"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_regular"
+        android:text="@string/pix_copiaecola"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/linear_pix_copiaeCola"
+        app:layout_constraintStart_toStartOf="@+id/linear_pix_copiaeCola"
+        app:layout_constraintTop_toBottomOf="@+id/linear_pix_copiaeCola" />
+
+    <LinearLayout
+        android:id="@+id/linear_pix_transferir"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/background_iconepix"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/linear_pix_email"
+        app:layout_constraintStart_toStartOf="@+id/linear_pix_email"
+        app:layout_constraintTop_toBottomOf="@+id/txt_pix_email"
+        tools:ignore="MissingConstraints,Orientation">
+
+        <ImageView
+            android:id="@+id/icon_pix_transferir"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_transferir" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_pix_transferir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_regular"
+        android:text="@string/pix_transferir"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/linear_pix_transferir"
+        app:layout_constraintStart_toStartOf="@+id/linear_pix_transferir"
+        app:layout_constraintTop_toBottomOf="@+id/linear_pix_transferir" />
+
+    <LinearLayout
+        android:id="@+id/linear_pix_receber"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/background_iconepix"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/linear_pix_cpf"
+        app:layout_constraintStart_toStartOf="@+id/linear_pix_cpf"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        tools:ignore="MissingConstraints,Orientation">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:rotation="180"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_transferir" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_pix_receber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_regular"
+        android:text="@string/pix_receber"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/linear_pix_receber"
+        app:layout_constraintStart_toStartOf="@+id/linear_pix_receber"
+        app:layout_constraintTop_toBottomOf="@+id/linear_pix_receber" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_areaPix_minhasChaves"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/btn_rosa"
+        android:drawableLeft="@drawable/ic_chave"
+        android:drawableTint="@color/white"
+        android:fontFamily="@font/nunito_semibold"
+        android:text="@string/pix_btn_minhaChave"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_pix_copiaeCola" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
