@@ -13,7 +13,7 @@
         <item name="android:statusBarColor" tools:targetApi="l">@color/white</item>
         <!-- Customize your theme here. -->
         <item name="android:background">@color/white</item>
-        <item name="android:textColor">@color/black</item>
+
 
     </style>
 </resources>
