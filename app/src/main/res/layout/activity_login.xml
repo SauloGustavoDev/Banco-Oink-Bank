@@ -112,6 +112,7 @@
         android:background="@drawable/edit_text_login"
         android:hint="@string/senha_entrar_exemplo"
         android:autofillHints="password"
+        android:maxLength="6"
         android:inputType="numberPassword"
         android:paddingTop="5dp"
         android:paddingStart="5dp"
