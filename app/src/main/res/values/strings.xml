@@ -13,6 +13,8 @@
     <string name="senha_entrar">Senha(6 Dígitos)</string>
     <string name="senha_entrar_exemplo">******</string>
     <string name="entrar">Entrar</string>
+    <string name="content_description">logo login</string>
+    <string name="BankApp">BankApp</string>
 
     <!-- Cadastrar -->
     <string name="cadastrar">Cadastrar</string>
