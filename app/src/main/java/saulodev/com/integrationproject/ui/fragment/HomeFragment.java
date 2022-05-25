@@ -1,5 +1,6 @@
 package saulodev.com.integrationproject.ui.fragment;
 
+import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
@@ -13,10 +14,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import saulodev.com.integrationproject.R;
+import saulodev.com.integrationproject.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
 
     private HomeViewModel mViewModel;
+    private FragmentHomeBinding bind;
 
     public static HomeFragment newInstance() {
         return new HomeFragment();
@@ -25,14 +28,22 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        bind = FragmentHomeBinding.inflate(inflater, container, false);
+        return bind.getRoot();
     }
-
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         mViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
 
+        bind.editarImg.setOnClickListener(view1 -> {
+            replaceEditFragment();
+        });
+    }
+
+    private void replaceEditFragment() {
+        FragmentManager manager = requireActivity().getSupportFragmentManager();
+        manager.beginTransaction().replace(R.id.frame, new EditFragment()).addToBackStack(null).commit();
     }
 }
