@@ -3,7 +3,7 @@
 
     <!-- Main -->
     <string name="entre_conta">Entre na sua conta</string>
-    <string name="criar_conta">Criar uma conta</string>
+    <string name="criar_conta">Criar conta</string>
 
     <!-- Entar -->
     <string name="agencia_digito">Agência com dígito</string>
@@ -20,15 +20,15 @@
     <string name="nome_exemplo">Ex.: João da Silva</string>
     <string name="cpf">CPF</string>
     <string name="cpf_exemplo">Ex.:000.000.000-00</string>
-    <string name="data_nascimento">Data de Nascimento</string>
+    <string name="data_nascimento">Data de \nNascimento</string>
     <string name="email">E-mail</string>
     <string name="email_exemplo">Ex.: joao.silva@email.com</string>
     <string name="renda_mensal">Renda Mensal</string>
-    <string name="patrimonio_liquido">Patrimônio Líquido</string>
+    <string name="patrimonio_liquido">Patrimônio\nLíquido</string>
     <string name="patrimonio_liquido_exemplo">Ex.: R$999,99</string>
     <string name="senha_cadastrar">Senha</string>
     <string name="senha_exemplo">Ex.: ******</string>
-    <string name="confirmar_senha">Confirmar Senha</string>
+    <string name="confirmar_senha">Confirmar\nSenha</string>
     <string name="selecionar">Selecionar</string>
 
     <!-- Home -->
