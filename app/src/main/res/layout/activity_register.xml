@@ -37,7 +37,7 @@
         android:background="@color/white"
         android:id="@+id/viewFundo"
         android:layout_width="match_parent"
-        android:layout_height="385dp"
+        android:layout_height="410dp"
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
