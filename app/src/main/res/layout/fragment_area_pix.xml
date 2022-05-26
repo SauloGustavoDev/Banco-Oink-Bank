@@ -60,8 +60,8 @@
 
         <ImageView
             android:id="@+id/icon_pix_qrcode"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_qrcode" />
 
@@ -95,8 +95,8 @@
 
         <ImageView
             android:id="@+id/icon_pix_celular"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:src="@drawable/ic_celular" />
 
     </LinearLayout>
@@ -128,8 +128,8 @@
         tools:ignore="MissingConstraints,Orientation">
 
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:src="@drawable/ic_email" />
 
     </LinearLayout>
@@ -160,8 +160,8 @@
         tools:ignore="MissingConstraints,Orientation">
 
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:src="@drawable/ic_cpf" />
 
     </LinearLayout>
@@ -192,8 +192,8 @@
 
         <ImageView
             android:id="@+id/icon_pix_chave"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_key" />
 
@@ -225,8 +225,8 @@
         tools:ignore="MissingConstraints,Orientation">
 
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:src="@drawable/ic_copiaecola" />
 
     </LinearLayout>
@@ -258,8 +258,8 @@
 
         <ImageView
             android:id="@+id/icon_pix_transferir"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_transferir" />
 
@@ -290,8 +290,8 @@
         tools:ignore="MissingConstraints,Orientation">
 
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:rotation="180"
             android:scaleType="centerCrop"
             android:src="@drawable/ic_transferir" />

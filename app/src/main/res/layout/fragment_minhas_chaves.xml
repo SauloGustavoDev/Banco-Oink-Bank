@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -54,8 +55,8 @@
 
     <ImageView
         android:id="@+id/ic_cpf"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
         android:layout_marginStart="36dp"
         android:layout_marginTop="8dp"
         android:src="@drawable/ic_cpf"
@@ -74,18 +75,18 @@
         app:layout_constraintEnd_toEndOf="@id/ic_cpf"
         app:layout_constraintStart_toStartOf="@id/ic_cpf"
         app:layout_constraintTop_toBottomOf="@id/ic_cpf" />
-    
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/sem_cadastro"
-        android:fontFamily="@font/nunito_regular"
-        android:textSize="17sp"
         android:layout_marginStart="64dp"
+        android:fontFamily="@font/nunito_regular"
+        android:text="@string/sem_cadastro"
         android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_cpf"
         app:layout_constraintStart_toEndOf="@id/ic_cpf"
-        app:layout_constraintTop_toBottomOf="@id/divider1"
-        app:layout_constraintBottom_toTopOf="@id/divider2"/>
+        app:layout_constraintTop_toTopOf="@+id/ic_cpf" />
 
 
     <com.google.android.material.divider.MaterialDivider
@@ -102,8 +103,8 @@
 
     <ImageView
         android:id="@+id/ic_aleatorio"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
         android:layout_marginStart="36dp"
         android:layout_marginTop="8dp"
         android:src="@drawable/ic_key"
@@ -127,14 +128,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/sem_cadastro"
-        android:fontFamily="@font/nunito_regular"
-        android:textSize="17sp"
         android:layout_marginStart="64dp"
+        android:fontFamily="@font/nunito_regular"
+        android:text="@string/sem_cadastro"
         android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_chave_aleatoria"
         app:layout_constraintStart_toEndOf="@id/ic_aleatorio"
-        app:layout_constraintTop_toBottomOf="@id/divider2"
-        app:layout_constraintBottom_toTopOf="@id/divider3"/>
+        app:layout_constraintTop_toTopOf="@+id/ic_aleatorio" />
 
 
     <com.google.android.material.divider.MaterialDivider
@@ -151,8 +152,8 @@
 
     <ImageView
         android:id="@+id/ic_telefone"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
         android:layout_marginStart="36dp"
         android:layout_marginTop="8dp"
         android:src="@drawable/ic_celular"
@@ -176,40 +177,28 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/sem_cadastro"
-        android:fontFamily="@font/nunito_regular"
-        android:textSize="17sp"
         android:layout_marginStart="64dp"
+        android:fontFamily="@font/nunito_regular"
+        android:text="@string/sem_cadastro"
         android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_telefone"
         app:layout_constraintStart_toEndOf="@id/ic_telefone"
-        app:layout_constraintTop_toBottomOf="@id/divider3"
-        app:layout_constraintBottom_toTopOf="@id/divider4"/>
-
-    <com.google.android.material.divider.MaterialDivider
-        android:id="@+id/divider4"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="15dp"
-        android:background="@color/cinza"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_telefone" />
+        app:layout_constraintTop_toTopOf="@+id/ic_telefone" />
 
     <android.widget.Button
         android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginTop="16dp"
         android:layout_marginStart="30dp"
-        android:fontFamily="@font/nunito_semibold"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
         android:layout_marginEnd="30dp"
-        android:text="@string/cadastrar_nova_chave"
         android:background="@drawable/btn_rosa"
+        android:fontFamily="@font/nunito_semibold"
+        android:text="@string/cadastrar_nova_chave"
+        android:textAllCaps="false"
+        android:layout_marginTop="32dp"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/divider4"/>
+        tools:layout_editor_absoluteY="430dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
