@@ -29,14 +29,14 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/content_description"/>
+        />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/rosa"
-        android:text="@string/BankApp"
+        android:text="@string/bank_app"
         android:textColor="@color/white"
         android:textSize="28sp"
         android:textStyle="bold"
@@ -100,6 +100,8 @@
         android:textColor="@color/white"
         android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
@@ -119,17 +121,17 @@
         android:id="@+id/editText2"
         android:layout_width="350dp"
         android:layout_height="32dp"
-        android:layout_marginStart="28dp"
         android:layout_marginTop="4dp"
+        android:autofillHints="password"
         android:background="@drawable/edit_text_login"
         android:hint="@string/senha_entrar_exemplo"
-        android:autofillHints="password"
-        android:maxLength="6"
         android:inputType="numberPassword"
-        android:paddingTop="5dp"
+        android:maxLength="6"
         android:paddingStart="5dp"
+        android:paddingTop="5dp"
         android:paddingEnd="0dp"
         android:textColorHint="@color/cinza"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
