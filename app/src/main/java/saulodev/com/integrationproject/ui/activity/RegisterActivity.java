@@ -10,7 +10,8 @@ import java.util.Locale;
 
 import saulodev.com.integrationproject.R;
 import saulodev.com.integrationproject.databinding.ActivityRegisterBinding;
-import saulodev.com.integrationproject.ui.util.mask_money;
+
+import saulodev.com.integrationproject.util.mask_money;
 
 public class RegisterActivity extends AppCompatActivity {
 
