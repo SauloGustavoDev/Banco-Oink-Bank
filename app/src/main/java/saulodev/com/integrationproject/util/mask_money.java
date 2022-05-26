@@ -1,4 +1,4 @@
-package saulodev.com.integrationproject.ui.util;
+package saulodev.com.integrationproject.util;
 
 import android.text.Editable;
 import android.text.TextWatcher;

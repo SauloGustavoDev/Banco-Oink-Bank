@@ -1,4 +1,4 @@
-package saulodev.com.integrationproject.ui.fragment;
+package saulodev.com.integrationproject.ui.viewmodel;
 
 import androidx.lifecycle.ViewModel;
 

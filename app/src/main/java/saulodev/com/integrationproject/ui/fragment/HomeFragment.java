@@ -9,14 +9,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import android.text.InputType;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import saulodev.com.integrationproject.R;
 import saulodev.com.integrationproject.databinding.FragmentHomeBinding;
+import saulodev.com.integrationproject.ui.viewmodel.HomeViewModel;
 
 public class HomeFragment extends Fragment {
 
