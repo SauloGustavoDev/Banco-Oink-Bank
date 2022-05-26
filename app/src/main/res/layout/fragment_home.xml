@@ -162,7 +162,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/appCompatButton"
-        android:layout_width="120dp"
+        android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:layout_marginTop="8dp"
         android:text="Pix"
@@ -179,7 +179,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/appCompatButton2"
-        android:layout_width="120dp"
+        android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:layout_marginTop="8dp"
         android:text="Pagar"
@@ -197,7 +197,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/appCompatButton3"
-        android:layout_width="120dp"
+        android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:layout_marginTop="8dp"
         android:text="Transferir"
