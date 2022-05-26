@@ -7,7 +7,7 @@
     tools:context=".ui.fragment.AreaPixFragment">
 
     <ImageView
-        android:id="@+id/btn_voltar_pix"
+        android:id="@+id/voltar_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -28,7 +28,7 @@
         android:textColor="@color/black"
         android:textSize="28dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_voltar_pix" />
+        app:layout_constraintTop_toBottomOf="@+id/voltar_img" />
 
     <TextView
         android:id="@+id/areapix_descricao"
@@ -311,7 +311,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linear_pix_receber" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_areaPix_minhasChaves"
+        android:id="@+id/minhas_chaves_btn"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginStart="30dp"

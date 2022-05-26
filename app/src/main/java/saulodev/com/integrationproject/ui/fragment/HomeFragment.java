@@ -1,5 +1,6 @@
 package saulodev.com.integrationproject.ui.fragment;
 
+import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import saulodev.com.integrationproject.R;
 import saulodev.com.integrationproject.databinding.FragmentHomeBinding;
 
 public class HomeFragment extends Fragment {
@@ -48,5 +50,23 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        bind.editarDadosImg.setOnClickListener(view1 -> {
+            replaceEditarFragment();
+            bind.frameEditar.requestFocus();
+        });
+
+        bind.pixBtn.setOnClickListener(view1 -> {
+            replacePixFragment();
+        });
+    }
+
+    private void replacePixFragment() {
+        FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.frame, new AreaPixFragment()).addToBackStack(null).commit();
+    }
+
+    private void replaceEditarFragment() {
+        FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.frame_editar, new EditFragment()).addToBackStack(null).commit();
     }
 }

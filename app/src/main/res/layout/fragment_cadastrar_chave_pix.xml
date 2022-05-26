@@ -76,6 +76,7 @@
 
     <android.widget.Button
         android:layout_width="0dp"
+        android:id="@+id/cadastrar_btn"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
