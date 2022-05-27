@@ -7,7 +7,8 @@ public class RetrofitClient {
 
     private static Retrofit RETROFIT;
 
-    private static String BASE_URL = "http://192.168.15.2:8080";//Siqueira
+    //private static String BASE_URL = "http://192.168.15.2:8080";//Siqueira
+    private static String BASE_URL = "http://192.168.0.120:8080";//Pedro
     //private static String BASE_URL = "http://192.168.15.86:8080";//Marinho
     //private static String BASE_URL = "http://192.168.15.87:8080";//Rodrigo
     //private static String BASE_URL = "http://192.168.15.6:8080";//Constantino
@@ -20,15 +21,15 @@ public class RetrofitClient {
     //private static String BASE_URL = "http://192.168.15.2:8080";//Luiz
 
 
-    /*public static Retrofit getRETROFIT(){
+    public static Retrofit getRETROFIT() {
 
-        if (RETROFIT == null){
+        if (RETROFIT == null) {
             RETROFIT = new Retrofit.Builder()
                     .baseUrl(BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
         }
         return RETROFIT;
-    }*/
+    }
 
 }

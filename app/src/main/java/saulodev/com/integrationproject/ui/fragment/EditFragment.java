@@ -28,6 +28,10 @@ public class EditFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        bind.linearLayout.setOnClickListener(view1 -> {
+            requireActivity().onBackPressed();
+        });
+
         bind.confirmarBtn.setOnClickListener(view1 -> {
             requireActivity().onBackPressed();
         });
