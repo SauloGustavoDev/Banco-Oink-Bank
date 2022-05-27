@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cinzaClaro"
     tools:context=".ui.fragment.EditFragment">
 
     <LinearLayout
         android:id="@+id/linear_layout"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:alpha="0.2"
+        android:alpha="0.25"
         android:background="@color/black"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@id/editar_layout"
@@ -22,8 +21,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/editar_layout"
         android:layout_width="match_parent"
-        android:background="@color/white"
         android:layout_height="wrap_content"
+        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
