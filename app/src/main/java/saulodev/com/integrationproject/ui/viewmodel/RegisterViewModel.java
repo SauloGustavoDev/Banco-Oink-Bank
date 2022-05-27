@@ -1,71 +1,130 @@
 package saulodev.com.integrationproject.ui.viewmodel;
 
+import android.util.Log;
+
+import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import saulodev.com.integrationproject.client.Methods;
 import saulodev.com.integrationproject.client.RetrofitClient;
 import saulodev.com.integrationproject.model.Cliente;
+import saulodev.com.integrationproject.util.VerificarDados;
 
 public class RegisterViewModel extends ViewModel {
 
-    public boolean validaCPF(String cpf) {
-        if (cpf.length() < 11) {
-            return false;
-        } else {
 
-            int[] digitosFinais = new int[2];
-            int[] digitosCpf = new int[10];
-            int multiplicacao;
-            int soma;
-            int restoDivisao;
+    private final static VerificarDados verificarDados = new VerificarDados();
+    private static Cliente cliente;
 
-            for (int x = 0; x < 10; x++) {
-                digitosCpf[x] = cpf.charAt(x);
-            }
 
-            if (digitosCpf[0] == digitosCpf[1] && digitosCpf[2] == digitosCpf[3] &&
-                    digitosCpf[4] == digitosCpf[5] && digitosCpf[6] == digitosCpf[7] &&
-                    digitosCpf[8] == digitosCpf[9]) {
-                return false;
-            } else {
-                for (int indiceMultiplicacao = 0; indiceMultiplicacao < 2; indiceMultiplicacao++) {
-                    if (indiceMultiplicacao == 0) {
-                        multiplicacao = 10;
-                    } else {
-                        multiplicacao = 11;
-                    }
-                    soma = 0;
+    private static String numeroContaFirebase = null;
 
-                    for (int indiceSoma = 0; indiceSoma < 9 + indiceMultiplicacao; indiceSoma++) {
-                        soma = soma + Integer.parseInt(String.valueOf(cpf.charAt(indiceSoma))) * multiplicacao;
-                        multiplicacao = multiplicacao - 1;
-                    }
+    private int contador = 0;
 
-                    restoDivisao = soma % 11;
-
-                    if (restoDivisao < 2) {
-                        digitosFinais[indiceMultiplicacao] = 0;
-
-                    } else {
-                        digitosFinais[indiceMultiplicacao] = 11 - restoDivisao;
-
-                    }
-                }
-
-                if (digitosFinais[0] == Integer.parseInt(String.valueOf(cpf.charAt(9))) &&
-                        digitosFinais[1] == Integer.parseInt(String.valueOf(cpf.charAt(10)))) {
-                    return true;
-                } else {
-                    //Inválido
-                    return false;
-                }
-            }
-
-        }
+    public void zerarContador() {
+        contador = 0;
     }
 
+    public int getContador() {
+        return contador;
+    }
+
+    //Formulário Dados Cadastrais
+    public boolean setNomeCompleto(String dado) {
+        int aux = 0;
+        if (verificarDados.verificarPreenchido(dado)) {
+            if (verificarDados.verificarCaracterEspecial(dado)) {
+                cliente.setNome(dado);
+                contador++;
+                aux = 1;
+            }
+        }
+        return aux == 1;
+    }
+
+    public boolean setCpf(String dado) {
+        int aux = 0;
+        if (verificarDados.verificarPreenchido(dado)) {
+            if (verificarDados.verificaTamanhoCpf(dado)) {
+                if (verificarDados.validaCPF(dado)) {
+                    cliente.setCpf(dado);
+                    contador++;
+                    aux = 1;
+                }
+            }
+        }
+        return aux == 1;
+    }
+
+
+
+    public boolean setDataNascimento(String dado) {
+        int aux = 0;
+        if (verificarDados.verificarPreenchido(dado)) {
+            if (verificarDados.verificarDataValida(dado)) {
+                if (verificarDados.verificarIdade(dado)) {
+                    cliente.setDataNascimento(dado);
+                    contador++;
+                    aux = 1;
+                }
+            }
+        }
+        return aux == 1;
+    }
+
+
+    public boolean setRenda(String dado) {
+        int aux = 0;
+        if (verificarDados.verificarPreenchido(dado)) {
+            if (verificarDados.maiorQueZero(dado.trim())) {
+                cliente.setRenda(Double.parseDouble(dado));
+                contador++;
+                aux = 1;
+            }
+        }
+        return aux == 1;
+    }
+
+    public boolean setPatrimonio(String dado) {
+        int aux = 0;
+        if (verificarDados.verificarPreenchido(dado)) {
+            if (verificarDados.maiorQueZero(dado)) {
+                cliente.setPatrimonio(Double.parseDouble(dado));
+                contador++;
+                aux = 1;
+            }
+        }
+        return aux == 1;
+    }
+
+    public boolean setEmail(String dado) {//Arrumar
+        int aux = 0;
+        if (verificarDados.verificarPreenchido(dado)) {
+            cliente.setEmail(dado);
+            contador++;
+            aux = 1;
+        }
+
+        return aux == 1;
+    }
+
+    public boolean setSenha(String dado, String verificador) {
+        int aux = 0;
+        if (verificarDados.verificarSenha(dado, verificador)) {
+            cliente.setSenha(dado);
+            contador++;
+            aux = 1;
+        }
+        return aux == 1;
+    }
+
+    //CADASTRANDO USUÁRIO
     public void cadastrarUsuario() {
 /*
         Cliente cliente = new Cliente();
