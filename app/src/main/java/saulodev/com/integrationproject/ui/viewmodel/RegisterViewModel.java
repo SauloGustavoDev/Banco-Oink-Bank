@@ -20,10 +20,8 @@ public class RegisterViewModel extends ViewModel {
 
 
     private final static VerificarDados verificarDados = new VerificarDados();
-    private static Cliente cliente;
+    private static Cliente cliente = new Cliente();
 
-
-    private static String numeroContaFirebase = null;
 
     private int contador = 0;
 
