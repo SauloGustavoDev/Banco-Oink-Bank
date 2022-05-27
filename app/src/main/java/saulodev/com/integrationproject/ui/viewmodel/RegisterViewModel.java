@@ -40,11 +40,19 @@ public class RegisterViewModel extends ViewModel {
 
 
     public void setRenda(String dado) {
-        cliente.setRenda(Double.parseDouble(dado));
+        String dadoFormatado = dado.replace("R", "");
+        dadoFormatado = dadoFormatado.replace("$", "");
+        dadoFormatado = dadoFormatado.replace(".", "");
+        dadoFormatado = dadoFormatado.replace(",", ".");
+        cliente.setRenda(Double.parseDouble(dadoFormatado));
     }
 
     public void setPatrimonio(String dado) {
-        cliente.setPatrimonio(Double.parseDouble(dado));
+        String dadoFormatado = dado.replace("R", "");
+        dadoFormatado = dadoFormatado.replace("$", "");
+        dadoFormatado = dadoFormatado.replace(".", "");
+        dadoFormatado = dadoFormatado.replace(",", ".");
+        cliente.setPatrimonio(Double.parseDouble(dadoFormatado));
     }
 
     public void setEmail(String dado) {//Arrumar

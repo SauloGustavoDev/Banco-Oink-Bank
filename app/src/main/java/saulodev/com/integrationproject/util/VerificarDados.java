@@ -1,14 +1,21 @@
 package saulodev.com.integrationproject.util;
 
+import android.os.Build;
 import android.util.Log;
 
+import androidx.annotation.RequiresApi;
+
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 public class VerificarDados {
 
     //VERIFICAR SE CAMPO ESTÁ PREENCHIDO
-    public boolean verificarPreenchido(String dado){
+    public static boolean verificarPreenchido(String dado){
         return !dado.isEmpty();
     }
 
@@ -16,12 +23,12 @@ public class VerificarDados {
     /*public boolean verificaTamanhoTelefone(String dado){
         return dado.length() >= 15;
     }//*/
-    public boolean verificaTamanhoCpf(String dado){
+    public static boolean verificaTamanhoCpf(String dado){
         return dado.length() >= 11;
     }
 
     //VALIDAR CPF
-    public boolean validaCPF(String cpf) {
+    public static boolean validaCPF(String cpf) {
         if (cpf.length() < 11) {
             return false;
         } else {
@@ -78,93 +85,29 @@ public class VerificarDados {
     }
 
     //VALIDAR IDADE | DATA
-    public boolean verificarIdade(String dado){
-        String dadoFormatado = dado.replace("/", "");
-        int diasAnoBissexto = 0;
-        int diaNoMes = 0;
-
-        String diaDigitadoAux = String.valueOf(dadoFormatado.charAt(0)) + String.valueOf(dadoFormatado.charAt(1));
-        String mesDigitadoAux = String.valueOf(dadoFormatado.charAt(2)) + String.valueOf(dadoFormatado.charAt(3));
-        String anoDigitadoAux = String.valueOf(dadoFormatado.charAt(4)) + String.valueOf(dadoFormatado.charAt(5)) +  String.valueOf(dadoFormatado.charAt(6)) +  String.valueOf(dadoFormatado.charAt(7));
-
-        int diaDigitado = Integer.parseInt(diaDigitadoAux);
-        int mesDigitado = Integer.parseInt(mesDigitadoAux);
-        int anoDigitado = Integer.parseInt(anoDigitadoAux);
-
-        SimpleDateFormat formataData = new SimpleDateFormat("dd-MM-yyyy");
-        Date data = new Date();
-        String dataAtual= formataData.format(data);
-
-
-        String diaAtualAux = String.valueOf(dadoFormatado.charAt(1)) + String.valueOf(dadoFormatado.charAt(2));
-        String mesAtualAux = String.valueOf(dadoFormatado.charAt(3)) + String.valueOf(dadoFormatado.charAt(4));
-        String anoAtualAux = String.valueOf(dataAtual.charAt(6)) + String.valueOf(dataAtual.charAt(7)) + String.valueOf(dataAtual.charAt(8)) + String.valueOf(dataAtual.charAt(9));
-
-
-        int diaAtual = Integer.parseInt(diaAtualAux);
-        int mesAtual = Integer.parseInt(mesAtualAux);
-        int anoAtual = Integer.parseInt(anoAtualAux);
-
-        Log.d("data", "dia atual: " + Integer.toString(diaAtual));
-        Log.d("data", "mes atual: " + Integer.toString(mesAtual));
-        Log.d("data", "ano atual: " + Integer.toString(anoAtual));
-
-
-        int bissexto = 0;
-
-        if(anoAtual%4 == 0)
-            bissexto = 1;
-
-        int[] diasNoMes = {
-                31,28 + bissexto ,31,30,31,30,
-                31,31,30,31,30,31
-        };
-
-        return (anoDigitado <= anoAtual - 18) && (anoDigitado < anoAtual - 18 || mesDigitado <= mesAtual) && (anoDigitado < anoAtual - 18 || mesDigitado < mesAtual || diaDigitado < diaAtual);
-
-    }
-    public boolean verificarDataValida(String dado){
-
-        String dadoFormatado = dado.replace("/", "");
-
-        if(dadoFormatado.length() < 8)
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public static boolean dateIsValid(String date) {
+        try {
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+            LocalDate d = LocalDate.parse(date, formatter);
+            return true;
+        } catch (DateTimeParseException e) {
             return false;
-
-        for(int i = 0; i < dadoFormatado.length(); i++){
-            Log.d("dado", String.valueOf(dadoFormatado.charAt(i)));
         }
+    }
 
-        String diaDigitadoAux = String.valueOf(dadoFormatado.charAt(0)) + String.valueOf(dadoFormatado.charAt(1));
-        String mesDigitadoAux = String.valueOf(dadoFormatado.charAt(2)) + String.valueOf(dadoFormatado.charAt(3));
-        String anoDigitadoAux = String.valueOf(dadoFormatado.charAt(4)) + String.valueOf(dadoFormatado.charAt(5)) +  String.valueOf(dadoFormatado.charAt(6)) +  String.valueOf(dadoFormatado.charAt(7));
-        Log.d("dado", diaDigitadoAux);
-        int diaDigitado = Integer.parseInt(diaDigitadoAux);
-        int mesDigitado = Integer.parseInt(mesDigitadoAux);
-        int anoDigitado = Integer.parseInt(anoDigitadoAux);
-
-
-        SimpleDateFormat formataData = new SimpleDateFormat("dd-MM-yyyy");
-        Date data = new Date();
-        String dataAtual= formataData.format(data);
-
-        String anoAtualAux = String.valueOf(dataAtual.charAt(6)) + String.valueOf(dataAtual.charAt(7)) + String.valueOf(dataAtual.charAt(8)) + String.valueOf(dataAtual.charAt(9));
-        int anoAtual = Integer.parseInt(anoAtualAux);
-
-        int bissexto = 0;
-
-        if(anoAtual%4 == 0)
-            bissexto = 1;
-
-        int[] diasNoMes = {
-                31,28 + bissexto ,31,30,31,30,
-                31,31,30,31,30,31
-        };
-
-        return anoDigitado <= anoAtual && 0 <= diaDigitado && diaDigitado <= diasNoMes[mesDigitado - 1] && mesDigitado <= 12 && mesDigitado > 0;
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public static int calculoIdade(String date) {
+        int ano, mes, dia;
+        String[] dateArray = date.split("/");
+        dia = Integer.parseInt(dateArray[0]);
+        mes = Integer.parseInt(dateArray[1]);
+        ano = Integer.parseInt(dateArray[2]);
+        return (int) ChronoUnit.YEARS.between(LocalDate.of(ano, mes, dia), LocalDate.now());
     }
 
     //VERIFICAR SE EXISTE CARACTÉRES ESPECIAIS
-    public boolean verificarCaracterEspecial(String dado){
+    public static boolean verificarCaracterEspecial(String dado){
         String caracterEspecial = "0123456789!¹@²#³$£%¢¨¬&*()-_=+§´`[{ª]}º<>.;:'|°?-+*/";//Colocar o \ e " para verificar
         int contador = 0;
         for(int i = 0; i < dado.length(); i++){
@@ -177,12 +120,12 @@ public class VerificarDados {
     }
 
     //VERIFICA SE VALOR É MAIOR QUE 0
-    public boolean maiorQueZero(String dado){
+    public static boolean maiorQueZero(String dado){
         return Double.parseDouble(dado)>0;
     }
 
     //VERIFICAR SENHAS
-    public boolean verificarSenha(String dado, String verificador){
+    public static boolean verificarSenha(String dado, String verificador){
         return dado.length() == 6 && dado.equals(verificador);
     }
 }
