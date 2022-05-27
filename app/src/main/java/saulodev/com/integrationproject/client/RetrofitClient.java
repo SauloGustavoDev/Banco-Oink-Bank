@@ -7,7 +7,7 @@ public class RetrofitClient {
 
     private static Retrofit RETROFIT;
 
-    //private static String BASE_URL = "http://192.168.15.2:8080";//Siqueira
+    private static String BASE_URL = "http://192.168.15.2:8080";//Siqueira
     //private static String BASE_URL = "http://192.168.0.120:8080";//Pedro
     //private static String BASE_URL = "http://192.168.15.86:8080";//Marinho
     //private static String BASE_URL = "http://192.168.15.87:8080";//Rodrigo
@@ -20,7 +20,6 @@ public class RetrofitClient {
     //private static String BASE_URL = "http://192.168.15.2:8080";//Saulo
     //private static String BASE_URL = "http://192.168.15.2:8080";//Luiz
 
-/*
     public static Retrofit getRETROFIT() {
 
         if (RETROFIT == null) {
@@ -31,6 +30,4 @@ public class RetrofitClient {
         }
         return RETROFIT;
     }
- */
-
 }
