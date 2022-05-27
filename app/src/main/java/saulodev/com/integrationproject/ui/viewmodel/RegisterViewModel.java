@@ -67,7 +67,7 @@ public class RegisterViewModel extends ViewModel {
     }
 
     public void cadastrarUsuario() {
-
+/*
         Cliente cliente = new Cliente();
 
 
@@ -86,5 +86,7 @@ public class RegisterViewModel extends ViewModel {
             }
         });
 
+
+ */
     }
 }
