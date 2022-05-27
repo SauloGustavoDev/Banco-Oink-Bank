@@ -9,5 +9,5 @@ public interface Methods {
 
     @POST("/clientes")
     Call<Cliente> cadastrarUsuario(@Body Cliente cliente);
-    
+
 }
