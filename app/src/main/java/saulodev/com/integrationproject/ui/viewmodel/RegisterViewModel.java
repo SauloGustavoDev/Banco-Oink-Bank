@@ -23,103 +23,36 @@ public class RegisterViewModel extends ViewModel {
     private static Cliente cliente = new Cliente();
 
 
-    private int contador = 0;
 
-    public void zerarContador() {
-        contador = 0;
-    }
-
-    public int getContador() {
-        return contador;
-    }
 
     //Formulário Dados Cadastrais
-    public boolean setNomeCompleto(String dado) {
-        int aux = 0;
-        if (verificarDados.verificarPreenchido(dado)) {
-            if (verificarDados.verificarCaracterEspecial(dado)) {
-                cliente.setNome(dado);
-                contador++;
-                aux = 1;
-            }
-        }
-        return aux == 1;
+    public void setNomeCompleto(String dado) {
+        cliente.setNome(dado);
     }
 
-    public boolean setCpf(String dado) {
-        int aux = 0;
-        if (verificarDados.verificarPreenchido(dado)) {
-            if (verificarDados.verificaTamanhoCpf(dado)) {
-                if (verificarDados.validaCPF(dado)) {
-                    cliente.setCpf(dado);
-                    contador++;
-                    aux = 1;
-                }
-            }
-        }
-        return aux == 1;
+    public void setCpf(String dado) {
+        cliente.setCpf(dado);
+    }
+
+    public void setDataNascimento(String dado) {
+        cliente.setDataNascimento(dado);
     }
 
 
-
-    public boolean setDataNascimento(String dado) {
-        int aux = 0;
-        if (verificarDados.verificarPreenchido(dado)) {
-            if (verificarDados.verificarDataValida(dado)) {
-                if (verificarDados.verificarIdade(dado)) {
-                    cliente.setDataNascimento(dado);
-                    contador++;
-                    aux = 1;
-                }
-            }
-        }
-        return aux == 1;
+    public void setRenda(String dado) {
+        cliente.setRenda(Double.parseDouble(dado));
     }
 
-
-    public boolean setRenda(String dado) {
-        int aux = 0;
-        if (verificarDados.verificarPreenchido(dado)) {
-            if (verificarDados.maiorQueZero(dado.trim())) {
-                cliente.setRenda(Double.parseDouble(dado));
-                contador++;
-                aux = 1;
-            }
-        }
-        return aux == 1;
+    public void setPatrimonio(String dado) {
+        cliente.setPatrimonio(Double.parseDouble(dado));
     }
 
-    public boolean setPatrimonio(String dado) {
-        int aux = 0;
-        if (verificarDados.verificarPreenchido(dado)) {
-            if (verificarDados.maiorQueZero(dado)) {
-                cliente.setPatrimonio(Double.parseDouble(dado));
-                contador++;
-                aux = 1;
-            }
-        }
-        return aux == 1;
+    public void setEmail(String dado) {//Arrumar
+        cliente.setEmail(dado);
     }
 
-    public boolean setEmail(String dado) {//Arrumar
-        int aux = 0;
-        if (verificarDados.verificarPreenchido(dado)) {
-            cliente.setEmail(dado);
-            contador++;
-            aux = 1;
-        }
-
-        return aux == 1;
-    }
-
-    public boolean setSenha(String dado, String verificador) {
-        int aux = 0;
-        if (verificarDados.verificarSenha(dado, verificador)) {
-            cliente.setSenha(dado);
-            contador++;
-            aux = 1;
-        }
-        return aux == 1;
+    public void setSenha(String dado, String verificador) {
+        cliente.setSenha(dado);
     }
 
     //CADASTRANDO USUÁRIO
