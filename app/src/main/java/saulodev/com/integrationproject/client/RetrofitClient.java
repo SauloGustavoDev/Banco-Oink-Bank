@@ -20,7 +20,7 @@ public class RetrofitClient {
     //private static String BASE_URL = "http://192.168.15.2:8080";//Luiz
 
 
-    public static Retrofit getRETROFIT(){
+    /*public static Retrofit getRETROFIT(){
 
         if (RETROFIT == null){
             RETROFIT = new Retrofit.Builder()
@@ -29,6 +29,6 @@ public class RetrofitClient {
                     .build();
         }
         return RETROFIT;
-    }
+    }*/
 
 }
