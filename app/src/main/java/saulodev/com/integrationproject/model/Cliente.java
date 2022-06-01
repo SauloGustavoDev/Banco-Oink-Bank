@@ -4,16 +4,16 @@ import com.google.gson.annotations.SerializedName;
 
 public class Cliente {
 
-    @SerializedName("id_cliente")
+    @SerializedName("idCliente")
     private int id;
 
-    @SerializedName("nm_nome")
+    @SerializedName("nome")
     private String nome;
 
     @SerializedName("cpf")
     private String cpf;
 
-    @SerializedName("dt_data")
+    @SerializedName("dataNascimento")
     private String dataNascimento;
 
     @SerializedName("email")

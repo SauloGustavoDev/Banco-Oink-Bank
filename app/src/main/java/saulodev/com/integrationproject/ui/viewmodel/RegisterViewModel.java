@@ -1,5 +1,7 @@
 package saulodev.com.integrationproject.ui.viewmodel;
 
+import static java.lang.Double.parseDouble;
+
 import android.util.Log;
 
 import androidx.lifecycle.MutableLiveData;
@@ -40,34 +42,32 @@ public class RegisterViewModel extends ViewModel {
 
 
     public void setRenda(String dado) {
-        String dadoFormatado = dado.replace("R", "");
-        dadoFormatado = dadoFormatado.replace("$", "");
-        dadoFormatado = dadoFormatado.replace(".", "");
+        String dadoFormatado = dado.replaceAll("[^0-9,]", "");
         dadoFormatado = dadoFormatado.replace(",", ".");
-        cliente.setRenda(Double.parseDouble(dadoFormatado));
+
+        Log.i("Cadastro", "Renda " + dadoFormatado);
+        cliente.setRenda(parseDouble(dadoFormatado.trim()));
+
     }
 
     public void setPatrimonio(String dado) {
-        String dadoFormatado = dado.replace("R", "");
-        dadoFormatado = dadoFormatado.replace("$", "");
-        dadoFormatado = dadoFormatado.replace(".", "");
+        String dadoFormatado = dado.replaceAll("[^0-9,]", "");
         dadoFormatado = dadoFormatado.replace(",", ".");
-        cliente.setPatrimonio(Double.parseDouble(dadoFormatado));
+
+        Log.i("Cadastro", "Patrimonio " + dadoFormatado);
+        cliente.setPatrimonio(parseDouble(dadoFormatado.trim()));
     }
 
     public void setEmail(String dado) {//Arrumar
         cliente.setEmail(dado);
     }
 
-    public void setSenha(String dado, String verificador) {
+    public void setSenha(String dado) {
         cliente.setSenha(dado);
     }
 
     //CADASTRANDO USUÁRIO
     public void cadastrarUsuario() {
-/*
-        Cliente cliente = new Cliente();
-
 
         Methods methods = RetrofitClient.getRETROFIT().create(Methods.class);
         Call<Cliente> call = methods.cadastrarUsuario(cliente);
@@ -75,16 +75,19 @@ public class RegisterViewModel extends ViewModel {
         call.enqueue(new Callback<Cliente>() {
             @Override
             public void onResponse(Call<Cliente> call, Response<Cliente> response) {
+                if (response.isSuccessful()){
+                    Log.i("Cadastro", "Cliente " + response.body().getNome() + " Cadastrado!");
 
+                }else {
+                    Log.i("Cadastro", "Cliente não cadastrado");
+                }
             }
 
             @Override
             public void onFailure(Call<Cliente> call, Throwable t) {
-
+                Log.i("Cadastro", "Mensagem " + t.getMessage());
             }
         });
 
-
- */
     }
 }

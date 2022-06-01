@@ -82,7 +82,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                     if(VerificarDados.calculoIdade(binding.edtData.getText().toString())>= 18){
                         binding.edtData.setTextColor(Color.parseColor("#FF000000"));
-                        viewModel.setCpf(binding.edtCpf.getText().toString());
+                        viewModel.setDataNascimento(binding.edtData.getMasked());
                     }
                 }
                 else{
@@ -100,7 +100,7 @@ public class RegisterActivity extends AppCompatActivity {
             //EMAIL
             if (VerificarDados.verificarPreenchido(binding.edtEmail.getText().toString())) {
                 binding.edtEmail.setTextColor(Color.parseColor("#FF000000"));
-                viewModel.setCpf(binding.edtEmail.getText().toString());
+                viewModel.setEmail(binding.edtEmail.getText().toString());
             }
             else{
                 binding.edtEmail.setTextColor(Color.parseColor("#FF0000"));
@@ -127,7 +127,7 @@ public class RegisterActivity extends AppCompatActivity {
             if (VerificarDados.verificarSenha(binding.edtSenha.getText().toString(), binding.edtConfirmaSenha.getText().toString())) {
                 binding.edtSenha.setTextColor(Color.parseColor("#FF000000"));
                 binding.edtConfirmaSenha.setTextColor(Color.parseColor("#FF000000"));
-                viewModel.setCpf(binding.edtRenda.getText().toString());
+                viewModel.setSenha(binding.edtSenha.getText().toString());
             }
             else{
                 binding.edtSenha.setTextColor(Color.parseColor("#FF0000"));
@@ -136,6 +136,7 @@ public class RegisterActivity extends AppCompatActivity {
             }
 
             if(verificador){
+                viewModel.cadastrarUsuario();
                 startActivity(new Intent(RegisterActivity.this, HomeActivity.class));
                 finish();
             }
