@@ -92,4 +92,11 @@
     <string name="pix_copiaecola_btn">Continuar</string>
     <string name="pix_copiaecola_Titulo">Insira o Pix Copia e Cola</string>
 
+    <!-- Confirmar Pix -->
+    <string name="confirmacao">Confirmação</string>
+    <string name="texto_confirmacao_pix">Confirme os dados de quem ira receber o pix:</string>
+    <string name="chave_pix">Chave Pix</string>
+    <string name="confirmar_pix">Confirmar Pix</string>
+
+
 </resources>
