@@ -83,9 +83,13 @@
     <string name="pix_email">E-mail</string>
     <string name="pix_cpf">CPF/CNPJ</string>
     <string name="pix_chaveAleatoria">Chave aleatória</string>
-    <string name="pix_copiaecola">PIX copia e cola</string>
+    <string name="pix_copiaecola">Pix copia e cola</string>
     <string name="pix_transferir">Transferir</string>
     <string name="pix_receber">Receber</string>
     <string name="pix_btn_minhaChave">Minhas chaves PIX</string>
+
+    <!-- Pix Copia e Cola -->
+    <string name="pix_copiaecola_btn">Continuar</string>
+    <string name="pix_copiaecola_Titulo">Insira o Pix Copia e Cola</string>
 
 </resources>
