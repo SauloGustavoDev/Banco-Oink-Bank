@@ -98,5 +98,17 @@
     <string name="chave_pix">Chave Pix</string>
     <string name="confirmar_pix">Confirmar Pix</string>
 
+    <!-- Cobrar -->
+    <string name="titulo_cobrar">Cobrar</string>
+    <string name="subtexto_cobrar">Qual valor você quer receber?</string>
+    <string name="nao_especificar">Não especificar valor</string>
+    <string name="confirmar">Confirmar</string>
+
+    <string name="titulo_cod_cobrar">Código de cobrança</string>
+    <string name="subtexto_cod_cobrar">Esse é seu pix copia e cola</string>
+
+
+
+
 
 </resources>
