@@ -9,16 +9,16 @@ import java.math.BigDecimal;
 import java.text.NumberFormat;
 import java.util.Locale;
 
-public class mask_money implements TextWatcher {
+public class MaskMoney implements TextWatcher {
 
         private final WeakReference<EditText> editTextWeakReference;
         private final Locale locale;
-        public mask_money(EditText editText, Locale locale) {
+        public MaskMoney(EditText editText, Locale locale) {
             this.editTextWeakReference = new WeakReference<EditText>(editText);
             this.locale = locale != null ? locale : Locale.getDefault();
         }
 
-        public mask_money(EditText editText) {
+        public MaskMoney(EditText editText) {
             this.editTextWeakReference = new WeakReference<EditText>(editText);
             this.locale = Locale.getDefault();
         }

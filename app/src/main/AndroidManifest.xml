@@ -12,10 +12,10 @@
         android:theme="@style/Theme.IntegrationProject"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".codigo_de_cobranca"
+            android:name=".ui.activity.CodigoDeCobrancaActivity"
             android:exported="false" />
         <activity
-            android:name=".cobrar"
+            android:name=".ui.activity.CobrarActivity"
             android:exported="false" />
         <activity
             android:name=".ui.activity.HomeActivity"

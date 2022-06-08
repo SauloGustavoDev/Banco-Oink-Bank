@@ -1,9 +1,11 @@
-package saulodev.com.integrationproject;
+package saulodev.com.integrationproject.ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class cobrar extends AppCompatActivity {
+import saulodev.com.integrationproject.R;
+
+public class CobrarActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

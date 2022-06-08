@@ -8,17 +8,15 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
 import java.util.Locale;
 
-import saulodev.com.integrationproject.R;
 import saulodev.com.integrationproject.databinding.ActivityRegisterBinding;
 
 import saulodev.com.integrationproject.ui.viewmodel.RegisterViewModel;
 import saulodev.com.integrationproject.util.VerificarDados;
-import saulodev.com.integrationproject.util.mask_money;
+import saulodev.com.integrationproject.util.MaskMoney;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -153,8 +151,8 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void initialMaskMoney() {
         Locale mLocale = new Locale("pt", "BR");
-        binding.edtPatrimonio.addTextChangedListener(new mask_money(binding.edtPatrimonio, mLocale));
-        binding.edtRenda.addTextChangedListener(new mask_money(binding.edtRenda, mLocale));
+        binding.edtPatrimonio.addTextChangedListener(new MaskMoney(binding.edtPatrimonio, mLocale));
+        binding.edtRenda.addTextChangedListener(new MaskMoney(binding.edtRenda, mLocale));
     }
 
 }
