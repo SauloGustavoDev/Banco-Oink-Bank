@@ -8,7 +8,7 @@
     android:background="@color/rosa">
 
     <ImageView
-        android:id="@+id/btnVoltar"
+        android:id="@+id/voltar_ic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -45,7 +45,7 @@
 
 
     <EditText
-        android:id="@+id/conta"
+        android:id="@+id/conta_txt"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginStart="12dp"
@@ -60,11 +60,11 @@
         android:paddingEnd="0dp"
         android:textColorHint="@color/cinza"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editText"
+        app:layout_constraintStart_toEndOf="@+id/agencia_txt"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/agencia_txt"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginStart="32dp"
@@ -78,7 +78,7 @@
         android:paddingEnd="0dp"
         android:textColorHint="@color/cinza"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/conta"
+        app:layout_constraintEnd_toStartOf="@id/conta_txt"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
@@ -90,9 +90,9 @@
         android:text="@string/agencia_digito"
         android:textColor="@color/white"
         android:textSize="17sp"
-        app:layout_constraintEnd_toEndOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="@+id/agencia_txt"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editText"
+        app:layout_constraintStart_toStartOf="@+id/agencia_txt"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
@@ -104,9 +104,9 @@
         android:text="@string/conta_digito"
         android:textColor="@color/white"
         android:textSize="17sp"
-        app:layout_constraintEnd_toEndOf="@+id/conta"
+        app:layout_constraintEnd_toEndOf="@+id/conta_txt"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/conta"
+        app:layout_constraintStart_toStartOf="@+id/conta_txt"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
@@ -120,10 +120,10 @@
         android:textColor="@color/white"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/agencia_txt" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/senha_txt"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginStart="32dp"
@@ -144,7 +144,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <android.widget.Button
-        android:id="@+id/btnEntrar"
+        android:id="@+id/entrar_btn"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginTop="32dp"
@@ -158,6 +158,6 @@
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/senha_txt" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
