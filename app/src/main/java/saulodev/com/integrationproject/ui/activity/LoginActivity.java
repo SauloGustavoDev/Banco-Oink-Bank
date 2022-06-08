@@ -25,7 +25,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void btnVoltarMain() {
-        binding.btnVoltar.setOnClickListener(new View.OnClickListener() {
+        binding.voltarIc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(LoginActivity.this, MainActivity.class));
@@ -35,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void btnEntrar() {
-        binding.btnEntrar.setOnClickListener(view -> {
+        binding.entrarBtn.setOnClickListener(view -> {
             startActivity(new Intent(LoginActivity.this, HomeActivity.class));
             finish();
         });

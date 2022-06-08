@@ -8,6 +8,8 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 
 import java.util.Locale;
@@ -15,6 +17,8 @@ import java.util.Locale;
 import saulodev.com.integrationproject.databinding.ActivityRegisterBinding;
 
 import saulodev.com.integrationproject.ui.viewmodel.RegisterViewModel;
+import saulodev.com.integrationproject.util.CpfCnpjUtils;
+import saulodev.com.integrationproject.util.ErrorEditText;
 import saulodev.com.integrationproject.util.VerificarDados;
 import saulodev.com.integrationproject.util.MaskMoney;
 
@@ -33,12 +37,39 @@ public class RegisterActivity extends AppCompatActivity {
         viewModel = new ViewModelProvider(this).get(RegisterViewModel.class);
 
 
+        verificandoCPF();
+
         btnVoltarMain();
 
         btnCadastrarCliente();
 
         initialMaskMoney();
 
+    }
+
+    private void verificandoCPF() {
+        binding.edtCpf.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if (binding.edtCpf.isDone())
+                    if (!CpfCnpjUtils.isValid(binding.edtCpf.getUnMasked())){
+                        ErrorEditText.setError(binding.edtCpf, getApplicationContext());
+                    }
+
+                    else{
+                        ErrorEditText.resetEditText(binding.edtCpf, getApplicationContext());
+                    }
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+            }
+        });
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -63,6 +94,7 @@ public class RegisterActivity extends AppCompatActivity {
 
 
             //CPF
+            /*
             if (VerificarDados.verificarPreenchido(binding.edtCpf.getUnMasked())){
                 if (VerificarDados.validaCPF(binding.edtCpf.getUnMasked())){
                     binding.edtCpf.setTextColor(Color.parseColor("#FF000000"));
@@ -73,6 +105,8 @@ public class RegisterActivity extends AppCompatActivity {
                 binding.edtCpf.setTextColor(Color.parseColor("#FF0000"));
                 verificador = false;
             }
+*/
+
 
             //DATA
             if (VerificarDados.verificarPreenchido(binding.edtData.getText().toString())) {
