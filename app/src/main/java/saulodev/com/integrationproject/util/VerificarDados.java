@@ -27,6 +27,11 @@ public class VerificarDados {
         return dado.length() >= 11;
     }
 
+    //Revisar critério de tamanho de nome
+    public static boolean validarNome(String name) {
+        return (name.contains(" ") && name.length() > 5);
+    }
+
     //VALIDAR CPF
     public static boolean validaCPF(String cpf) {
         if (cpf.length() < 11) {

@@ -15,4 +15,6 @@
     <color name="cinza">#D6D7DE</color>
     <color name="cinzaClaro">#F7F3F7</color>
 
+    <color name="errorColor">#FF0000</color>
+
 </resources>

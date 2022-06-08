@@ -44,7 +44,6 @@ public class HomeFragment extends Fragment {
         int inputTypePass = bind.txtSaldo.getInputType();
         bind.txtSaldo.setInputType(inputTypePass);
 
-
         bind.btnHide.setOnClickListener(view1 ->{
             int inputType = bind.txtSaldo.getInputType();
 
