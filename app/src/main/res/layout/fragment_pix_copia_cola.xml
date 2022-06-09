@@ -7,7 +7,7 @@
     tools:context=".ui.fragment.PixCopiaColaFragment">
 
     <ImageButton
-        android:id="@+id/setaVoltar_img_ic"
+        android:id="@+id/seta_voltar_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -29,7 +29,7 @@
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/setaVoltar_img_ic" />
+        app:layout_constraintTop_toBottomOf="@+id/seta_voltar_img" />
 
     <EditText
         android:id="@+id/pix_copia_e_cola_edttxt"

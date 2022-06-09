@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/voltarImg"
+        android:id="@+id/seta_voltar_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -16,7 +15,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txt_minhas_chaves"
+        android:id="@+id/minhas_chaves_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -27,10 +26,10 @@
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/voltarImg" />
+        app:layout_constraintTop_toBottomOf="@+id/seta_voltar_img" />
 
     <TextView
-        android:id="@+id/text_visualize_chaves"
+        android:id="@+id/visualize_chaves_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -38,8 +37,8 @@
         android:text="@string/visualize"
         android:textColor="@color/black"
         android:textSize="17sp"
-        app:layout_constraintStart_toStartOf="@id/txt_minhas_chaves"
-        app:layout_constraintTop_toBottomOf="@id/txt_minhas_chaves" />
+        app:layout_constraintStart_toStartOf="@id/minhas_chaves_text"
+        app:layout_constraintTop_toBottomOf="@id/minhas_chaves_text" />
 
     <com.google.android.material.divider.MaterialDivider
         android:id="@+id/divider1"
@@ -51,10 +50,10 @@
         android:background="@color/cinza"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_visualize_chaves" />
+        app:layout_constraintTop_toBottomOf="@id/visualize_chaves_text" />
 
     <ImageView
-        android:id="@+id/ic_cpf"
+        android:id="@+id/cpf_img"
         android:layout_width="28dp"
         android:layout_height="26dp"
         android:layout_marginStart="36dp"
@@ -64,19 +63,20 @@
         app:layout_constraintTop_toBottomOf="@id/divider1" />
 
     <TextView
-        android:id="@+id/text_cpf"
+        android:id="@+id/cpf_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/nunito_regular"
         android:text="@string/cpf"
         android:textColor="@color/black"
         android:textSize="14sp"
-        android:layout_marginTop="4dp"
-        android:fontFamily="@font/nunito_regular"
-        app:layout_constraintEnd_toEndOf="@id/ic_cpf"
-        app:layout_constraintStart_toStartOf="@id/ic_cpf"
-        app:layout_constraintTop_toBottomOf="@id/ic_cpf" />
+        app:layout_constraintEnd_toEndOf="@id/cpf_img"
+        app:layout_constraintStart_toStartOf="@id/cpf_img"
+        app:layout_constraintTop_toBottomOf="@id/cpf_img" />
 
     <TextView
+        android:id="@+id/cpf_descricao_txt_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
@@ -84,9 +84,9 @@
         android:text="@string/sem_cadastro"
         android:textColor="@color/black"
         android:textSize="17sp"
-        app:layout_constraintBottom_toBottomOf="@+id/text_cpf"
-        app:layout_constraintStart_toEndOf="@id/ic_cpf"
-        app:layout_constraintTop_toTopOf="@+id/ic_cpf" />
+        app:layout_constraintBottom_toBottomOf="@+id/cpf_txt"
+        app:layout_constraintStart_toEndOf="@id/cpf_img"
+        app:layout_constraintTop_toTopOf="@+id/cpf_img" />
 
 
     <com.google.android.material.divider.MaterialDivider
@@ -99,10 +99,10 @@
         android:background="@color/cinza"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_cpf" />
+        app:layout_constraintTop_toBottomOf="@id/cpf_txt" />
 
     <ImageView
-        android:id="@+id/ic_aleatorio"
+        android:id="@+id/chave_aleatoria_img"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_marginStart="36dp"
@@ -112,20 +112,21 @@
         app:layout_constraintTop_toBottomOf="@id/divider2" />
 
     <TextView
-        android:id="@+id/text_chave_aleatoria"
+        android:id="@+id/chave_aleatoria_text"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
-        android:text="@string/chave_aleatoria"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        android:textAlignment="center"
         android:layout_marginTop="4dp"
         android:fontFamily="@font/nunito_regular"
-        app:layout_constraintEnd_toEndOf="@id/ic_aleatorio"
-        app:layout_constraintStart_toStartOf="@id/ic_aleatorio"
-        app:layout_constraintTop_toBottomOf="@id/ic_aleatorio" />
+        android:text="@string/chave_aleatoria"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/chave_aleatoria_img"
+        app:layout_constraintStart_toStartOf="@id/chave_aleatoria_img"
+        app:layout_constraintTop_toBottomOf="@id/chave_aleatoria_img" />
 
     <TextView
+        android:id="@+id/aleatoria_descricao_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
@@ -133,9 +134,9 @@
         android:text="@string/sem_cadastro"
         android:textColor="@color/black"
         android:textSize="17sp"
-        app:layout_constraintBottom_toBottomOf="@+id/text_chave_aleatoria"
-        app:layout_constraintStart_toEndOf="@id/ic_aleatorio"
-        app:layout_constraintTop_toTopOf="@+id/ic_aleatorio" />
+        app:layout_constraintBottom_toBottomOf="@+id/chave_aleatoria_text"
+        app:layout_constraintStart_toEndOf="@id/chave_aleatoria_img"
+        app:layout_constraintTop_toTopOf="@+id/chave_aleatoria_img" />
 
 
     <com.google.android.material.divider.MaterialDivider
@@ -148,10 +149,10 @@
         android:background="@color/cinza"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_chave_aleatoria" />
+        app:layout_constraintTop_toBottomOf="@id/chave_aleatoria_text" />
 
     <ImageView
-        android:id="@+id/ic_telefone"
+        android:id="@+id/telefone_img"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_marginStart="36dp"
@@ -161,20 +162,21 @@
         app:layout_constraintTop_toBottomOf="@id/divider3" />
 
     <TextView
-        android:id="@+id/text_telefone"
+        android:id="@+id/telefone_text"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
-        android:text="@string/telefone"
-        android:textColor="@color/black"
-        android:textSize="14sp"
-        android:textAlignment="center"
         android:layout_marginTop="4dp"
         android:fontFamily="@font/nunito_regular"
-        app:layout_constraintEnd_toEndOf="@id/ic_telefone"
-        app:layout_constraintStart_toStartOf="@id/ic_telefone"
-        app:layout_constraintTop_toBottomOf="@id/ic_telefone" />
+        android:text="@string/telefone"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/telefone_img"
+        app:layout_constraintStart_toStartOf="@id/telefone_img"
+        app:layout_constraintTop_toBottomOf="@id/telefone_img" />
 
     <TextView
+        android:id="@+id/telefone_descricao_txt_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
@@ -182,23 +184,23 @@
         android:text="@string/sem_cadastro"
         android:textColor="@color/black"
         android:textSize="17sp"
-        app:layout_constraintBottom_toBottomOf="@+id/text_telefone"
-        app:layout_constraintStart_toEndOf="@id/ic_telefone"
-        app:layout_constraintTop_toTopOf="@+id/ic_telefone" />
+        app:layout_constraintBottom_toBottomOf="@+id/telefone_text"
+        app:layout_constraintStart_toEndOf="@id/telefone_img"
+        app:layout_constraintTop_toTopOf="@+id/telefone_img" />
 
     <android.widget.Button
-        android:id="@+id/cadastrarChaveBtn"
+        android:id="@+id/cadastrar_chave_btn"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginStart="30dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/btn_rosa"
         android:fontFamily="@font/nunito_semibold"
         android:text="@string/cadastrar_nova_chave"
-        android:layout_marginTop="32dp"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_telefone" />
+        app:layout_constraintTop_toBottomOf="@+id/telefone_text" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

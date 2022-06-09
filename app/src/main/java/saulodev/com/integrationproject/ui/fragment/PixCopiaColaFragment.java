@@ -28,10 +28,10 @@ public class PixCopiaColaFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        bind.btnContinuarPixCopiaCola.setOnClickListener(view1 -> {
+        bind.continuarPixCopiaEColaBtn.setOnClickListener(view1 -> {
             replaceConfirmaPix();
         });
-        bind.imageSetaCopiaCola.setOnClickListener(view1 -> {
+        bind.setaVoltarImg.setOnClickListener(view1 -> {
             requireActivity().onBackPressed();
         });
     }
