@@ -31,5 +31,9 @@ public class CadastrarChavePixFragment extends Fragment {
         bind.cadastrarBtn.setOnClickListener(view1 -> {
             requireActivity().onBackPressed();
         });
+
+        bind.linearBtn.setOnClickListener(view1 -> {
+            requireActivity().onBackPressed();
+        });
     }
 }

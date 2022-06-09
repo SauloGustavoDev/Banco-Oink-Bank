@@ -28,17 +28,18 @@ public class MinhasChavesFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        bind.setaVoltarImg.setOnClickListener(view1 -> {
+        bind.voltarImg.setOnClickListener(view1 -> {
             requireActivity().onBackPressed();
         });
 
         bind.cadastrarChaveBtn.setOnClickListener(view1 -> {
             replaceCadastrarChaveFragment();
+            bind.frameCadastrarChave.requestFocus();
         });
     }
 
     private void replaceCadastrarChaveFragment() {
         FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.frame, new CadastrarChavePixFragment()).addToBackStack(null).commit();
+        fragmentManager.beginTransaction().replace(R.id.frame_cadastrarChave, new CadastrarChavePixFragment()).addToBackStack(null).commit();
     }
 }
