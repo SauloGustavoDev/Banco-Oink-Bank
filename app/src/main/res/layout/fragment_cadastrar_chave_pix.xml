@@ -7,7 +7,7 @@
     tools:context=".ui.fragment.CadastrarChavePixFragment">
 
     <TextView
-        android:id="@+id/cadastrarTexto"
+        android:id="@+id/cadastrar_titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textoSelecionarChave"
+        android:id="@+id/selecionar_chave_txt"
         android:layout_width="0sp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -31,26 +31,26 @@
         android:text="@string/selecionar_tipo_chave"
         android:textColor="@color/black"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/spinnerSelecionarTipoChave"
+        app:layout_constraintEnd_toStartOf="@+id/selecionar_tipo_chave_spinner"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cadastrarTexto" />
+        app:layout_constraintTop_toBottomOf="@+id/cadastrar_titulo" />
 
     <Spinner
-        android:id="@+id/spinnerSelecionarTipoChave"
+        android:id="@+id/selecionar_tipo_chave_spinner"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="16dp"
         android:entries="@array/tipos_de_chaves"
         android:textAlignment="center"
         android:fontFamily="@font/nunito_regular"
-        app:layout_constraintBottom_toBottomOf="@+id/textoSelecionarChave"
+        app:layout_constraintBottom_toBottomOf="@+id/selecionar_chave_txt"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textoSelecionarChave"
-        app:layout_constraintTop_toTopOf="@+id/textoSelecionarChave" />
+        app:layout_constraintStart_toEndOf="@+id/selecionar_chave_txt"
+        app:layout_constraintTop_toTopOf="@+id/selecionar_chave_txt" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/sua_chave_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -60,10 +60,10 @@
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textoSelecionarChave" />
+        app:layout_constraintTop_toBottomOf="@+id/selecionar_chave_txt" />
 
     <TextView
-        android:id="@+id/chave"
+        android:id="@+id/chave_campo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
@@ -74,8 +74,8 @@
         android:textColor="@color/rosa"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView5"
-        app:layout_constraintTop_toBottomOf="@+id/textoSelecionarChave"
+        app:layout_constraintStart_toEndOf="@+id/sua_chave_txt"
+        app:layout_constraintTop_toBottomOf="@+id/selecionar_chave_txt"
         tools:text="Chave Teste" />
 
     <android.widget.Button
@@ -92,6 +92,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chave" />
+        app:layout_constraintTop_toBottomOf="@+id/chave_campo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
