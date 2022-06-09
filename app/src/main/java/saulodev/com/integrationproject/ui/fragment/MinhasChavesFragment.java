@@ -28,7 +28,7 @@ public class MinhasChavesFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        bind.setaVoltarImg.setOnClickListener(view1 -> {
+        bind.voltarImg.setOnClickListener(view1 -> {
             requireActivity().onBackPressed();
         });
 

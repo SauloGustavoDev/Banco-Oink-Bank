@@ -7,7 +7,7 @@
     tools:context=".ui.fragment.EditFragment">
 
     <LinearLayout
-        android:id="@+id/linear_layout"
+        android:id="@+id/linear_btn"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:alpha="0.25"
