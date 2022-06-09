@@ -224,7 +224,7 @@
             app:layout_constraintTop_toBottomOf="@id/divider5" />
 
         <EditText
-            android:id="@+id/renda_edt"
+            android:id="@+id/edt_valor"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/nunito_regular"
@@ -239,7 +239,7 @@
             android:layout_marginTop="5dp"
             app:layout_constraintEnd_toEndOf="@id/divider5"
             app:layout_constraintStart_toStartOf="@id/divider5"
-            app:layout_constraintTop_toBottomOf="@id/renda_edt" />
+            app:layout_constraintTop_toBottomOf="@id/edt_valor" />
 
         <TextView
             android:id="@+id/patrimonio_txt"
@@ -260,8 +260,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:fontFamily="@font/nunito_regular"
-            app:layout_constraintEnd_toEndOf="@id/renda_edt"
-            app:layout_constraintStart_toStartOf="@id/renda_edt"
+            app:layout_constraintEnd_toEndOf="@id/edt_valor"
+            app:layout_constraintStart_toStartOf="@id/edt_valor"
             app:layout_constraintTop_toBottomOf="@id/divider6" />
 
         <com.google.android.material.divider.MaterialDivider

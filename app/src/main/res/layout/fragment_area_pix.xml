@@ -7,7 +7,7 @@
     tools:context=".ui.fragment.AreaPixFragment">
 
     <ImageView
-        android:id="@+id/voltar_img"
+        android:id="@+id/btn_voltar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -27,7 +27,7 @@
         android:textColor="@color/black"
         android:textSize="28dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/voltar_img" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_voltar" />
 
     <TextView
         android:id="@+id/areapix_descricao"

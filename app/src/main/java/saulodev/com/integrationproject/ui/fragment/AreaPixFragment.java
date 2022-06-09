@@ -38,7 +38,7 @@ public class AreaPixFragment extends Fragment {
             replacePixCopiaColaFragment();
         });
 
-        bind.voltarImg.setOnClickListener(view1 -> {
+        bind.btnVoltar.setOnClickListener(view1 -> {
             requireActivity().onBackPressed();
         });
     }

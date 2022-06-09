@@ -12,12 +12,6 @@
         android:theme="@style/Theme.IntegrationProject"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".ui.activity.CodigoDeCobrancaActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.activity.CobrarActivity"
-            android:exported="false" />
-        <activity
             android:name=".ui.activity.HomeActivity"
             android:exported="false" />
         <activity
