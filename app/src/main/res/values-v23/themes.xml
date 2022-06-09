@@ -16,6 +16,7 @@
         <!-- Customize your theme here. -->
         <item name="android:drawableTint">@color/rosa</item>
         <item name="fontFamily">@font/nunito_regular</item>
+        <item name="android:textColor">@color/black</item>
 
     </style>
 
