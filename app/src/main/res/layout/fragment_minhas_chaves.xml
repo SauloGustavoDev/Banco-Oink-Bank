@@ -196,7 +196,6 @@
         android:fontFamily="@font/nunito_semibold"
         android:text="@string/cadastrar_nova_chave"
         android:layout_marginTop="32dp"
-        android:textAllCaps="false"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

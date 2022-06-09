@@ -387,7 +387,6 @@
         android:layout_marginTop="10dp"
         android:layout_marginStart="30dp"
         android:fontFamily="@font/nunito_semibold"
-        android:textAllCaps="false"
         android:textColor="@color/white"
         android:layout_marginEnd="30dp"
         android:text="@string/cadastrar"
