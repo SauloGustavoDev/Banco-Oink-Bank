@@ -48,11 +48,11 @@ public class HomeFragment extends Fragment {
             int inputType = bind.txtSaldo.getInputType();
 
             if(inputType == inputTypePass){
-                bind.btnHide.setBackground(getResources().getDrawable(R.drawable.ic_eye_ios));
+                bind.btnHide.setBackground(getResources().getDrawable(R.drawable.ic_eye_visibility));
                 bind.txtSaldo.setInputType(InputType.TYPE_NUMBER_VARIATION_NORMAL);
             }else {
                 bind.txtSaldo.setInputType(inputTypePass);
-                bind.btnHide.setBackground(getResources().getDrawable(R.drawable.ic_eye_off_ios));
+                bind.btnHide.setBackground(getResources().getDrawable(R.drawable.ic_eye_visibility_off));
 
             }
         });
