@@ -85,7 +85,7 @@ public class EditFragment extends Fragment {
             public void afterTextChanged(Editable editable) {}
         });
 
-        bind.linearBtn.setOnClickListener(view1 -> {
+        bind.linearFundoTransparenteBtn.setOnClickListener(view1 -> {
             requireActivity().onBackPressed();
         });
 

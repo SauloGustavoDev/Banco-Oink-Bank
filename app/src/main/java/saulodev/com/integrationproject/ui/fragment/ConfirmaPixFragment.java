@@ -30,11 +30,11 @@ public class ConfirmaPixFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        binding.btnVoltar.setOnClickListener(view1 -> {
+        binding.voltarBtn.setOnClickListener(view1 -> {
             requireActivity().onBackPressed();
         });
 
-        binding.btnConfirmarPix.setOnClickListener(view1 -> {
+        binding.confirmarBtn.setOnClickListener(view1 -> {
             getFragmentManager().popBackStack();
             replaceHomeFragment();
         });
