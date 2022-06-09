@@ -7,7 +7,11 @@
     tools:context=".ui.fragment.AreaPixFragment">
 
     <ImageView
+<<<<<<< HEAD
         android:id="@+id/btn_voltar"
+=======
+        android:id="@+id/voltar_img_btn"
+>>>>>>> b01387c1ea6570a1463175950e401df846c5360b
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -17,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/areapix_titulo"
+        android:id="@+id/areapix_titulo_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -25,12 +29,16 @@
         android:fontFamily="@font/nunito_extrabold"
         android:text="@string/area_pix_titulo"
         android:textColor="@color/black"
-        android:textSize="28dp"
+        android:textSize="28sp"
         app:layout_constraintStart_toStartOf="parent"
+<<<<<<< HEAD
         app:layout_constraintTop_toBottomOf="@+id/btn_voltar" />
+=======
+        app:layout_constraintTop_toBottomOf="@+id/voltar_img_btn" />
+>>>>>>> b01387c1ea6570a1463175950e401df846c5360b
 
     <TextView
-        android:id="@+id/areapix_descricao"
+        android:id="@+id/areapix_descricao_subtitulo_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -40,10 +48,10 @@
         android:textColor="@color/black"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/areapix_titulo" />
+        app:layout_constraintTop_toBottomOf="@+id/areapix_titulo_txt" />
 
     <LinearLayout
-        android:id="@+id/linear_pix_qrcode"
+        android:id="@+id/pix_qrcode_linear_btn"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginTop="32dp"
@@ -54,11 +62,11 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/areapix_descricao"
+        app:layout_constraintTop_toBottomOf="@+id/areapix_descricao_subtitulo_txt"
         tools:ignore="MissingConstraints,Orientation">
 
         <ImageView
-            android:id="@+id/icon_pix_qrcode"
+            android:id="@+id/pix_qrcode_ic"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:scaleType="centerCrop"
@@ -67,16 +75,16 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/text_pix_QRCode"
+        android:id="@+id/pix_qrcode_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_regular"
         android:text="@string/qr_code"
         android:textColor="@color/black"
         android:textSize="13sp"
-        app:layout_constraintEnd_toEndOf="@+id/linear_pix_qrcode"
-        app:layout_constraintStart_toStartOf="@+id/linear_pix_qrcode"
-        app:layout_constraintTop_toBottomOf="@+id/linear_pix_qrcode" />
+        app:layout_constraintEnd_toEndOf="@+id/pix_qrcode_linear_btn"
+        app:layout_constraintStart_toStartOf="@+id/pix_qrcode_linear_btn"
+        app:layout_constraintTop_toBottomOf="@+id/pix_qrcode_linear_btn" />
 
     <LinearLayout
         android:id="@+id/linear_pix_celular"
@@ -86,14 +94,14 @@
         android:layout_marginEnd="24dp"
         android:background="@drawable/background_iconepix"
         android:gravity="center"
-        app:layout_constraintEnd_toStartOf="@+id/linear_pix_email"
+        app:layout_constraintEnd_toStartOf="@+id/pix_email_linear_btn"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/linear_pix_qrcode"
-        app:layout_constraintTop_toBottomOf="@+id/areapix_descricao"
+        app:layout_constraintStart_toEndOf="@+id/pix_qrcode_linear_btn"
+        app:layout_constraintTop_toBottomOf="@+id/areapix_descricao_subtitulo_txt"
         tools:ignore="MissingConstraints,Orientation">
 
         <ImageView
-            android:id="@+id/icon_pix_celular"
+            android:id="@+id/pix_celular_ic"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/ic_celular" />
@@ -101,7 +109,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/txt_pix_celular"
+        android:id="@+id/pix_celular_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_regular"
@@ -113,20 +121,21 @@
         app:layout_constraintTop_toBottomOf="@+id/linear_pix_celular" />
 
     <LinearLayout
-        android:id="@+id/linear_pix_email"
+        android:id="@+id/pix_email_linear_btn"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
         android:background="@drawable/background_iconepix"
         android:gravity="center"
-        app:layout_constraintEnd_toStartOf="@+id/linear_pix_cpf"
+        app:layout_constraintEnd_toStartOf="@+id/pix_cpf_linear_btn"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/linear_pix_celular"
-        app:layout_constraintTop_toBottomOf="@+id/areapix_descricao"
+        app:layout_constraintTop_toBottomOf="@+id/areapix_descricao_subtitulo_txt"
         tools:ignore="MissingConstraints,Orientation">
 
         <ImageView
+            android:id="@+id/email_ic"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/ic_email" />
@@ -134,19 +143,19 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/txt_pix_email"
+        android:id="@+id/pix_email_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_regular"
         android:text="@string/pix_email"
         android:textColor="@color/black"
         android:textSize="13sp"
-        app:layout_constraintEnd_toEndOf="@+id/linear_pix_email"
-        app:layout_constraintStart_toStartOf="@+id/linear_pix_email"
-        app:layout_constraintTop_toBottomOf="@+id/linear_pix_email" />
+        app:layout_constraintEnd_toEndOf="@+id/pix_email_linear_btn"
+        app:layout_constraintStart_toStartOf="@+id/pix_email_linear_btn"
+        app:layout_constraintTop_toBottomOf="@+id/pix_email_linear_btn" />
 
     <LinearLayout
-        android:id="@+id/linear_pix_cpf"
+        android:id="@+id/pix_cpf_linear_btn"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginTop="32dp"
@@ -154,43 +163,44 @@
         android:background="@drawable/background_iconepix"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/linear_pix_email"
-        app:layout_constraintTop_toBottomOf="@+id/areapix_descricao"
+        app:layout_constraintStart_toEndOf="@+id/pix_email_linear_btn"
+        app:layout_constraintTop_toBottomOf="@+id/areapix_descricao_subtitulo_txt"
         tools:ignore="MissingConstraints,Orientation">
 
         <ImageView
-            android:layout_width="30dp"
+            android:id="@+id/cpf_cnpj_ic"
+            android:layout_width="29dp"
             android:layout_height="30dp"
             android:src="@drawable/ic_cpf" />
 
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/cpf_conpj_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_regular"
         android:text="@string/pix_cpf"
         android:textColor="@color/black"
         android:textSize="13sp"
-        app:layout_constraintEnd_toEndOf="@+id/linear_pix_cpf"
-        app:layout_constraintStart_toStartOf="@+id/linear_pix_cpf"
-        app:layout_constraintTop_toBottomOf="@+id/linear_pix_cpf" />
+        app:layout_constraintEnd_toEndOf="@+id/pix_cpf_linear_btn"
+        app:layout_constraintStart_toStartOf="@+id/pix_cpf_linear_btn"
+        app:layout_constraintTop_toBottomOf="@+id/pix_cpf_linear_btn" />
 
     <LinearLayout
-        android:id="@+id/linear_pix_chaveAleatoria"
+        android:id="@+id/pix_chave_aleatoria_linear_btn"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginTop="24dp"
         android:background="@drawable/background_iconepix"
         android:gravity="center"
-        app:layout_constraintEnd_toEndOf="@+id/linear_pix_qrcode"
-        app:layout_constraintStart_toStartOf="@+id/linear_pix_qrcode"
-        app:layout_constraintTop_toBottomOf="@+id/text_pix_QRCode"
+        app:layout_constraintEnd_toEndOf="@+id/pix_qrcode_linear_btn"
+        app:layout_constraintStart_toStartOf="@+id/pix_qrcode_linear_btn"
+        app:layout_constraintTop_toBottomOf="@+id/pix_qrcode_txt"
         tools:ignore="MissingConstraints,Orientation">
 
         <ImageView
-            android:id="@+id/icon_pix_chave"
+            android:id="@+id/pix_chave_ic"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:scaleType="centerCrop"
@@ -199,7 +209,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/txt_pix_chaveAleatoria"
+        android:id="@+id/pix_chave_aleatoria_txt"
         android:layout_width="60dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_regular"
@@ -207,12 +217,12 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="13sp"
-        app:layout_constraintEnd_toEndOf="@+id/linear_pix_chaveAleatoria"
-        app:layout_constraintStart_toStartOf="@+id/linear_pix_chaveAleatoria"
-        app:layout_constraintTop_toBottomOf="@+id/linear_pix_chaveAleatoria" />
+        app:layout_constraintEnd_toEndOf="@+id/pix_chave_aleatoria_linear_btn"
+        app:layout_constraintStart_toStartOf="@+id/pix_chave_aleatoria_linear_btn"
+        app:layout_constraintTop_toBottomOf="@+id/pix_chave_aleatoria_linear_btn" />
 
     <LinearLayout
-        android:id="@+id/linear_pix_copiaeCola"
+        android:id="@+id/pix_copia_cola_linear_btn"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginTop="24dp"
@@ -220,10 +230,11 @@
         android:background="@drawable/background_iconepix"
         app:layout_constraintEnd_toEndOf="@+id/linear_pix_celular"
         app:layout_constraintStart_toStartOf="@+id/linear_pix_celular"
-        app:layout_constraintTop_toBottomOf="@+id/txt_pix_celular"
+        app:layout_constraintTop_toBottomOf="@+id/pix_celular_txt"
         tools:ignore="MissingConstraints,Orientation">
 
         <ImageView
+            android:id="@+id/copiacola_ic"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/ic_copiaecola" />
@@ -231,7 +242,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/txt_pix_copiaeCola"
+        android:id="@+id/pix_copiaecola_txt"
         android:layout_width="60dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_regular"
@@ -239,24 +250,24 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="13sp"
-        app:layout_constraintEnd_toEndOf="@+id/linear_pix_copiaeCola"
-        app:layout_constraintStart_toStartOf="@+id/linear_pix_copiaeCola"
-        app:layout_constraintTop_toBottomOf="@+id/linear_pix_copiaeCola" />
+        app:layout_constraintEnd_toEndOf="@+id/pix_copia_cola_linear_btn"
+        app:layout_constraintStart_toStartOf="@+id/pix_copia_cola_linear_btn"
+        app:layout_constraintTop_toBottomOf="@+id/pix_copia_cola_linear_btn" />
 
     <LinearLayout
-        android:id="@+id/linear_pix_transferir"
+        android:id="@+id/pix_transferir_linear_btn"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginTop="24dp"
         android:background="@drawable/background_iconepix"
         android:gravity="center"
-        app:layout_constraintEnd_toEndOf="@+id/linear_pix_email"
-        app:layout_constraintStart_toStartOf="@+id/linear_pix_email"
-        app:layout_constraintTop_toBottomOf="@+id/txt_pix_email"
+        app:layout_constraintEnd_toEndOf="@+id/pix_email_linear_btn"
+        app:layout_constraintStart_toStartOf="@+id/pix_email_linear_btn"
+        app:layout_constraintTop_toBottomOf="@+id/pix_email_txt"
         tools:ignore="MissingConstraints,Orientation">
 
         <ImageView
-            android:id="@+id/icon_pix_transferir"
+            android:id="@+id/pix_transferir_ic"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:scaleType="centerCrop"
@@ -265,30 +276,31 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/txt_pix_transferir"
+        android:id="@+id/pix_transferir_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_regular"
         android:text="@string/pix_transferir"
         android:textColor="@color/black"
         android:textSize="13sp"
-        app:layout_constraintEnd_toEndOf="@+id/linear_pix_transferir"
-        app:layout_constraintStart_toStartOf="@+id/linear_pix_transferir"
-        app:layout_constraintTop_toBottomOf="@+id/linear_pix_transferir" />
+        app:layout_constraintEnd_toEndOf="@+id/pix_transferir_linear_btn"
+        app:layout_constraintStart_toStartOf="@+id/pix_transferir_linear_btn"
+        app:layout_constraintTop_toBottomOf="@+id/pix_transferir_linear_btn" />
 
     <LinearLayout
-        android:id="@+id/linear_pix_receber"
+        android:id="@+id/pix_receber_linear_btn"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginTop="24dp"
         android:background="@drawable/background_iconepix"
         android:gravity="center"
-        app:layout_constraintEnd_toEndOf="@+id/linear_pix_cpf"
-        app:layout_constraintStart_toStartOf="@+id/linear_pix_cpf"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="@+id/pix_cpf_linear_btn"
+        app:layout_constraintStart_toStartOf="@+id/pix_cpf_linear_btn"
+        app:layout_constraintTop_toBottomOf="@+id/cpf_conpj_txt"
         tools:ignore="MissingConstraints,Orientation">
 
         <ImageView
+            android:id="@+id/transferir_ic"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:rotation="180"
@@ -298,16 +310,16 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/txt_pix_receber"
+        android:id="@+id/pix_receber_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_regular"
         android:text="@string/pix_receber"
         android:textColor="@color/black"
         android:textSize="13sp"
-        app:layout_constraintEnd_toEndOf="@+id/linear_pix_receber"
-        app:layout_constraintStart_toStartOf="@+id/linear_pix_receber"
-        app:layout_constraintTop_toBottomOf="@+id/linear_pix_receber" />
+        app:layout_constraintEnd_toEndOf="@+id/pix_receber_linear_btn"
+        app:layout_constraintStart_toStartOf="@+id/pix_receber_linear_btn"
+        app:layout_constraintTop_toBottomOf="@+id/pix_receber_linear_btn" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/minhas_chaves_btn"
@@ -326,7 +338,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_pix_copiaeCola" />
+        app:layout_constraintTop_toBottomOf="@+id/pix_copiaecola_txt" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

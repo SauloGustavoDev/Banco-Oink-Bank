@@ -34,11 +34,15 @@ public class AreaPixFragment extends Fragment {
             replaceMinhasChavesFragment();
         });
 
-        bind.linearPixCopiaeCola.setOnClickListener(view1 -> {
+        bind.pixCopiaColaLinearBtn.setOnClickListener(view1 -> {
             replacePixCopiaColaFragment();
         });
 
+<<<<<<< HEAD
         bind.btnVoltar.setOnClickListener(view1 -> {
+=======
+        bind.voltarImgBtn.setOnClickListener(view1 -> {
+>>>>>>> b01387c1ea6570a1463175950e401df846c5360b
             requireActivity().onBackPressed();
         });
     }
