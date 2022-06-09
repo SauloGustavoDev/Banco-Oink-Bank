@@ -8,7 +8,7 @@
     tools:context=".ui.fragment.ConfirmaPixFragment">
 
     <android.widget.Button
-        android:id="@+id/btnConfirmarPix"
+        android:id="@+id/confirmar_btn"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
@@ -22,96 +22,94 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtCpf"
+        app:layout_constraintTop_toBottomOf="@+id/cpf_txt"
         app:layout_constraintVertical_bias="0.098" />
 
     <TextView
-        android:id="@+id/txtCpf"
+        android:id="@+id/cpf_txt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="8dp"
         android:text="@string/cpf"
         android:fontFamily="@font/nunito_regular"
         android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNome" />
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="@id/nome_txt"
+        app:layout_constraintTop_toBottomOf="@+id/nome_txt" />
 
     <TextView
-        android:id="@+id/txtChavePix"
+        android:id="@+id/chave_pix_txt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="28dp"
         android:text="@string/chave_pix"
         android:fontFamily="@font/nunito_regular"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSaldo" />
+        app:layout_constraintTop_toBottomOf="@+id/saldo_campo_txt" />
 
     <TextView
-        android:id="@+id/campoChavePix"
+        android:id="@+id/chave_pix_campo_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         android:textColor="@color/black"
         android:fontFamily="@font/nunito_regular"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/txtChavePix"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/chave_pix_txt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/txtChavePix"
-        app:layout_constraintTop_toTopOf="@+id/txtChavePix"
+        app:layout_constraintStart_toEndOf="@+id/chave_pix_txt"
+        app:layout_constraintTop_toTopOf="@+id/chave_pix_txt"
         app:layout_constraintVertical_bias="0.0"
         tools:text="asdnmsad4688ASd1265" />
 
     <TextView
-        android:id="@+id/campoNome"
+        android:id="@+id/nome_campo_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         tools:text="André da silva"
         android:fontFamily="@font/nunito_regular"
         android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/txtNome"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/nome_txt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/txtNome"
-        app:layout_constraintTop_toTopOf="@+id/txtNome"
+        app:layout_constraintStart_toEndOf="@+id/nome_txt"
+        app:layout_constraintTop_toTopOf="@+id/nome_txt"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/campoCpf"
+        android:id="@+id/cpf_campo_txt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         tools:text="000.000.000-00"
         android:textColor="@color/black"
         android:fontFamily="@font/nunito_regular"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/txtCpf"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cpf_txt"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txtCpf"
+        app:layout_constraintTop_toTopOf="@+id/cpf_txt"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/txtNome"
+        android:id="@+id/nome_txt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/nunito_regular"
         android:text="@string/nome"
         android:textColor="@color/black"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtChavePix" />
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="@id/chave_pix_txt"
+        app:layout_constraintTop_toBottomOf="@+id/chave_pix_txt" />
 
     <TextView
-        android:id="@+id/txtSaldo"
+        android:id="@+id/saldo_campo_txt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="2dp"
@@ -120,55 +118,58 @@
         android:text="999.00"
         android:textColor="@color/rosa"
         android:textSize="22sp"
-        app:layout_constraintStart_toEndOf="@+id/textView17"
-        app:layout_constraintTop_toBottomOf="@+id/areapix_descricao2" />
+        app:layout_constraintStart_toEndOf="@+id/moeda_txt"
+        app:layout_constraintTop_toBottomOf="@+id/confirma_dados_subtitulo_txt" />
 
     <TextView
-        android:id="@+id/textView17"
+        android:id="@+id/moeda_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_regular"
         android:text="R$"
         android:textColor="@color/rosa"
         android:textSize="22sp"
-        app:layout_constraintBottom_toBottomOf="@+id/txtSaldo"
+        app:layout_constraintBottom_toBottomOf="@+id/saldo_campo_txt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.402"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txtSaldo"
+        app:layout_constraintTop_toTopOf="@+id/saldo_campo_txt"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/areapix_descricao2"
+        android:id="@+id/confirma_dados_subtitulo_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/nunito_semibold"
+        android:layout_marginStart="16dp"
         android:text="@string/texto_confirmacao_pix"
         android:textColor="@color/black"
         android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/confirmarTitulo" />
+        app:layout_constraintTop_toBottomOf="@+id/confirmacao_titulo" />
 
     <TextView
-        android:id="@+id/confirmarTitulo"
+        android:id="@+id/confirmacao_titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/nunito_extrabold"
         android:text="@string/confirmacao"
         android:textColor="@color/black"
         android:textSize="28sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnVoltar" />
+        app:layout_constraintTop_toBottomOf="@+id/voltar_btn" />
 
     <ImageView
-        android:id="@+id/btnVoltar"
+        android:id="@+id/voltar_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:src="@drawable/ic_seta"
         app:layout_constraintStart_toStartOf="parent"
