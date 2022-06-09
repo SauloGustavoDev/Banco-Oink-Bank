@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activity.CodigoDeCobrancaActivity">
+    tools:context=".ui.fragment.CodigoCobrancaFragment">
 
     <ImageView
-        android:id="@+id/voltar_img"
+        android:id="@+id/btn_voltar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/cobrar_titulo"
+        android:id="@+id/txt_codigo_cobranca"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -27,10 +27,10 @@
         android:textColor="@color/black"
         android:textSize="28dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/voltar_img" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_voltar" />
 
     <TextView
-        android:id="@+id/cobrar_descricao"
+        android:id="@+id/txt_pix_copia_cola"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -40,7 +40,7 @@
         android:textColor="@color/black"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cobrar_titulo" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_codigo_cobranca" />
 
     <TextView
         android:id="@+id/chave_pix"
@@ -52,16 +52,17 @@
         tools:text="bankapp.com//9hf89ia8s8asnshd8s9"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cobrar_descricao" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_pix_copia_cola" />
 
     <ImageView
+        android:id="@+id/icon_copia"
         android:layout_width="22dp"
         android:layout_height="22dp"
         android:layout_marginTop="8dp"
         android:layout_marginStart="8dp"
         android:src="@drawable/ic_copiaecola"
         app:layout_constraintStart_toEndOf="@+id/chave_pix"
-        app:layout_constraintTop_toBottomOf="@+id/cobrar_descricao">
+        app:layout_constraintTop_toBottomOf="@+id/txt_pix_copia_cola">
 
     </ImageView>
 
@@ -69,7 +70,7 @@
         android:layout_width="350dp"
         android:layout_height="350dp"
         android:src="@drawable/ic_qrcode"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/btn_confirmar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chave_pix">
@@ -77,14 +78,15 @@
     </ImageView>
 
     <android.widget.Button
-        android:id="@+id/button"
+        android:id="@+id/btn_confirmar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/btn_rosa"
         android:text="@string/confirmar"
+        android:fontFamily="@font/nunito_semibold"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

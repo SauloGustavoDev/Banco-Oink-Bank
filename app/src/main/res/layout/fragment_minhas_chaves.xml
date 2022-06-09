@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white">
 
+<<<<<<< HEAD
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+=======
+    <ImageView
+        android:id="@+id/seta_voltar_img"
+        android:layout_width="wrap_content"
+>>>>>>> 11d8a56716cd948e15ae7b40973823b17a6ce410
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -221,4 +226,196 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+<<<<<<< HEAD
+=======
+    <TextView
+        android:id="@+id/minhas_chaves_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nunito_extrabold"
+        android:text="@string/minhas_chaves"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seta_voltar_img" />
+
+    <TextView
+        android:id="@+id/visualize_chaves_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/nunito_regular"
+        android:text="@string/visualize"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="@id/minhas_chaves_text"
+        app:layout_constraintTop_toBottomOf="@id/minhas_chaves_text" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/divider1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="15dp"
+        android:background="@color/cinza"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/visualize_chaves_text" />
+
+    <ImageView
+        android:id="@+id/cpf_img"
+        android:layout_width="28dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_cpf"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider1" />
+
+    <TextView
+        android:id="@+id/cpf_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/nunito_regular"
+        android:text="@string/cpf"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/cpf_img"
+        app:layout_constraintStart_toStartOf="@id/cpf_img"
+        app:layout_constraintTop_toBottomOf="@id/cpf_img" />
+
+    <TextView
+        android:id="@+id/cpf_descricao_txt_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:fontFamily="@font/nunito_regular"
+        android:text="@string/sem_cadastro"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cpf_txt"
+        app:layout_constraintStart_toEndOf="@id/cpf_img"
+        app:layout_constraintTop_toTopOf="@+id/cpf_img" />
+
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/divider2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:background="@color/cinza"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cpf_txt" />
+
+    <ImageView
+        android:id="@+id/chave_aleatoria_img"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_key"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+    <TextView
+        android:id="@+id/chave_aleatoria_text"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/nunito_regular"
+        android:text="@string/chave_aleatoria"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/chave_aleatoria_img"
+        app:layout_constraintStart_toStartOf="@id/chave_aleatoria_img"
+        app:layout_constraintTop_toBottomOf="@id/chave_aleatoria_img" />
+
+    <TextView
+        android:id="@+id/aleatoria_descricao_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:fontFamily="@font/nunito_regular"
+        android:text="@string/sem_cadastro"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/chave_aleatoria_text"
+        app:layout_constraintStart_toEndOf="@id/chave_aleatoria_img"
+        app:layout_constraintTop_toTopOf="@+id/chave_aleatoria_img" />
+
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/divider3"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:background="@color/cinza"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chave_aleatoria_text" />
+
+    <ImageView
+        android:id="@+id/telefone_img"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_celular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider3" />
+
+    <TextView
+        android:id="@+id/telefone_text"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/nunito_regular"
+        android:text="@string/telefone"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@id/telefone_img"
+        app:layout_constraintStart_toStartOf="@id/telefone_img"
+        app:layout_constraintTop_toBottomOf="@id/telefone_img" />
+
+    <TextView
+        android:id="@+id/telefone_descricao_txt_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:fontFamily="@font/nunito_regular"
+        android:text="@string/sem_cadastro"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/telefone_text"
+        app:layout_constraintStart_toEndOf="@id/telefone_img"
+        app:layout_constraintTop_toTopOf="@+id/telefone_img" />
+
+    <android.widget.Button
+        android:id="@+id/cadastrar_chave_btn"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/btn_rosa"
+        android:fontFamily="@font/nunito_semibold"
+        android:text="@string/cadastrar_nova_chave"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/telefone_text" />
+
+>>>>>>> 11d8a56716cd948e15ae7b40973823b17a6ce410
 </androidx.constraintlayout.widget.ConstraintLayout>

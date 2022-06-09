@@ -41,18 +41,18 @@ public class HomeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         mViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
 
-        int inputTypePass = bind.txtSaldo.getInputType();
-        bind.txtSaldo.setInputType(inputTypePass);
+        int inputTypePass = bind.saldoUserTxt.getInputType();
+        bind.saldoUserTxt.setInputType(inputTypePass);
 
-        bind.btnHide.setOnClickListener(view1 ->{
-            int inputType = bind.txtSaldo.getInputType();
+        bind.hideBtn.setOnClickListener(view1 ->{
+            int inputType = bind.saldoUserTxt.getInputType();
 
             if(inputType == inputTypePass){
-                bind.btnHide.setBackground(getResources().getDrawable(R.drawable.ic_eye_ios));
-                bind.txtSaldo.setInputType(InputType.TYPE_NUMBER_VARIATION_NORMAL);
+                bind.hideBtn.setBackground(getResources().getDrawable(R.drawable.ic_eye_visibility));
+                bind.saldoUserTxt.setInputType(InputType.TYPE_NUMBER_VARIATION_NORMAL);
             }else {
-                bind.txtSaldo.setInputType(inputTypePass);
-                bind.btnHide.setBackground(getResources().getDrawable(R.drawable.ic_eye_off_ios));
+                bind.saldoUserTxt.setInputType(inputTypePass);
+                bind.hideBtn.setBackground(getResources().getDrawable(R.drawable.ic_eye_visibility_off));
 
             }
         });

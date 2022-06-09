@@ -40,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="64dp"
-        android:fontFamily="@font/nunito_regular"
+        android:fontFamily="@font/nunito_semibold"
         android:text="@string/criar_conta"
         android:textColor="@color/white"
         android:textSize="18sp"
