@@ -44,7 +44,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_cobrar" />
 
     <EditText
-        android:id="@+id/edt_valor"
+        android:id="@+id/edt_til"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -69,7 +69,7 @@
         android:textColor="@color/rosaClaro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_valor" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_til" />
 
     <android.widget.Button
         android:id="@+id/btn_confirmar"

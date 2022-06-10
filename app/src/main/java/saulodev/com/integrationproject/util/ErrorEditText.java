@@ -5,6 +5,8 @@ import android.widget.EditText;
 
 import androidx.core.app.ActivityCompat;
 
+import com.google.android.material.textfield.TextInputLayout;
+
 import saulodev.com.integrationproject.R;
 
 public class ErrorEditText {

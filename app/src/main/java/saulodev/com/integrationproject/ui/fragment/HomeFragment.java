@@ -59,7 +59,6 @@ public class HomeFragment extends Fragment {
 
         bind.editarDadosImg.setOnClickListener(view1 -> {
             replaceEditarFragment();
-            bind.frameEditar.requestFocus();
         });
 
         bind.pixBtn.setOnClickListener(view1 -> {
@@ -74,7 +73,7 @@ public class HomeFragment extends Fragment {
 
     private void replaceEditarFragment() {
         FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.frame_editar, new EditFragment()).addToBackStack(null).commit();
+        fragmentManager.beginTransaction().replace(R.id.frame, new EditFragment()).addToBackStack(null).commit();
     }
 
 

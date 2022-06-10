@@ -107,5 +107,11 @@
     <string name="titulo_cod_cobrar">Código de cobrança</string>
     <string name="subtexto_cod_cobrar">Esse é seu pix copia e cola</string>
 
+    <!-- Editar -->
+    <string name="cpf_invalido">CPF inválido</string>
+    <string name="data_invalida_1">Data inválida</string>
+    <string name="data_invalida_2">Menor de 18 anos</string>
+    <string name="email_invalido">E-mail inválido</string>
+    <string name="nome_invalido">Nome inválido</string>
 
 </resources>

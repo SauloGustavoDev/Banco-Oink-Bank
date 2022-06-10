@@ -2,6 +2,7 @@ package saulodev.com.integrationproject.util;
 
 import android.os.Build;
 import android.util.Log;
+import android.util.Patterns;
 
 import androidx.annotation.RequiresApi;
 
@@ -132,5 +133,13 @@ public class VerificarDados {
     //VERIFICAR SENHAS
     public static boolean verificarSenha(String dado, String verificador){
         return dado.length() == 6 && dado.equals(verificador);
+    }
+
+    public static boolean validarEmail(String email) {
+
+        if (Patterns.EMAIL_ADDRESS.matcher(email).matches())
+            return true;
+        else
+            return false;
     }
 }
