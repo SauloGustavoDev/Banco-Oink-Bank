@@ -66,7 +66,7 @@
         android:textAlignment="center"
         android:text="@string/nao_especificar"
         android:fontFamily="@font/nunito_semibold"
-        android:textColor="@color/rosaClaro"
+        android:textColor="@color/azul_escuro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_til" />

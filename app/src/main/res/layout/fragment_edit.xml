@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/nunito_semibold"
             android:text="Excluir"
-            android:textColor="@color/rosa"
+            android:textColor="@color/azul_claro"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="@id/editar_txt"
             app:layout_constraintEnd_toEndOf="parent"

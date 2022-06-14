@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.activity.LoginActivity"
-    android:background="@color/rosa">
+    android:background="@color/azul_claro">
 
     <ImageView
         android:id="@+id/voltar_ic"
@@ -34,7 +34,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/rosa"
+        android:backgroundTint="@color/azul_claro"
         android:text="@string/bank_app"
         android:fontFamily="@font/nunito_extrabold"
         android:textColor="@color/white"
@@ -60,7 +60,7 @@
         android:inputType="number"
         android:paddingStart="8dp"
         android:paddingEnd="0dp"
-        android:textColorHint="@color/cinza"
+        android:textColorHint="@color/amarelo_queimado"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/agencia_txt"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -79,7 +79,7 @@
         android:inputType="number"
         android:autofillHints="username"
         android:paddingEnd="0dp"
-        android:textColorHint="@color/cinza"
+        android:textColorHint="@color/amarelo_queimado"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/conta_txt"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -89,7 +89,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:backgroundTint="@color/rosa"
+        android:backgroundTint="@color/azul_claro"
         android:text="@string/agencia_digito"
         android:textColor="@color/white"
         android:fontFamily="@font/nunito_semibold"
@@ -104,7 +104,7 @@
         android:layout_width="wrap_content"
         android:layout_height="19dp"
         android:layout_marginTop="48dp"
-        android:backgroundTint="@color/rosa"
+        android:backgroundTint="@color/azul_claro"
         android:text="@string/conta_digito"
         android:textColor="@color/white"
         android:fontFamily="@font/nunito_semibold"
@@ -120,7 +120,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="6dp"
-        android:backgroundTint="@color/rosa"
+        android:backgroundTint="@color/azul_claro"
         android:text="@string/senha_entrar"
         android:textColor="@color/white"
         android:fontFamily="@font/nunito_semibold"
@@ -145,7 +145,7 @@
         android:paddingStart="8dp"
         android:paddingTop="5dp"
         android:paddingEnd="0dp"
-        android:textColorHint="@color/cinza"
+        android:textColorHint="@color/amarelo_queimado"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -161,7 +161,7 @@
         android:textSize="18sp"
         android:text="@string/entrar"
         android:fontFamily="@font/nunito_semibold"
-        android:textColor="@color/rosa"
+        android:textColor="@color/azul_claro"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

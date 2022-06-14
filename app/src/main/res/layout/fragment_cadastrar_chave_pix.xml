@@ -88,7 +88,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="84dp"
             android:textAlignment="center"
-            android:textColor="@color/rosa"
+            android:textColor="@color/azul_claro"
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/cadastrar_btn"
             app:layout_constraintEnd_toEndOf="parent"
