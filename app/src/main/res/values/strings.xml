@@ -117,4 +117,11 @@
     <!-- Erro inesperado -->
     <string name="erro_inesperado_titulo">Oooopss...</string>
     <string name="erro_inesperado_subtitulo">Parece que ocorreu um erro inesperado em nosso sistema</string>
+
+
+    <!-- Tela erro 404 -->
+    <string name="tente_novamente">Tente novamente</string>
+    <string name="titulo_erro_404">Esses não são os porcos que você estava procurando.</string>
+    <string name="subtitulo_erro_404">Caso precise, entre em contato com o suporte.</string>
+    <string name="porco_sendo_abduzido">Porco sendo abduzido</string>
 </resources>
