@@ -16,6 +16,17 @@
         <item name="android:textSize">17sp</item>
     </style>
 
+    <style name="texto_azul">
+        <item name="android:textColor">@color/azul_escuro</item>
+        <item name="font">@font/nunito_regular</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="texto_botao">
+        <item name="font">@font/nunito_regular</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
     <style name="botao">
         <item name="android:background">@drawable/btn_botao_azul_claro</item>
         <item name="android:textColor">@color/black</item>

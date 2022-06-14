@@ -18,28 +18,23 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        style="@style/titulo_pagina"
+
         android:id="@+id/txt_cobrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/nunito_extrabold"
         android:text="@string/titulo_cobrar"
-        android:textColor="@color/black"
-        android:textSize="28sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_voltar" />
+        app:layout_constraintStart_toEndOf="@+id/btn_voltar"
+        app:layout_constraintTop_toTopOf="@+id/btn_voltar" />
 
     <TextView
+        style="@style/subtitulo_pagina"
         android:id="@+id/txt_qual_valor_receber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/nunito_semibold"
         android:text="@string/subtexto_cobrar"
-        android:textColor="@color/black"
-        android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_cobrar" />
 
@@ -57,6 +52,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_qual_valor_receber" />
 
     <TextView
+        style="@style/texto_azul"
         android:id="@+id/txt_especificar_valor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -65,23 +61,17 @@
         android:layout_marginEnd="20dp"
         android:textAlignment="center"
         android:text="@string/nao_especificar"
-        android:fontFamily="@font/nunito_semibold"
-        android:textColor="@color/azul_escuro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_til" />
 
     <android.widget.Button
+        style="@style/botao"
         android:id="@+id/btn_confirmar"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:background="@drawable/btn_rosa"
         android:text="@string/confirmar"
-        android:fontFamily="@font/nunito_semibold"
-        android:textColor="@color/white"
         android:layout_marginBottom="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

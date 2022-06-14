@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    >
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@color/white">
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/voltarImg"
@@ -20,33 +20,28 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:src="@drawable/ic_seta"
+
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/txt_minhas_chaves"
+            style="@style/titulo_pagina"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/nunito_extrabold"
             android:text="@string/minhas_chaves"
-            android:textColor="@color/black"
-            android:textSize="28sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/voltarImg" />
+            app:layout_constraintStart_toEndOf="@+id/voltarImg"
+            app:layout_constraintTop_toTopOf="@+id/voltarImg" />
 
         <TextView
             android:id="@+id/text_visualize_chaves"
+            style="@style/subtitulo_pagina"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:fontFamily="@font/nunito_regular"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
             android:text="@string/visualize"
-            android:textColor="@color/black"
-            android:textSize="17sp"
-            app:layout_constraintStart_toStartOf="@id/txt_minhas_chaves"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/txt_minhas_chaves" />
 
         <com.google.android.material.divider.MaterialDivider
@@ -73,25 +68,21 @@
 
         <TextView
             android:id="@+id/text_cpf"
+            style="@style/texto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:fontFamily="@font/nunito_regular"
             android:text="@string/cpf"
-            android:textColor="@color/black"
-            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="@id/ic_cpf"
             app:layout_constraintStart_toStartOf="@id/ic_cpf"
             app:layout_constraintTop_toBottomOf="@id/ic_cpf" />
 
         <TextView
+            style="@style/texto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="64dp"
-            android:fontFamily="@font/nunito_regular"
             android:text="@string/sem_cadastro"
-            android:textColor="@color/black"
-            android:textSize="17sp"
             app:layout_constraintBottom_toBottomOf="@+id/text_cpf"
             app:layout_constraintStart_toEndOf="@id/ic_cpf"
             app:layout_constraintTop_toTopOf="@+id/ic_cpf" />
@@ -121,26 +112,22 @@
 
         <TextView
             android:id="@+id/text_chave_aleatoria"
+            style="@style/texto"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:fontFamily="@font/nunito_regular"
             android:text="@string/chave_aleatoria"
             android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="@id/ic_aleatorio"
             app:layout_constraintStart_toStartOf="@id/ic_aleatorio"
             app:layout_constraintTop_toBottomOf="@id/ic_aleatorio" />
 
         <TextView
+            style="@style/texto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="64dp"
-            android:fontFamily="@font/nunito_regular"
             android:text="@string/sem_cadastro"
-            android:textColor="@color/black"
-            android:textSize="17sp"
             app:layout_constraintBottom_toBottomOf="@+id/text_chave_aleatoria"
             app:layout_constraintStart_toEndOf="@id/ic_aleatorio"
             app:layout_constraintTop_toTopOf="@+id/ic_aleatorio" />
@@ -170,45 +157,37 @@
 
         <TextView
             android:id="@+id/text_telefone"
+            style="@style/texto"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:fontFamily="@font/nunito_regular"
             android:text="@string/telefone"
             android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="@id/ic_telefone"
             app:layout_constraintStart_toStartOf="@id/ic_telefone"
             app:layout_constraintTop_toBottomOf="@id/ic_telefone" />
 
         <TextView
+            style="@style/texto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="64dp"
-            android:fontFamily="@font/nunito_regular"
             android:text="@string/sem_cadastro"
-            android:textColor="@color/black"
-            android:textSize="17sp"
             app:layout_constraintBottom_toBottomOf="@+id/text_telefone"
             app:layout_constraintStart_toEndOf="@id/ic_telefone"
             app:layout_constraintTop_toTopOf="@+id/ic_telefone" />
 
         <android.widget.Button
             android:id="@+id/cadastrarChaveBtn"
+            style="@style/botao"
             android:layout_width="0dp"
             android:layout_height="40dp"
-            android:layout_marginStart="30dp"
             android:layout_marginTop="32dp"
-            android:layout_marginEnd="30dp"
-            android:background="@drawable/btn_rosa"
-            android:fontFamily="@font/nunito_semibold"
             android:text="@string/cadastrar_nova_chave"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_telefone" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -216,9 +195,9 @@
         android:id="@+id/frame_cadastrarChave"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:alpha="0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
