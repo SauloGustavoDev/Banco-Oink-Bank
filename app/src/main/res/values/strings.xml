@@ -107,5 +107,10 @@
     <string name="titulo_cod_cobrar">Código de cobrança</string>
     <string name="subtexto_cod_cobrar">Esse é seu pix copia e cola</string>
 
+    <!-- Transferencia Recebida -->
+    <string name="transferencia_recebida">Transferência recebida!</string>
+    <string name="voce_recebeu_transferencia">Você recebeu uma transferência e já está disponível em sua conta.</string>
+    <string name="voltar_btn">Voltar</string>
+
 
 </resources>
