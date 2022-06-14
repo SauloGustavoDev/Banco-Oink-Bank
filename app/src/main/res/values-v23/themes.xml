@@ -16,7 +16,6 @@
         <!-- Customize your theme here. -->
         <item name="fontFamily">@font/nunito_regular</item>
         <item name="android:textColor">@color/black</item>
-        <item name="backgroundTint">@color/cinza_backgroundtint</item>
         <item name="hintTextColor">@color/cinza</item>
 
 

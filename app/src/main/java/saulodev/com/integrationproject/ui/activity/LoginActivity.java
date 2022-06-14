@@ -19,12 +19,12 @@ public class LoginActivity extends AppCompatActivity {
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        btnEntrar();
+        /*btnEntrar();
 
-        btnVoltarMain();
+        btnVoltarMain();*/
     }
 
-    private void btnVoltarMain() {
+    /*private void btnVoltarMain() {
         binding.voltarIc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -39,5 +39,5 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(new Intent(LoginActivity.this, HomeActivity.class));
             finish();
         });
-    }
+    }*/
 }

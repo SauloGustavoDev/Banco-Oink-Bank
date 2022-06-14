@@ -4,167 +4,165 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activity.LoginActivity"
-    android:background="@color/azul_claro">
-
-    <ImageView
-        android:id="@+id/voltar_ic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/ic_seta"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/white" />
+    tools:context=".ui.activity.LoginActivity">
 
 
     <ImageView
-        android:id="@+id/btn_voltar_pix"
+        android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="152dp"
-        android:src="@drawable/icon_login"
+        android:layout_marginStart="64dp"
+        android:src="@drawable/ic_pig_welcome"
+        android:layout_marginTop="-20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="-8dp"
+        android:background="@drawable/ic_rectangle_login"
+        android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/titulo_pagina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seja bem-vindo ao"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/titulo_pagina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OinkBank"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            style="@style/titulo_pagina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=", seu"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            style="@style/titulo_pagina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mais novo banco."
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView8"
+        style="@style/titulo_pagina"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/azul_claro"
-        android:text="@string/bank_app"
-        android:fontFamily="@font/nunito_extrabold"
-        android:textColor="@color/white"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_voltar_pix" />
-
-
-    <EditText
-        android:id="@+id/conta_txt"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
-        android:autofillHints="username"
-        android:background="@drawable/edit_text_login"
-        android:hint="@string/conta_digito_exemplo"
-        android:fontFamily="@font/nunito_regular"
-        android:textSize="18sp"
-        android:inputType="number"
-        android:paddingStart="8dp"
-        android:paddingEnd="0dp"
-        android:textColorHint="@color/amarelo_queimado"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/agencia_txt"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-    <EditText
-        android:id="@+id/agencia_txt"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="4dp"
-        android:background="@drawable/edit_text_login"
-        android:hint="@string/agencia_digito_exemplo"
-        android:textSize="18sp"
-        android:fontFamily="@font/nunito_regular"
-        android:paddingStart="8dp"
-        android:inputType="number"
-        android:autofillHints="username"
-        android:paddingEnd="0dp"
-        android:textColorHint="@color/amarelo_queimado"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/conta_txt"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:backgroundTint="@color/azul_claro"
-        android:text="@string/agencia_digito"
-        android:textColor="@color/white"
-        android:fontFamily="@font/nunito_semibold"
-        android:textSize="17sp"
-        app:layout_constraintEnd_toEndOf="@+id/agencia_txt"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/agencia_txt"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Oinkbank"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
     <TextView
         android:id="@+id/textView3"
+        style="@style/texto"
         android:layout_width="wrap_content"
-        android:layout_height="19dp"
-        android:layout_marginTop="48dp"
-        android:backgroundTint="@color/azul_claro"
-        android:text="@string/conta_digito"
-        android:textColor="@color/white"
-        android:fontFamily="@font/nunito_semibold"
-        android:textSize="17sp"
-        app:layout_constraintEnd_toEndOf="@+id/conta_txt"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/conta_txt"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Agência"
+        android:layout_marginTop="64dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="1-9"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
         android:id="@+id/textView4"
+        style="@style/texto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="6dp"
-        android:backgroundTint="@color/azul_claro"
-        android:text="@string/senha_entrar"
-        android:textColor="@color/white"
-        android:fontFamily="@font/nunito_semibold"
-        android:textSize="17sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/agencia_txt" />
+        android:layout_marginTop="64dp"
+        android:text="Conta com digito"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <EditText
-        android:id="@+id/senha_txt"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="32dp"
-        android:autofillHints="password"
-        android:background="@drawable/edit_text_login"
-        android:hint="@string/senha_entrar_exemplo"
-        android:textSize="18sp"
-        android:fontFamily="@font/nunito_regular"
-        android:inputType="numberPassword"
-        android:maxLength="6"
-        android:paddingStart="8dp"
-        android:paddingTop="5dp"
-        android:paddingEnd="0dp"
-        android:textColorHint="@color/amarelo_queimado"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="1-9"
+        android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-    <android.widget.Button
-        android:id="@+id/entrar_btn"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/edit_text_login"
-        android:layout_marginStart="70dp"
-        android:layout_marginEnd="70dp"
-        android:textSize="18sp"
-        android:text="@string/entrar"
-        android:fontFamily="@font/nunito_semibold"
-        android:textColor="@color/azul_claro"
-        android:textAllCaps="false"
+    <TextView
+        android:id="@+id/textView5"
+        style="@style/texto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Senha"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="********"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/senha_txt" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/botao"
+        android:layout_width="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:text="Entrar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

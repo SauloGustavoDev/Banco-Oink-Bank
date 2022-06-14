@@ -320,7 +320,8 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="30dp"
-        android:background="@drawable/btn_rosa"
+        style="@style/botao"
+
         android:drawableLeft="@drawable/ic_chave"
         android:drawableTint="@color/white"
         android:fontFamily="@font/nunito_semibold"
