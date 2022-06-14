@@ -40,7 +40,7 @@ em contato conosco."
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/subtitulo_txt" />
 
-    <androidx.appcompat.widget.AppCompatButton
+    <android.widget.Button
         android:id="@+id/appCompatButton"
         style="@style/botao"
         android:layout_width="0dp"
