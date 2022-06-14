@@ -8,7 +8,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/layout_margin"
         tools:context=".ui.activity.RegisterActivity">
 
         <ImageView
@@ -43,6 +43,7 @@
             android:id="@+id/nome_til"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/nome_text">
 
@@ -68,10 +69,11 @@
             android:id="@+id/cpf_til"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/cpf_text">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <com.santalu.maskara.widget.MaskEditText
                 android:id="@+id/cpf_edt"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -93,10 +95,11 @@
             android:id="@+id/data_nascimento_til"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/data_nascimento_text">
 
-            <com.google.android.material.textfield.TextInputEditText
+            <com.santalu.maskara.widget.MaskEditText
                 android:id="@+id/data_nascimento_edt"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -118,6 +121,7 @@
             android:id="@+id/email_til"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/email_text">
 
@@ -143,6 +147,7 @@
             android:id="@+id/renda_mensal_til"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/renda_mensal_text">
 
@@ -168,6 +173,7 @@
             android:id="@+id/patrimonio_liquido_til"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/patrimonio_liquido_text">
 
@@ -193,6 +199,7 @@
             android:id="@+id/senha_til"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/senha_text">
 
@@ -218,6 +225,7 @@
             android:id="@+id/confirmar_senha_til"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/confirmar_senha_text">
 
@@ -239,11 +247,13 @@
             app:layout_constraintTop_toBottomOf="@id/confirmar_senha_til" />
 
         <android.widget.Button
+            android:id="@+id/continuar_btn"
             style="@style/botao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:text="@string/cadastrar"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/termos_checkbox" />

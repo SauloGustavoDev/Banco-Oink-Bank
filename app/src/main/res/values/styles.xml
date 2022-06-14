@@ -7,7 +7,7 @@
     </style>
 
     <style name="subtitulo_pagina">
-        <item name="font">@font/nunito_bold</item>
+        <item name="font">@font/nunito_medium</item>
         <item name="android:textSize">17sp</item>
     </style>
 
