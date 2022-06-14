@@ -39,6 +39,7 @@
         app:layout_constraintTop_toBottomOf="@+id/erro_subtitulo_txt" />
 
     <android.widget.Button
+        android:id="@+id/voltar_btn"
         style="@style/botao"
         android:text="@string/voltar_btn"
         app:layout_constraintBottom_toBottomOf="parent"

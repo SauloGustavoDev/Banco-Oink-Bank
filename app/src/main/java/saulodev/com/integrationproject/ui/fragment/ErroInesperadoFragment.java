@@ -2,6 +2,8 @@ package saulodev.com.integrationproject.ui.fragment;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -9,9 +11,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import saulodev.com.integrationproject.R;
+import saulodev.com.integrationproject.databinding.FragmentEditBinding;
+import saulodev.com.integrationproject.databinding.FragmentErroInesperadoBinding;
 
 public class ErroInesperadoFragment extends Fragment {
 
+    private FragmentErroInesperadoBinding bind;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -24,7 +29,16 @@ public class ErroInesperadoFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_erro_inesperado, container, false);
+        bind = FragmentErroInesperadoBinding.inflate(inflater, container, false);
+        return bind.getRoot();
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        bind.voltarBtn.setOnClickListener(view1 -> {
+            requireActivity().onBackPressed();
+        });
     }
 }
