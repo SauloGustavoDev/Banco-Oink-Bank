@@ -116,7 +116,7 @@
         android:layout_marginTop="28dp"
         android:fontFamily="@font/nunito_regular"
         android:text="999.00"
-        android:textColor="@color/rosa"
+        android:textColor="@color/azul_claro"
         android:textSize="22sp"
         app:layout_constraintStart_toEndOf="@+id/moeda_txt"
         app:layout_constraintTop_toBottomOf="@+id/confirma_dados_subtitulo_txt" />
@@ -127,7 +127,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_regular"
         android:text="R$"
-        android:textColor="@color/rosa"
+        android:textColor="@color/azul_claro"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="@+id/saldo_campo_txt"
         app:layout_constraintEnd_toEndOf="parent"
