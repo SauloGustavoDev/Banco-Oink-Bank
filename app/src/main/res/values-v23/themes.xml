@@ -14,9 +14,9 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">@color/cinzaClaro</item>
         <!-- Customize your theme here. -->
-        <item name="android:drawableTint">@color/rosa</item>
         <item name="fontFamily">@font/nunito_regular</item>
         <item name="android:textColor">@color/black</item>
+
 
     </style>
 

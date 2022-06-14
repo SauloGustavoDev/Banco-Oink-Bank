@@ -107,10 +107,11 @@
     <string name="titulo_cod_cobrar">Código de cobrança</string>
     <string name="subtexto_cod_cobrar">Esse é seu pix copia e cola</string>
 
-    <!-- Transferencia Recebida -->
-    <string name="transferencia_recebida">Transferência recebida!</string>
-    <string name="voce_recebeu_transferencia">Você recebeu uma transferência e já está disponível em sua conta.</string>
-    <string name="voltar_btn">Voltar</string>
-
+    <!-- Editar -->
+    <string name="cpf_invalido">CPF inválido</string>
+    <string name="data_invalida_1">Data inválida</string>
+    <string name="data_invalida_2">Menor de 18 anos</string>
+    <string name="email_invalido">E-mail inválido</string>
+    <string name="nome_invalido">Nome inválido</string>
 
 </resources>
