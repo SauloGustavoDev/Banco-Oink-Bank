@@ -9,55 +9,47 @@
 
     <android.widget.Button
         android:id="@+id/confirmar_btn"
+        style="@style/botao"
         android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/btn_rosa"
         android:fontFamily="@font/nunito_semibold"
         android:text="@string/confirmar_pix"
-        android:textAllCaps="true"
-        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.625"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cpf_txt"
-        app:layout_constraintVertical_bias="0.098" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
+        style="@style/texto"
         android:id="@+id/cpf_txt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="@string/cpf"
-        android:fontFamily="@font/nunito_regular"
-        android:textColor="@color/black"
-        android:textSize="17sp"
         app:layout_constraintStart_toStartOf="@id/nome_txt"
         app:layout_constraintTop_toBottomOf="@+id/nome_txt" />
 
     <TextView
+        style="@style/texto"
         android:id="@+id/chave_pix_txt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="28dp"
         android:text="@string/chave_pix"
-        android:fontFamily="@font/nunito_regular"
-        android:textColor="@color/black"
-        android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/saldo_campo_txt" />
 
     <TextView
+        style="@style/texto"
         android:id="@+id/chave_pix_campo_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
-        android:textColor="@color/black"
-        android:fontFamily="@font/nunito_regular"
-        android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="@+id/chave_pix_txt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -67,14 +59,12 @@
         tools:text="asdnmsad4688ASd1265" />
 
     <TextView
+        style="@style/texto"
         android:id="@+id/nome_campo_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
         tools:text="André da silva"
-        android:fontFamily="@font/nunito_regular"
-        android:textColor="@color/black"
-        android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="@+id/nome_txt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -83,28 +73,24 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
+        style="@style/texto"
         android:id="@+id/cpf_campo_txt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         tools:text="000.000.000-00"
-        android:textColor="@color/black"
-        android:fontFamily="@font/nunito_regular"
-        android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="@+id/cpf_txt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/cpf_txt"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
+        style="@style/texto"
         android:id="@+id/nome_txt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:fontFamily="@font/nunito_regular"
         android:text="@string/nome"
-        android:textColor="@color/black"
-        android:textSize="17sp"
         app:layout_constraintStart_toStartOf="@id/chave_pix_txt"
         app:layout_constraintTop_toBottomOf="@+id/chave_pix_txt" />
 
@@ -115,8 +101,8 @@
         android:layout_marginStart="2dp"
         android:layout_marginTop="28dp"
         android:fontFamily="@font/nunito_regular"
-        android:text="999.00"
-        android:textColor="@color/azul_claro"
+        android:text="999,00"
+        android:textColor="@color/azul_escuro"
         android:textSize="22sp"
         app:layout_constraintStart_toEndOf="@+id/moeda_txt"
         app:layout_constraintTop_toBottomOf="@+id/confirma_dados_subtitulo_txt" />
@@ -127,7 +113,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_regular"
         android:text="R$"
-        android:textColor="@color/azul_claro"
+        android:textColor="@color/azul_escuro"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="@+id/saldo_campo_txt"
         app:layout_constraintEnd_toEndOf="parent"
@@ -137,33 +123,26 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
+        style="@style/subtitulo_pagina"
         android:id="@+id/confirma_dados_subtitulo_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/nunito_semibold"
         android:layout_marginStart="16dp"
         android:text="@string/texto_confirmacao_pix"
-        android:textColor="@color/black"
-        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/confirmacao_titulo" />
 
     <TextView
+        style="@style/titulo_pagina"
         android:id="@+id/confirmacao_titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/nunito_extrabold"
         android:text="@string/confirmacao"
-        android:textColor="@color/black"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/voltar_btn" />
+        app:layout_constraintStart_toEndOf="@+id/voltar_btn"
+        app:layout_constraintTop_toTopOf="@+id/voltar_btn" />
 
     <ImageView
         android:id="@+id/voltar_btn"
