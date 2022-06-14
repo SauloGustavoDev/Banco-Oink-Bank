@@ -6,6 +6,8 @@
     android:layout_margin="16dp">
 
     <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:id="@+id/titulo_txt"
         style="@style/titulo_pagina"
         android:text="Erro na transação!"
@@ -15,15 +17,35 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/subtitulo_txt"
+        android:layout_height="wrap_content"
         android:layout_width="0dp"
         style="@style/subtitulo_pagina"
         android:text="No momento, não foi possível
 efetuar a transação. Tente
 novamente mais tarde ou entre
 em contato conosco."
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/titulo_txt"
         app:layout_constraintTop_toBottomOf="@id/titulo_txt"/>
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/subtitulo_txt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/porco_na_lama"/>
 
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/botao"
+        android:layout_width="0dp"
+        android:layout_marginBottom="16dp"
+        android:text="Voltar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
