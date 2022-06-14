@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="layout_margin">16dp</dimen>
+    <dimen name="margin_between_edt_and_tittle">2dp</dimen>
+    <dimen name="margin_between_edt">10dp</dimen>
 </resources>

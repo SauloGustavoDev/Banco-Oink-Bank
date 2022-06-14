@@ -43,7 +43,7 @@
             android:id="@+id/nome_til"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/nome_text">
 
@@ -60,7 +60,7 @@
             style="@style/subtitulo_pagina"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="@dimen/margin_between_edt"
             android:text="@string/cpf"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/nome_til" />
@@ -69,7 +69,7 @@
             android:id="@+id/cpf_til"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/cpf_text">
 
@@ -86,7 +86,7 @@
             style="@style/subtitulo_pagina"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="@dimen/margin_between_edt"
             android:text="@string/data_de_nascimento"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/cpf_til" />
@@ -95,7 +95,7 @@
             android:id="@+id/data_nascimento_til"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/data_nascimento_text">
 
@@ -112,7 +112,7 @@
             style="@style/subtitulo_pagina"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="@dimen/margin_between_edt"
             android:text="@string/email"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/data_nascimento_til" />
@@ -121,7 +121,7 @@
             android:id="@+id/email_til"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/email_text">
 
@@ -138,7 +138,7 @@
             style="@style/subtitulo_pagina"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="@dimen/margin_between_edt"
             android:text="@string/renda_mensal"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/email_til" />
@@ -147,7 +147,7 @@
             android:id="@+id/renda_mensal_til"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/renda_mensal_text">
 
@@ -164,7 +164,7 @@
             style="@style/subtitulo_pagina"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="@dimen/margin_between_edt"
             android:text="@string/patrimonio_liquido"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/renda_mensal_til" />
@@ -173,7 +173,7 @@
             android:id="@+id/patrimonio_liquido_til"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/patrimonio_liquido_text">
 
@@ -190,7 +190,7 @@
             style="@style/subtitulo_pagina"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="@dimen/margin_between_edt"
             android:text="@string/senha"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/patrimonio_liquido_til" />
@@ -199,7 +199,7 @@
             android:id="@+id/senha_til"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/senha_text">
 
@@ -216,7 +216,7 @@
             style="@style/subtitulo_pagina"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="@dimen/margin_between_edt"
             android:text="@string/confirmar_senha"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/senha_til" />
@@ -225,7 +225,7 @@
             android:id="@+id/confirmar_senha_til"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/confirmar_senha_text">
 
@@ -241,7 +241,7 @@
             android:id="@+id/termos_checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="20dp"
             android:text="@string/termos_e_condicoes"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/confirmar_senha_til" />
@@ -251,7 +251,7 @@
             style="@style/botao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="20dp"
             android:text="@string/cadastrar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
