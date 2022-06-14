@@ -17,67 +17,70 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ImageView
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_marginTop="-8dp"
+        android:layout_height="0dp"
         android:background="@drawable/ic_rectangle_login"
-        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/bem_vindo_titulo_txt"
-            style="@style/titulo_pagina"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Seja bem-vindo ao"
-            android:textColor="@color/white"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/bem_vindo_titulo_txt"
+        style="@style/titulo_pagina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Seja bem-vindo ao"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
-        <TextView
-            android:id="@+id/nome_banco_txt"
-            style="@style/titulo_pagina"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="OinkBank"
-            android:textColor="@color/black"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bem_vindo_titulo_txt" />
+    <TextView
+        android:id="@+id/nome_banco_txt"
+        style="@style/titulo_pagina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="OinkBank"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bem_vindo_titulo_txt" />
 
-        <TextView
-            style="@style/titulo_pagina"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=", seu"
-            android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="@+id/nome_banco_txt"
-            app:layout_constraintStart_toEndOf="@+id/nome_banco_txt"
-            app:layout_constraintTop_toBottomOf="@+id/bem_vindo_titulo_txt" />
+    <TextView
+        style="@style/titulo_pagina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=", seu"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/nome_banco_txt"
+        app:layout_constraintStart_toEndOf="@+id/nome_banco_txt"
+        app:layout_constraintTop_toBottomOf="@+id/bem_vindo_titulo_txt" />
 
-        <TextView
-            style="@style/titulo_pagina"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="mais novo banco."
-            android:textColor="@color/white"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nome_banco_txt" />
+    <TextView
+        android:id="@+id/textView"
+        style="@style/titulo_pagina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="mais novo banco."
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nome_banco_txt" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/nome_banco_logo_txt"
         style="@style/titulo_pagina"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:text="Oinkbank"
-        android:layout_marginStart="8dp"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="@+id/pig_welcome_img" />
 
@@ -87,8 +90,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="Agência"
         android:layout_marginTop="64dp"
+        android:text="Agência"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pig_welcome_img" />
 
@@ -96,9 +99,9 @@
         android:id="@+id/numero_agencia_txt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="1-9"
-        android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="1-9"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/agencia_txt" />
@@ -117,8 +120,8 @@
         android:id="@+id/numero_conta_txt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="1-9"
         android:layout_marginEnd="16dp"
+        android:hint="1-9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/conta_com_digito_txt" />
@@ -128,9 +131,9 @@
         style="@style/texto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Senha"
-        android:layout_marginTop="8dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Senha"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/numero_agencia_txt" />
 
@@ -158,6 +161,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/numero_senha_txt" />
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Ainda não tem conta ?"
+        android:layout_marginEnd="6dp"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/entrar_btn" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Cadastre-se!"
+        android:textColor="@color/azul_escuro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/entrar_btn" />
+
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
@@ -165,6 +193,13 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.50" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
