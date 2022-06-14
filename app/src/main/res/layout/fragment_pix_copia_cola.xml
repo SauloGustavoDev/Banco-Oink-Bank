@@ -26,7 +26,7 @@
         android:fontFamily="@font/nunito_semibold"
         android:text="@string/pix_copiaecola_Titulo"
         android:textColor="@color/black"
-        android:textSize="28sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/seta_voltar_img" />

@@ -2,6 +2,7 @@
 <resources>
     <style name="titulo_pagina">
         <item name="font">@font/nunito_bold</item>
+        <item name="android:textStyle">bold</item>
         <item name="android:textSize">24sp</item>
     </style>
 
