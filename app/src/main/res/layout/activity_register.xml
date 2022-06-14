@@ -1,385 +1,252 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.activity.RegisterActivity">
+    android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/voltar_ic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/ic_seta"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/txt_CriarConta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/nunito_extrabold"
-        android:text="@string/criar_conta"
-        android:textSize="28dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/voltar_ic" />
-
-    <View
-        android:id="@+id/viewFundo"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="410dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_CriarConta" />
-
-    <TextView
-        android:id="@+id/txt_nome"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="12dp"
-        android:fontFamily="@font/nunito_semibold"
-        android:text="@string/nome"
-        android:textSize="18dp"
-        app:layout_constraintBottom_toBottomOf="@+id/edt_nome"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/viewFundo" />
+        android:layout_margin="16dp"
+        tools:context=".ui.activity.RegisterActivity">
 
-    <EditText
-        android:id="@+id/edt_nome"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="15dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:fontFamily="@font/nunito_semibold"
-        android:hint="@string/nome_exemplo"
-        android:inputType="textPersonName"
-        android:textSize="16dp"
-        android:maxLength="900"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="@+id/viewFundo" />
+        <ImageView
+            android:id="@+id/voltar_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_seta"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.divider.MaterialDivider
-        android:id="@+id/view2"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:background="@color/amarelo_queimado"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_nome" />
+        <TextView
+            android:id="@+id/tittle"
+            style="@style/titulo_pagina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="@string/boas_vindas"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/voltar_btn" />
 
-    <TextView
-        android:id="@+id/txt_cpf"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="12dp"
-        android:fontFamily="@font/nunito_semibold"
-        android:text="@string/cpf"
-        android:textSize="17dp"
-        app:layout_constraintBottom_toBottomOf="@+id/edt_cpf"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view2" />
+        <TextView
+            android:id="@+id/nome_text"
+            style="@style/subtitulo_pagina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="@string/nome"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tittle" />
 
-    <com.santalu.maskara.widget.MaskEditText
-        android:id="@+id/edt_cpf"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="15dp"
-        android:inputType="number"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
-        android:fontFamily="@font/nunito_semibold"
-        android:hint="@string/cpf_exemplo"
-        android:textSize="15dp"
-        app:mask="___.___.___-__"
-        app:maskCharacter="_"
-        app:maskStyle="completable"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/view2" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nome_til"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nome_text">
 
-    <com.google.android.material.divider.MaterialDivider
-        android:id="@+id/view3"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="10dp"
-        android:background="@color/amarelo_queimado"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_cpf" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nome_edt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.40" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/txt_data"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/nunito_semibold"
-        android:text="@string/data_nascimento"
-        android:textSize="17dp"
-        app:layout_constraintBottom_toBottomOf="@+id/edt_data"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view3" />
+        <TextView
+            android:id="@+id/cpf_text"
+            style="@style/subtitulo_pagina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/cpf"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nome_til" />
 
-    <com.santalu.maskara.widget.MaskEditText
-        android:id="@+id/edt_data"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="15dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
-        android:fontFamily="@font/nunito_semibold"
-        android:hint="Ex.: 24/05/2002"
-        app:mask="__/__/____"
-        app:maskCharacter="_"
-        app:maskStyle="completable"
-        android:inputType="date"
-        android:textSize="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/view3" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cpf_til"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cpf_text">
 
-    <com.google.android.material.divider.MaterialDivider
-        android:id="@+id/view4"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="10dp"
-        android:background="@color/amarelo_queimado"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_data" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cpf_edt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
 
-    <TextView
-        android:id="@+id/txt_email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="12dp"
-        android:fontFamily="@font/nunito_semibold"
-        android:text="@string/email"
-        android:textSize="17dp"
-        app:layout_constraintBottom_toBottomOf="@+id/edt_email"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view4" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/edt_email"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="15dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="10dp"
-        android:fontFamily="@font/nunito_semibold"
-        android:hint="@string/email_exemplo"
-        android:textSize="15dp"
-        android:maxLength="350"
-        android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/view4" />
+        <TextView
+            android:id="@+id/data_nascimento_text"
+            style="@style/subtitulo_pagina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/data_de_nascimento"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cpf_til" />
 
-    <com.google.android.material.divider.MaterialDivider
-        android:id="@+id/view5"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="10dp"
-        android:background="@color/amarelo_queimado"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_email" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/data_nascimento_til"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/data_nascimento_text">
 
-    <TextView
-        android:id="@+id/txt_renda"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="12dp"
-        android:fontFamily="@font/nunito_semibold"
-        android:text="@string/renda_mensal"
-        android:textSize="17dp"
-        app:layout_constraintBottom_toBottomOf="@+id/edt_renda"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view5" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/data_nascimento_edt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
 
-    <EditText
-        android:id="@+id/edt_renda"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="15dp"
-        android:fontFamily="@font/nunito_semibold"
-        android:textSize="15dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="10dp"
-        android:hint="Ex.: R$ 5200,00"
-        android:inputType="numberDecimal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/view5" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.divider.MaterialDivider
-        android:id="@+id/view6"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="10dp"
-        android:background="@color/amarelo_queimado"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_renda" />
+        <TextView
+            android:id="@+id/email_text"
+            style="@style/subtitulo_pagina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/email"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/data_nascimento_til" />
 
-    <TextView
-        android:id="@+id/txt_patrimonio"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/nunito_semibold"
-        android:text="@string/patrimonio_liquido"
-        android:textSize="17dp"
-        app:layout_constraintBottom_toBottomOf="@+id/edt_patrimonio"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view6" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email_til"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/email_text">
 
-    <EditText
-        android:id="@+id/edt_patrimonio"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="15dp"
-        android:layout_marginStart="10dp"
-        android:fontFamily="@font/nunito_semibold"
-        android:hint="@string/patrimonio_liquido_exemplo"
-        android:textSize="15dp"
-        android:inputType="numberDecimal"
-        android:layout_marginTop="5dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/view6" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email_edt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
 
-    <com.google.android.material.divider.MaterialDivider
-        android:id="@+id/view7"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="10dp"
-        android:background="@color/amarelo_queimado"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_patrimonio" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/txt_senha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="12dp"
-        android:fontFamily="@font/nunito_semibold"
-        android:text="@string/senha_cadastrar"
-        android:textSize="17dp"
-        app:layout_constraintBottom_toBottomOf="@+id/edt_senha"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view7" />
+        <TextView
+            android:id="@+id/renda_mensal_text"
+            style="@style/subtitulo_pagina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/renda_mensal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/email_til" />
 
-    <EditText
-        android:id="@+id/edt_senha"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="15dp"
-        android:fontFamily="@font/nunito_semibold"
-        android:hint="@string/senha_exemplo"
-        android:textSize="15dp"
-        android:maxLength="6"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="10dp"
-        android:inputType="numberPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/view7" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/renda_mensal_til"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/renda_mensal_text">
 
-    <com.google.android.material.divider.MaterialDivider
-        android:id="@+id/view8"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="10dp"
-        android:background="@color/amarelo_queimado"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_senha" />
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/renda_mensal_edt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
 
-    <TextView
-        android:id="@+id/txt_confirma_senha"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/nunito_semibold"
-        android:text="@string/confirmar_senha"
-        android:textSize="17dp"
-        app:layout_constraintBottom_toBottomOf="@+id/viewFundo"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view8" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/edt_confirma_senha"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="15dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
-        android:fontFamily="@font/nunito_semibold"
-        android:hint="@string/senha_exemplo"
-        android:inputType="numberPassword"
-        android:textSize="15dp"
-        android:maxLength="6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/view8" />
+        <TextView
+            android:id="@+id/patrimonio_liquido_text"
+            style="@style/subtitulo_pagina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/patrimonio_liquido"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/renda_mensal_til" />
 
-    <android.widget.Button
-        android:id="@+id/btnCadastrar"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="30dp"
-        android:fontFamily="@font/nunito_semibold"
-        android:textColor="@color/white"
-        android:layout_marginEnd="30dp"
-        android:text="@string/cadastrar"
-        android:background="@drawable/btn_rosa"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewFundo" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/patrimonio_liquido_til"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/patrimonio_liquido_text">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/patrimonio_liquido_edt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/senha_text"
+            style="@style/subtitulo_pagina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/senha"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/patrimonio_liquido_til" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/senha_til"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/senha_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/senha_edt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/confirmar_senha_text"
+            style="@style/subtitulo_pagina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/confirmar_senha"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/senha_til" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/confirmar_senha_til"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/confirmar_senha_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/confirmar_senha_edt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <CheckBox
+            android:id="@+id/termos_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="@string/termos_e_condicoes"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/confirmar_senha_til" />
+
+        <android.widget.Button
+            style="@style/botao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="@string/cadastrar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/termos_checkbox" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -19,17 +19,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
+/*
         defineFullscreen();
 
         btnRegistrar();
 
         btnEntrar();
 
-
+ */
 
     }
-
+/*
     private void defineFullscreen() {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -54,4 +54,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+ */
 }
