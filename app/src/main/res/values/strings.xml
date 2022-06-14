@@ -51,8 +51,6 @@
     <string name="editar">Editar</string>
     <string name="excluir">Excluir</string>
     <string name="confirmar_edicao">Confirmar edição</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!-- Minhas chaves -->
     <string name="minhas_chaves">Minhas chaves PIX</string>
@@ -119,4 +117,7 @@
     <string name="voce_recebeu_transferencia">Você recebeu uma transferência e já está disponível em sua conta</string>
     <string name="transferencia_recebida">Transferência recebida!</string>
 
+    <!-- Erro inesperado -->
+    <string name="erro_inesperado_titulo">Oooopss...</string>
+    <string name="erro_inesperado_subtitulo">Parece que ocorreu um erro inesperado em nosso sistema</string>
 </resources>
