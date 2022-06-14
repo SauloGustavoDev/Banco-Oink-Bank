@@ -23,40 +23,38 @@
         android:id="@+id/cadastrarChave_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <TextView
+            style="@style/titulo_pagina"
             android:id="@+id/cadastrar_chave_titulo_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginBottom="32dp"
-            android:fontFamily="@font/nunito_semibold"
             android:text="@string/cadastrar_chave_pix"
-            android:textColor="@color/black"
-            android:textSize="24sp"
             app:layout_constraintBottom_toTopOf="@+id/selecionar_tipo_chave_subtitulo_txt"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
+            style="@style/texto"
             android:id="@+id/selecionar_tipo_chave_subtitulo_txt"
             android:layout_width="0sp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginBottom="16dp"
             android:text="@string/selecionar_tipo_chave"
-            android:textColor="@color/black"
-            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/chave_txt"
             app:layout_constraintEnd_toStartOf="@+id/selecionar_spinner"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Spinner
+            style="@style/texto"
             android:id="@+id/selecionar_spinner"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -69,18 +67,18 @@
             app:layout_constraintTop_toTopOf="@+id/selecionar_tipo_chave_subtitulo_txt" />
 
         <TextView
+            style="@style/texto"
             android:id="@+id/sua_chave_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginBottom="84dp"
             android:text="@string/sua_chave"
-            android:textColor="@color/black"
-            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/cadastrar_btn"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
+            style="@style/texto"
             android:id="@+id/chave_txt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -89,7 +87,6 @@
             android:layout_marginBottom="84dp"
             android:textAlignment="center"
             android:textColor="@color/azul_claro"
-            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/cadastrar_btn"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -99,16 +96,10 @@
 
         <android.widget.Button
             android:id="@+id/cadastrar_btn"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="44dp"
-            android:background="@drawable/btn_rosa"
-            android:fontFamily="@font/nunito_semibold"
+            style="@style/botao"
+            android:layout_marginBottom="32dp"
             android:text="@string/cadastrar"
             android:textAllCaps="false"
-            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"

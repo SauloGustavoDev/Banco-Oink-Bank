@@ -46,15 +46,10 @@
 
     <android.widget.Button
         android:id="@+id/continuar_pix_copia_e_cola_btn"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="32dp"
-        android:background="@drawable/btn_rosa"
+        style="@style/botao"
+        android:layout_marginBottom="36dp"
         android:text="@string/pix_copiaecola_btn"
         android:fontFamily="@font/nunito_semibold"
-        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
