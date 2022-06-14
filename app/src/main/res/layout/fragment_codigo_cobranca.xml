@@ -75,7 +75,6 @@
         android:id="@+id/btn_confirmar"
         android:layout_width="match_parent"
         android:layout_marginBottom="32dp"
-        android:background="@drawable/btn_rosa"
         android:text="@string/confirmar"
         android:fontFamily="@font/nunito_semibold"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -13,7 +13,6 @@
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginBottom="32dp"
-        android:background="@drawable/btn_rosa"
         android:fontFamily="@font/nunito_semibold"
         android:text="@string/confirmar_pix"
         app:layout_constraintBottom_toBottomOf="parent"
