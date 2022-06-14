@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.CadastroSucessoFragment">
+
+    <TextView
+        android:id="@+id/bem_vindo_titulo_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        style="@style/titulo_pagina"
+        android:text="Seja bem-vindo\nao OinkBank, cadastro\nrealizado com sucesso!"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/seus_dados_subtitulo_txt"
+        style="@style/subtitulo_pagina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Seus dados de acesso:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bem_vindo_titulo_txt" />
+
+    <TextView
+        android:id="@+id/conta_txt"
+        style="@style/texto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:drawableStart="@drawable/ic_circle"
+        android:drawablePadding="5dp"
+        android:text="Conta:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seus_dados_subtitulo_txt" />
+
+    <TextView
+        android:id="@+id/digito_conta_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1-2"
+        style="@style/texto"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toEndOf="@+id/conta_txt"
+        app:layout_constraintTop_toBottomOf="@+id/seus_dados_subtitulo_txt" />
+
+    <TextView
+        android:id="@+id/agencia_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_circle"
+        android:text="Agência:"
+        style="@style/texto"
+        android:drawablePadding="5dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/conta_txt" />
+
+    <TextView
+        android:id="@+id/digito_agencia_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1-9"
+        style="@style/texto"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toEndOf="@+id/agencia_txt"
+        app:layout_constraintTop_toBottomOf="@+id/conta_txt" />
+
+    <ImageView
+        android:id="@+id/porco_feliz_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/pig_cadastro_concluido"
+        app:layout_constraintBottom_toTopOf="@+id/entrar_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.widget.Button
+        android:id="@+id/entrar_btn"
+        style="@style/botao"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Entrar"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
