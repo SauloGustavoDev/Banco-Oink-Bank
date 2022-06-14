@@ -7,17 +7,15 @@
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/rosa</item>
-        <item name="colorSecondaryVariant">@color/rosa</item>
+        <item name="colorSecondary">@color/azul_claro</item>
+        <item name="colorSecondaryVariant">@color/azul_claro</item>
         <item name="colorOnSecondary">@color/black</item>
         <item name="colorOnTertiary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">@color/white</item>
         <!-- Customize your theme here. -->
         <item name="android:background">@color/white</item>
-
-
-
+        <item name="android:textColor">@color/black</item>
 
 
     </style>

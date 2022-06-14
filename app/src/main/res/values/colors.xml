@@ -10,9 +10,9 @@
     <color name="white">#FFFFFFFF</color>
 
     <!-- Cores que serão utilizadass -->
-    <color name="rosa">#FF2C55</color>
-    <color name="rosaClaro">#FF3660</color>
-    <color name="cinza">#D6D7DE</color>
+    <color name="azul_claro">#9BF6FF</color>
+    <color name="azul_escuro">#A0C4FF</color>
+    <color name="amarelo_queimado">#FDFFB6</color>
     <color name="cinzaClaro">#F7F3F7</color>
 
     <color name="errorColor">#FF0000</color>

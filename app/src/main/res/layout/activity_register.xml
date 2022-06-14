@@ -7,7 +7,7 @@
     tools:context=".ui.activity.RegisterActivity">
 
     <ImageView
-        android:id="@+id/btnVoltar"
+        android:id="@+id/voltar_ic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -27,7 +27,7 @@
         android:textSize="28dp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnVoltar" />
+        app:layout_constraintTop_toBottomOf="@+id/voltar_ic" />
 
     <View
         android:id="@+id/viewFundo"
@@ -75,7 +75,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        android:background="@color/cinza"
+        android:background="@color/amarelo_queimado"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_nome" />
@@ -118,7 +118,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
-        android:background="@color/cinza"
+        android:background="@color/amarelo_queimado"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_cpf" />
@@ -169,7 +169,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
-        android:background="@color/cinza"
+        android:background="@color/amarelo_queimado"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_data" />
@@ -210,7 +210,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
-        android:background="@color/cinza"
+        android:background="@color/amarelo_queimado"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_email" />
@@ -250,7 +250,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
-        android:background="@color/cinza"
+        android:background="@color/amarelo_queimado"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_renda" />
@@ -291,7 +291,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
-        android:background="@color/cinza"
+        android:background="@color/amarelo_queimado"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_patrimonio" />
@@ -332,7 +332,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="10dp"
-        android:background="@color/cinza"
+        android:background="@color/amarelo_queimado"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_senha" />

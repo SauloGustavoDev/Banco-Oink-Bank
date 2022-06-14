@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <android.widget.Button
-        android:id="@+id/btnEntrar"
+        android:id="@+id/entrar_btn"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginStart="32dp"
@@ -28,7 +28,7 @@
         android:fontFamily="@font/nunito_semibold"
         android:text="@string/entre_conta"
         android:textAllCaps="false"
-        android:textColor="@color/rosa"
+        android:textColor="@color/azul_claro"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/btnRegistar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,7 +45,7 @@
         android:textColor="@color/white"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/btnEntrar"
-        app:layout_constraintStart_toStartOf="@+id/btnEntrar" />
+        app:layout_constraintEnd_toEndOf="@+id/entrar_btn"
+        app:layout_constraintStart_toStartOf="@+id/entrar_btn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
