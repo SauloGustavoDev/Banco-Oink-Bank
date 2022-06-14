@@ -8,13 +8,12 @@
 
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/pig_welcome_img"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:src="@drawable/ic_pig_welcome"
         android:layout_marginTop="-20dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_pig_welcome"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
 
 
@@ -30,7 +29,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/bem_vindo_titulo_txt"
             style="@style/titulo_pagina"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -41,14 +40,14 @@
 
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/nome_banco_txt"
             style="@style/titulo_pagina"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="OinkBank"
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintTop_toBottomOf="@+id/bem_vindo_titulo_txt" />
 
         <TextView
             style="@style/titulo_pagina"
@@ -56,9 +55,9 @@
             android:layout_height="wrap_content"
             android:text=", seu"
             android:textColor="@color/white"
-            app:layout_constraintBottom_toBottomOf="@+id/textView2"
-            app:layout_constraintStart_toEndOf="@+id/textView2"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintBottom_toBottomOf="@+id/nome_banco_txt"
+            app:layout_constraintStart_toEndOf="@+id/nome_banco_txt"
+            app:layout_constraintTop_toBottomOf="@+id/bem_vindo_titulo_txt" />
 
         <TextView
             style="@style/titulo_pagina"
@@ -67,23 +66,23 @@
             android:text="mais novo banco."
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            app:layout_constraintTop_toBottomOf="@+id/nome_banco_txt" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/nome_banco_logo_txt"
         style="@style/titulo_pagina"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:text="Oinkbank"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/pig_welcome_img" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/agencia_txt"
         style="@style/texto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -91,10 +90,10 @@
         android:text="Agência"
         android:layout_marginTop="64dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/pig_welcome_img" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/numero_agencia_txt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="1-9"
@@ -102,29 +101,30 @@
         android:layout_marginStart="16dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/agencia_txt" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/conta_com_digito_txt"
         style="@style/texto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:text="Conta com digito"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/pig_welcome_img" />
 
     <EditText
+        android:id="@+id/numero_conta_txt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="1-9"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/conta_com_digito_txt" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/senha_txt"
         style="@style/texto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -132,20 +132,22 @@
         android:layout_marginTop="8dp"
         android:layout_marginStart="16dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/numero_agencia_txt" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/numero_senha_txt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:hint="********"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toBottomOf="@+id/senha_txt" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/entrar_btn"
         style="@style/botao"
         android:layout_width="match_parent"
         android:layout_marginStart="16dp"
@@ -154,7 +156,7 @@
         android:text="Entrar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/numero_senha_txt" />
 
 
     <androidx.constraintlayout.widget.Guideline
