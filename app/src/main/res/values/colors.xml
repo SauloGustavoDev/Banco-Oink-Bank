@@ -13,8 +13,10 @@
     <color name="azul_claro">#9BF6FF</color>
     <color name="azul_escuro">#A0C4FF</color>
     <color name="amarelo_queimado">#FDFFB6</color>
-    <color name="cinzaClaro">#F7F3F7</color>
-
+    <color name="cinzaClaro">#DBDBDB</color>
+    <color name="cinza">#4D4D4D</color>
+    <color name="cinza_backgroundtint">#B3B3B3</color>
+    <color name="cinza_escuro">#2A2A2A</color>
     <color name="errorColor">#FF0000</color>
 
 </resources>
