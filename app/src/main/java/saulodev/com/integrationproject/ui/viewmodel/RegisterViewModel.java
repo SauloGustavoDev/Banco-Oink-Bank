@@ -2,6 +2,8 @@ package saulodev.com.integrationproject.ui.viewmodel;
 
 import static java.lang.Double.parseDouble;
 
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.util.Log;
 
 import androidx.lifecycle.MutableLiveData;
@@ -25,6 +27,32 @@ public class RegisterViewModel extends ViewModel {
     private static Cliente cliente = new Cliente();
 
 
+    //SHARED PREFERENCES
+    private static SharedPreferences sharedPreferences = null;
+
+    public void iniciarSharedPreferences(){
+        //sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+    }
+
+    public String recuperarIdSharedPreferences(){
+        return sharedPreferences.getString("armazenamento", null);
+    }
+
+    public void deletarIdSharedPreferences(){
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("armazenamento", null);
+        editor.apply();
+    }
+
+    public void salvarID(String id){
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("armazenamento", id);
+        editor.apply();
+    }
+
+    public void dessativarSharedPreferences(){
+        sharedPreferences = null;
+    }
 
 
     //Formulário Dados Cadastrais
