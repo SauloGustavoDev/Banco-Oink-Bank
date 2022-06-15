@@ -38,8 +38,7 @@
         <item name="android:layout_marginEnd">32dp</item>
     </style>
     
-    <style name="FullScreenDialogTheme" parent="Theme.AppCompat.DialogWhenLarge">
-        <item name="android:statusBarColor">@color/cinzaClaro</item>
+    <style name="FullScreenDialogTheme" parent="@style/Theme.IntegrationProject">
         <item name="android:windowAnimationStyle">@style/Theme.AppCompat.Dialog</item>
     </style>
 </resources>

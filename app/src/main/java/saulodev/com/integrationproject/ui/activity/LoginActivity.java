@@ -11,10 +11,9 @@ import android.view.View;
 import saulodev.com.integrationproject.R;
 import saulodev.com.integrationproject.databinding.ActivityLoginBinding;
 import saulodev.com.integrationproject.util.MyAlertDialog;
+import saulodev.com.integrationproject.util.VerificarDados;
 
 public class LoginActivity extends AppCompatActivity {
-
-
 
     ActivityLoginBinding binding = null;
     @Override
@@ -22,14 +21,15 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
         btnEntrar();
+        
     }
 
     private void btnEntrar() {
         binding.entrarBtn.setOnClickListener(view -> {
           /* startActivity(new Intent(LoginActivity.this, HomeActivity.class));
             finish();*/
+
 
             DialogFragment dialog = MyAlertDialog.newInstance();
             dialog.show(getSupportFragmentManager(),"fragment");
