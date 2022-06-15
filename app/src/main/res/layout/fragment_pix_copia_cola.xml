@@ -43,14 +43,8 @@
     <android.widget.Button
         android:id="@+id/continuar_pix_copia_e_cola_btn"
         style="@style/botao"
-<<<<<<< HEAD
         android:layout_width="match_parent"
         android:layout_marginBottom="36dp"
-=======
-        android:layout_marginBottom="32dp"
-        android:text="@string/pix_copiaecola_btn"
->>>>>>> c5c56e5dfac2ae598bef5e455dd12d9df2bbe531
-        android:fontFamily="@font/nunito_semibold"
         android:text="@string/pix_copiaecola_btn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
