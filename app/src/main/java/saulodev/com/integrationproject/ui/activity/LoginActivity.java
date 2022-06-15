@@ -1,14 +1,22 @@
 package saulodev.com.integrationproject.ui.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+
+import saulodev.com.integrationproject.R;
 import saulodev.com.integrationproject.databinding.ActivityLoginBinding;
+import saulodev.com.integrationproject.util.MyAlertDialog;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private ActivityLoginBinding binding = null;
+
+
+    ActivityLoginBinding binding = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,21 +24,15 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         btnEntrar();
-        btnLogin();
     }
-
 
     private void btnEntrar() {
         binding.entrarBtn.setOnClickListener(view -> {
-            startActivity(new Intent(LoginActivity.this, HomeActivity.class));
-            finish();
-        });
-    }
+          /* startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+            finish();*/
 
-    private void btnLogin() {
-        binding.cadastrarTxt.setOnClickListener(view -> {
-            startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
-            finish();
+            DialogFragment dialog = MyAlertDialog.newInstance();
+            dialog.show(getSupportFragmentManager(),"fragment");
         });
     }
 }

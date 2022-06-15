@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".ui.fragment.Erro404Fragment">
 
     <TextView
@@ -33,22 +34,22 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <ImageView
+        android:layout_width="700dp"
+        android:layout_height="900dp"
+        android:layout_marginTop="104dp"
         android:contentDescription="@string/porco_sendo_abduzido"
-        android:layout_width="750dp"
-        android:layout_height="700dp"
         android:src="@drawable/ic_porco_obduzido"
-        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.846"
+        app:layout_constraintHorizontal_bias="0.768"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <android.widget.Button
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sair_btn"
+        style="@style/botao"
         android:layout_width="match_parent"
         android:layout_marginBottom="36dp"
-        style="@style/botao"
         android:text="@string/tente_novamente"
-        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
