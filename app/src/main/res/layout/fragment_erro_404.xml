@@ -45,7 +45,6 @@
 
     <android.widget.Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_marginBottom="36dp"
         style="@style/botao"
         android:text="@string/tente_novamente"
