@@ -36,11 +36,19 @@ public class RegisterActivity extends AppCompatActivity {
 
         viewModel = new ViewModelProvider(this).get(RegisterViewModel.class);
 
-        bind.continuarBtn.setOnClickListener(view -> {
-
-        });
-
         edtWatchers();
+        listeners();
+    }
+
+    private void listeners() {
+        bind.registrarBtn.setOnClickListener(view -> {
+            String nome = bind.nomeEdt.getText().toString().trim();
+            String cpf = bind.cpfEdt.getText().toString().trim();
+            String dataNascimento = bind.dataNascimentoEdt.getUnMasked().trim();
+            String email = bind.emailEdt.getText().toString().trim();
+            String rendaMensal = bind.rendaMensalEdt.getText().toString().trim();
+            String patrimonioLiquido = bind.patrimonioLiquidoEdt.getText().toString().trim();
+        });
     }
 
     private void edtWatchers() {
@@ -67,25 +75,18 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
-        bind.emailEdt.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+        bind.emailEdt.setOnFocusChangeListener((view, hasFocus) -> {
+            if (!hasFocus) {
                 if (bind.emailEdt.getText().toString().trim().isEmpty())
                     bind.emailTil.setErrorEnabled(false);
+                else {
+                    if (!VerificarDados.validarEmail(bind.emailEdt.getText().toString().trim())) {
+                        bind.emailTil.setError(getString(R.string.email_invalido));
+                        bind.emailTil.setErrorEnabled(true);
+                    } else
+                        bind.emailTil.setErrorEnabled(false);
+                }
 
-                if (!VerificarDados.validarEmail(bind.emailEdt.getText().toString().trim())) {
-                    bind.emailTil.setError(getString(R.string.email_invalido));
-                    bind.emailTil.setErrorEnabled(true);
-                } else
-                    bind.emailTil.setErrorEnabled(false);
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
             }
         });
 
@@ -97,7 +98,7 @@ public class RegisterActivity extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if(bind.dataNascimentoEdt.getText().toString().trim().isEmpty())
+                if (bind.dataNascimentoEdt.getText().toString().trim().isEmpty())
                     bind.dataNascimentoTil.setErrorEnabled(false);
 
                 if (bind.dataNascimentoEdt.isDone()) {

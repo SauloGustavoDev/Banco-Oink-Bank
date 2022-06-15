@@ -247,7 +247,7 @@
             app:layout_constraintTop_toBottomOf="@id/confirmar_senha_til" />
 
         <android.widget.Button
-            android:id="@+id/continuar_btn"
+            android:id="@+id/registrar_btn"
             style="@style/botao"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
