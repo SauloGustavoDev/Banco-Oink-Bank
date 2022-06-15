@@ -5,23 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.View;
-
-import java.util.Locale;
 
 import saulodev.com.integrationproject.R;
 import saulodev.com.integrationproject.databinding.ActivityRegisterBinding;
-
 import saulodev.com.integrationproject.ui.viewmodel.RegisterViewModel;
 import saulodev.com.integrationproject.util.CpfCnpjUtils;
-import saulodev.com.integrationproject.util.ErrorEditText;
 import saulodev.com.integrationproject.util.VerificarDados;
-import saulodev.com.integrationproject.util.MaskMoney;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -36,6 +29,14 @@ public class RegisterActivity extends AppCompatActivity {
 
         viewModel = new ViewModelProvider(this).get(RegisterViewModel.class);
 
+<<<<<<< HEAD
+=======
+        bind.continuarBtn.setOnClickListener(view -> {
+            Intent intent = new Intent(this, CadastroConcluidoActivity.class);
+            startActivity(intent);
+        });
+
+>>>>>>> dbc4ad18f29c8faa59401a742d06505485c03134
         edtWatchers();
         listeners();
     }

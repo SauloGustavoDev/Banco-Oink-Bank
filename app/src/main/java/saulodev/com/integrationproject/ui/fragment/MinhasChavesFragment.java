@@ -36,6 +36,8 @@ public class MinhasChavesFragment extends Fragment {
             replaceCadastrarChaveFragment();
             bind.frameCadastrarChave.requestFocus();
         });
+
+
     }
 
     private void replaceCadastrarChaveFragment() {
