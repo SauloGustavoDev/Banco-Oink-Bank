@@ -29,14 +29,6 @@ public class RegisterActivity extends AppCompatActivity {
 
         viewModel = new ViewModelProvider(this).get(RegisterViewModel.class);
 
-<<<<<<< HEAD
-=======
-        bind.continuarBtn.setOnClickListener(view -> {
-            Intent intent = new Intent(this, CadastroConcluidoActivity.class);
-            startActivity(intent);
-        });
-
->>>>>>> dbc4ad18f29c8faa59401a742d06505485c03134
         edtWatchers();
         listeners();
     }
