@@ -18,8 +18,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        style="@style/titulo_pagina"
         android:id="@+id/pix_copia_e_cola_titulo_txt"
+        style="@style/titulo_pagina"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/pix_copiaecola_Titulo"
@@ -43,9 +43,10 @@
     <android.widget.Button
         android:id="@+id/continuar_pix_copia_e_cola_btn"
         style="@style/botao"
+        android:layout_width="match_parent"
         android:layout_marginBottom="36dp"
-        android:text="@string/pix_copiaecola_btn"
         android:fontFamily="@font/nunito_semibold"
+        android:text="@string/pix_copiaecola_btn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

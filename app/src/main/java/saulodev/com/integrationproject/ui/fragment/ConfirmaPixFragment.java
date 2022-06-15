@@ -35,14 +35,14 @@ public class ConfirmaPixFragment extends Fragment {
         });
 
         binding.confirmarBtn.setOnClickListener(view1 -> {
-            getFragmentManager().popBackStack();
-            replaceHomeFragment();
+            replaceConfirmaTransacaoFragment();
         });
     }
 
-    private void replaceHomeFragment() {
+    private void replaceConfirmaTransacaoFragment() {
         FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.frame, new HomeFragment()).addToBackStack(null).commit();
+        fragmentManager.beginTransaction().replace(R.id.frame, new TransacaoConcluidaFragment()).addToBackStack(null).commit();
     }
+
 
 }
