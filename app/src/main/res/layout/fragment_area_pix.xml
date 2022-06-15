@@ -45,7 +45,6 @@
         android:background="@drawable/background_iconepix"
         android:gravity="center"
         app:layout_constraintEnd_toStartOf="@+id/linear_pix_celular"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/areapix_descricao_subtitulo_txt"
