@@ -22,7 +22,7 @@ public class LoginActivity extends AppCompatActivity {
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         btnEntrar();
-        
+        btnRegister();
     }
 
     private void btnEntrar() {
@@ -35,6 +35,11 @@ public class LoginActivity extends AppCompatActivity {
 
             DialogFragment dialog = myAlertDialog;
             dialog.show(getSupportFragmentManager(),"fragment");
+        });
+    }
+    private void btnRegister(){
+        binding.cadastrarTxt.setOnClickListener(View -> {
+            startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
         });
     }
 }

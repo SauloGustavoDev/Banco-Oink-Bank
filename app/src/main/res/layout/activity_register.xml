@@ -51,7 +51,8 @@
                 android:id="@+id/nome_edt"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:background="@android:color/transparent"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -78,7 +79,8 @@
                 android:layout_width="match_parent"
                 android:maxLength="11"
                 android:layout_height="match_parent"
-                android:inputType="number" />
+                android:inputType="number"
+                android:background="@android:color/transparent"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -105,7 +107,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:maxLength="10"
-                android:inputType="date" />
+                android:inputType="date"
+                android:background="@android:color/transparent"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -131,7 +134,8 @@
                 android:id="@+id/email_edt"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:inputType="textEmailAddress" />
+                android:inputType="textEmailAddress"
+                android:background="@android:color/transparent"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -157,7 +161,8 @@
                 android:id="@+id/renda_mensal_edt"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                android:background="@android:color/transparent"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -183,7 +188,8 @@
                 android:id="@+id/patrimonio_liquido_edt"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                android:background="@android:color/transparent"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -210,7 +216,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="numberPassword"
-                android:maxLength="6" />
+                android:maxLength="6"
+                android:background="@android:color/transparent"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -237,7 +244,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="numberPassword"
-                android:maxLength="6" />
+                android:maxLength="6"
+                android:background="@android:color/transparent"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
