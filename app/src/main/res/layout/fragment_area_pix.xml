@@ -17,13 +17,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        style="@style/titulo_pagina"
         android:id="@+id/areapix_titulo_txt"
+        style="@style/titulo_pagina"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="19dp"
         android:text="@string/area_pix_titulo"
         app:layout_constraintStart_toEndOf="@+id/voltar_img_btn"
-        app:layout_constraintTop_toTopOf="@+id/voltar_img_btn" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         style="@style/subtitulo_pagina"

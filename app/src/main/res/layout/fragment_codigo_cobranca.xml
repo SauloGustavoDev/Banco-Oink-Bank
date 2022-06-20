@@ -17,13 +17,14 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        style="@style/titulo_pagina"
         android:id="@+id/txt_codigo_cobranca"
+        style="@style/titulo_pagina"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:text="@string/titulo_cod_cobrar"
         app:layout_constraintStart_toEndOf="@+id/btn_voltar"
-        app:layout_constraintTop_toTopOf="@+id/btn_voltar" />
+        tools:layout_editor_absoluteY="16dp" />
 
     <TextView
         style="@style/subtitulo_pagina"

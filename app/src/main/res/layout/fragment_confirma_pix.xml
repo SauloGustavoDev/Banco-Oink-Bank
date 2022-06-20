@@ -135,13 +135,15 @@
         app:layout_constraintTop_toBottomOf="@+id/confirmacao_titulo" />
 
     <TextView
-        style="@style/titulo_pagina"
         android:id="@+id/confirmacao_titulo"
+        style="@style/titulo_pagina"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:text="@string/confirmacao"
         app:layout_constraintStart_toEndOf="@+id/voltar_btn"
-        app:layout_constraintTop_toTopOf="@+id/voltar_btn" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/voltar_btn"

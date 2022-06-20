@@ -25,7 +25,7 @@
             style="@style/titulo_pagina"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="16dp"
             android:text="@string/editar"
             app:layout_constraintStart_toEndOf="@id/voltar_btn"
             app:layout_constraintTop_toTopOf="parent" />
