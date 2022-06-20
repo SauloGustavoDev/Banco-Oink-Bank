@@ -25,7 +25,6 @@ public class LoginActivity extends AppCompatActivity {
 
         binding.cadastrarTxt.setOnClickListener(view -> {
             startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
-            finish();
         });
         
     }
