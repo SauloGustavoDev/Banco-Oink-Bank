@@ -11,7 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:alpha="0.25"
-        android:background="@color/black"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/cadastrarChave_layout"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,7 +21,6 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cadastrarChave_layout"
         android:layout_width="match_parent"
-        android:background="@color/white"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent">
