@@ -178,6 +178,50 @@
             app:layout_constraintStart_toEndOf="@id/ic_telefone"
             app:layout_constraintTop_toTopOf="@+id/ic_telefone" />
 
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider4"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/amarelo_queimado"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_telefone" />
+
+        <ImageView
+            android:id="@+id/ic_email"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_email"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider4" />
+
+        <TextView
+            android:id="@+id/text_email"
+            style="@style/texto"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Email"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@id/ic_email"
+            app:layout_constraintStart_toStartOf="@id/ic_email"
+            app:layout_constraintTop_toBottomOf="@id/ic_email" />
+
+        <TextView
+            style="@style/texto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="64dp"
+            android:text="@string/sem_cadastro"
+            app:layout_constraintBottom_toBottomOf="@+id/text_email"
+            app:layout_constraintStart_toEndOf="@id/ic_email"
+            app:layout_constraintTop_toTopOf="@+id/ic_email" />
+
         <android.widget.Button
             android:id="@+id/cadastrarChaveBtn"
             style="@style/botao"
@@ -187,7 +231,7 @@
             android:text="@string/cadastrar_nova_chave"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_telefone" />
+            app:layout_constraintTop_toBottomOf="@+id/text_email" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
