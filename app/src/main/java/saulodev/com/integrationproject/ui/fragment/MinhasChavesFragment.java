@@ -34,7 +34,7 @@ public class MinhasChavesFragment extends Fragment {
 
         bind.cadastrarChaveBtn.setOnClickListener(view1 -> {
             replaceCadastrarChaveFragment();
-            bind.frameCadastrarChave.requestFocus();
+            //bind.frameCadastrarChave.requestFocus();
         });
 
 
@@ -42,6 +42,6 @@ public class MinhasChavesFragment extends Fragment {
 
     private void replaceCadastrarChaveFragment() {
         FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.frame_cadastrarChave, new CadastrarChavePixFragment()).addToBackStack(null).commit();
+        fragmentManager.beginTransaction().replace(R.id.frame_cadastrar_chave, new CadastrarChavePixFragment()).addToBackStack(null).commit();
     }
 }
