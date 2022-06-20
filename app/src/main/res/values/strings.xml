@@ -26,6 +26,9 @@
     <string name="patrimonio_liquido">Patrimônio líquido</string>
     <string name="senha">Senha</string>
     <string name="confirmar_senha">Confirmar senha</string>
+    <string name="campo_obrigatorio">Campo obrigatório</string>
+    <string name="seis_digitos">A senha deve ter seis dígitos</string>
+    <string name="senhas_iguais">As senhas devem ser iguais</string>
 
     <!-- Home -->
     <string name="ola">Olá,</string>

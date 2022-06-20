@@ -22,6 +22,11 @@ public class LoginActivity extends AppCompatActivity {
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         btnEntrar();
+
+        binding.cadastrarTxt.setOnClickListener(view -> {
+            startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
+            finish();
+        });
         
     }
 
