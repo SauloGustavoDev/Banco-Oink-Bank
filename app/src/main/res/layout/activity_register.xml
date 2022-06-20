@@ -49,6 +49,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/nome_edt"
+                style="@style/formulario_edit_text"
+                tools:text="teste"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="textPersonName"
@@ -76,6 +78,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/cpf_edt"
+                style="@style/formulario_edit_text"
+                tools:text="teste"
                 android:layout_width="match_parent"
                 android:maxLength="11"
                 android:layout_height="match_parent"
@@ -104,6 +108,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/data_nascimento_edt"
+                style="@style/formulario_edit_text"
+                tools:text="teste"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:maxLength="10"
@@ -132,6 +138,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/email_edt"
+                style="@style/formulario_edit_text"
+                tools:text="teste"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="textEmailAddress"
@@ -159,6 +167,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/renda_mensal_edt"
+                style="@style/formulario_edit_text"
+                tools:text="teste"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="numberDecimal"
@@ -186,6 +196,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/patrimonio_liquido_edt"
+                style="@style/formulario_edit_text"
+                tools:text="teste"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="numberDecimal"
@@ -213,6 +225,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/senha_edt"
+                style="@style/formulario_edit_text"
+                tools:text="teste"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="numberPassword"
@@ -241,6 +255,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/confirmar_senha_edt"
+                style="@style/formulario_edit_text"
+                tools:text="teste"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="numberPassword"

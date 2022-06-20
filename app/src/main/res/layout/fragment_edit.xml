@@ -133,6 +133,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/email_edt"
+                style="@style/formulario_edit_text"
+                tools:text="teste"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@android:color/transparent"
@@ -160,6 +162,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/renda_mensal_edt"
+                style="@style/formulario_edit_text"
+                tools:text="teste"
                 android:layout_width="match_parent"
                 android:inputType="number"
                 android:layout_height="match_parent"
@@ -188,6 +192,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/patrimonio_liquido_edt"
+                style="@style/formulario_edit_text"
+                tools:text="teste"
                 android:layout_width="match_parent"
                 android:inputType="number"
                 android:layout_height="match_parent"
