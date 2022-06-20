@@ -39,6 +39,16 @@ public class RegisterActivity extends AppCompatActivity {
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     private void listeners() {
+
+        bind.voltarBtn.setOnClickListener(view -> {
+            finish();
+        });
+
+        bind.termosCheckbox.setOnClickListener(view -> {
+            if (bind.termosCheckbox.isChecked())
+                bind.termosCheckbox.setError(null);
+        });
+
         bind.registrarBtn.setOnClickListener(view -> {
 
             String nome = bind.nomeEdt.getText().toString().trim();
@@ -64,8 +74,9 @@ public class RegisterActivity extends AppCompatActivity {
                         bind.senhaTil.setErrorEnabled(true);
                     } else {
                         //TODO
-
-                        startActivity(new Intent(RegisterActivity.this, HomeActivity.class));
+                        Intent intent = new Intent(RegisterActivity.this, HomeActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent);
                         finish();
                     }
 
@@ -133,10 +144,7 @@ public class RegisterActivity extends AppCompatActivity {
     private void edtWatchers() {
 
         bind.nomeEdt.setOnFocusChangeListener((view, hasFocus) -> {
-            if (hasFocus) {
-                if (bind.nomeEdt.getText().toString().isEmpty())
-                    bind.nomeTil.setErrorEnabled(false);
-            }
+            bind.nomeTil.setErrorEnabled(false);
         });
 
         bind.cpfEdt.addTextChangedListener(new TextWatcher() {
@@ -227,17 +235,11 @@ public class RegisterActivity extends AppCompatActivity {
         });
 
         bind.rendaMensalEdt.setOnFocusChangeListener((view, hasFocus) -> {
-            if (hasFocus) {
-                if (bind.rendaMensalEdt.getText().toString().isEmpty())
-                    bind.rendaMensalTil.setErrorEnabled(false);
-            }
+            bind.rendaMensalTil.setErrorEnabled(false);
         });
 
         bind.patrimonioLiquidoEdt.setOnFocusChangeListener((view, hasFocus) -> {
-            if (hasFocus) {
-                if (bind.patrimonioLiquidoEdt.getText().toString().isEmpty())
-                    bind.patrimonioLiquidoTil.setErrorEnabled(false);
-            }
+            bind.patrimonioLiquidoTil.setErrorEnabled(false);
         });
 
 

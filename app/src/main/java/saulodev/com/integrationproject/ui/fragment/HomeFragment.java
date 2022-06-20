@@ -57,7 +57,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        bind.editarDadosImg.setOnClickListener(view1 -> {
+        bind.editarDadosArea.setOnClickListener(view1 -> {
             replaceEditarFragment();
         });
 

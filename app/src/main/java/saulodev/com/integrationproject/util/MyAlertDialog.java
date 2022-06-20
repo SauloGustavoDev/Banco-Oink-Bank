@@ -1,7 +1,7 @@
 package saulodev.com.integrationproject.util;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,15 +11,18 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
+import org.xmlpull.v1.XmlPullParser;
+
 import saulodev.com.integrationproject.R;
 
 public class MyAlertDialog extends DialogFragment implements View.OnClickListener{
-    private int layout;
+
 
 
     public static MyAlertDialog newInstance(){
         return new MyAlertDialog();
     }
+
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -31,16 +34,17 @@ public class MyAlertDialog extends DialogFragment implements View.OnClickListene
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-            View view = inflater.inflate(R.layout.fragment_erro_404, container, false);
-            Button fechar = view.findViewById(R.id.sair_btn);
-            fechar.setOnClickListener(this);
-            return view;
+
+                View view = inflater.inflate(R.layout.fragment_erro_404,container,false);
+                Button fechar = view.findViewById(R.id.sair_btn);
+                fechar.setOnClickListener(this);
+                return view;
+
     }
 
     @Override
     public void onClick(View view) {
         dismiss();
     }
-
 
 }
