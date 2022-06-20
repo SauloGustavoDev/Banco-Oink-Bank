@@ -32,12 +32,12 @@ public class LoginActivity extends AppCompatActivity {
 
     private void btnEntrar() {
         binding.entrarBtn.setOnClickListener(view -> {
-          /* startActivity(new Intent(LoginActivity.this, HomeActivity.class));
-            finish();*/
+            startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+            finish();
 
-
-            DialogFragment dialog = MyAlertDialog.newInstance();
-            dialog.show(getSupportFragmentManager(),"fragment");
+//
+//            DialogFragment dialog = MyAlertDialog.newInstance();
+//            dialog.show(getSupportFragmentManager(),"fragment");
         });
     }
 }

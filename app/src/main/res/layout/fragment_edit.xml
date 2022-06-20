@@ -1,322 +1,206 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_margin="16dp">
+    android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:layout_margin="@dimen/layout_margin"
+        tools:context=".ui.activity.RegisterActivity">
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline"
+        <ImageView
+            android:id="@+id/voltar_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.35" />
-
-        <TextView
-            android:id="@+id/editar_txt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/nunito_extrabold"
-            android:gravity="center"
-            android:text="Editar"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_seta"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/excluir_txt"
+            android:id="@+id/tittle"
+            style="@style/titulo_pagina"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/nunito_semibold"
-            android:text="Excluir"
-            android:textColor="@color/azul_claro"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@id/editar_txt"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/editar_txt" />
-
-        <com.google.android.material.divider.MaterialDivider
-            android:id="@+id/divider1"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="5dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/editar_txt" />
+            android:layout_marginStart="32dp"
+            android:text="@string/editar"
+            app:layout_constraintStart_toEndOf="@id/voltar_btn"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/nome_txt"
-            android:layout_width="0dp"
+            android:id="@+id/nome_text"
+            style="@style/subtitulo_pagina"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/nunito_regular"
-            android:text="Nome"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@id/divider2"
-            app:layout_constraintEnd_toEndOf="@id/guideline"
+            android:layout_marginTop="25dp"
+            android:text="@string/nome"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/divider1" />
+            app:layout_constraintTop_toBottomOf="@id/tittle" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/nome_til"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="5dp"
-            app:layout_constraintBottom_toTopOf="@id/divider2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/guideline"
-            app:layout_constraintTop_toBottomOf="@id/divider1">
+            android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nome_text">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/nome_edt"
                 android:layout_width="match_parent"
-                android:inputType="textPersonName"
                 android:layout_height="match_parent"
-                android:background="@color/white"
-                android:fontFamily="@font/nunito_regular" />
+                android:background="@color/white" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.divider.MaterialDivider
-            android:id="@+id/divider2"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_marginTop="5dp"
-            app:layout_constraintEnd_toEndOf="parent"
+        <TextView
+            android:id="@+id/cpf_text"
+            style="@style/subtitulo_pagina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_between_edt"
+            android:text="@string/cpf"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/nome_til" />
 
-        <TextView
-            android:id="@+id/cpf_txt"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/nunito_regular"
-            android:text="CPF"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@id/divider3"
-            app:layout_constraintEnd_toStartOf="@id/guideline"
-            app:layout_constraintStart_toStartOf="@id/nome_txt"
-            app:layout_constraintTop_toBottomOf="@id/divider2" />
-
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/cpf_til"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            app:layout_constraintEnd_toEndOf="@id/nome_til"
-            app:layout_constraintStart_toStartOf="@id/nome_til"
-            app:layout_constraintTop_toBottomOf="@id/divider2">
+            android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cpf_text">
 
             <com.santalu.maskara.widget.MaskEditText
                 android:id="@+id/cpf_edt"
                 android:layout_width="match_parent"
-                android:inputType="number"
                 android:layout_height="match_parent"
-                android:layout_marginTop="5dp"
-                android:background="@color/white"
-                android:clickable="false"
-                android:fontFamily="@font/nunito_regular"
-                app:mask="___.___.___-__"
-                app:maskCharacter="_"
-                app:maskStyle="completable" />
+                android:inputType="number"
+                android:background="@color/white" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
-
-        <com.google.android.material.divider.MaterialDivider
-            android:id="@+id/divider3"
-            android:layout_width="0dp"
+        <TextView
+            android:id="@+id/data_nascimento_text"
+            style="@style/subtitulo_pagina"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            app:layout_constraintEnd_toEndOf="@id/divider2"
-            app:layout_constraintStart_toStartOf="@id/divider2"
+            android:layout_marginTop="@dimen/margin_between_edt"
+            android:text="@string/data_de_nascimento"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/cpf_til" />
 
-        <TextView
-            android:id="@+id/data_txt"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/nunito_regular"
-            android:text="Data de nascimento"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@id/divider4"
-            app:layout_constraintEnd_toEndOf="@id/guideline"
-            app:layout_constraintStart_toStartOf="@id/cpf_txt"
-            app:layout_constraintTop_toBottomOf="@id/divider3" />
-
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/data_til"
-            android:layout_width="0dp"
+            android:id="@+id/data_nascimento_til"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="@id/cpf_til"
-            app:layout_constraintStart_toStartOf="@id/cpf_til"
-            app:layout_constraintTop_toBottomOf="@id/divider3">
+            android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/data_nascimento_text">
 
             <com.santalu.maskara.widget.MaskEditText
-                android:id="@+id/data_edt"
+                android:id="@+id/data_nascimento_edt"
                 android:layout_width="match_parent"
+                android:inputType="date"
                 android:layout_height="match_parent"
-                android:inputType="number"
-                android:layout_marginTop="5dp"
-                android:background="@color/white"
-                android:fontFamily="@font/nunito_regular"
-                app:mask="__/__/____"
-                app:maskCharacter="_"
-                app:maskStyle="completable" />
+                android:background="@color/white" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.divider.MaterialDivider
-            android:id="@+id/divider4"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_marginTop="5dp"
-            app:layout_constraintEnd_toEndOf="@id/divider3"
-            app:layout_constraintStart_toStartOf="@id/divider3"
-            app:layout_constraintTop_toBottomOf="@id/data_til" />
-
         <TextView
-            android:id="@+id/email_txt"
-            android:layout_width="0dp"
+            android:id="@+id/email_text"
+            style="@style/subtitulo_pagina"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/nunito_regular"
-            android:text="E-mail"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@id/divider5"
-            app:layout_constraintEnd_toEndOf="@id/guideline"
-            app:layout_constraintStart_toStartOf="@id/data_txt"
-            app:layout_constraintTop_toBottomOf="@id/divider4" />
+            android:layout_marginTop="@dimen/margin_between_edt"
+            android:text="@string/email"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/data_nascimento_til" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/email_til"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            app:layout_constraintEnd_toEndOf="@id/data_til"
-            app:layout_constraintStart_toStartOf="@id/data_til"
-            app:layout_constraintTop_toBottomOf="@id/divider4">
+            android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/email_text">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/email_edt"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/white"
-                android:inputType="textEmailAddress"
-                android:fontFamily="@font/nunito_regular" />
+                android:background="@color/white" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.divider.MaterialDivider
-            android:id="@+id/divider5"
-            android:layout_width="0dp"
+        <TextView
+            android:id="@+id/renda_mensal_text"
+            style="@style/subtitulo_pagina"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            app:layout_constraintEnd_toEndOf="@id/divider4"
-            app:layout_constraintStart_toStartOf="@id/divider4"
+            android:layout_marginTop="@dimen/margin_between_edt"
+            android:text="@string/renda_mensal"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/email_til" />
 
-        <TextView
-            android:id="@+id/renda_txt"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/nunito_regular"
-            android:text="Rensa mensal"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@id/divider6"
-            app:layout_constraintEnd_toEndOf="@id/guideline"
-            app:layout_constraintStart_toStartOf="@id/email_txt"
-            app:layout_constraintTop_toBottomOf="@id/divider5" />
-
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edt_til"
-            android:layout_width="0dp"
+            android:id="@+id/renda_mensal_til"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            app:layout_constraintEnd_toEndOf="@id/email_til"
-            app:layout_constraintStart_toStartOf="@id/email_til"
-            app:layout_constraintTop_toBottomOf="@id/divider5">
+            android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/renda_mensal_text">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edt_valor"
+                android:id="@+id/renda_mensal_edt"
                 android:layout_width="match_parent"
-                android:inputType="numberDecimal"
+                android:inputType="number"
                 android:layout_height="match_parent"
-                android:background="@color/white"
-                android:fontFamily="@font/nunito_regular" />
+                android:background="@color/white" />
+
         </com.google.android.material.textfield.TextInputLayout>
-
-
-        <com.google.android.material.divider.MaterialDivider
-            android:id="@+id/divider6"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            app:layout_constraintEnd_toEndOf="@id/divider5"
-            app:layout_constraintStart_toStartOf="@id/divider5"
-            app:layout_constraintTop_toBottomOf="@id/edt_til" />
 
         <TextView
-            android:id="@+id/patrimonio_txt"
-            android:layout_width="0dp"
+            android:id="@+id/patrimonio_liquido_text"
+            style="@style/subtitulo_pagina"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/nunito_regular"
-            android:text="Patrimônio líquido"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@id/divider7"
-            app:layout_constraintEnd_toEndOf="@id/guideline"
-            app:layout_constraintStart_toStartOf="@id/renda_txt"
-            app:layout_constraintTop_toBottomOf="@id/divider6" />
+            android:layout_marginTop="@dimen/margin_between_edt"
+            android:text="@string/patrimonio_liquido"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/renda_mensal_til" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/patrimonio_til"
-            android:layout_width="0dp"
+            android:id="@+id/patrimonio_liquido_til"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            app:layout_constraintEnd_toEndOf="@id/edt_til"
-            app:layout_constraintStart_toStartOf="@id/edt_til"
-            app:layout_constraintTop_toBottomOf="@id/divider6">
+            android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/patrimonio_liquido_text">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/patrimonio_edt"
+                android:id="@+id/patrimonio_liquido_edt"
                 android:layout_width="match_parent"
+                android:inputType="number"
                 android:layout_height="match_parent"
-                android:inputType="numberDecimal"
-                android:background="@color/white"
-                android:fontFamily="@font/nunito_regular" />
-        </com.google.android.material.textfield.TextInputLayout>
+                android:background="@color/white" />
 
-        <com.google.android.material.divider.MaterialDivider
-            android:id="@+id/divider7"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_marginTop="5dp"
-            app:layout_constraintEnd_toEndOf="@id/divider6"
-            app:layout_constraintStart_toStartOf="@id/divider6"
-            app:layout_constraintTop_toBottomOf="@id/patrimonio_til" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <android.widget.Button
-            android:id="@+id/confirmar_btn"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="15dp"
-            android:text="Confirmar edição"
+            android:id="@+id/editar_btn"
             style="@style/botao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/editar_btn"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/divider7" />
+            app:layout_constraintTop_toBottomOf="@id/patrimonio_liquido_til" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </ScrollView>

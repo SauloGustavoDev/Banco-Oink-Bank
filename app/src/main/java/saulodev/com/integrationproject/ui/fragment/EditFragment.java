@@ -87,7 +87,7 @@ public class EditFragment extends Fragment {
             public void afterTextChanged(Editable editable) {}
         });
 
-        bind.dataEdt.addTextChangedListener(new TextWatcher() {
+        bind.dataNascimentoEdt.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
             }
@@ -95,20 +95,20 @@ public class EditFragment extends Fragment {
             @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if(bind.dataEdt.getText().toString().trim().isEmpty())
-                    bind.dataTil.setErrorEnabled(false);
+                if(bind.dataNascimentoEdt.getText().toString().trim().isEmpty())
+                    bind.dataNascimentoTil.setErrorEnabled(false);
 
-                if (bind.dataEdt.isDone()) {
-                    String date = bind.dataEdt.getText().toString().trim();
+                if (bind.dataNascimentoEdt.isDone()) {
+                    String date = bind.dataNascimentoEdt.getText().toString().trim();
                     if (VerificarDados.dateIsValid(date)) {
                         if (!(VerificarDados.calculoIdade(date) > 18)) {
-                            bind.dataTil.setError(getString(R.string.data_invalida_2));
-                            bind.dataTil.setErrorEnabled(true);
+                            bind.dataNascimentoTil.setError(getString(R.string.data_invalida_2));
+                            bind.dataNascimentoTil.setErrorEnabled(true);
                         } else
-                            bind.dataTil.setErrorEnabled(false);
+                            bind.dataNascimentoTil.setErrorEnabled(false);
                     } else {
-                        bind.dataTil.setError(getString(R.string.data_invalida_1));
-                        bind.dataTil.setErrorEnabled(true);
+                        bind.dataNascimentoTil.setError(getString(R.string.data_invalida_1));
+                        bind.dataNascimentoTil.setErrorEnabled(true);
                     }
                 }
             }
@@ -118,7 +118,7 @@ public class EditFragment extends Fragment {
             }
         });
 
-        bind.confirmarBtn.setOnClickListener(view1 -> {
+        bind.editarBtn.setOnClickListener(view1 -> {
             requireActivity().onBackPressed();
         });
     }
