@@ -48,9 +48,19 @@ public class EditFragment extends Fragment {
             String patrimonioLiquido = bind.patrimonioEdt.getText().toString().trim();
          */
 
+        btnBack();
         listeners();
         edtWatchers();
 
+    }
+
+    private void btnBack() {
+        bind.voltarBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                requireActivity().onBackPressed();
+            }
+        });
     }
 
     private void edtWatchers() {
@@ -87,14 +97,15 @@ public class EditFragment extends Fragment {
 
         bind.emailEdt.addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {}
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+            }
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if(bind.emailEdt.getText().toString().trim().isEmpty())
+                if (bind.emailEdt.getText().toString().trim().isEmpty())
                     bind.emailTil.setErrorEnabled(false);
 
-                if(!VerificarDados.validarEmail(bind.emailEdt.getText().toString().trim())) {
+                if (!VerificarDados.validarEmail(bind.emailEdt.getText().toString().trim())) {
                     bind.emailTil.setError(getString(R.string.email_invalido));
                     bind.emailTil.setErrorEnabled(true);
                 } else
@@ -102,7 +113,8 @@ public class EditFragment extends Fragment {
             }
 
             @Override
-            public void afterTextChanged(Editable editable) {}
+            public void afterTextChanged(Editable editable) {
+            }
         });
 
         bind.dataNascimentoEdt.addTextChangedListener(new TextWatcher() {
@@ -159,11 +171,11 @@ public class EditFragment extends Fragment {
                 if (VerificarDados.validaCPF(cpf) && VerificarDados.dateIsValid(dataNascimento) &&
                         VerificarDados.validarEmail(email)) {
 
-                        //ENVIAR ALTERAÇÕES PARA API
-                        //TODO
-                        requireActivity().onBackPressed();
+                    //ENVIAR ALTERAÇÕES PARA API
+                    //TODO
+                    requireActivity().onBackPressed();
 
-                    } else {
+                } else {
 
                     if (!VerificarDados.validarEmail(email)) {
                         bind.emailTil.setError(getString(R.string.email_invalido));
