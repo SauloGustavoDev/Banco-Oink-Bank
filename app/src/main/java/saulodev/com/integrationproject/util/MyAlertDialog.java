@@ -1,6 +1,6 @@
 package saulodev.com.integrationproject.util;
 
-import android.app.AlertDialog;
+import android.app.Dialog;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,35 +11,40 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
-import org.xmlpull.v1.XmlPullParser;
-
 import saulodev.com.integrationproject.R;
 
 public class MyAlertDialog extends DialogFragment implements View.OnClickListener{
 
+    private int mLayout;
 
-
-    public static MyAlertDialog newInstance(){
-        return new MyAlertDialog();
-    }
 
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setStyle(DialogFragment.STYLE_NORMAL, R.style.FullScreenDialogTheme);
+
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
+               int layout = mLayout;
 
-                View view = inflater.inflate(R.layout.fragment_erro_404,container,false);
+                View view = inflater.inflate(layout,container,false);
                 Button fechar = view.findViewById(R.id.sair_btn);
                 fechar.setOnClickListener(this);
                 return view;
+    }
 
+
+    public MyAlertDialog(int layout){
+        this.mLayout = layout;
+    }
+
+    public int getmLayout() {
+        return mLayout;
     }
 
     @Override
