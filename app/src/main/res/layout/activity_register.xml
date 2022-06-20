@@ -51,7 +51,6 @@
                 android:id="@+id/nome_edt"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/white"
                 android:inputType="textPersonName" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -79,7 +78,6 @@
                 android:layout_width="match_parent"
                 android:maxLength="11"
                 android:layout_height="match_parent"
-                android:background="@color/white"
                 android:inputType="number" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -106,7 +104,6 @@
                 android:id="@+id/data_nascimento_edt"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/white"
                 android:maxLength="10"
                 android:inputType="date" />
 
@@ -134,7 +131,6 @@
                 android:id="@+id/email_edt"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/white"
                 android:inputType="textEmailAddress" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -161,7 +157,6 @@
                 android:id="@+id/renda_mensal_edt"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/white"
                 android:inputType="numberDecimal" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -188,7 +183,6 @@
                 android:id="@+id/patrimonio_liquido_edt"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/white"
                 android:inputType="numberDecimal" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -215,7 +209,6 @@
                 android:id="@+id/senha_edt"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/white"
                 android:inputType="numberPassword"
                 android:maxLength="6" />
 
@@ -243,7 +236,6 @@
                 android:id="@+id/confirmar_senha_edt"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/white"
                 android:inputType="numberPassword"
                 android:maxLength="6" />
 
