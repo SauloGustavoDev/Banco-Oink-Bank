@@ -62,10 +62,10 @@ public class RegisterActivity extends AppCompatActivity {
 
             if (!nome.isEmpty() && !cpf.isEmpty() && !dataNascimento.isEmpty() &&
                     !email.isEmpty() && !rendaMensal.isEmpty() && !patrimonioLiquido.isEmpty() &&
-                    !senha.isEmpty() && !confirmarSenha.isEmpty()) {
+                    !senha.isEmpty() && !confirmarSenha.isEmpty() && bind.termosCheckbox.isChecked()) {
 
                 if (VerificarDados.validaCPF(cpf) && VerificarDados.dateIsValid(dataNascimento) &&
-                        VerificarDados.validarEmail(email) && senha.equals(confirmarSenha) && bind.termosCheckbox.isChecked()) {
+                        VerificarDados.validarEmail(email) && senha.equals(confirmarSenha)) {
 
                     if (senha.length() < 6 || confirmarSenha.length() < 6) {
                         bind.senhaTil.setError(getString(R.string.seis_digitos));
@@ -74,6 +74,7 @@ public class RegisterActivity extends AppCompatActivity {
                         bind.senhaTil.setErrorEnabled(true);
                     } else {
                         //TODO
+
                         Intent intent = new Intent(RegisterActivity.this, HomeActivity.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(intent);
@@ -82,9 +83,6 @@ public class RegisterActivity extends AppCompatActivity {
 
                 } else {
 
-                    if (!bind.termosCheckbox.isChecked()) {
-                        bind.termosCheckbox.setError("Aceite os termos");
-                    }
                     if (!senha.equals(confirmarSenha)) {
                         bind.confirmarSenhaTil.setError(getString(R.string.senhas_iguais));
                         bind.confirmarSenhaTil.setErrorEnabled(true);
@@ -104,6 +102,9 @@ public class RegisterActivity extends AppCompatActivity {
                 }
 
             } else {
+                if (!bind.termosCheckbox.isChecked()) {
+                    bind.termosCheckbox.setError("Aceite os termos");
+                }
                 if (confirmarSenha.isEmpty()) {
                     bind.confirmarSenhaTil.setError(getString(R.string.campo_obrigatorio));
                     bind.confirmarSenhaTil.setErrorEnabled(true);
