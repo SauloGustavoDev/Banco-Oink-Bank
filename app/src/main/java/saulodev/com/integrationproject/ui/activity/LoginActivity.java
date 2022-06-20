@@ -22,21 +22,19 @@ public class LoginActivity extends AppCompatActivity {
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         btnEntrar();
-
-        binding.cadastrarTxt.setOnClickListener(view -> {
-            startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
-        });
         
     }
 
     private void btnEntrar() {
         binding.entrarBtn.setOnClickListener(view -> {
-            startActivity(new Intent(LoginActivity.this, HomeActivity.class));
-            finish();
+          /* startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+            finish();*/
 
-//
-//            DialogFragment dialog = MyAlertDialog.newInstance();
-//            dialog.show(getSupportFragmentManager(),"fragment");
+            MyAlertDialog myAlertDialog = MyAlertDialog.newInstance();
+
+
+            DialogFragment dialog = myAlertDialog;
+            dialog.show(getSupportFragmentManager(),"fragment");
         });
     }
 }

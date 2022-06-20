@@ -28,8 +28,5 @@ public class Erro404Fragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        binding.sairBtn.setOnClickListener(view1 ->{
-            requireActivity().finish();
-        });
     }
 }
