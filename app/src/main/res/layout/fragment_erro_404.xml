@@ -34,9 +34,19 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_404"
+        android:scaleType="fitStart"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <ImageView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="32dp"
         android:contentDescription="@string/porco_sendo_abduzido"
         android:scaleType="fitEnd"
         android:src="@drawable/ic_porco_abduzido"
@@ -44,7 +54,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/sair_btn"
