@@ -83,7 +83,7 @@
                 style="@style/formulario_edit_text"
                 tools:text="teste"
                 android:layout_width="match_parent"
-                android:maxLength="11"
+                android:maxLength="14"
                 android:layout_height="match_parent"
                 android:inputType="number"
                 android:background="@android:color/transparent"/>

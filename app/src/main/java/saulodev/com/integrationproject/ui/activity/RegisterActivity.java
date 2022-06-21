@@ -11,6 +11,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 
 import java.util.Locale;
@@ -19,6 +20,7 @@ import saulodev.com.integrationproject.R;
 import saulodev.com.integrationproject.databinding.ActivityRegisterBinding;
 import saulodev.com.integrationproject.ui.viewmodel.RegisterViewModel;
 import saulodev.com.integrationproject.util.CpfCnpjUtils;
+import saulodev.com.integrationproject.util.Mask;
 import saulodev.com.integrationproject.util.VerificarDados;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -41,8 +43,14 @@ public class RegisterActivity extends AppCompatActivity {
 
         viewModel = new ViewModelProvider(this).get(RegisterViewModel.class);
 
+        maskField();
         edtWatchers();
         listeners();
+    }
+
+    private void maskField() {
+        maskCpf();
+        maskDate();
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -60,11 +68,11 @@ public class RegisterActivity extends AppCompatActivity {
         bind.registrarBtn.setOnClickListener(view -> {
 
             String nome = bind.nomeEdt.getText().toString().trim();
-            String cpf = bind.cpfEdt.getText().toString().trim();
+            String cpf = Mask.noMask(bind.cpfEdt.getText().toString().trim());
             String dataNascimento = bind.dataNascimentoEdt.getText().toString().trim();
             String email = bind.emailEdt.getText().toString().trim();
-            String rendaMensal = bind.rendaMensalEdt.getText().toString().trim();
-            String patrimonioLiquido = bind.patrimonioLiquidoEdt.getText().toString().trim();
+            String rendaMensal = bind.rendaMensalEdt.getText().toString().trim(); //
+            String patrimonioLiquido = bind.patrimonioLiquidoEdt.getText().toString().trim(); //
             String senha = bind.senhaEdt.getText().toString().trim();
             String confirmarSenha = bind.confirmarSenhaEdt.getText().toString().trim();
 
@@ -163,7 +171,7 @@ public class RegisterActivity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                String cpf = bind.cpfEdt.getText().toString().trim();
+                String cpf = Mask.noMask(bind.cpfEdt.getText().toString().trim());
 
                 if (cpf.isEmpty()) {
                     bind.cpfTil.setErrorEnabled(false);
@@ -259,5 +267,15 @@ public class RegisterActivity extends AppCompatActivity {
         bind.confirmarSenhaEdt.setOnFocusChangeListener((view, hasFocus) -> {
             bind.confirmarSenhaTil.setErrorEnabled(false);
         });
+    }
+
+    private void maskDate() {
+        bind.dataNascimentoEdt.addTextChangedListener(
+                Mask.insert(Mask.DATA_MASK, bind.dataNascimentoEdt));
+    }
+
+    private void maskCpf() {
+        bind.cpfEdt.addTextChangedListener(
+                Mask.insert(Mask.CPF_MASK, bind.cpfEdt));
     }
 }

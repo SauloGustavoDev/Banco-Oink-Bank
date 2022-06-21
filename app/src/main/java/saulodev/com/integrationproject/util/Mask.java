@@ -103,4 +103,8 @@ public abstract class Mask {
             public void afterTextChanged(Editable s) {}
         };
     }
+
+    public static String noMask(String text){
+        return text.replaceAll("\\p{Punct}", "");
+    }
 }
