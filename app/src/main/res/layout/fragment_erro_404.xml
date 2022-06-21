@@ -48,7 +48,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:contentDescription="@string/porco_sendo_abduzido"
-        android:scaleType="fitEnd"
+        android:scaleType="centerCrop"
         android:src="@drawable/ic_porco_abduzido"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
