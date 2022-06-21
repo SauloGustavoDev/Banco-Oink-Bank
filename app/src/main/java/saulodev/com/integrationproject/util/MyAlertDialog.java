@@ -29,9 +29,7 @@ public class MyAlertDialog extends DialogFragment implements View.OnClickListene
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-               int layout = mLayout;
-
-                View view = inflater.inflate(layout,container,false);
+                View view = inflater.inflate(mLayout,container,false);
                 Button fechar = view.findViewById(R.id.sair_btn);
                 fechar.setOnClickListener(this);
                 return view;

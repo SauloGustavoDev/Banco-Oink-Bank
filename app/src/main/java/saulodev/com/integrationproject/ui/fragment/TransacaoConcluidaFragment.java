@@ -29,7 +29,7 @@ public class TransacaoConcluidaFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        bind.continuarBtn.setOnClickListener(view1 -> {
+        bind.sairBtn.setOnClickListener(view1 -> {
             getFragmentManager().popBackStack();
             replaceHomeFragment();
         });
