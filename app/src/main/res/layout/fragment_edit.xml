@@ -7,7 +7,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_margin="@dimen/layout_margin"
         tools:context=".ui.activity.RegisterActivity">
 
@@ -44,6 +44,7 @@
             android:id="@+id/nome_til"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/layout_formulario_erro"
             android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/nome_text">
@@ -71,6 +72,7 @@
             android:id="@+id/cpf_til"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/layout_formulario_erro"
             android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/cpf_text">
@@ -100,6 +102,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
+            style="@style/layout_formulario_erro"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/data_nascimento_text">
 
@@ -127,6 +130,7 @@
             android:id="@+id/email_til"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/layout_formulario_erro"
             android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/email_text">
@@ -156,6 +160,7 @@
             android:id="@+id/renda_mensal_til"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/layout_formulario_erro"
             android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/renda_mensal_text">
@@ -186,6 +191,7 @@
             android:id="@+id/patrimonio_liquido_til"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/layout_formulario_erro"
             android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/patrimonio_liquido_text">

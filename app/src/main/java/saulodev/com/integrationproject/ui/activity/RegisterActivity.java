@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
+import android.graphics.Rect;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.Editable;
@@ -23,6 +25,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     private ActivityRegisterBinding bind;
     private RegisterViewModel viewModel;
+    private Drawable errorIcon;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
@@ -30,6 +33,11 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bind = ActivityRegisterBinding.inflate(getLayoutInflater());
         setContentView(bind.getRoot());
+
+        errorIcon = getResources().getDrawable(R.drawable.ic_error);
+        errorIcon.setBounds(new Rect(0, 0, errorIcon.getIntrinsicWidth(), errorIcon.getIntrinsicHeight()));
+
+
 
         viewModel = new ViewModelProvider(this).get(RegisterViewModel.class);
 
@@ -103,7 +111,7 @@ public class RegisterActivity extends AppCompatActivity {
 
             } else {
                 if (!bind.termosCheckbox.isChecked()) {
-                    bind.termosCheckbox.setError("Aceite os termos");
+                    bind.termosCheckbox.setError("Aceite os termos",errorIcon);
                 }
                 if (confirmarSenha.isEmpty()) {
                     bind.confirmarSenhaTil.setError(getString(R.string.campo_obrigatorio));

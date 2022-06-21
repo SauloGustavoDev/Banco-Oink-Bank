@@ -43,6 +43,7 @@
             android:id="@+id/nome_til"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/layout_formulario_erro"
             android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/nome_text">
@@ -72,6 +73,7 @@
             android:id="@+id/cpf_til"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/layout_formulario_erro"
             android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/cpf_text">
@@ -102,6 +104,7 @@
             android:id="@+id/data_nascimento_til"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/layout_formulario_erro"
             android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/data_nascimento_text">
@@ -132,6 +135,7 @@
             android:id="@+id/email_til"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/layout_formulario_erro"
             android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/email_text">
@@ -139,11 +143,11 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/email_edt"
                 style="@style/formulario_edit_text"
-                tools:text="teste"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@android:color/transparent"
                 android:inputType="textEmailAddress"
-                android:background="@android:color/transparent"/>
+                tools:text="teste" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -161,6 +165,7 @@
             android:id="@+id/renda_mensal_til"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/layout_formulario_erro"
             android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/renda_mensal_text">
@@ -190,6 +195,7 @@
             android:id="@+id/patrimonio_liquido_til"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/layout_formulario_erro"
             android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/patrimonio_liquido_text">
@@ -219,6 +225,7 @@
             android:id="@+id/senha_til"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            style="@style/layout_formulario_erro"
             android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/senha_text">
@@ -247,6 +254,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/confirmar_senha_til"
+            style="@style/layout_formulario_erro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
