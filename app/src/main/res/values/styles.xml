@@ -42,7 +42,8 @@
     <style name="formulario_edit_text">
         <item name="android:padding">10dp</item>
         <item name="android:paddingStart">0dp</item>
-        <item name="android:textColor">@color/cinza</item>
+        <item name="android:alpha">0.8</item>
+<!--        <item name="android:textColor">@color/cinza</item>-->
     </style>
     
     <style name="FullScreenDialogTheme" parent="@style/Theme.IntegrationProject">
