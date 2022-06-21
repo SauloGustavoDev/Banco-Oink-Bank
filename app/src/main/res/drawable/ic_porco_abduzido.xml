@@ -7,13 +7,10 @@
     <clip-path
         android:pathData="M0,0h428v558h-428z"/>
     <path
-        android:pathData="M0,0h428v558h-428z"
-        android:fillColor="#ffffff"/>
-    <path
         android:pathData="M247.57,272.27C247.55,272.26 247.52,272.25 247.5,272.25C247.48,272.25 247.45,272.26 247.43,272.27C247.39,272.3 246.53,272.9 246.53,273.78C246.53,274.04 246.63,274.29 246.82,274.47C247,274.65 247.24,274.75 247.5,274.75C247.76,274.75 248,274.65 248.18,274.47C248.37,274.29 248.47,274.04 248.47,273.78C248.47,272.88 247.61,272.3 247.57,272.27Z"
         android:fillColor="#C9F2FB"/>
     <path
-        android:pathData="M315.5,40L0,513V581H344L430,83.5"
+        android:pathData="M315.5,40L-105,581H0H344L430,83.5"
         android:fillColor="#FEFAE0"
         android:fillAlpha="0.9"/>
     <path
