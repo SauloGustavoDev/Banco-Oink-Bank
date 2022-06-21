@@ -21,6 +21,7 @@ import saulodev.com.integrationproject.databinding.ActivityRegisterBinding;
 import saulodev.com.integrationproject.ui.viewmodel.RegisterViewModel;
 import saulodev.com.integrationproject.util.CpfCnpjUtils;
 import saulodev.com.integrationproject.util.Mask;
+import saulodev.com.integrationproject.util.MaskMoney;
 import saulodev.com.integrationproject.util.VerificarDados;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -51,6 +52,7 @@ public class RegisterActivity extends AppCompatActivity {
     private void maskField() {
         maskCpf();
         maskDate();
+        maskMoney();
     }
 
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -71,8 +73,8 @@ public class RegisterActivity extends AppCompatActivity {
             String cpf = Mask.noMask(bind.cpfEdt.getText().toString().trim());
             String dataNascimento = bind.dataNascimentoEdt.getText().toString().trim();
             String email = bind.emailEdt.getText().toString().trim();
-            String rendaMensal = bind.rendaMensalEdt.getText().toString().trim(); //
-            String patrimonioLiquido = bind.patrimonioLiquidoEdt.getText().toString().trim(); //
+            String rendaMensal = MaskMoney.noMask(bind.rendaMensalEdt.getText().toString().trim());
+            String patrimonioLiquido = MaskMoney.noMask(bind.patrimonioLiquidoEdt.getText().toString().trim());
             String senha = bind.senhaEdt.getText().toString().trim();
             String confirmarSenha = bind.confirmarSenhaEdt.getText().toString().trim();
 
@@ -277,5 +279,11 @@ public class RegisterActivity extends AppCompatActivity {
     private void maskCpf() {
         bind.cpfEdt.addTextChangedListener(
                 Mask.insert(Mask.CPF_MASK, bind.cpfEdt));
+    }
+
+    private void maskMoney(){
+        Locale locale = new Locale("pt", "BR");
+        bind.rendaMensalEdt.addTextChangedListener(new MaskMoney(bind.rendaMensalEdt, locale));
+        bind.patrimonioLiquidoEdt.addTextChangedListener(new MaskMoney(bind.patrimonioLiquidoEdt, locale));
     }
 }

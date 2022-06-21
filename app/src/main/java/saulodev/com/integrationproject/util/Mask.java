@@ -1,6 +1,5 @@
 package saulodev.com.integrationproject.util;
 
-
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
