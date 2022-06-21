@@ -36,10 +36,10 @@
     <ImageView
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginTop="32dp"
         android:contentDescription="@string/porco_sendo_abduzido"
-        android:src="@drawable/ic_porco_obduzido1"
-        android:scaleType="centerCrop"
-        android:paddingTop="120dp"
+        android:scaleType="fitEnd"
+        android:src="@drawable/ic_porco_abduzido"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
