@@ -211,7 +211,6 @@
             android:id="@+id/editar_btn"
             style="@style/botao"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/editar_btn"
             app:layout_constraintBottom_toBottomOf="parent"

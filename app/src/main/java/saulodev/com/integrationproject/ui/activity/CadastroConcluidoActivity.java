@@ -17,7 +17,7 @@ public class CadastroConcluidoActivity extends AppCompatActivity {
         binding = ActivityCadastroConcluidoBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.entrarBtn.setOnClickListener(view -> {
+        binding.sairBtn.setOnClickListener(view -> {
             concluirCadastro();
         });
     }

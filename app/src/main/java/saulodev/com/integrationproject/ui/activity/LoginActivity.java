@@ -14,7 +14,6 @@ import saulodev.com.integrationproject.util.MyAlertDialog;
 import saulodev.com.integrationproject.util.VerificarDados;
 
 public class LoginActivity extends AppCompatActivity {
-    MyAlertDialog myAlertDialog = new MyAlertDialog(R.layout.fragment_erro_inesperado);
 
     ActivityLoginBinding binding = null;
     @Override
@@ -34,7 +33,7 @@ public class LoginActivity extends AppCompatActivity {
           /* startActivity(new Intent(LoginActivity.this, HomeActivity.class));
             finish();*/
 
-
+            MyAlertDialog myAlertDialog = new MyAlertDialog(R.layout.fragment_erro_inesperado);
             DialogFragment dialog = myAlertDialog;
             dialog.show(getSupportFragmentManager(),"fragment");
 

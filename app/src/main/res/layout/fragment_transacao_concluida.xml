@@ -35,17 +35,17 @@
         android:layout_marginTop="32dp"
         android:layout_marginBottom="32dp"
         android:src="@drawable/ic_image_transacao_concluida"
-        app:layout_constraintBottom_toTopOf="@+id/continuar_btn"
+        app:layout_constraintBottom_toTopOf="@+id/sair_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.78"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mensagem_conclusao_subtitulo_txt" />
 
-    <android.widget.Button
-        android:id="@+id/continuar_btn"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sair_btn"
         style="@style/botao"
-        android:layout_marginBottom="32dp"
         android:layout_width="match_parent"
+        android:layout_marginBottom="16dp"
         android:text="Continuar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

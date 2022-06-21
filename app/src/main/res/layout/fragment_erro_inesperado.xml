@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp"
+    android:padding="@dimen/layout_margin"
     tools:context=".ui.fragment.ErroInesperadoFragment">
 
     <TextView
@@ -31,18 +31,18 @@
         android:id="@+id/erro_imagem_ic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
         android:src="@drawable/ic_erro_inesperado"
-        app:layout_constraintBottom_toTopOf="@+id/voltar_btn"
+        app:layout_constraintBottom_toTopOf="@+id/sair_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/erro_subtitulo_txt"
-        app:layout_constraintVertical_bias="0.0" />
+        />
 
-    <android.widget.Button
-        android:id="@+id/voltar_btn"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sair_btn"
         style="@style/botao"
-        android:text="@string/voltar_btn"
+        android:layout_width="match_parent"
+        android:text="@string/tente_novamente"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
