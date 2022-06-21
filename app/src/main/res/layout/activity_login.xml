@@ -97,6 +97,7 @@
 
     <EditText
         android:id="@+id/numero_agencia_txt"
+        style="@style/texto_login"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -118,6 +119,7 @@
 
     <EditText
         android:id="@+id/numero_conta_txt"
+        style="@style/texto_login"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -140,6 +142,7 @@
 
     <EditText
         android:id="@+id/numero_senha_txt"
+        style="@style/texto_login"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
