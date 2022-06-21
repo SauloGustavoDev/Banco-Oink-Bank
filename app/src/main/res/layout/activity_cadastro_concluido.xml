@@ -82,19 +82,16 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:src="@drawable/pig_cadastro_concluido"
-        app:layout_constraintBottom_toTopOf="@+id/entrar_btn"
+        app:layout_constraintBottom_toTopOf="@+id/sair_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <android.widget.Button
-        android:id="@+id/entrar_btn"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sair_btn"
         style="@style/botao"
         android:layout_width="match_parent"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:text="Entrar"
-        android:textAllCaps="false"
+        android:layout_marginBottom="32dp"
+        android:text="Continuar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

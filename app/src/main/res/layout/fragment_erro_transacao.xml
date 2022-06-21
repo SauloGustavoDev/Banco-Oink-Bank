@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp">
+    android:padding="@dimen/layout_margin">
 
     <TextView
         android:layout_width="0dp"
@@ -35,17 +35,17 @@ em contato conosco."
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/porco_na_lama"
-        app:layout_constraintBottom_toTopOf="@+id/appCompatButton"
+        app:layout_constraintBottom_toTopOf="@+id/sair_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/subtitulo_txt" />
 
-    <android.widget.Button
-        android:id="@+id/appCompatButton"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sair_btn"
         style="@style/botao"
-        android:layout_width="0dp"
-        android:layout_margin="16dp"
-        android:text="Voltar"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="32dp"
+        android:text="@string/tente_novamente"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
