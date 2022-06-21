@@ -18,13 +18,6 @@ public class ErroInesperadoFragment extends Fragment {
 
     private FragmentErroInesperadoBinding bind;
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-
-        }
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -37,8 +30,5 @@ public class ErroInesperadoFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        bind.voltarBtn.setOnClickListener(view1 -> {
-            requireActivity().onBackPressed();
-        });
     }
 }

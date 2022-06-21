@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintSet;
 import androidx.fragment.app.DialogFragment;
 
 import saulodev.com.integrationproject.R;
@@ -16,8 +17,6 @@ import saulodev.com.integrationproject.R;
 public class MyAlertDialog extends DialogFragment implements View.OnClickListener{
 
     private int mLayout;
-
-
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -30,20 +29,18 @@ public class MyAlertDialog extends DialogFragment implements View.OnClickListene
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-                View view = inflater.inflate(mLayout,container,false);
+               int layout = mLayout;
+
+                View view = inflater.inflate(layout,container,false);
                 Button fechar = view.findViewById(R.id.sair_btn);
                 fechar.setOnClickListener(this);
                 return view;
     }
 
-
     public MyAlertDialog(int layout){
         this.mLayout = layout;
     }
 
-    public int getmLayout() {
-        return mLayout;
-    }
 
     @Override
     public void onClick(View view) {
