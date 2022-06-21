@@ -32,8 +32,10 @@
 
     <ImageView
         android:id="@+id/porco_feliz_img"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:src="@drawable/ic_porco_feliz"
         app:layout_constraintBottom_toTopOf="@+id/voltar_transferencia_recebida_btn"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,7 +45,7 @@
     <android.widget.Button
         android:id="@+id/voltar_transferencia_recebida_btn"
         style="@style/botao"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/voltar_btn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
