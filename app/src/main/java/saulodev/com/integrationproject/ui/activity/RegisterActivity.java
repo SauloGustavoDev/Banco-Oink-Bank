@@ -2,6 +2,7 @@ package saulodev.com.integrationproject.ui.activity;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
@@ -37,10 +38,10 @@ public class RegisterActivity extends AppCompatActivity {
         bind = ActivityRegisterBinding.inflate(getLayoutInflater());
         setContentView(bind.getRoot());
 
-        errorIcon = getResources().getDrawable(R.drawable.ic_error);
-        errorIcon.setBounds(new Rect(0, 0, errorIcon.getIntrinsicWidth(), errorIcon.getIntrinsicHeight()));
-
-
+        errorIcon = ActivityCompat.getDrawable(this, R.drawable.ic_error);
+        if (errorIcon != null) {
+            errorIcon.setBounds(new Rect(0, 0, errorIcon.getIntrinsicWidth(), errorIcon.getIntrinsicHeight()));
+        }
 
         viewModel = new ViewModelProvider(this).get(RegisterViewModel.class);
 
@@ -94,7 +95,7 @@ public class RegisterActivity extends AppCompatActivity {
                         //TODO
 
                         Intent intent = new Intent(RegisterActivity.this, HomeActivity.class);
-                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK |Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(intent);
                         finish();
                     }
@@ -121,7 +122,7 @@ public class RegisterActivity extends AppCompatActivity {
 
             } else {
                 if (!bind.termosCheckbox.isChecked()) {
-                    bind.termosCheckbox.setError("Aceite os termos",errorIcon);
+                    bind.termosCheckbox.setError("Aceite os termos", errorIcon);
                 }
                 if (confirmarSenha.isEmpty()) {
                     bind.confirmarSenhaTil.setError(getString(R.string.campo_obrigatorio));
@@ -163,7 +164,10 @@ public class RegisterActivity extends AppCompatActivity {
     private void edtWatchers() {
 
         bind.nomeEdt.setOnFocusChangeListener((view, hasFocus) -> {
-            bind.nomeTil.setErrorEnabled(false);
+            if (!hasFocus && bind.nomeEdt.getText().toString().trim().isEmpty())
+                bind.nomeTil.setError(getString(R.string.campo_obrigatorio));
+            else
+                bind.nomeTil.setErrorEnabled(false);
         });
 
         bind.cpfEdt.addTextChangedListener(new TextWatcher() {
@@ -175,15 +179,9 @@ public class RegisterActivity extends AppCompatActivity {
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 String cpf = Mask.noMask(bind.cpfEdt.getText().toString().trim());
 
-                if (cpf.isEmpty()) {
-                    bind.cpfTil.setErrorEnabled(false);
-                    return;
-                }
-
                 if (cpf.length() == 11) {
                     if (!VerificarDados.validaCPF(cpf)) {
                         bind.cpfTil.setError(getString(R.string.cpf_invalido));
-                        bind.cpfTil.setErrorEnabled(true);
                     } else {
                         bind.cpfTil.setErrorEnabled(false);
                     }
@@ -197,6 +195,14 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
+        bind.cpfEdt.setOnFocusChangeListener((view, hasFocus) -> {
+            if(!hasFocus && bind.cpfEdt.getText().toString().trim().isEmpty())
+                bind.cpfTil.setError(getString(R.string.campo_obrigatorio));
+            else
+                bind.cpfTil.setErrorEnabled(false);
+
+        });
+
         bind.dataNascimentoEdt.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -206,19 +212,12 @@ public class RegisterActivity extends AppCompatActivity {
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 String data = bind.dataNascimentoEdt.getText().toString().trim();
 
-                if (data.isEmpty()) {
-                    bind.dataNascimentoTil.setErrorEnabled(false);
-                    return;
-                }
-
                 if (data.length() == 10) {
                     if (!VerificarDados.dateIsValid(data)) {
                         bind.dataNascimentoTil.setError(getString(R.string.data_invalida_1));
-                        bind.dataNascimentoTil.setErrorEnabled(true);
                     } else {
                         if (VerificarDados.calculoIdade(data) < 18) {
                             bind.dataNascimentoTil.setError(getString(R.string.data_invalida_2));
-                            bind.dataNascimentoTil.setErrorEnabled(true);
                         } else
                             bind.dataNascimentoTil.setErrorEnabled(false);
                     }
@@ -232,42 +231,54 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
+        bind.dataNascimentoEdt.setOnFocusChangeListener((view, hasFocus) -> {
+            if(!hasFocus && bind.dataNascimentoEdt.getText().toString().trim().isEmpty()) {
+                bind.dataNascimentoTil.setError(getString(R.string.campo_obrigatorio));
+            }
+        });
+
         bind.emailEdt.setOnFocusChangeListener((view, hasFocus) -> {
-            if (hasFocus) {
-                if (bind.emailEdt.getText().toString().isEmpty())
-                    bind.emailTil.setErrorEnabled(false);
+            String email = bind.emailEdt.getText().toString().trim();
 
+            if (!hasFocus && email.isEmpty()) {
+                bind.emailTil.setError(getString(R.string.campo_obrigatorio));
+            } else if (hasFocus && email.isEmpty()) {
+                bind.emailTil.setErrorEnabled(false);
             } else {
-                String email = bind.emailEdt.getText().toString().trim();
-
-                if (email.isEmpty())
+                if (!VerificarDados.validarEmail(email)) {
+                    bind.emailTil.setError(getString(R.string.email_invalido));
+                } else
                     bind.emailTil.setErrorEnabled(false);
-                else {
-                    if (!VerificarDados.validarEmail(email)) {
-                        bind.emailTil.setError(getString(R.string.email_invalido));
-                        bind.emailTil.setErrorEnabled(true);
-                    } else
-                        bind.emailTil.setErrorEnabled(false);
-                }
-
             }
         });
 
         bind.rendaMensalEdt.setOnFocusChangeListener((view, hasFocus) -> {
-            bind.rendaMensalTil.setErrorEnabled(false);
+            if (!hasFocus && bind.rendaMensalEdt.getText().toString().trim().isEmpty())
+                bind.rendaMensalTil.setError(getString(R.string.campo_obrigatorio));
+            else
+                bind.rendaMensalTil.setErrorEnabled(false);
         });
 
         bind.patrimonioLiquidoEdt.setOnFocusChangeListener((view, hasFocus) -> {
-            bind.patrimonioLiquidoTil.setErrorEnabled(false);
+            if (!hasFocus && bind.patrimonioLiquidoEdt.getText().toString().trim().isEmpty())
+                bind.patrimonioLiquidoTil.setError(getString(R.string.campo_obrigatorio));
+            else
+                bind.patrimonioLiquidoTil.setErrorEnabled(false);
         });
 
 
         bind.senhaEdt.setOnFocusChangeListener((view, hasFocus) -> {
-            bind.senhaTil.setErrorEnabled(false);
+            if (!hasFocus && bind.senhaEdt.getText().toString().trim().isEmpty())
+                bind.senhaTil.setError(getString(R.string.campo_obrigatorio));
+            else
+                bind.senhaTil.setErrorEnabled(false);
         });
 
         bind.confirmarSenhaEdt.setOnFocusChangeListener((view, hasFocus) -> {
-            bind.confirmarSenhaTil.setErrorEnabled(false);
+            if (!hasFocus && bind.confirmarSenhaEdt.getText().toString().trim().isEmpty())
+                bind.confirmarSenhaTil.setError(getString(R.string.campo_obrigatorio));
+            else
+                bind.confirmarSenhaTil.setErrorEnabled(false);
         });
     }
 
@@ -281,7 +292,7 @@ public class RegisterActivity extends AppCompatActivity {
                 Mask.insert(Mask.CPF_MASK, bind.cpfEdt));
     }
 
-    private void maskMoney(){
+    private void maskMoney() {
         Locale locale = new Locale("pt", "BR");
         bind.rendaMensalEdt.addTextChangedListener(new MaskMoney(bind.rendaMensalEdt, locale));
         bind.patrimonioLiquidoEdt.addTextChangedListener(new MaskMoney(bind.patrimonioLiquidoEdt, locale));
