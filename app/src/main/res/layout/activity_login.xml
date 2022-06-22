@@ -10,7 +10,7 @@
 
     <ImageView
         android:id="@+id/pig_welcome_img"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_pig_welcome"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
