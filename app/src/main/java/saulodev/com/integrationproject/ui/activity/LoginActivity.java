@@ -26,17 +26,15 @@ public class LoginActivity extends AppCompatActivity {
         btnRegister();
 
 
+        /*MyAlertDialog myAlertDialog = new MyAlertDialog(R.layout.fragment_erro_inesperado);
+        DialogFragment dialog = myAlertDialog;
+        dialog.show(getSupportFragmentManager(),"fragment");*/
+
     }
 
     private void btnEntrar() {
         binding.entrarBtn.setOnClickListener(view -> {
-          /* startActivity(new Intent(LoginActivity.this, HomeActivity.class));
-            finish();*/
-
-            MyAlertDialog myAlertDialog = new MyAlertDialog(R.layout.fragment_erro_inesperado);
-            DialogFragment dialog = myAlertDialog;
-            dialog.show(getSupportFragmentManager(),"fragment");
-
+        startActivity(new Intent(LoginActivity.this, HomeActivity.class));
         });
     }
     private void btnRegister(){
