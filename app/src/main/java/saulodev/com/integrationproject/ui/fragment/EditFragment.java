@@ -15,12 +15,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.Locale;
+
 import saulodev.com.integrationproject.R;
 import saulodev.com.integrationproject.databinding.FragmentEditBinding;
 import saulodev.com.integrationproject.ui.activity.HomeActivity;
 import saulodev.com.integrationproject.ui.activity.RegisterActivity;
 import saulodev.com.integrationproject.util.CpfCnpjUtils;
 import saulodev.com.integrationproject.util.ErrorEditText;
+import saulodev.com.integrationproject.util.MaskMoney;
 import saulodev.com.integrationproject.util.VerificarDados;
 
 public class EditFragment extends Fragment {
@@ -48,10 +51,17 @@ public class EditFragment extends Fragment {
             String patrimonioLiquido = bind.patrimonioEdt.getText().toString().trim();
          */
 
+        maskField();
         btnBack();
         listeners();
         edtWatchers();
 
+    }
+
+    private void maskField() {
+        Locale locale = new Locale("pt", "BR");
+        bind.patrimonioLiquidoEdt.addTextChangedListener(new MaskMoney(bind.patrimonioLiquidoEdt, locale));
+        bind.rendaMensalEdt.addTextChangedListener(new MaskMoney(bind.rendaMensalEdt, locale));
     }
 
     private void btnBack() {
@@ -162,8 +172,8 @@ public class EditFragment extends Fragment {
             String cpf = bind.cpfEdt.getText().toString().trim();
             String dataNascimento = bind.dataNascimentoEdt.getText().toString().trim();
             String email = bind.emailEdt.getText().toString().trim();
-            String rendaMensal = bind.rendaMensalEdt.getText().toString().trim();
-            String patrimonioLiquido = bind.patrimonioLiquidoEdt.getText().toString().trim();
+            String rendaMensal = MaskMoney.noMask(bind.rendaMensalEdt.getText().toString().trim());
+            String patrimonioLiquido = MaskMoney.noMask(bind.patrimonioLiquidoEdt.getText().toString().trim());
 
             if (!nome.isEmpty() && !cpf.isEmpty() && !dataNascimento.isEmpty() &&
                     !email.isEmpty() && !rendaMensal.isEmpty() && !patrimonioLiquido.isEmpty()) {

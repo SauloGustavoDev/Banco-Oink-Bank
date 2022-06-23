@@ -4,16 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="@dimen/layout_margin"
     tools:context=".ui.activity.CadastroConcluidoActivity">
 
     <TextView
         android:id="@+id/bem_vindo_titulo_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         style="@style/titulo_pagina"
-        android:text="Seja bem-vindo\nao OinkBank, cadastro\nrealizado com sucesso!"
+        android:text="@string/bem_vindo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,9 +21,7 @@
         style="@style/subtitulo_pagina"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Seus dados de acesso:"
+        android:text="@string/dados_acesso"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bem_vindo_titulo_txt" />
 
@@ -33,11 +30,10 @@
         style="@style/texto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:drawableStart="@drawable/ic_circle"
         android:drawablePadding="5dp"
-        android:text="Conta:"
+        android:text="@string/conta"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/seus_dados_subtitulo_txt" />
 
@@ -57,10 +53,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableStart="@drawable/ic_circle"
-        android:text="Agência:"
+        android:text="@string/agencia"
         style="@style/texto"
         android:drawablePadding="5dp"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/conta_txt" />
@@ -84,14 +79,16 @@
         android:src="@drawable/pig_cadastro_concluido"
         app:layout_constraintBottom_toTopOf="@+id/sair_btn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/agencia_txt"
+        app:layout_constraintVertical_bias="0.808" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/sair_btn"
         style="@style/botao"
         android:layout_width="match_parent"
-        android:layout_marginBottom="32dp"
-        android:text="Continuar"
+        android:text="@string/continuar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
