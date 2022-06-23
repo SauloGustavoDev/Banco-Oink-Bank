@@ -4,6 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_margin="@dimen/layout_margin"
     android:layout_height="match_parent"
     tools:context=".ui.fragment.ConfirmaPixFragment">
 
@@ -12,15 +13,12 @@
         style="@style/botao"
         android:layout_width="0dp"
         android:layout_height="40dp"
-        android:layout_marginBottom="32dp"
         android:fontFamily="@font/nunito_semibold"
         android:text="@string/confirmar_pix"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.625"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cpf_txt"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         style="@style/texto"
@@ -37,7 +35,6 @@
         android:id="@+id/chave_pix_txt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="28dp"
         android:text="@string/chave_pix"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,7 +45,6 @@
         android:id="@+id/chave_pix_campo_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/chave_pix_txt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -62,7 +58,6 @@
         android:id="@+id/nome_campo_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
         tools:text="André da silva"
         app:layout_constraintBottom_toBottomOf="@+id/nome_txt"
         app:layout_constraintEnd_toEndOf="parent"
@@ -76,7 +71,6 @@
         android:id="@+id/cpf_campo_txt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
         tools:text="000.000.000-00"
         app:layout_constraintBottom_toBottomOf="@+id/cpf_txt"
         app:layout_constraintEnd_toEndOf="parent"
@@ -127,7 +121,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginStart="16dp"
         android:text="@string/texto_confirmacao_pix"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -149,7 +142,6 @@
         android:id="@+id/voltar_btn"
         android:layout_width="wrap_content"
         android:layout_height="32dp"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:src="@drawable/ic_seta"
         app:layout_constraintStart_toStartOf="parent"
