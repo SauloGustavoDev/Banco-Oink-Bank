@@ -133,6 +133,13 @@
     <string name="porco_sendo_abduzido">Porco sendo abduzido</string>
     <string name="ja_possui_uma_conta_entre_aqui">Já possui uma conta? <b>Entre aqui</b></string>
 
+    <!-- Cadastro Concluido -->
+    <string name="bem_vindo">Seja bem-vindo\nao OinkBank, cadastro\nrealizado com sucesso!</string>
+    <string name="dados_acesso">Seus dados de acesso:</string>
+    <string name="conta">Conta:</string>
+    <string name="agencia">Agência:</string>
+
+
     <!-- Transação concluída -->
     <string name="transacao_concluida">Transação concluida!</string>
     <string name="transacao_sub">Sua transação foi efetuada com sucesso.</string>
