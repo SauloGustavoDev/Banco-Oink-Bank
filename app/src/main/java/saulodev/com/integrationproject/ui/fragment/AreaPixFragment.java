@@ -38,6 +38,10 @@ public class AreaPixFragment extends Fragment {
             replacePixCopiaColaFragment();
         });
 
+        bind.pixReceberLinearBtn.setOnClickListener(view1 -> {
+            replaceCobrarFragment();
+        });
+
         bind.voltarImgBtn.setOnClickListener(view1 -> {
             requireActivity().onBackPressed();
         });
@@ -51,5 +55,10 @@ public class AreaPixFragment extends Fragment {
     private void replacePixCopiaColaFragment(){
         FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.frame, new PixCopiaColaFragment()).addToBackStack(null).commit();
+    }
+
+    private void replaceCobrarFragment(){
+        FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.frame, new CobrarFragment()).addToBackStack(null).commit();
     }
 }

@@ -5,14 +5,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="@dimen/layout_margin"
     tools:context=".ui.fragment.CobrarFragment">
 
     <ImageView
         android:id="@+id/btn_voltar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="4dp"
         android:src="@drawable/ic_seta"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,7 +23,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:text="@string/titulo_cobrar"
         app:layout_constraintStart_toEndOf="@+id/btn_voltar"
         app:layout_constraintTop_toTopOf="parent" />
@@ -33,46 +32,48 @@
         android:id="@+id/txt_qual_valor_receber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
         android:text="@string/subtexto_cobrar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_cobrar" />
 
-    <EditText
-        android:id="@+id/edt_til"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nome_til"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:hint="R$ 0,00"
-        android:fontFamily="@font/nunito_regular"
+        style="@style/layout_formulario_erro"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_qual_valor_receber" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_qual_valor_receber" >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nome_edt"
+            style="@style/formulario_edit_text"
+            tools:text="teste"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPersonName"
+            android:background="@android:color/transparent"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         style="@style/texto_azul"
         android:id="@+id/txt_especificar_valor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginTop="16dp"
         android:textAlignment="center"
         android:text="@string/nao_especificar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_til" />
+        app:layout_constraintTop_toBottomOf="@+id/nome_til" />
 
     <android.widget.Button
         style="@style/botao"
         android:id="@+id/btn_confirmar"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
         android:text="@string/confirmar"
-        android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
