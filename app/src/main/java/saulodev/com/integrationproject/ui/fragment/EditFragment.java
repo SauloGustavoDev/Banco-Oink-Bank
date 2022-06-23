@@ -74,36 +74,6 @@ public class EditFragment extends Fragment {
     }
 
     private void edtWatchers() {
-        bind.cpfEdt.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                String cpf = bind.cpfEdt.getText().toString().trim();
-
-                if (cpf.isEmpty()) {
-                    bind.cpfTil.setErrorEnabled(false);
-                    return;
-                }
-
-                if (cpf.length() == 11) {
-                    if (!VerificarDados.validaCPF(cpf)) {
-                        bind.cpfTil.setError(getString(R.string.cpf_invalido));
-                        bind.cpfTil.setErrorEnabled(true);
-                    } else {
-                        bind.cpfTil.setErrorEnabled(false);
-                    }
-                } else
-                    bind.cpfTil.setErrorEnabled(false);
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-            }
-        });
 
         bind.emailEdt.addTextChangedListener(new TextWatcher() {
             @Override
@@ -127,40 +97,18 @@ public class EditFragment extends Fragment {
             }
         });
 
-        bind.dataNascimentoEdt.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-            }
+        bind.rendaMensalEdt.setOnFocusChangeListener((view, hasFocus) -> {
+            if (!hasFocus && bind.rendaMensalEdt.getText().toString().trim().isEmpty())
+                bind.rendaMensalTil.setError(getString(R.string.campo_obrigatorio));
+            else
+                bind.rendaMensalTil.setErrorEnabled(false);
+        });
 
-            @RequiresApi(api = Build.VERSION_CODES.O)
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                String data = bind.dataNascimentoEdt.getText().toString().trim();
-
-                if (data.isEmpty()) {
-                    bind.dataNascimentoTil.setErrorEnabled(false);
-                    return;
-                }
-
-                if (data.length() == 10) {
-                    if (!VerificarDados.dateIsValid(data)) {
-                        bind.dataNascimentoTil.setError(getString(R.string.data_invalida_1));
-                        bind.dataNascimentoTil.setErrorEnabled(true);
-                    } else {
-                        if (VerificarDados.calculoIdade(data) < 18) {
-                            bind.dataNascimentoTil.setError(getString(R.string.data_invalida_2));
-                            bind.dataNascimentoTil.setErrorEnabled(true);
-                        } else
-                            bind.dataNascimentoTil.setErrorEnabled(false);
-                    }
-                } else {
-                    bind.dataNascimentoTil.setErrorEnabled(false);
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-            }
+        bind.patrimonioLiquidoEdt.setOnFocusChangeListener((view, hasFocus) -> {
+            if (!hasFocus && bind.patrimonioLiquidoEdt.getText().toString().trim().isEmpty())
+                bind.patrimonioLiquidoTil.setError(getString(R.string.campo_obrigatorio));
+            else
+                bind.patrimonioLiquidoTil.setErrorEnabled(false);
         });
     }
 
