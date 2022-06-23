@@ -102,7 +102,7 @@
     <string name="nao_especificar">Não especificar valor</string>
     <string name="confirmar">Confirmar</string>
     <string name="hint_valor">R$ 0,00</string>
-    <string name="texto_erro_cobrar">Preencha um valor</string>
+    <string name="texto_erro_cobrar">Preencha o valor</string>
 
     <string name="titulo_cod_cobrar">Código de cobrança</string>
     <string name="subtexto_cod_cobrar">Esse é seu pix copia e cola</string>
