@@ -9,7 +9,7 @@
     <LinearLayout
         android:id="@+id/linear_btn"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="350dp"
         android:alpha="0.25"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/cadastrarChave_layout"
@@ -22,15 +22,17 @@
         android:id="@+id/cadastrarChave_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:alpha="1.0"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
 
         <TextView
-            style="@style/titulo_pagina"
             android:id="@+id/cadastrar_chave_titulo_txt"
-            android:layout_height="0dp"
+            style="@style/titulo_pagina"
             android:layout_width="wrap_content"
+            android:layout_height="0dp"
             android:layout_marginStart="16dp"
             android:layout_marginBottom="32dp"
             android:text="@string/cadastrar_chave_pix"
@@ -40,8 +42,8 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            style="@style/texto"
             android:id="@+id/selecionar_tipo_chave_subtitulo_txt"
+            style="@style/texto"
             android:layout_width="0sp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -53,8 +55,8 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <Spinner
-            style="@style/texto"
             android:id="@+id/selecionar_spinner"
+            style="@style/texto"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginEnd="16dp"
@@ -66,8 +68,8 @@
             app:layout_constraintTop_toTopOf="@+id/selecionar_tipo_chave_subtitulo_txt" />
 
         <TextView
-            style="@style/texto"
             android:id="@+id/sua_chave_txt"
+            style="@style/texto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -77,8 +79,8 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            style="@style/texto"
             android:id="@+id/chave_txt"
+            style="@style/texto"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
