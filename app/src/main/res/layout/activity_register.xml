@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:scrollbars="none"
     android:padding="@dimen/layout_margin"
     android:layout_height="match_parent">
 
@@ -275,9 +276,10 @@
 
         <CheckBox
             android:id="@+id/termos_checkbox"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
             android:text="@string/termos_e_condicoes"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/confirmar_senha_til" />

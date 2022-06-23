@@ -52,7 +52,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="20dp"
-            android:background="@color/amarelo_queimado"
+            android:background="@color/cinzaClaro"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/text_visualize_chaves" />
@@ -96,7 +96,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="20dp"
-            android:background="@color/amarelo_queimado"
+            android:background="@color/cinzaClaro"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/text_cpf" />
@@ -141,7 +141,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="15dp"
-            android:background="@color/amarelo_queimado"
+            android:background="@color/cinzaClaro"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/text_chave_aleatoria" />
@@ -185,7 +185,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="15dp"
-            android:background="@color/amarelo_queimado"
+            android:background="@color/cinzaClaro"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/text_telefone" />
@@ -233,15 +233,12 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_email" />
 
+        <FrameLayout
+            android:id="@+id/frame_cadastrar_chave"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <FrameLayout
-        android:id="@+id/frame_cadastrar_chave"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
