@@ -50,10 +50,10 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/nome_edt"
             style="@style/formulario_edit_text"
-            tools:text="teste"
+            tools:text="@string/hint_valor"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:inputType="textPersonName"
+            android:inputType="number"
             android:background="@android:color/transparent"/>
 
     </com.google.android.material.textfield.TextInputLayout>

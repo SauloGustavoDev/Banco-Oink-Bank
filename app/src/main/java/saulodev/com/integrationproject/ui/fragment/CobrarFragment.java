@@ -31,26 +31,24 @@ public class CobrarFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentCobrarBinding.inflate(inflater, container, false);
+
+        maskMoney();
         return binding.getRoot();
+
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        errorIcon = ActivityCompat.getDrawable(getActivity(), R.drawable.ic_error);
-        if (errorIcon != null) {
-            errorIcon.setBounds(new Rect(0, 0, errorIcon.getIntrinsicWidth(), errorIcon.getIntrinsicHeight()));
-        }
-
-        maskMoney();
-
         binding.btnConfirmar.setOnClickListener(view1 -> {
-            String valor = binding.nomeEdt.getText().toString().trim();
-            if (!valor.equals(null)){
-                replaceCodigoCobrancaFragment();
+            String valor = binding.nomeEdt.getText().toString();
+            if (valor.equals(null) || valor.equals("") || valor.isEmpty() ||
+                valor == "" || valor == null){
+
+                binding.nomeTil.setError(getString(R.string.campo_obrigatorio));
             }else {
-                binding.nomeEdt.setError(getString(R.string.texto_erro_cobrar));
+                replaceCodigoCobrancaFragment();
             }
 
         });

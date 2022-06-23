@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="@dimen/layout_margin"
     tools:context=".ui.fragment.AreaPixFragment">
 
     <ImageView
         android:id="@+id/voltar_img_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
         android:src="@drawable/ic_seta"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,7 +21,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="19dp"
         android:text="@string/area_pix_titulo"
         app:layout_constraintStart_toEndOf="@+id/voltar_img_btn"
         app:layout_constraintTop_toTopOf="parent" />
@@ -32,7 +30,6 @@
         android:id="@+id/areapix_descricao_subtitulo_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
         android:text="@string/area_pix_descricao"
         app:layout_constraintStart_toStartOf="parent"
