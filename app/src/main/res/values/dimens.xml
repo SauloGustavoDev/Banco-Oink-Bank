@@ -2,5 +2,5 @@
 <resources>
     <dimen name="layout_margin">16dp</dimen>
     <dimen name="margin_between_edt_and_tittle">0dp</dimen>
-    <dimen name="margin_between_edt">15dp</dimen>
+    <dimen name="margin_between_edt">20dp</dimen>
 </resources>

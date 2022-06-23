@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:scrollbars="none"
+    android:layout_height="match_parent"
     android:padding="@dimen/layout_margin"
-    android:layout_height="match_parent">
+    android:scrollbars="none">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -42,9 +42,9 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/nome_til"
+            style="@style/layout_formulario_erro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/layout_formulario_erro"
             android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/nome_text">
@@ -52,11 +52,11 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/nome_edt"
                 style="@style/formulario_edit_text"
-                tools:text="teste"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@android:color/transparent"
                 android:inputType="textPersonName"
-                android:background="@android:color/transparent"/>
+                tools:text="teste" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -72,9 +72,9 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/cpf_til"
+            style="@style/layout_formulario_erro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/layout_formulario_erro"
             android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/cpf_text">
@@ -82,12 +82,12 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/cpf_edt"
                 style="@style/formulario_edit_text"
-                tools:text="teste"
                 android:layout_width="match_parent"
-                android:maxLength="14"
                 android:layout_height="match_parent"
+                android:background="@android:color/transparent"
                 android:inputType="number"
-                android:background="@android:color/transparent"/>
+                android:maxLength="14"
+                tools:text="teste" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -103,9 +103,9 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/data_nascimento_til"
+            style="@style/layout_formulario_erro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/layout_formulario_erro"
             android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/data_nascimento_text">
@@ -113,12 +113,12 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/data_nascimento_edt"
                 style="@style/formulario_edit_text"
-                tools:text="teste"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:maxLength="10"
+                android:background="@android:color/transparent"
                 android:inputType="date"
-                android:background="@android:color/transparent"/>
+                android:maxLength="10"
+                tools:text="teste" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -134,9 +134,9 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/email_til"
+            style="@style/layout_formulario_erro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/layout_formulario_erro"
             android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/email_text">
@@ -164,9 +164,9 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/renda_mensal_til"
+            style="@style/layout_formulario_erro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/layout_formulario_erro"
             android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/renda_mensal_text">
@@ -174,11 +174,11 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/renda_mensal_edt"
                 style="@style/formulario_edit_text"
-                tools:text="teste"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@android:color/transparent"
                 android:inputType="numberDecimal"
-                android:background="@android:color/transparent"/>
+                tools:text="teste" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -194,9 +194,9 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/patrimonio_liquido_til"
+            style="@style/layout_formulario_erro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/layout_formulario_erro"
             android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/patrimonio_liquido_text">
@@ -204,11 +204,11 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/patrimonio_liquido_edt"
                 style="@style/formulario_edit_text"
-                tools:text="teste"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@android:color/transparent"
                 android:inputType="numberDecimal"
-                android:background="@android:color/transparent"/>
+                tools:text="teste" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -224,9 +224,9 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/senha_til"
+            style="@style/layout_formulario_erro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/layout_formulario_erro"
             android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/senha_text">
@@ -234,12 +234,12 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/senha_edt"
                 style="@style/formulario_edit_text"
-                tools:text="teste"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@android:color/transparent"
                 android:inputType="numberPassword"
                 android:maxLength="6"
-                android:background="@android:color/transparent"/>
+                tools:text="teste" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -265,12 +265,12 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/confirmar_senha_edt"
                 style="@style/formulario_edit_text"
-                tools:text="teste"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@android:color/transparent"
                 android:inputType="numberPassword"
                 android:maxLength="6"
-                android:background="@android:color/transparent"/>
+                tools:text="teste" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -278,11 +278,11 @@
             android:id="@+id/termos_checkbox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="-7dp"
             android:layout_marginTop="20dp"
             android:paddingEnd="16dp"
-            android:layout_marginStart="-7dp"
-            app:layout_constraintEnd_toEndOf="parent"
             android:text="@string/termos_e_condicoes"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/confirmar_senha_til" />
 
@@ -292,12 +292,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"
             android:text="@string/cadastrar"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginBottom="5dp"
             app:layout_constraintTop_toBottomOf="@id/termos_checkbox" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="@string/ja_possui_uma_conta_entre_aqui"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/registrar_btn" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
