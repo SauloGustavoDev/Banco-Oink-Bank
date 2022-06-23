@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="@dimen/layout_margin"
     tools:context=".ui.fragment.PixCopiaColaFragment">
 
     <ImageButton
         android:id="@+id/seta_voltar_img"
         android:layout_width="wrap_content"
         android:layout_height="32dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:background="@android:color/transparent"
         android:src="@drawable/ic_seta"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,9 +30,7 @@
         android:id="@+id/pix_copia_e_cola_edttxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="64dp"
-        android:layout_marginEnd="16dp"
         android:fontFamily="@font/nunito_regular"
         android:hint="@string/pix_copiaecola"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,7 +42,6 @@
         android:id="@+id/continuar_pix_copia_e_cola_btn"
         style="@style/botao"
         android:layout_width="match_parent"
-        android:layout_marginBottom="36dp"
         android:text="@string/pix_copiaecola_btn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
