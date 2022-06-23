@@ -38,7 +38,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_cobrar" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/nome_til"
+        android:id="@+id/layout_til"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/layout_formulario_erro"
@@ -48,7 +48,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_qual_valor_receber" >
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/nome_edt"
+            android:id="@+id/valor_edit_text"
             style="@style/formulario_edit_text"
             tools:text="@string/hint_valor"
             android:layout_width="match_parent"
@@ -68,7 +68,7 @@
         android:text="@string/nao_especificar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nome_til" />
+        app:layout_constraintTop_toBottomOf="@+id/layout_til" />
 
     <android.widget.Button
         style="@style/botao"

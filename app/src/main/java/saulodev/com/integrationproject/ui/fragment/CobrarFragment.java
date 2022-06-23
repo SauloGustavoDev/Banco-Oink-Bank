@@ -42,11 +42,11 @@ public class CobrarFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         binding.btnConfirmar.setOnClickListener(view1 -> {
-            String valor = binding.nomeEdt.getText().toString();
+            String valor = binding.valorEditText.getText().toString();
             if (valor.equals(null) || valor.equals("") || valor.isEmpty() ||
                 valor == "" || valor == null){
 
-                binding.nomeTil.setError(getString(R.string.campo_obrigatorio));
+                binding.layoutTil.setError(getString(R.string.campo_obrigatorio));
             }else {
                 replaceCodigoCobrancaFragment();
             }
@@ -62,6 +62,6 @@ public class CobrarFragment extends Fragment {
 
     private void maskMoney() {
         Locale locale = new Locale("pt", "BR");
-        binding.nomeEdt.addTextChangedListener(new MaskMoney(binding.nomeEdt, locale));
+        binding.valorEditText.addTextChangedListener(new MaskMoney(binding.valorEditText, locale));
     }
 }
