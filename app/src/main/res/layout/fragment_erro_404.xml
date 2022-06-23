@@ -36,6 +36,7 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
+        android:adjustViewBounds="true"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
@@ -45,14 +46,14 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <ImageView
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:adjustViewBounds="true"
         android:contentDescription="@string/porco_sendo_abduzido"
-        android:scaleType="centerCrop"
+        android:scaleType="fitEnd"
         android:src="@drawable/ic_porco_abduzido"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <androidx.appcompat.widget.AppCompatButton
