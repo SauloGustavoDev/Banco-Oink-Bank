@@ -116,7 +116,7 @@
     <string name="voltar_btn">Voltar</string>
     <string name="voce_recebeu_transferencia">Você recebeu uma transferência e já está disponível em sua conta</string>
     <string name="transferencia_recebida">Transferência recebida!</string>
-    <string name="termos_e_condicoes">Ao criar uma conta você aceita nossos termos e condições.</string>
+    <string name="termos_e_condicoes">Ao criar uma conta você aceita nossos <b>termos e condições</b>.</string>
 
 
     <!-- Erro inesperado -->
