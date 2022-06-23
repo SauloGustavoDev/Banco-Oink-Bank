@@ -31,7 +31,10 @@ public class CobrarFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentCobrarBinding.inflate(inflater, container, false);
+
+        maskMoney();
         return binding.getRoot();
+
     }
 
     @Override
@@ -42,8 +45,6 @@ public class CobrarFragment extends Fragment {
         if (errorIcon != null) {
             errorIcon.setBounds(new Rect(0, 0, errorIcon.getIntrinsicWidth(), errorIcon.getIntrinsicHeight()));
         }
-
-        maskMoney();
 
         binding.btnConfirmar.setOnClickListener(view1 -> {
             String valor = binding.nomeEdt.getText().toString().trim();
