@@ -21,6 +21,6 @@ public class HomeActivity extends AppCompatActivity {
 
     public void replaceFragment(){
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().add(R.id.frame, new HomeFragment()).addToBackStack(null).commit();
+        fragmentManager.beginTransaction().add(R.id.frame, new HomeFragment()).commit();
     }
 }
