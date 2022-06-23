@@ -35,6 +35,7 @@ public class LoginActivity extends AppCompatActivity {
     private void btnEntrar() {
         binding.entrarBtn.setOnClickListener(view -> {
         startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+        finish();
         });
     }
     private void btnRegister(){
