@@ -59,6 +59,10 @@ public class RegisterActivity extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.O)
     private void listeners() {
 
+        bind.entrarTxt.setOnClickListener(view -> {
+            finish();
+        });
+
         bind.voltarBtn.setOnClickListener(view -> {
             finish();
         });

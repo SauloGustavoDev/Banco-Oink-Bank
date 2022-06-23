@@ -301,6 +301,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/entrar_txt"
             android:layout_marginTop="25dp"
             android:text="@string/ja_possui_uma_conta_entre_aqui"
             app:layout_constraintEnd_toEndOf="parent"
