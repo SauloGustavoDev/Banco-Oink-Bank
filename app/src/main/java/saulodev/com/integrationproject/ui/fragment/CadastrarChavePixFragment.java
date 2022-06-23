@@ -2,6 +2,7 @@ package saulodev.com.integrationproject.ui.fragment;
 
 import android.app.Activity;
 import android.app.ActivityManager;
+import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.drawable.ColorDrawable;
@@ -52,6 +53,11 @@ public class CadastrarChavePixFragment extends Fragment {
         });
     }
 
+    @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        bind.cadastrarChaveLayout.setBackgroundColor(getThemeBackgroundColor());
+        super.onConfigurationChanged(newConfig);
+    }
 
     public int getThemeBackgroundColor() {
         TypedArray array = getActivity().getTheme().obtainStyledAttributes(
