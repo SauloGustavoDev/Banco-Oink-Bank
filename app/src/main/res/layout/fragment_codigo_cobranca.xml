@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_margin="@dimen/layout_margin"
     android:layout_height="match_parent"
     tools:context=".ui.fragment.CodigoCobrancaFragment">
 
@@ -10,8 +11,7 @@
         android:id="@+id/btn_voltar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+
         android:src="@drawable/ic_seta"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,7 +22,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:text="@string/titulo_cod_cobrar"
         app:layout_constraintStart_toEndOf="@+id/btn_voltar"
         app:layout_constraintTop_toTopOf="parent" />
@@ -32,38 +31,38 @@
         android:id="@+id/txt_pix_copia_cola"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
         android:text="@string/subtexto_cod_cobrar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_codigo_cobranca" />
 
     <TextView
-        style="@style/texto"
         android:id="@+id/chave_pix"
-        android:layout_width="wrap_content"
+        style="@style/texto"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="8dp"
-        tools:text="bankapp.com//9hf89ia8s8asnshd8s9"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/icon_copia"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_pix_copia_cola" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_pix_copia_cola"
+        tools:text="bankapp.com//asdasfadafadagawaq" />
 
     <ImageView
         android:id="@+id/icon_copia"
         android:layout_width="22dp"
         android:layout_height="22dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="8dp"
         android:src="@drawable/ic_copiaecola"
-        app:layout_constraintStart_toEndOf="@+id/chave_pix"
-        app:layout_constraintTop_toBottomOf="@+id/txt_pix_copia_cola">
+        app:layout_constraintBottom_toBottomOf="@+id/chave_pix"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/chave_pix"
+        app:layout_constraintVertical_bias="1.0">
 
     </ImageView>
 
     <ImageView
-        android:layout_width="350dp"
-        android:layout_height="350dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:src="@drawable/ic_qrcode"
         app:layout_constraintBottom_toTopOf="@+id/btn_confirmar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -73,13 +72,10 @@
     </ImageView>
 
     <android.widget.Button
-        style="@style/botao"
         android:id="@+id/btn_confirmar"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="32dp"
-        android:text="@string/confirmar"
+        style="@style/botao"
         android:fontFamily="@font/nunito_semibold"
+        android:text="@string/confirmar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
