@@ -15,6 +15,13 @@
     <string name="senha_entrar_exemplo">******</string>
     <string name="entrar">Entrar</string>
 
+    <string name="cadastre_se">Cadastre-se.</string>
+    <string name="nao_tem_cadastro">Não tem cadastro?</string>
+    <string name="nome_banco">OinkBank</string>
+    <string name="mais_novo_banco">mais novo banco !</string>
+    <string name="seu">, seu</string>
+    <string name="seja_bem_vindo_ao">Seja bem vindo ao</string>
+
     <!-- Cadastrar -->
     <string name="boas_vindas">Boas-vindas, para realizar seu cadastro precisamos de alguns dados</string>
     <string name="cadastrar">Cadastrar</string>
