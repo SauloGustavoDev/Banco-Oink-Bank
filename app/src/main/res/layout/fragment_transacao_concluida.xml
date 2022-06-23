@@ -4,27 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="@dimen/layout_margin"
     tools:context=".ui.fragment.TransacaoConcluidaFragment">
 
     <TextView
         android:id="@+id/transacao_concluida_titulo_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         style="@style/titulo_pagina"
-        android:text="Transação concluida !"
+        android:text="@string/transacao_concluida"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/mensagem_conclusao_subtitulo_txt"
+        style="@style/subtitulo_pagina"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="4dp"
-        android:text="Sua transação foi efetuada com sucesso."
-        style="@style/subtitulo_pagina"
+        android:text="@string/transacao_sub"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/transacao_concluida_titulo_txt" />
 
@@ -37,16 +37,16 @@
         android:src="@drawable/ic_image_transacao_concluida"
         app:layout_constraintBottom_toTopOf="@+id/sair_btn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.78"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mensagem_conclusao_subtitulo_txt" />
+        app:layout_constraintTop_toBottomOf="@+id/mensagem_conclusao_subtitulo_txt"
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/sair_btn"
         style="@style/botao"
         android:layout_width="match_parent"
-        android:layout_marginBottom="16dp"
-        android:text="Continuar"
+        android:text="@string/continuar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
