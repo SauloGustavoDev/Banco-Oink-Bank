@@ -25,10 +25,9 @@ public class LoginActivity extends AppCompatActivity {
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        edtWatchers();
         btnEntrar();
         btnRegister();
-
+        edtWatchers();
 
         /*MyAlertDialog myAlertDialog = new MyAlertDialog(R.layout.fragment_erro_inesperado);
         DialogFragment dialog = myAlertDialog;
@@ -44,8 +43,6 @@ public class LoginActivity extends AppCompatActivity {
 
             if (!conta.isEmpty() && !agencia.isEmpty() &&
                     !senha.isEmpty()) {
-
-                if (!conta.isEmpty()) {
 
                     if (agencia.length() != 5) {
                         binding.numeroAgenciaFil.setError("agencia incorreta");
@@ -68,10 +65,9 @@ public class LoginActivity extends AppCompatActivity {
                         binding.numeroSenhaFil.setErrorEnabled(false);
                     }
 
-                } else if (agencia.length() == 5 && conta.length() == 8 && senha.length() == 6) {
-                    startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+                    if (agencia.length() == 5 && conta.length() == 8 && senha.length() == 6) {
                     finish();
-
+                    startActivity(new Intent(LoginActivity.this, HomeActivity.class));
                 }
 
             }else {
@@ -96,9 +92,7 @@ public class LoginActivity extends AppCompatActivity {
                     } else {
                         binding.numeroSenhaFil.setErrorEnabled(false);
                     }
-
                 }
-        finish();
         });
 
         }
@@ -111,29 +105,21 @@ public class LoginActivity extends AppCompatActivity {
 
     private void edtWatchers() {
 
-        binding.numeroAgenciaFil.setOnFocusChangeListener((view, hasFocus) ->{
+        binding.numeroAgenciaEdt.setOnFocusChangeListener((view, hasFocus) ->{
 
-            if (!hasFocus && binding.numeroAgenciaEdt.getText().toString().trim().isEmpty())
-                binding.numeroAgenciaFil.setError(getString(R.string.campo_obrigatorio));
-            else
+            if (!hasFocus)
                 binding.numeroAgenciaFil.setErrorEnabled(false);
-
         });
 
-        binding.numeroContaFil.setOnFocusChangeListener((view, hasFocus) ->{
+        binding.contaComDigitoEdt.setOnFocusChangeListener((view2, hasFocus) ->{
 
-            if (!hasFocus && binding.contaComDigitoEdt.getText().toString().trim().isEmpty())
-                binding.numeroContaFil.setError(getString(R.string.campo_obrigatorio));
-            else
+            if (!hasFocus)
                 binding.numeroContaFil.setErrorEnabled(false);
-
         });
 
-        binding.numeroSenhaFil.setOnFocusChangeListener((view, hasFocus) ->{
+        binding.passwordEdt.setOnFocusChangeListener((view3, hasFocus) ->{
 
-            if (!hasFocus && binding.passwordEdt.getText().toString().trim().isEmpty())
-                binding.numeroSenhaFil.setError(getString(R.string.campo_obrigatorio));
-            else
+            if (!hasFocus )
                 binding.numeroSenhaFil.setErrorEnabled(false);
 
         });

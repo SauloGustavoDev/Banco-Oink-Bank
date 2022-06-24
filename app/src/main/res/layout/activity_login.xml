@@ -112,10 +112,9 @@
             android:id="@+id/numero_agencia_edt"
             style="@style/formulario_edit_text"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
+            tools:text="@string/nome_banco"
             android:background="@android:color/transparent"
-            android:gravity="bottom"
-            android:padding="4dp"
             android:inputType="number"
             />
 
@@ -145,12 +144,10 @@
             android:id="@+id/conta_com_digito_edt"
             style="@style/formulario_edit_text"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:background="@android:color/transparent"
-            android:gravity="bottom"
-            android:padding="4dp"
             android:inputType="number"
-            />
+             />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -160,7 +157,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/layout_margin"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:text="@string/senha"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/numero_agencia_fil" />
@@ -180,12 +177,11 @@
             android:id="@+id/password_edt"
             style="@style/formulario_edit_text"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:background="@android:color/transparent"
-            android:gravity="bottom"
             android:maxLength="6"
             android:inputType="numberPassword"
-            android:padding="4dp" />
+             />
 
     </com.google.android.material.textfield.TextInputLayout>
 
