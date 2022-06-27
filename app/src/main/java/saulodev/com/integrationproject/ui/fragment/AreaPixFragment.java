@@ -58,6 +58,11 @@ public class AreaPixFragment extends Fragment {
             DialogFragment dialog = myAlertDialog;
             dialog.show(requireActivity().getSupportFragmentManager(),"fragment");
 
+        }); bind.pixEmailLinearBtn.setOnClickListener(view1 ->{
+            MyAlertDialog myAlertDialog = new MyAlertDialog(R.layout.fragment_transferencia_recebida);
+            DialogFragment dialog = myAlertDialog;
+            dialog.show(requireActivity().getSupportFragmentManager(),"fragment");
+
         });
 
         bind.minhasChavesBtn.setOnClickListener(view1 -> {
