@@ -39,9 +39,9 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(bind.getRoot());
 
         errorIcon = ActivityCompat.getDrawable(this, R.drawable.ic_error);
-        if (errorIcon != null) {
+        if (errorIcon != null)
             errorIcon.setBounds(new Rect(0, 0, errorIcon.getIntrinsicWidth(), errorIcon.getIntrinsicHeight()));
-        }
+
 
         viewModel = new ViewModelProvider(this).get(RegisterViewModel.class);
 

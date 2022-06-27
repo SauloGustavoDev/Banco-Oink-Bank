@@ -26,9 +26,9 @@
 
         <TextView
             android:id="@+id/txt_minhas_chaves"
+            style="@style/titulo_pagina"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/titulo_pagina"
             android:layout_marginStart="16dp"
             android:text="@string/minhas_chaves"
             app:layout_constraintStart_toEndOf="@+id/voltarImg"
@@ -221,12 +221,14 @@
             style="@style/botao"
             android:layout_width="0dp"
             android:layout_height="40dp"
+            android:layout_marginStart="@dimen/layout_margin"
             android:layout_marginTop="32dp"
+            android:layout_marginEnd="@dimen/layout_margin"
+
             android:text="@string/cadastrar_nova_chave"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_email" />
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
