@@ -3,7 +3,10 @@ package saulodev.com.integrationproject.ui.fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
+import android.content.res.Configuration;
+import android.content.res.TypedArray;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -40,6 +43,7 @@ public class HomeFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         mViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
+        bind.homeLayout.setBackgroundColor(getThemeBackgroundColor());
 
         int inputTypePass = bind.saldoUserTxt.getInputType();
         bind.saldoUserTxt.setInputType(inputTypePass);
@@ -66,6 +70,7 @@ public class HomeFragment extends Fragment {
         });
     }
 
+
     private void replacePixFragment() {
         FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.frame, new AreaPixFragment()).addToBackStack(null).commit();
@@ -74,6 +79,14 @@ public class HomeFragment extends Fragment {
     private void replaceEditarFragment() {
         FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.frame, new EditFragment()).addToBackStack(null).commit();
+    }
+
+    public int getThemeBackgroundColor() {
+        TypedArray array = getActivity().getTheme().obtainStyledAttributes(
+                new int[] { android.R.attr.colorBackground });
+        int backgroundColor = array.getColor(0, 0xFF00FF);
+        array.recycle();
+        return backgroundColor;
     }
 
 

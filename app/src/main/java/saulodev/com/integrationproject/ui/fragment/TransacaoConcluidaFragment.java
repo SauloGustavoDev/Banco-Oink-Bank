@@ -30,13 +30,18 @@ public class TransacaoConcluidaFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         bind.sairBtn.setOnClickListener(view1 -> {
-            getFragmentManager().popBackStack();
+            popBackStack();
             replaceHomeFragment();
         });
 
     }
+
+    private void popBackStack() {
+        requireActivity().getSupportFragmentManager().popBackStack();
+    }
+
     private void replaceHomeFragment() {
         FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.frame, new HomeFragment()).addToBackStack(null).commit();
+        fragmentManager.beginTransaction().replace(R.id.frame, new HomeFragment()).commit();
     }
 }
