@@ -215,7 +215,7 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <android.widget.Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/editar_btn"
             style="@style/botao"
             android:layout_width="match_parent"

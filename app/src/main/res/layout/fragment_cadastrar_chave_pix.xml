@@ -91,7 +91,7 @@
             app:layout_constraintTop_toTopOf="@+id/sua_chave_txt"
             tools:text="Chave Teste" />
 
-        <android.widget.Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/cadastrar_btn"
             style="@style/botao"
             android:layout_width="0dp"

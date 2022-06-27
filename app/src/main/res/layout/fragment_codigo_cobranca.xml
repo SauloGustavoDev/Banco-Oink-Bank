@@ -71,7 +71,7 @@
 
     </ImageView>
 
-    <android.widget.Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_confirmar"
         style="@style/botao"
         android:fontFamily="@font/nunito_semibold"

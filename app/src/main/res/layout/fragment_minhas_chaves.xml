@@ -214,7 +214,7 @@
             app:layout_constraintStart_toEndOf="@id/ic_email"
             app:layout_constraintTop_toTopOf="@+id/ic_email" />
 
-        <android.widget.Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/cadastrarChaveBtn"
             style="@style/botao"
             android:layout_width="0dp"

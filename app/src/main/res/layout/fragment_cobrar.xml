@@ -71,7 +71,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layout_til" />
 
-    <android.widget.Button
+    <androidx.appcompat.widget.AppCompatButton
         style="@style/botao"
         android:id="@+id/btn_confirmar"
         android:text="@string/confirmar"
