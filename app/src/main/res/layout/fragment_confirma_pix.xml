@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:padding="@dimen/layout_margin"
+    android:layout_margin="@dimen/layout_margin"
     android:background="?android:attr/colorBackground"
     android:layout_height="match_parent"
     tools:context=".ui.fragment.ConfirmaPixFragment">
@@ -117,8 +117,8 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        style="@style/subtitulo_pagina"
         android:id="@+id/confirma_dados_subtitulo_txt"
+        style="@style/subtitulo_pagina"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -134,16 +134,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
         android:text="@string/confirmacao"
         app:layout_constraintStart_toEndOf="@+id/voltar_btn"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/voltar_btn" />
 
     <ImageView
         android:id="@+id/voltar_btn"
         android:layout_width="wrap_content"
         android:layout_height="32dp"
-        android:layout_marginTop="16dp"
         android:src="@drawable/ic_seta"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
