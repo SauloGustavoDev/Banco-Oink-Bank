@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/layout_margin"
+    android:background="?android:attr/colorBackground"
     tools:context=".ui.fragment.CobrarFragment">
 
     <ImageView

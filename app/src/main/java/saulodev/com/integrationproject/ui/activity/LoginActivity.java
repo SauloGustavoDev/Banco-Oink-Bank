@@ -59,7 +59,7 @@ public class LoginActivity extends AppCompatActivity {
                     }
 
                     if (senha.length() != 6) {
-                        binding.numeroSenhaFil.setError("senha_incorreta");
+                        binding.numeroSenhaFil.setError("senha incorreta");
 
                     } else {
                         binding.numeroSenhaFil.setErrorEnabled(false);

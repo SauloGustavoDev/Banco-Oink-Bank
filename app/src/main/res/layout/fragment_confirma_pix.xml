@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:padding="@dimen/layout_margin"
+    android:background="?android:attr/colorBackground"
     android:layout_height="match_parent"
     tools:context=".ui.fragment.ConfirmaPixFragment">
 

@@ -1,5 +1,9 @@
 package saulodev.com.integrationproject.ui.fragment;
 
+import static android.R.attr.colorBackground;
+
+import android.annotation.SuppressLint;
+import android.content.res.Resources;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -26,9 +30,11 @@ public class AreaPixFragment extends Fragment {
         return bind.getRoot();
     }
 
+    @SuppressLint({"ResourceType", "UseCompatLoadingForDrawables"})
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
 
         bind.minhasChavesBtn.setOnClickListener(view1 -> {
             replaceMinhasChavesFragment();
@@ -45,7 +51,9 @@ public class AreaPixFragment extends Fragment {
         bind.voltarImgBtn.setOnClickListener(view1 -> {
             requireActivity().onBackPressed();
         });
+
     }
+
 
     private void replaceMinhasChavesFragment() {
         FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
@@ -61,4 +69,7 @@ public class AreaPixFragment extends Fragment {
         FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.frame, new CobrarFragment()).addToBackStack(null).commit();
     }
+
+
 }
+
