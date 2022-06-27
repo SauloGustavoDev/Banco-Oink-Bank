@@ -95,7 +95,6 @@
             android:id="@+id/cadastrar_btn"
             style="@style/botao"
             android:layout_width="0dp"
-            android:layout_marginBottom="32dp"
             android:text="@string/cadastrar"
             android:textAllCaps="false"
             app:layout_constraintBottom_toBottomOf="parent"
