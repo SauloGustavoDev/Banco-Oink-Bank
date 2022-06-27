@@ -43,7 +43,6 @@
         android:id="@+id/sair_btn"
         style="@style/botao"
         android:layout_width="match_parent"
-        android:layout_margin="16dp"
         android:text="@string/voltar_btn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
