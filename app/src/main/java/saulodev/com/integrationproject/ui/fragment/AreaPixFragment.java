@@ -39,7 +39,6 @@ public class AreaPixFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-
         bind.pixQrcodeLinearBtn.setOnClickListener(view1 ->{
             MyAlertDialog myAlertDialog = new MyAlertDialog(R.layout.fragment_erro_inesperado);
         DialogFragment dialog = myAlertDialog;
