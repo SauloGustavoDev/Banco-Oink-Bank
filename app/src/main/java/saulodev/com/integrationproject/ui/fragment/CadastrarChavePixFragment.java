@@ -43,7 +43,6 @@ public class CadastrarChavePixFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         bind.cadastrarChaveLayout.setBackgroundColor(getThemeBackgroundColor());
-
         bind.cadastrarBtn.setOnClickListener(view1 -> {
             requireActivity().onBackPressed();
         });
@@ -51,13 +50,9 @@ public class CadastrarChavePixFragment extends Fragment {
         bind.linearBtn.setOnClickListener(view1 -> {
             requireActivity().onBackPressed();
         });
+
     }
 
-    @Override
-    public void onConfigurationChanged(@NonNull Configuration newConfig) {
-        bind.cadastrarChaveLayout.setBackgroundColor(getThemeBackgroundColor());
-        super.onConfigurationChanged(newConfig);
-    }
 
     public int getThemeBackgroundColor() {
         TypedArray array = getActivity().getTheme().obtainStyledAttributes(
@@ -66,6 +61,8 @@ public class CadastrarChavePixFragment extends Fragment {
         array.recycle();
         return backgroundColor;
     }
+
+
 
 
 }

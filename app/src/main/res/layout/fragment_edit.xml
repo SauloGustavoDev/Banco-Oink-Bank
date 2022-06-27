@@ -53,7 +53,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/nome_edt"
                 android:layout_width="match_parent"
-                android:text="Lucas da Silva"
+                android:text="Fred Rico"
                 style="@style/formulario_edit_text_enabled"
                 android:enabled="false"
                 android:layout_height="match_parent"
@@ -149,6 +149,7 @@
                 style="@style/formulario_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:inputType="textEmailAddress"
                 android:background="@android:color/transparent"
                 tools:text="fredrico@gmail.com" />
 
