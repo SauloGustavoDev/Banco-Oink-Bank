@@ -53,6 +53,10 @@ public class CobrarFragment extends Fragment {
 
         });
 
+        binding.btnVoltar.setOnClickListener(view1 -> {
+            requireActivity().onBackPressed();
+        });
+
     }
 
     private void replaceCodigoCobrancaFragment(){
