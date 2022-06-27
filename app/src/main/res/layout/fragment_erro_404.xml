@@ -35,11 +35,11 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:adjustViewBounds="true"
-        android:layout_height="wrap_content"
+        android:layout_width="191dp"
+        android:layout_height="58dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
+        android:adjustViewBounds="true"
         android:scaleType="fitStart"
         android:src="@drawable/ic_404"
         app:layout_constraintStart_toStartOf="parent"
