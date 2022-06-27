@@ -32,18 +32,19 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_porco_feliz"
-        app:layout_constraintBottom_toTopOf="@+id/voltar_transferencia_recebida_btn"
+        app:layout_constraintBottom_toTopOf="@+id/sair_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/voce_recebeu_transferencia_subtitulo_txt"
         app:layout_constraintVertical_bias="0.647" />
 
-    <android.widget.Button
-        android:id="@+id/voltar_transferencia_recebida_btn"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sair_btn"
         style="@style/botao"
-        android:layout_marginBottom="16dp"
-        android:text="@string/voltar_btn"
+        android:layout_width="match_parent"
+        android:layout_margin="16dp"
+        android:text="@string/tente_novamente"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
