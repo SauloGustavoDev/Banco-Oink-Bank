@@ -26,17 +26,24 @@
         app:layout_constraintStart_toEndOf="@+id/seta_voltar_img"
         app:layout_constraintTop_toTopOf="@+id/seta_voltar_img" />
 
-    <EditText
-        android:id="@+id/pix_copia_e_cola_edttxt"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/pix_til"
+        style="@style/layout_formulario_erro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        android:fontFamily="@font/nunito_regular"
-        android:hint="@string/pix_copiaecola"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pix_copia_e_cola_titulo_txt" />
+        app:layout_constraintTop_toBottomOf="@+id/pix_copia_e_cola_titulo_txt">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/pix_edt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:hint="@string/pix_copiaecola" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <android.widget.Button
         android:id="@+id/continuar_pix_copia_e_cola_btn"
