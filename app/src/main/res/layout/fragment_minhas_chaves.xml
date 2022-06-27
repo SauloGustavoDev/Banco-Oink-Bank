@@ -221,10 +221,7 @@
             style="@style/botao"
             android:layout_width="0dp"
             android:layout_height="40dp"
-            android:layout_marginStart="@dimen/layout_margin"
             android:layout_marginTop="32dp"
-            android:layout_marginEnd="@dimen/layout_margin"
-
             android:text="@string/cadastrar_nova_chave"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
