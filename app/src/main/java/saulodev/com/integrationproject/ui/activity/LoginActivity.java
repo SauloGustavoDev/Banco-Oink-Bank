@@ -44,14 +44,14 @@ public class LoginActivity extends AppCompatActivity {
             if (!conta.isEmpty() && !agencia.isEmpty() &&
                     !senha.isEmpty()) {
 
-                    if (agencia.length() != 5) {
+                    if (agencia.isEmpty()) {
                         binding.numeroAgenciaFil.setError("agencia incorreta");
 
                     } else {
                         binding.numeroAgenciaFil.setErrorEnabled(false);
                     }
 
-                    if (conta.length() != 8) {
+                    if (conta.isEmpty()) {
                         binding.numeroContaFil.setError("conta invalida");
 
                     } else {
@@ -65,7 +65,7 @@ public class LoginActivity extends AppCompatActivity {
                         binding.numeroSenhaFil.setErrorEnabled(false);
                     }
 
-                    if (agencia.length() == 5 && conta.length() == 8 && senha.length() == 6) {
+                    if (!agencia.isEmpty() && !conta.isEmpty() && senha.length() == 6 ) {
                     finish();
                     startActivity(new Intent(LoginActivity.this, HomeActivity.class));
                 }
