@@ -52,6 +52,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/nome_edt"
                 android:layout_width="match_parent"
+                android:text="Lucas da Silva"
                 style="@style/formulario_edit_text_enabled"
                 android:enabled="false"
                 android:layout_height="match_parent"
@@ -81,6 +82,7 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/cpf_edt"
+                android:text="111.444.777-35"
                 android:layout_width="match_parent"
                 style="@style/formulario_edit_text_enabled"
                 android:enabled="false"
@@ -114,6 +116,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:enabled="false"
+                android:text="01/02/1999"
                 style="@style/formulario_edit_text_enabled"
                 android:background="@android:color/transparent"
                 android:inputType="date"

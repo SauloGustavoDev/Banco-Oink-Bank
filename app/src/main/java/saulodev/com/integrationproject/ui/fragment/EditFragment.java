@@ -126,8 +126,7 @@ public class EditFragment extends Fragment {
             if (!nome.isEmpty() && !cpf.isEmpty() && !dataNascimento.isEmpty() &&
                     !email.isEmpty() && !rendaMensal.isEmpty() && !patrimonioLiquido.isEmpty()) {
 
-                if (VerificarDados.validaCPF(cpf) && VerificarDados.dateIsValid(dataNascimento) &&
-                        VerificarDados.validarEmail(email)) {
+                if (VerificarDados.validarEmail(email)) {
 
                     //ENVIAR ALTERAÇÕES PARA API
                     //TODO
