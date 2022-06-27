@@ -46,7 +46,7 @@
         app:layout_constraintEnd_toStartOf="@+id/icon_copia"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_pix_copia_cola"
-        tools:text="bankapp.com//asdasfadafadagawaq" />
+        android:text="bankapp.com//asdasfadafadagawaq" />
 
     <ImageView
         android:id="@+id/icon_copia"

@@ -215,7 +215,6 @@
         android:layout_marginTop="@dimen/layout_margin"
         android:fontFamily="@font/nunito_bold"
         android:text="@string/cadastre_se"
-        android:textColor="@color/azul_escuro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/entrar_btn" />
