@@ -10,10 +10,25 @@
     android:scrollbars="none"
     tools:context=".ui.fragment.HomeFragment">
 
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/cinzaClaro"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -96,7 +111,7 @@
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="182dp"
+            android:layout_marginEnd="170dp"
             android:text="@string/conta"
             android:textSize="17sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -135,30 +150,19 @@
             app:layout_constraintStart_toEndOf="@+id/textView10"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout4"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="180dp"
-            android:background="@color/cinzaClaro"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0">
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
             <View
                 android:id="@+id/meus_cartoes_campo"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:layout_marginTop="116dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="140dp"
                 android:background="@drawable/btn_branco"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
 
             <ImageView
                 android:id="@+id/imageView2"
@@ -186,7 +190,8 @@
                 android:id="@+id/nossas_ofertas_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="16dp"
+
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/nunito_regular"
                 android:text="@string/nossas_ofertas"
@@ -195,21 +200,21 @@
                 app:layout_constraintTop_toBottomOf="@+id/meus_cartoes_campo" />
 
             <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/container"
-                android:paddingStart="20dp"
-                android:paddingEnd="20dp"
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginTop="12dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nossas_ofertas_txt" />
+              android:id="@+id/container"
+              android:paddingStart="20dp"
+              android:paddingEnd="20dp"
+              android:layout_width="match_parent"
+              android:layout_height="150dp"
+              android:layout_marginTop="12dp"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/nossas_ofertas_txt" />
 
             <TextView
                 android:id="@+id/textView13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/nunito_regular"
                 android:text="@string/seguro"
@@ -221,7 +226,8 @@
                 android:id="@+id/textView14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="16dp"
+
                 android:layout_marginTop="4dp"
                 android:text="@string/frase_seguro"
                 android:textSize="14sp"
@@ -233,7 +239,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginTop="12dp"
-
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
                 android:background="@drawable/btn_branco"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -264,7 +271,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
 </ScrollView>
