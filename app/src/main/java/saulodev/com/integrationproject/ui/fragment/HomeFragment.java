@@ -1,12 +1,8 @@
 package saulodev.com.integrationproject.ui.fragment;
 
-import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.ViewModelProvider;
 
-import android.annotation.SuppressLint;
-import android.app.AlertDialog;
-import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 
@@ -19,6 +15,8 @@ import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -78,6 +76,25 @@ public class HomeFragment extends Fragment {
         int inputTypePass = bind.saldoUserTxt.getInputType();
         bind.saldoUserTxt.setInputType(inputTypePass);
 
+        bind.btnVisibility.setOnClickListener(view1 -> {
+            Animation animation_baixo = AnimationUtils.loadAnimation(getActivity(), R.anim.animation_baixo);
+            Animation animation_cima = AnimationUtils.loadAnimation(getActivity(), R.anim.animation_cima);
+            Animation animation_btn = AnimationUtils.loadAnimation(getActivity(), R.anim.animation_btn);
+
+        if (bind.layoutGone.getVisibility() == View.GONE){
+            bind.layoutGone.setVisibility(View.VISIBLE);
+            bind.layoutGone.startAnimation(animation_baixo);
+            bind.btnVisibility.startAnimation(animation_btn);
+            bind.btnVisibility.setImageResource(R.drawable.ic_seta_cima);
+        }else {
+            bind.layoutGone.startAnimation(animation_cima);
+            bind.layoutGone.setVisibility(View.GONE);
+            bind.btnVisibility.startAnimation(animation_btn);
+            bind.btnVisibility.setImageResource(R.drawable.ic_seta_baixo);
+        }
+
+        });
+
         bind.hideBtn.setOnClickListener(view1 ->{
             int inputType = bind.saldoUserTxt.getInputType();
 
@@ -93,12 +110,12 @@ public class HomeFragment extends Fragment {
         bind.editarDadosArea.setOnClickListener(view1 -> {
             replaceEditarFragment();
         });
-/*
+
         bind.pixBtn.setOnClickListener(view1 -> {
             replacePixFragment();
         });
 
- */
+
     }
 
 
