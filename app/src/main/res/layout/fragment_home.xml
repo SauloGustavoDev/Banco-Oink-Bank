@@ -6,506 +6,266 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginTop="16dp"
-    android:fillViewport="false"
+    android:fillViewport="true"
     android:scrollbars="none"
     tools:context=".ui.fragment.HomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/perfil_img"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/ic_profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:fontFamily="@font/nunito_bold"
+            android:text="@string/ola"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/perfil_img"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/nome_home_edt_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/nunito_bold"
+            android:text="Frederico !"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/hide_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/ic_eye_visibility_off"
+            android:padding="6dp"
+            app:layout_constraintEnd_toStartOf="@+id/editar_dados_area"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/editar_dados_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/ic_settings"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:fontFamily="@font/nunito_regular"
+            android:text="@string/agencia"
+            android:textSize="17sp"
+            app:layout_constraintStart_toEndOf="@+id/perfil_img"
+            app:layout_constraintTop_toBottomOf="@+id/nome_home_edt_txt" />
+
+        <TextView
+            android:id="@+id/agencia_home_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="007"
+            android:textSize="17sp"
+            app:layout_constraintStart_toEndOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/nome_home_edt_txt" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="182dp"
+            android:text="@string/conta"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nome_home_edt_txt" />
+
+        <TextView
+            android:id="@+id/conta_home_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="1234-05"
+            android:textSize="17sp"
+            app:layout_constraintStart_toEndOf="@+id/textView9"
+            app:layout_constraintTop_toBottomOf="@+id/nome_home_edt_txt" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="92dp"
+            android:fontFamily="@font/nunito_regular"
+            android:text="@string/saldo"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/saldo_user_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="86dp"
+            android:text="1298,99"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/textView10"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout4"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="180dp"
+            android:background="@color/cinzaClaro"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <TextView
-                android:id="@+id/saudacao_txt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/nunito_bold"
-                android:text="Olá, Lucas"
-                android:textSize="24sp"
-                app:layout_constraintStart_toStartOf="@+id/guideline4"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageButton
-                android:id="@+id/perfil_img"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:background="@drawable/ic_profile"
-                app:layout_constraintBottom_toBottomOf="@+id/saudacao_txt"
-                app:layout_constraintEnd_toStartOf="@+id/guideline5"
-                app:layout_constraintTop_toTopOf="@+id/saudacao_txt" />
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cartao_card"
-                android:layout_width="0dp"
-                android:layout_height="180dp"
-                android:layout_marginTop="8dp"
-                android:backgroundTint="@color/azul_escuro"
-                app:cardCornerRadius="6dp"
-                app:layout_constraintEnd_toStartOf="@+id/guideline5"
-                app:layout_constraintStart_toStartOf="@+id/guideline4"
-                app:layout_constraintTop_toBottomOf="@+id/saudacao_txt">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:id="@+id/saldo_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginTop="8dp"
-                        android:fontFamily="@font/nunito_regular"
-                        android:text="Saldo:"
-                        android:textSize="17sp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/saldo_text_2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="32dp"
-                        android:fontFamily="@font/nunito_regular"
-                        android:text="R$"
-                        android:textSize="17sp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/saldo_text" />
-
-                    <TextView
-                        android:id="@+id/saldo_user_txt"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="2dp"
-                        android:fontFamily="@font/nunito_regular"
-                        android:inputType="numberPassword"
-                        android:text="990,90"
-                        android:textSize="24sp"
-                        app:layout_constraintBottom_toBottomOf="@+id/saldo_text_2"
-                        app:layout_constraintStart_toEndOf="@+id/saldo_text_2"
-                        app:layout_constraintTop_toTopOf="@+id/saldo_text_2" />
-
-                    <ImageButton
-                        android:id="@+id/hide_btn"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginEnd="16dp"
-                        android:background="@drawable/ic_eye_visibility_off"
-                        android:padding="6dp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/agencia_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:fontFamily="@font/nunito_regular"
-                        android:text="Agência:"
-                        android:textSize="17sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent" />
-
-                    <TextView
-                        android:id="@+id/agencia_user_txt"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:fontFamily="@font/nunito_regular"
-                        android:text="1-9"
-                        android:textSize="17sp"
-                        app:layout_constraintBottom_toBottomOf="@+id/agencia_text"
-                        app:layout_constraintStart_toEndOf="@+id/agencia_text"
-                        app:layout_constraintTop_toTopOf="@+id/agencia_text" />
-
-
-                    <TextView
-                        android:id="@+id/conta_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:fontFamily="@font/nunito_regular"
-                        android:text="Conta:"
-                        android:textSize="17sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/guideline6" />
-
-                    <TextView
-                        android:id="@+id/conta_txt"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:fontFamily="@font/nunito_regular"
-                        android:text="1"
-                        android:textSize="17sp"
-                        app:layout_constraintBottom_toBottomOf="@+id/conta_text"
-                        app:layout_constraintStart_toEndOf="@+id/conta_text"
-                        app:layout_constraintTop_toTopOf="@+id/conta_text" />
-
-                    <androidx.constraintlayout.widget.Guideline
-                        android:id="@+id/guideline6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        app:layout_constraintGuide_percent="0.50" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </androidx.cardview.widget.CardView>
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/pix_btn"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/btn_botao_azul_claro"
-                android:drawableStart="@drawable/ic_pix"
-                android:drawableTint="@color/cinza_escuro"
-                android:fontFamily="@font/nunito_semibold"
-                android:paddingStart="8dp"
-                android:paddingEnd="8dp"
-                android:text="Área Pix"
-                android:textAllCaps="false"
-                android:textColor="@color/cinza_escuro"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toStartOf="@+id/pagar_btn"
-                app:layout_constraintHorizontal_chainStyle="spread_inside"
-                app:layout_constraintStart_toStartOf="@id/guideline4"
-                app:layout_constraintTop_toBottomOf="@+id/cartao_card" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/pagar_btn"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="8dp"
-                android:paddingStart="20dp"
-                android:paddingEnd="20dp"
-                android:background="@drawable/btn_botao_azul_claro"
-                android:drawableStart="@drawable/ic_barcode"
-                android:drawableTint="@color/cinza_escuro"
-                android:fontFamily="@font/nunito_semibold"
-                android:text="Pagar"
-                android:textAlignment="center"
-                android:textAllCaps="false"
-                android:textColor="@color/cinza_escuro"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toStartOf="@+id/transferir_btn"
-                app:layout_constraintStart_toEndOf="@+id/pix_btn"
-                app:layout_constraintTop_toBottomOf="@+id/cartao_card" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/transferir_btn"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/btn_botao_azul_claro"
-                android:drawableStart="@drawable/ic_transferir"
-                android:drawablePadding="6dp"
-                android:drawableTint="@color/cinza_escuro"
-                android:fontFamily="@font/nunito_semibold"
-                android:paddingStart="8dp"
-                android:paddingEnd="7dp"
-                android:text="Transferir"
-                android:textAllCaps="false"
-                android:textColor="@color/cinza_escuro"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toStartOf="@+id/guideline5"
-                app:layout_constraintStart_toEndOf="@+id/pagar_btn"
-                app:layout_constraintTop_toBottomOf="@+id/cartao_card" />
-
-            <com.google.android.material.divider.MaterialDivider
-                android:id="@+id/materialDivider"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/pagar_btn" />
-
-            <ImageView
-                android:id="@+id/meus_cartoes_img"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_marginTop="16dp"
-                android:src="@drawable/ic_cartao"
-                app:layout_constraintStart_toStartOf="@+id/guideline4"
-                app:layout_constraintTop_toBottomOf="@+id/materialDivider" />
-
-            <TextView
-                android:id="@+id/meus_cartoes_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:fontFamily="@font/nunito_regular"
-                android:text="@string/meus_cartoes"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@+id/meus_cartoes_img"
-                app:layout_constraintStart_toEndOf="@+id/meus_cartoes_img"
-                app:layout_constraintTop_toTopOf="@+id/meus_cartoes_img" />
-
-            <ImageButton
-                android:id="@+id/seta_img"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/ic_seta"
-                android:scaleX="-1"
-                app:layout_constraintBottom_toBottomOf="@+id/meus_cartoes_text"
-                app:layout_constraintEnd_toStartOf="@+id/guideline5"
-                app:layout_constraintTop_toTopOf="@+id/meus_cartoes_text" />
-
-
-            <com.google.android.material.divider.MaterialDivider
-                android:id="@+id/materialDivider5"
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_marginTop="16sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/guideline4"
-                app:layout_constraintTop_toBottomOf="@+id/meus_cartoes_img" />
-
-            <ImageView
-                android:id="@+id/emprestimo_img"
-                android:layout_width="32dp"
-                android:layout_height="42dp"
-                android:layout_marginTop="16dp"
-                android:src="@drawable/ic_emprestimo"
-                app:layout_constraintStart_toStartOf="@+id/guideline4"
-                app:layout_constraintTop_toBottomOf="@+id/materialDivider5" />
-
-            <TextView
-                android:id="@+id/emprestimo_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:fontFamily="@font/nunito_regular"
-                android:text="@string/emprestimo"
-                android:textSize="17sp"
-                app:layout_constraintBottom_toBottomOf="@+id/emprestimo_img"
-                app:layout_constraintStart_toEndOf="@+id/emprestimo_img"
-                app:layout_constraintTop_toTopOf="@+id/emprestimo_img" />
-
-            <ImageButton
-                android:id="@+id/emprestimo_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/ic_seta"
-                android:scaleX="-1"
-                app:layout_constraintBottom_toBottomOf="@+id/emprestimo_text"
-                app:layout_constraintEnd_toStartOf="@+id/guideline5"
-                app:layout_constraintTop_toTopOf="@+id/emprestimo_text" />
-
-
-            <com.google.android.material.divider.MaterialDivider
-                android:id="@+id/materialDivider6"
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_marginTop="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/guideline4"
-                app:layout_constraintTop_toBottomOf="@+id/emprestimo_img" />
-
-            <ImageView
-                android:id="@+id/recarga_img"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_marginTop="16dp"
-                android:src="@drawable/ic_celular"
-                app:layout_constraintStart_toStartOf="@+id/guideline4"
-                app:layout_constraintTop_toBottomOf="@+id/materialDivider6" />
-
-            <TextView
-                android:id="@+id/recarga_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:fontFamily="@font/nunito_regular"
-                android:text="@string/recarga_celular"
-                android:textSize="17sp"
-                app:layout_constraintBottom_toBottomOf="@+id/recarga_img"
-                app:layout_constraintStart_toEndOf="@+id/recarga_img"
-                app:layout_constraintTop_toTopOf="@+id/recarga_img" />
-
-            <ImageButton
-                android:id="@+id/seta_recarga_img"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/ic_seta"
-                android:scaleX="-1"
-                app:layout_constraintBottom_toBottomOf="@+id/recarga_text"
-                app:layout_constraintEnd_toStartOf="@+id/guideline5"
-                app:layout_constraintTop_toTopOf="@+id/recarga_text" />
-
-
-            <com.google.android.material.divider.MaterialDivider
-                android:id="@+id/materialDivider7"
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_marginTop="16sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/guideline4"
-                app:layout_constraintTop_toBottomOf="@+id/recarga_img" />
-
-            <ImageButton
-                android:id="@+id/seta_shopping_img"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/ic_seta"
-                android:scaleX="-1"
-                app:layout_constraintBottom_toBottomOf="@+id/shopping_text"
-                app:layout_constraintEnd_toStartOf="@+id/guideline5"
-                app:layout_constraintTop_toTopOf="@+id/shopping_text" />
-
-
-            <com.google.android.material.divider.MaterialDivider
-                android:id="@+id/materialDivider8"
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_marginTop="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/guideline4"
-                app:layout_constraintTop_toBottomOf="@+id/shopping_img" />
-
-            <ImageView
-                android:id="@+id/shopping_img"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_marginTop="16dp"
-                android:src="@drawable/ic_fourshopping"
-                app:layout_constraintStart_toStartOf="@+id/guideline4"
-                app:layout_constraintTop_toBottomOf="@+id/materialDivider7" />
-
-            <TextView
-                android:id="@+id/shopping_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:fontFamily="@font/nunito_regular"
-                android:text="@string/fourshopping"
-                android:textSize="17sp"
-                app:layout_constraintBottom_toBottomOf="@+id/shopping_img"
-                app:layout_constraintStart_toEndOf="@+id/shopping_img"
-                app:layout_constraintTop_toTopOf="@+id/shopping_img" />
-
-            <ImageButton
-                android:id="@+id/seta_seguro_img"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/ic_seta"
-                android:scaleX="-1"
-                app:layout_constraintBottom_toBottomOf="@+id/seguro_text"
-                app:layout_constraintEnd_toStartOf="@+id/guideline5"
-                app:layout_constraintTop_toTopOf="@+id/seguro_text" />
-
-
-            <com.google.android.material.divider.MaterialDivider
-                android:id="@+id/materialDivider9"
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_marginTop="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/guideline4"
-                app:layout_constraintTop_toBottomOf="@+id/seguro_img" />
-
-            <ImageView
-                android:id="@+id/seguro_img"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_marginTop="16dp"
-                android:src="@drawable/ic_seguro"
-                app:layout_constraintStart_toStartOf="@+id/guideline4"
-                app:layout_constraintTop_toBottomOf="@+id/materialDivider8" />
-
-            <TextView
-                android:id="@+id/seguro_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:fontFamily="@font/nunito_regular"
-                android:text="@string/seguro"
-                android:textSize="17sp"
-                app:layout_constraintBottom_toBottomOf="@+id/seguro_img"
-                app:layout_constraintStart_toEndOf="@+id/seguro_img"
-                app:layout_constraintTop_toTopOf="@+id/seguro_img" />
-
-
-            <ImageView
-                android:id="@+id/editar_dados_img"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:src="@drawable/ic_editar_dados"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/guideline4"
-                app:layout_constraintTop_toBottomOf="@+id/materialDivider9" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
 
             <View
-                android:id="@+id/editar_dados_area"
+                android:id="@+id/meus_cartoes_campo"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="116dp"
+                android:background="@drawable/btn_branco"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/materialDivider9" />
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/ic_cartao"
+                app:layout_constraintBottom_toBottomOf="@+id/meus_cartoes_campo"
+                app:layout_constraintStart_toStartOf="@+id/meus_cartoes_campo"
+                app:layout_constraintTop_toTopOf="@+id/meus_cartoes_campo" />
 
             <TextView
-                android:id="@+id/editar_dados_text"
+                android:id="@+id/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
+                android:layout_marginStart="15dp"
                 android:fontFamily="@font/nunito_regular"
-                android:text="@string/editar_dados"
+                android:text="@string/meus_cartoes"
                 android:textSize="17sp"
-                app:layout_constraintBottom_toBottomOf="@+id/editar_dados_img"
-                app:layout_constraintStart_toEndOf="@+id/editar_dados_img"
-                app:layout_constraintTop_toTopOf="@+id/editar_dados_img" />
+                app:layout_constraintBottom_toBottomOf="@+id/meus_cartoes_campo"
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintTop_toTopOf="@+id/meus_cartoes_campo" />
 
-
-            <ImageButton
-                android:id="@+id/seta_editar_dados_img"
+            <TextView
+                android:id="@+id/nossas_ofertas_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/ic_seta"
-                android:scaleX="-1"
-                app:layout_constraintBottom_toBottomOf="@+id/editar_dados_text"
-                app:layout_constraintEnd_toStartOf="@+id/guideline5"
-                app:layout_constraintTop_toTopOf="@+id/editar_dados_text" />
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/nunito_regular"
+                android:text="@string/nossas_ofertas"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/meus_cartoes_campo" />
 
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+                app:cardCornerRadius="17dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nossas_ofertas_txt" />
 
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline4"
+            <TextView
+                android:id="@+id/textView13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.05" />
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/nunito_regular"
+                android:text="@string/seguro"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline5"
+            <TextView
+                android:id="@+id/textView14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.95" />
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/frase_seguro"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="12dp"
+
+                android:background="@drawable/btn_branco"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/ic_seguro"
+                app:layout_constraintBottom_toBottomOf="@+id/view2"
+                app:layout_constraintStart_toStartOf="@+id/view2"
+                app:layout_constraintTop_toTopOf="@+id/view2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/nunito_regular"
+                android:text="@string/seguro_de_vida"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="@+id/view2"
+                app:layout_constraintStart_toEndOf="@+id/imageView3"
+                app:layout_constraintTop_toTopOf="@+id/view2" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <FrameLayout
-            android:id="@+id/frame_editar"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </ScrollView>

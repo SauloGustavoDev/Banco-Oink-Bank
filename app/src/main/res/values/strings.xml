@@ -39,7 +39,7 @@
 
     <!-- Home -->
     <string name="ola">Olá,</string>
-    <string name="saldo">Saldo:</string>
+    <string name="saldo">R$</string>
     <string name="agencia_home">Agência:</string>
     <string name="conta_home">Conta:</string>
     <string name="pix">Pix</string>
@@ -49,7 +49,10 @@
     <string name="emprestimo">Empréstimo</string>
     <string name="recarga_celular">Recarga de celular</string>
     <string name="fourshopping">FourShopping</string>
+    <string name="nossas_ofertas">Nossas ofertas</string>
     <string name="seguro">Seguro</string>
+    <string name="frase_seguro">Não deixe o seu dinheiro para os outros, cuide de você !</string>
+    <string name="seguro_de_vida">Seguro de vida</string>
     <string name="editar_dados">Editar Dados</string>
     <string name="sair">sair</string>
 

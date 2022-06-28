@@ -64,10 +64,12 @@ public class HomeFragment extends Fragment {
         bind.editarDadosArea.setOnClickListener(view1 -> {
             replaceEditarFragment();
         });
-
+/*
         bind.pixBtn.setOnClickListener(view1 -> {
             replacePixFragment();
         });
+
+ */
     }
 
 
