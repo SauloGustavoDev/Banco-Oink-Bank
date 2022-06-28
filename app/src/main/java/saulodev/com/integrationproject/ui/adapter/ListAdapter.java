@@ -12,6 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import saulodev.com.integrationproject.R;
 import saulodev.com.integrationproject.model.CardOffers;
@@ -19,9 +20,9 @@ import saulodev.com.integrationproject.model.CardOffers;
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder> {
 
     private Context context;
-    private ArrayList<CardOffers> listOffers;
+    private List<CardOffers> listOffers;
 
-    public ListAdapter(Context context, ArrayList<CardOffers> listOffers){
+    public ListAdapter(Context context, List<CardOffers> listOffers){
         this.context = context;
         this.listOffers = listOffers;
     }
