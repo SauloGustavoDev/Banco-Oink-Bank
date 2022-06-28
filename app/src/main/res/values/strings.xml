@@ -157,4 +157,6 @@
     <string name="transacao_concluida">Transação concluida!</string>
     <string name="transacao_sub">Sua transação foi efetuada com sucesso.</string>
     <string name="continuar">Continuar</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
