@@ -1,5 +1,7 @@
 package saulodev.com.integrationproject.model;
 
+import android.graphics.drawable.Drawable;
+
 public class CardOffers {
 
     private int offer;

@@ -194,14 +194,13 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/meus_cartoes_campo" />
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardView"
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/container"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:layout_marginStart="8dp"
                 android:layout_marginTop="12dp"
-                android:layout_marginEnd="8dp"
-                app:cardCornerRadius="17dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/nossas_ofertas_txt" />
@@ -216,7 +215,7 @@
                 android:text="@string/seguro"
                 android:textSize="24sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardView" />
+                app:layout_constraintTop_toBottomOf="@+id/container" />
 
             <TextView
                 android:id="@+id/textView14"
