@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
     android:scrollbars="none"
+
     tools:context=".ui.fragment.HomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -19,7 +20,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.0"
+        android:paddingBottom="32dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout2"
@@ -307,61 +309,43 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/layout_gone" />
 
-        <View
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/meus_cartoes_campo"
+            style="@style/botao"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:background="@drawable/btn_branco"
+            android:drawableStart="@drawable/ic_cartao"
+            android:drawablePadding="16dp"
+            android:layout_marginTop="16dp"
+            android:paddingLeft="8dp"
+            android:text="@string/meus_cartoes"
+            android:textAlignment="textStart"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_visibility" />
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:background="@drawable/ic_cartao"
-            app:layout_constraintBottom_toBottomOf="@+id/meus_cartoes_campo"
-            app:layout_constraintStart_toStartOf="@+id/meus_cartoes_campo"
-            app:layout_constraintTop_toTopOf="@+id/meus_cartoes_campo" />
-
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:fontFamily="@font/nunito_regular"
-            android:text="@string/meus_cartoes"
-            android:textSize="17sp"
-            app:layout_constraintBottom_toBottomOf="@+id/meus_cartoes_campo"
-            app:layout_constraintStart_toEndOf="@+id/imageView2"
-            app:layout_constraintTop_toTopOf="@+id/meus_cartoes_campo" />
 
         <TextView
             android:id="@+id/nossas_ofertas_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/nunito_regular"
-            android:text="@string/nossas_ofertas"
+            android:fontFamily="@font/nunito_light"
             android:textSize="24sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/nossas_ofertas"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/meus_cartoes_campo" />
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/container"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_marginTop="12dp"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/nossas_ofertas_txt" />
@@ -370,63 +354,42 @@
             android:id="@+id/textView13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_light"
+            android:textSize="24sp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:fontFamily="@font/nunito_regular"
             android:text="@string/seguro"
-            android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/container" />
 
         <TextView
             android:id="@+id/textView14"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:layout_marginStart="16dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
             android:text="@string/frase_seguro"
             android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/cinza_escuro"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
-        <View
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/view2"
+            style="@style/botao"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
             android:background="@drawable/btn_branco"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:drawableStart="@drawable/ic_seguro"
+            android:drawablePadding="16dp"
+            android:paddingLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/seguro_de_vida"
+            android:textAlignment="textStart"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:background="@drawable/ic_seguro"
-            app:layout_constraintBottom_toBottomOf="@+id/view2"
-            app:layout_constraintStart_toStartOf="@+id/view2"
-            app:layout_constraintTop_toTopOf="@+id/view2" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:fontFamily="@font/nunito_regular"
-            android:text="@string/seguro_de_vida"
-            android:textSize="17sp"
-            app:layout_constraintBottom_toBottomOf="@+id/view2"
-            app:layout_constraintStart_toEndOf="@+id/imageView3"
-            app:layout_constraintTop_toTopOf="@+id/view2" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

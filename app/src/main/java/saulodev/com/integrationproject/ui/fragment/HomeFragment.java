@@ -73,8 +73,6 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        int inputTypePass = bind.saldoUserTxt.getInputType();
-        bind.saldoUserTxt.setInputType(inputTypePass);
 
         bind.btnVisibility.setOnClickListener(view1 -> {
             Animation animation_baixo = AnimationUtils.loadAnimation(getActivity(), R.anim.animation_baixo);
@@ -95,6 +93,9 @@ public class HomeFragment extends Fragment {
 
         });
 
+        int inputTypePass = bind.saldoUserTxt.getInputType();
+        bind.saldoUserTxt.setInputType(inputTypePass);
+
         bind.hideBtn.setOnClickListener(view1 ->{
             int inputType = bind.saldoUserTxt.getInputType();
 
@@ -114,7 +115,6 @@ public class HomeFragment extends Fragment {
         bind.pixBtn.setOnClickListener(view1 -> {
             replacePixFragment();
         });
-
 
     }
 
