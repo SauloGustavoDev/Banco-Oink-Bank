@@ -14,12 +14,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/background_theme"
+        android:paddingBottom="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:paddingBottom="32dp"
         app:layout_constraintVertical_bias="0.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -310,20 +310,20 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/meus_cartoes_campo"
-            android:layout_height="40dp"
             android:layout_width="match_parent"
+            android:layout_height="40dp"
             android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:textAllCaps="false"
-            android:textSize="17sp"
-            android:fontFamily="@font/nunito_medium"
             android:background="@drawable/background_btn_icons_home"
             android:drawableStart="@drawable/ic_cartao"
             android:drawablePadding="16dp"
-            android:layout_marginTop="16dp"
+            android:fontFamily="@font/nunito_medium"
             android:paddingLeft="8dp"
             android:text="@string/meus_cartoes"
             android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="17sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_visibility" />
@@ -333,43 +333,45 @@
             android:id="@+id/nossas_ofertas_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/nunito_light"
-            android:textSize="24sp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/nunito_light"
             android:text="@string/nossas_ofertas"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/meus_cartoes_campo" />
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/container"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_marginTop="12dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline6"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nossas_ofertas_txt" />
+            app:layout_constraintTop_toTopOf="@+id/guideline5" />
 
         <TextView
             android:id="@+id/textView13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/nunito_light"
-            android:textSize="24sp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/nunito_light"
             android:text="@string/seguro"
+            android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/container" />
+            app:layout_constraintTop_toTopOf="@+id/guideline6" />
 
         <TextView
             android:id="@+id/textView14"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
             android:text="@string/frase_seguro"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -378,23 +380,37 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/view2"
-            android:layout_height="40dp"
             android:layout_width="match_parent"
+            android:layout_height="40dp"
             android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
-            android:textAllCaps="false"
-            android:textSize="17sp"
-            android:fontFamily="@font/nunito_medium"
             android:background="@drawable/background_btn_icons_home"
             android:drawableStart="@drawable/ic_seguro"
             android:drawablePadding="16dp"
+            android:fontFamily="@font/nunito_medium"
             android:paddingLeft="8dp"
-            android:layout_marginTop="16dp"
             android:text="@string/seguro_de_vida"
             android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="17sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.55" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.80" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
