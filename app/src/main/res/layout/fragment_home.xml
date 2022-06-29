@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
     android:scrollbars="none"
-
     tools:context=".ui.fragment.HomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -20,8 +19,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        android:paddingBottom="32dp">
+        app:layout_constraintVertical_bias="0.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout2"
@@ -240,7 +238,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="@string/transferir"
+                android:text="@string/recarga_celular"
                 app:layout_constraintEnd_toEndOf="@+id/imageButton6"
                 app:layout_constraintStart_toStartOf="@+id/imageButton6"
                 app:layout_constraintTop_toBottomOf="@+id/imageButton6" />
@@ -249,7 +247,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="@string/pagar"
+                android:text="@string/fourshopping"
                 app:layout_constraintEnd_toEndOf="@+id/imageButton5"
                 app:layout_constraintStart_toStartOf="@+id/imageButton5"
                 app:layout_constraintTop_toBottomOf="@+id/imageButton5" />
@@ -258,7 +256,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="@string/pix"
+                android:text="@string/emprestimo"
                 app:layout_constraintEnd_toEndOf="@+id/imageButton4"
                 app:layout_constraintStart_toStartOf="@+id/imageButton4"
                 app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
@@ -268,7 +266,7 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:background="@drawable/btn_redondo_home"
-                android:src="@drawable/ic_barcode"
+                android:src="@drawable/ic_fourshopping"
                 app:layout_constraintEnd_toStartOf="@+id/imageButton6"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/imageButton4"
@@ -279,7 +277,7 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:background="@drawable/btn_redondo_home"
-                android:src="@drawable/ic_pix"
+                android:src="@drawable/ic_emprestimo"
                 app:layout_constraintEnd_toStartOf="@+id/imageButton5"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
@@ -290,7 +288,7 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:background="@drawable/btn_redondo_home"
-                android:src="@drawable/ic_transfer"
+                android:src="@drawable/ic_celular"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/imageButton5"
@@ -392,6 +390,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
 </ScrollView>
