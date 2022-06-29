@@ -13,7 +13,7 @@
         android:id="@+id/constraintLayout4"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/cinzaClaro"
+        android:background="@drawable/background_theme"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -26,7 +26,7 @@
             android:id="@+id/constraintLayout2"
             android:layout_width="match_parent"
             android:layout_height="180dp"
-            android:background="@color/white"
+            android:background="?android:attr/colorBackground"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -297,12 +297,12 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <android.widget.ImageButton
+        <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/btn_visibility"
             android:layout_width="70dp"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:layout_marginTop="16dp"
-            android:backgroundTint="@color/white"
+            android:background="@drawable/background_btn_icons_home"
             android:src="@drawable/ic_seta_baixo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -310,11 +310,14 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/meus_cartoes_campo"
-            style="@style/botao"
+            android:layout_height="40dp"
             android:layout_width="match_parent"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:background="@drawable/btn_branco"
+            android:textAllCaps="false"
+            android:textSize="17sp"
+            android:fontFamily="@font/nunito_medium"
+            android:background="@drawable/background_btn_icons_home"
             android:drawableStart="@drawable/ic_cartao"
             android:drawablePadding="16dp"
             android:layout_marginTop="16dp"
@@ -363,23 +366,26 @@
 
         <TextView
             android:id="@+id/textView14"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
             android:text="@string/frase_seguro"
             android:textSize="14sp"
-            android:textColor="@color/cinza_escuro"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/view2"
-            style="@style/botao"
+            android:layout_height="40dp"
             android:layout_width="match_parent"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:background="@drawable/btn_branco"
+            android:textAllCaps="false"
+            android:textSize="17sp"
+            android:fontFamily="@font/nunito_medium"
+            android:background="@drawable/background_btn_icons_home"
             android:drawableStart="@drawable/ic_seguro"
             android:drawablePadding="16dp"
             android:paddingLeft="8dp"
