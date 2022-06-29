@@ -19,6 +19,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:paddingBottom="32dp"
         app:layout_constraintVertical_bias="0.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -132,24 +133,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="28dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/layout_margin"
                 android:fontFamily="@font/nunito_regular"
                 android:text="@string/saldo"
                 android:textSize="17sp"
-                app:layout_constraintBottom_toBottomOf="@+id/saldo_user_txt"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/saldo_user_txt" />
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
             <TextView
                 android:id="@+id/saldo_user_txt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:layout_marginTop="16dp"
+                android:inputType="numberPassword"
                 android:text="1298,99"
                 android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView10"
                 app:layout_constraintStart_toEndOf="@+id/textView10"
-                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+                app:layout_constraintTop_toTopOf="@+id/textView10" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
