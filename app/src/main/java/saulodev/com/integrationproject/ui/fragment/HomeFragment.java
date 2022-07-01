@@ -3,6 +3,7 @@ package saulodev.com.integrationproject.ui.fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 
@@ -24,6 +25,7 @@ import java.util.List;
 import saulodev.com.integrationproject.R;
 import saulodev.com.integrationproject.databinding.FragmentHomeBinding;
 import saulodev.com.integrationproject.model.CardOffers;
+import saulodev.com.integrationproject.ui.activity.AreaPixActivity;
 import saulodev.com.integrationproject.ui.adapter.ListAdapter;
 import saulodev.com.integrationproject.ui.viewmodel.HomeViewModel;
 
@@ -112,7 +114,8 @@ public class HomeFragment extends Fragment {
         });
 
         bind.pixBtn.setOnClickListener(view1 -> {
-            replacePixFragment();
+            Intent intent = new Intent(getContext(), AreaPixActivity.class);
+            startActivity(intent);
         });
 
     }
