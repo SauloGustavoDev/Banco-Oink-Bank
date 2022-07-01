@@ -1,47 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="@dimen/layout_margin"
-    tools:context=".ui.fragment.PixCopiaColaFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.PixCopiaColaFragment"
+    android:padding="16dp">
 
-    <ImageButton
+    <ImageView
         android:id="@+id/seta_voltar_img"
         android:layout_width="wrap_content"
         android:layout_height="32dp"
-        android:background="@android:color/transparent"
+        android:layout_marginTop="4dp"
         android:src="@drawable/ic_seta"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/voltar_pix_copia_cola" />
 
     <TextView
-        android:id="@+id/pix_copia_e_cola_titulo_txt"
+        android:id="@+id/txt_minhas_chaves"
         style="@style/titulo_pagina"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="@string/pix_copiaecola_Titulo"
+        android:text="@string/pix_copia_cola"
         app:layout_constraintStart_toEndOf="@+id/seta_voltar_img"
         app:layout_constraintTop_toTopOf="@+id/seta_voltar_img" />
+
+    <TextView
+        android:id="@+id/text_visualize_chaves"
+        style="@style/subtitulo_pagina"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/subtitulo_pix_copia_cola"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_minhas_chaves" />
+
+    <TextView
+
+        android:id="@+id/textView7"
+        style="@style/subtitulo_pagina"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/codigo_pix_copia_cola"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_visualize_chaves" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/pix_til"
         style="@style/layout_formulario_erro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pix_copia_e_cola_titulo_txt">
+        app:layout_constraintTop_toBottomOf="@id/textView7">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/pix_edt"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@android:color/transparent"
-            android:hint="@string/pix_copiaecola" />
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/pix_edt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:hint="@string/pix_copiaecola" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
