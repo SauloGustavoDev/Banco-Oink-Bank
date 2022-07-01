@@ -43,9 +43,6 @@ public class CadastrarChavePixFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         bind.cadastrarChaveLayout.setBackgroundColor(getThemeBackgroundColor());
-        bind.cadastrarBtn.setOnClickListener(view1 -> {
-            requireActivity().onBackPressed();
-        });
 
         bind.linearBtn.setOnClickListener(view1 -> {
             requireActivity().onBackPressed();

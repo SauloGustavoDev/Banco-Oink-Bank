@@ -64,15 +64,20 @@
 
     <!-- Minhas chaves -->
     <string name="minhas_chaves">Minhas chaves PIX</string>
-    <string name="visualize">Visualize, adicione ou exclua chaves Pix:</string>
+    <string name="visualize">Aqui estão todas as suas chaves. Clique nelas para editá-las ou crie uma nova.</string>
     <string name="telefone">Telefone</string>
     <string name="chave_aleatoria">Chave Aleatória</string>
     <string name="cadastrar_nova_chave">Cadastrar nova chave</string>
     <string name="sem_cadastro">S/Cadastro</string>
+    <string name="titulo_pesquisa">Pesquisar por pessoa</string>
+    <string name="hint_pesquisa">Nome, CPF, telefone</string>
+    <string name="titulo_selecionar_chave">Selecionar Chave</string>
 
 
     <!-- Cadastrar Chave Pix -->
-    <string name="cadastrar_chave_pix">Cadastrar Chave PIX</string>
+    <string name="texto_conta_corrente">Conta\nCorrente</string>
+    <string name="texto_conta_pupanca">Conta\nPoupança</string>
+    <string name="tipo_de_conta">Tipo de Conta</string>
     <string name="selecionar_tipo_chave">Selecionar o tipo de chave desejada:</string>
     <string name="sua_chave">Sua chave:</string>
     <string-array name="tipos_de_chaves">
