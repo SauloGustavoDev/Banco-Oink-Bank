@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_theme"
+    android:padding="16dp"
+    tools:context=".ui.fragment.DefinirLimitePixFragment">
+
+    <ImageView
+        android:id="@+id/voltar_definirLimite_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/ic_seta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/definirLimitePix_titulo_txt"
+        style="@style/titulo_pagina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Definir Limite"
+        app:layout_constraintStart_toEndOf="@+id/voltar_definirLimite_btn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/definirLimite_subtitulo_txt"
+        style="@style/subtitulo_pagina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Defina um limite de gatos para os períodos diurno e noturno"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/definirLimitePix_titulo_txt" />
+
+    <TextView
+        android:id="@+id/limiteDiurno_txt"
+        style="@style/subtitulo_pagina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Limite do período diurno:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/definirLimite_subtitulo_txt" />
+
+    <EditText
+        android:id="@+id/limiteDiurno_edt_txt"
+        style="@style/formulario_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="R$ 200,00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/limiteDiurno_txt" />
+
+    <TextView
+        android:id="@+id/limiteNoturno_txt"
+        style="@style/subtitulo_pagina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Limite do período noturno:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/limiteDiurno_edt_txt" />
+
+    <EditText
+        android:id="@+id/limiteNoturno_edt_txt"
+        style="@style/formulario_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="R$ 200,00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/limiteNoturno_txt" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/salvarLimitePix_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Salvar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

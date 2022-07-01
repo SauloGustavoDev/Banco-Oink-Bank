@@ -28,7 +28,7 @@
     </style>
     
 
-    <style name="botao">
+    <style name="salvarLimitePix_btn">
         <item name="android:background">@drawable/btn_botao_azul_claro</item>
         <item name="android:textColor">@color/cinza_escuro</item>
         <item name="font">@font/nunito_medium</item>

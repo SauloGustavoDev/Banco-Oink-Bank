@@ -7,7 +7,7 @@
 
     <!-- Entar -->
     <string name="bank_app">BankApp</string>
-    <string name="agencia_digito">Agência com dígito</string>
+    <string name="agencia_digito">Agência</string>
     <string name="agencia_digito_exemplo">0000-0</string>
     <string name="conta_digito">Conta com dígito</string>
     <string name="conta_digito_exemplo">00000000-0</string>
@@ -39,7 +39,7 @@
 
     <!-- Home -->
     <string name="ola">Olá,</string>
-    <string name="saldo">Saldo:</string>
+    <string name="saldo">R$</string>
     <string name="agencia_home">Agência:</string>
     <string name="conta_home">Conta:</string>
     <string name="pix">Pix</string>
@@ -48,8 +48,11 @@
     <string name="meus_cartoes">Meus Cartões</string>
     <string name="emprestimo">Empréstimo</string>
     <string name="recarga_celular">Recarga de celular</string>
-    <string name="fourshopping">FourShopping</string>
+    <string name="fourshopping">Shopping</string>
+    <string name="nossas_ofertas">Nossas ofertas</string>
     <string name="seguro">Seguro</string>
+    <string name="frase_seguro">Não deixe o seu dinheiro para os outros, cuide de você !</string>
+    <string name="seguro_de_vida">Seguro de vida</string>
     <string name="editar_dados">Editar Dados</string>
     <string name="sair">sair</string>
 
@@ -154,4 +157,6 @@
     <string name="transacao_concluida">Transação concluida!</string>
     <string name="transacao_sub">Sua transação foi efetuada com sucesso.</string>
     <string name="continuar">Continuar</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

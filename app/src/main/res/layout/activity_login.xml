@@ -186,7 +186,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/entrar_btn"
-        style="@style/botao"
+        style="@style/salvarLimitePix_btn"
         android:layout_width="match_parent"
         android:layout_marginTop="@dimen/layout_margin"
         android:text="@string/entrar"
@@ -248,6 +248,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.3" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

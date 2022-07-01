@@ -4,7 +4,7 @@
 
     <style name="Theme.IntegrationProject" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/azul_claro</item>
+        <item name="colorPrimary">@color/azul_escuro</item>
         <item name="colorPrimaryVariant">@color/cinzaClaro</item>
         <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->

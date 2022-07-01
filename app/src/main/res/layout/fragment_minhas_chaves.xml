@@ -216,7 +216,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/cadastrarChaveBtn"
-            style="@style/botao"
+            style="@style/salvarLimitePix_btn"
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_marginTop="32dp"
