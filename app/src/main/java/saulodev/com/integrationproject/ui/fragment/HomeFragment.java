@@ -24,7 +24,7 @@ import java.util.List;
 import saulodev.com.integrationproject.R;
 import saulodev.com.integrationproject.databinding.FragmentHomeBinding;
 import saulodev.com.integrationproject.model.CardOffers;
-import saulodev.com.integrationproject.ui.adapter.ListAdapter;
+import saulodev.com.integrationproject.ui.adapter.ListAdapterHome;
 import saulodev.com.integrationproject.ui.viewmodel.HomeViewModel;
 
 public class HomeFragment extends Fragment {
@@ -56,7 +56,7 @@ public class HomeFragment extends Fragment {
         viewPager2 = getView().findViewById(R.id.container);
 
         viewPager2.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);
-        ListAdapter adapter = new ListAdapter(requireActivity(),listCards);
+        ListAdapterHome adapter = new ListAdapterHome(requireActivity(),listCards);
         viewPager2.setAdapter(adapter);
 
         viewPager2.setOffscreenPageLimit(3);
