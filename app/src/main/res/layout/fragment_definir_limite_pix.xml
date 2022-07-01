@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:text="Definir Limite"
+        android:text="@string/definir_limite"
         app:layout_constraintStart_toEndOf="@+id/voltar_definirLimite_btn"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Defina um limite de gatos para os períodos diurno e noturno"
+        android:text="@string/defina_limite_subtitulo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/definirLimitePix_titulo_txt" />
 
@@ -43,7 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Limite do período diurno:"
+        android:text="@string/limite_diurno"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/definirLimite_subtitulo_txt" />
 
@@ -63,7 +63,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Limite do período noturno:"
+        android:text="@string/limite_noturno"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/limiteDiurno_edt_txt" />
 
@@ -78,7 +78,7 @@
         app:layout_constraintTop_toBottomOf="@+id/limiteNoturno_txt" />
 
     <androidx.appcompat.widget.AppCompatButton
-        style="@style/salvarLimitePix_btn"
+        style="@style/botao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Salvar"

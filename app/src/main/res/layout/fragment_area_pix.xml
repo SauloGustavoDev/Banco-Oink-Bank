@@ -1,306 +1,391 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="@dimen/layout_margin"
-    android:background="?android:attr/colorBackground"
+    android:fillViewport="true"
+    android:scrollbars="none"
     tools:context=".ui.fragment.AreaPixFragment">
 
-    <ImageView
-        android:id="@+id/voltar_img_btn"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout4"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_seta"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/areapix_titulo_txt"
-        style="@style/titulo_pagina"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="@string/area_pix_titulo"
-        app:layout_constraintStart_toEndOf="@+id/voltar_img_btn"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        style="@style/subtitulo_pagina"
-        android:id="@+id/areapix_descricao_subtitulo_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/area_pix_descricao"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/areapix_titulo_txt" />
-
-    <LinearLayout
-        android:id="@+id/pix_qrcode_linear_btn"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/background_iconepix"
-        android:gravity="center"
-        app:layout_constraintEnd_toStartOf="@+id/linear_pix_celular"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/areapix_descricao_subtitulo_txt"
-        tools:ignore="MissingConstraints,Orientation">
-
-        <ImageView
-            android:id="@+id/pix_qrcode_ic"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ic_qrcode" />
-
-    </LinearLayout>
-
-    <TextView
-        style="@style/texto_botao"
-        android:id="@+id/pix_qrcode_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/qr_code"
-        app:layout_constraintEnd_toEndOf="@+id/pix_qrcode_linear_btn"
-        app:layout_constraintStart_toStartOf="@+id/pix_qrcode_linear_btn"
-        app:layout_constraintTop_toBottomOf="@+id/pix_qrcode_linear_btn" />
-
-    <LinearLayout
-        android:id="@+id/linear_pix_celular"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/background_iconepix"
-        android:gravity="center"
-        app:layout_constraintEnd_toStartOf="@+id/pix_email_linear_btn"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/pix_qrcode_linear_btn"
-        app:layout_constraintTop_toBottomOf="@+id/areapix_descricao_subtitulo_txt"
-        tools:ignore="MissingConstraints,Orientation">
-
-        <ImageView
-            android:id="@+id/pix_celular_ic"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_celular" />
-
-    </LinearLayout>
-
-    <TextView
-        style="@style/texto_botao"
-        android:id="@+id/pix_celular_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/pix_celular"
-        app:layout_constraintEnd_toEndOf="@+id/linear_pix_celular"
-        app:layout_constraintStart_toStartOf="@+id/linear_pix_celular"
-        app:layout_constraintTop_toBottomOf="@+id/linear_pix_celular" />
-
-    <LinearLayout
-        android:id="@+id/pix_email_linear_btn"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/background_iconepix"
-        android:gravity="center"
-        app:layout_constraintEnd_toStartOf="@+id/pix_cpf_linear_btn"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/linear_pix_celular"
-        app:layout_constraintTop_toBottomOf="@+id/areapix_descricao_subtitulo_txt"
-        tools:ignore="MissingConstraints,Orientation">
-
-        <ImageView
-            android:id="@+id/email_ic"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_email" />
-
-    </LinearLayout>
-
-    <TextView
-        style="@style/texto_botao"
-        android:id="@+id/pix_email_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/pix_email"
-        app:layout_constraintEnd_toEndOf="@+id/pix_email_linear_btn"
-        app:layout_constraintStart_toStartOf="@+id/pix_email_linear_btn"
-        app:layout_constraintTop_toBottomOf="@+id/pix_email_linear_btn" />
-
-    <LinearLayout
-        android:id="@+id/pix_cpf_linear_btn"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="32dp"
-        android:gravity="center"
-        android:background="@drawable/background_iconepix"
+        android:background="@drawable/background_theme"
+        android:paddingBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/pix_email_linear_btn"
         app:layout_constraintTop_toBottomOf="@+id/areapix_descricao_subtitulo_txt"
         tools:ignore="MissingConstraints,Orientation">
 
-        <ImageView
-            android:id="@+id/cpf_cnpj_ic"
-            android:layout_width="29dp"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="?android:attr/colorBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="@dimen/layout_margin">
+
+            <ImageView
+                android:id="@+id/btn_voltar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/ic_seta"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_cobrar"
+                style="@style/titulo_pagina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Área PIX"
+                app:layout_constraintStart_toEndOf="@+id/btn_voltar"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Cobrar\nAlguém"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="@+id/imageButton3"
+                app:layout_constraintStart_toStartOf="@+id/imageButton3"
+                app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Copia e Cola"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="@+id/pix_copia_cola_linear_btn"
+                app:layout_constraintStart_toStartOf="@+id/pix_copia_cola_linear_btn"
+                app:layout_constraintTop_toBottomOf="@+id/pix_copia_cola_linear_btn" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Pagar com\nQR code"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="@+id/pix_qrcode_linear_btn"
+                app:layout_constraintStart_toStartOf="@+id/pix_qrcode_linear_btn"
+                app:layout_constraintTop_toBottomOf="@+id/pix_qrcode_linear_btn" />
+
+            <android.widget.ImageButton
+                android:id="@+id/pix_copia_cola_linear_btn"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/btn_redondo_home"
+                android:src="@drawable/ic_copiaecola"
+                app:layout_constraintEnd_toStartOf="@+id/imageButton3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/pix_qrcode_linear_btn"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.widget.ImageButton
+                android:id="@+id/pix_qrcode_linear_btn"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/btn_redondo_home"
+                android:src="@drawable/ic_qr_code_scan"
+                app:layout_constraintEnd_toStartOf="@+id/pix_copia_cola_linear_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.widget.ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/btn_redondo_home"
+                android:src="@drawable/ic_cobrar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/pix_copia_cola_linear_btn"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/pix_celular"
+                app:layout_constraintEnd_toEndOf="@+id/linear_pix_celular"
+                app:layout_constraintStart_toStartOf="@+id/linear_pix_celular"
+                app:layout_constraintTop_toBottomOf="@+id/linear_pix_celular" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/pix_email"
+                app:layout_constraintEnd_toEndOf="@+id/pix_email_linear_btn"
+                app:layout_constraintStart_toStartOf="@+id/pix_email_linear_btn"
+                app:layout_constraintTop_toBottomOf="@+id/pix_email_linear_btn" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/pix_cpf"
+                app:layout_constraintEnd_toEndOf="@+id/pix_cpf_linear_btn"
+                app:layout_constraintStart_toStartOf="@+id/pix_cpf_linear_btn"
+                app:layout_constraintTop_toBottomOf="@+id/pix_cpf_linear_btn" />
+
+            <android.widget.ImageButton
+                android:id="@+id/pix_email_linear_btn"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/btn_redondo_home"
+                android:src="@drawable/ic_email"
+                app:layout_constraintEnd_toStartOf="@+id/linear_pix_celular"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/pix_cpf_linear_btn"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.widget.ImageButton
+                android:id="@+id/pix_cpf_linear_btn"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/btn_redondo_home"
+                android:src="@drawable/ic_cpf"
+                app:layout_constraintEnd_toStartOf="@+id/pix_email_linear_btn"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.widget.ImageButton
+                android:id="@+id/linear_pix_celular"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/btn_redondo_home"
+                android:src="@drawable/ic_celular"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/pix_email_linear_btn"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pix_receber"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/pix_receber_linear_btn"
+                app:layout_constraintStart_toStartOf="@+id/pix_receber_linear_btn"
+                app:layout_constraintTop_toBottomOf="@+id/pix_receber_linear_btn" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/transferir"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/pix_transferir_linear_btn"
+                app:layout_constraintStart_toStartOf="@+id/pix_transferir_linear_btn"
+                app:layout_constraintTop_toBottomOf="@+id/pix_transferir_linear_btn" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/chave_aleatoria"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/pix_chave_aleatoria_linear_btn"
+                app:layout_constraintStart_toStartOf="@+id/pix_chave_aleatoria_linear_btn"
+                app:layout_constraintTop_toBottomOf="@+id/pix_chave_aleatoria_linear_btn" />
+
+            <android.widget.ImageButton
+
+                android:id="@+id/pix_receber_linear_btn"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:background="@drawable/btn_redondo_home"
+                android:src="@drawable/ic_receber"
+                android:layout_marginTop="@dimen/layout_margin"
+                app:layout_constraintEnd_toEndOf="@+id/linear_pix_celular"
+                app:layout_constraintStart_toStartOf="@+id/linear_pix_celular"
+                app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+            <android.widget.ImageButton
+                android:id="@+id/pix_chave_aleatoria_linear_btn"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="@dimen/layout_margin"
+                android:background="@drawable/btn_redondo_home"
+                android:src="@drawable/ic_key"
+                app:layout_constraintEnd_toEndOf="@+id/pix_cpf_linear_btn"
+                app:layout_constraintStart_toStartOf="@+id/pix_cpf_linear_btn"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+            <android.widget.ImageButton
+                android:id="@+id/pix_transferir_linear_btn"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="@dimen/layout_margin"
+                android:background="@drawable/btn_redondo_home"
+                android:src="@drawable/ic_transfer"
+                app:layout_constraintEnd_toEndOf="@+id/pix_email_linear_btn"
+                app:layout_constraintStart_toStartOf="@+id/pix_email_linear_btn"
+                app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btn_visibility"
+            android:layout_width="70dp"
             android:layout_height="30dp"
-            android:src="@drawable/ic_cpf" />
+            android:layout_marginTop="8dp"
+            android:background="@drawable/background_btn_icons_home"
+            android:src="@drawable/ic_seta_baixo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_gone" />
 
-    </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/minhas_chaves_btn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/background_btn_icons_home"
+            android:drawableStart="@drawable/ic_key"
+            android:drawablePadding="16dp"
+            android:layout_marginTop="@dimen/layout_margin"
+            android:fontFamily="@font/nunito_medium"
+            android:paddingLeft="8dp"
+            android:text="@string/minhas_chaves"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nossas_ofertas_txt" />
 
-    <TextView
-        style="@style/texto_botao"
-        android:id="@+id/cpf_conpj_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/pix_cpf"
-        app:layout_constraintEnd_toEndOf="@+id/pix_cpf_linear_btn"
-        app:layout_constraintStart_toStartOf="@+id/pix_cpf_linear_btn"
-        app:layout_constraintTop_toBottomOf="@+id/pix_cpf_linear_btn" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/meus_comprovantes_btn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/background_btn_icons_home"
+            android:drawableStart="@drawable/ic_comprovante"
+            android:drawablePadding="16dp"
+            android:fontFamily="@font/nunito_medium"
+            android:paddingLeft="8dp"
+            android:layout_marginTop="@dimen/layout_margin"
+            android:text="Meus Comprovantes"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/minhas_chaves_btn" />
 
-    <LinearLayout
-        android:id="@+id/pix_chave_aleatoria_linear_btn"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/background_iconepix"
-        android:gravity="center"
-        app:layout_constraintEnd_toEndOf="@+id/pix_qrcode_linear_btn"
-        app:layout_constraintStart_toStartOf="@+id/pix_qrcode_linear_btn"
-        app:layout_constraintTop_toBottomOf="@+id/pix_qrcode_txt"
-        tools:ignore="MissingConstraints,Orientation">
-
-        <ImageView
-            android:id="@+id/pix_chave_ic"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ic_key" />
-
-    </LinearLayout>
-
-    <TextView
-        style="@style/texto_botao"
-        android:id="@+id/pix_chave_aleatoria_txt"
-        android:layout_width="60dp"
-        android:layout_height="wrap_content"
-        android:text="@string/pix_chaveAleatoria"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="@+id/pix_chave_aleatoria_linear_btn"
-        app:layout_constraintStart_toStartOf="@+id/pix_chave_aleatoria_linear_btn"
-        app:layout_constraintTop_toBottomOf="@+id/pix_chave_aleatoria_linear_btn" />
-
-    <LinearLayout
-        android:id="@+id/pix_copia_cola_linear_btn"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="24dp"
-        android:gravity="center"
-        android:background="@drawable/background_iconepix"
-        app:layout_constraintEnd_toEndOf="@+id/linear_pix_celular"
-        app:layout_constraintStart_toStartOf="@+id/linear_pix_celular"
-        app:layout_constraintTop_toBottomOf="@+id/pix_celular_txt"
-        tools:ignore="MissingConstraints,Orientation">
-
-        <ImageView
-            android:id="@+id/copiacola_ic"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ic_copiaecola" />
-
-    </LinearLayout>
-
-    <TextView
-        style="@style/texto_botao"
-        android:id="@+id/pix_copiaecola_txt"
-        android:layout_width="60dp"
-        android:layout_height="wrap_content"
-        android:text="@string/pix_copiaecola"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="@+id/pix_copia_cola_linear_btn"
-        app:layout_constraintStart_toStartOf="@+id/pix_copia_cola_linear_btn"
-        app:layout_constraintTop_toBottomOf="@+id/pix_copia_cola_linear_btn" />
-
-    <LinearLayout
-        android:id="@+id/pix_transferir_linear_btn"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/background_iconepix"
-        android:gravity="center"
-        app:layout_constraintEnd_toEndOf="@+id/pix_email_linear_btn"
-        app:layout_constraintStart_toStartOf="@+id/pix_email_linear_btn"
-        app:layout_constraintTop_toBottomOf="@+id/pix_email_txt"
-        tools:ignore="MissingConstraints,Orientation">
-
-        <ImageView
-            android:id="@+id/pix_transferir_ic"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ic_transferir" />
-
-    </LinearLayout>
-
-    <TextView
-        style="@style/texto_botao"
-        android:id="@+id/pix_transferir_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/pix_transferir"
-        app:layout_constraintEnd_toEndOf="@+id/pix_transferir_linear_btn"
-        app:layout_constraintStart_toStartOf="@+id/pix_transferir_linear_btn"
-        app:layout_constraintTop_toBottomOf="@+id/pix_transferir_linear_btn" />
-
-    <LinearLayout
-        android:id="@+id/pix_receber_linear_btn"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/background_iconepix"
-        android:gravity="center"
-        app:layout_constraintEnd_toEndOf="@+id/pix_cpf_linear_btn"
-        app:layout_constraintStart_toStartOf="@+id/pix_cpf_linear_btn"
-        app:layout_constraintTop_toBottomOf="@+id/cpf_conpj_txt"
-        tools:ignore="MissingConstraints,Orientation">
-
-        <ImageView
-            android:id="@+id/transferir_ic"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:rotation="180"
-            android:scaleType="centerCrop"
-            android:src="@drawable/ic_transferir" />
-
-    </LinearLayout>
-
-    <TextView
-        style="@style/texto_botao"
-        android:id="@+id/pix_receber_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/pix_receber"
-        app:layout_constraintEnd_toEndOf="@+id/pix_receber_linear_btn"
-        app:layout_constraintStart_toStartOf="@+id/pix_receber_linear_btn"
-        app:layout_constraintTop_toBottomOf="@+id/pix_receber_linear_btn" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        style="@style/salvarLimitePix_btn"
-        android:id="@+id/minhas_chaves_btn"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="24dp"
-        android:text="@string/pix_btn_minhaChave"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pix_copiaecola_txt" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/meus_limites_btn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/background_btn_icons_home"
+            android:drawableStart="@drawable/ic_meu_limites"
+            android:drawablePadding="16dp"
+            android:fontFamily="@font/nunito_medium"
+            android:paddingLeft="8dp"
+            android:text="Meus Limites"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="17sp"
+            android:layout_marginTop="@dimen/layout_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/meus_comprovantes_btn" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/nossas_ofertas_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/nunito_medium"
+            android:text="Outras Operações"
+            android:textSize="24sp"
+            android:layout_marginTop="@dimen/layout_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_visibility" />
+
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/nunito_light"
+            android:text="Hitórico"
+            android:textSize="24sp"
+            android:layout_marginTop="@dimen/layout_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/meus_limites_btn" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RecyclerViewHistorico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/layout_margin"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_confirmar"
+            style="@style/botao"
+            android:text="Ver Hitórico Completo"
+            android:layout_marginStart="@dimen/layout_margin"
+            android:layout_marginEnd="@dimen/layout_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/layout_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="710dp"
+            app:layout_constraintTop_toBottomOf="@id/RecyclerViewHistorico"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</ScrollView>
