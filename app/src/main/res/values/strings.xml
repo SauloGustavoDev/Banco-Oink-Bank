@@ -102,9 +102,14 @@
 
     <!-- Confirmar Pix -->
     <string name="confirmacao">Confirmação</string>
-    <string name="texto_confirmacao_pix">Confirme os dados de quem ira receber o pix:</string>
+    <string name="texto_confirmacao_pix">Verifique os dados para efeturar a transferência.</string>
     <string name="chave_pix">Chave Pix</string>
     <string name="confirmar_pix">Confirmar Pix</string>
+    <string name="mensagem_confirmar">Mensgem:</string>
+    <string name="nome_confirmar">Nome:</string>
+    <string name="data_transferencia">Data de transferência:</string>
+    <string name="valor_transferencia">Valor:</string>
+
 
     <!-- Cobrar -->
     <string name="titulo_cobrar">Cobrar</string>
