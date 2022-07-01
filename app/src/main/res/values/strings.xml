@@ -157,6 +157,12 @@
     <string name="transacao_concluida">Transação concluida!</string>
     <string name="transacao_sub">Sua transação foi efetuada com sucesso.</string>
     <string name="continuar">Continuar</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pix_copia_cola">Pix Copia Cola</string>
+    <string name="subtitulo_pix_copia_cola">Digite o código do Pix Copia Cola para efetuar o pagamento.</string>
+    <string name="codigo_pix_copia_cola">Código Pix Copia Cola</string>
+    <string name="voltar_pix_copia_cola">Voltar</string>
+
+    <!-- Pix Copia Cola -->
+
+
 </resources>
