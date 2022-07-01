@@ -99,9 +99,9 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_view_minhas_chaves"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/layout_margin"
-                android:background="@color/white"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txt_selecionar_chave" />
