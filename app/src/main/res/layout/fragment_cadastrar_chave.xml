@@ -87,12 +87,10 @@
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
         android:inputType="number"
-        android:maxLength="11"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chave_text"
         tools:text="111.444.777-35" />
-
 
     <com.google.android.material.divider.MaterialDivider
         android:id="@+id/divider2"
