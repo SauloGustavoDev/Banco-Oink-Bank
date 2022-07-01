@@ -1,5 +1,8 @@
 package saulodev.com.integrationproject.ui.fragment;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -10,6 +13,7 @@ import androidx.fragment.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import saulodev.com.integrationproject.R;
 import saulodev.com.integrationproject.databinding.FragmentCodigoCobrancaBinding;
@@ -30,12 +34,19 @@ public class CodigoCobrancaFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        binding.copiarImg.setOnClickListener(view1 -> {
+            ClipboardManager clipboardManager = (ClipboardManager) requireContext()
+                    .getSystemService(Context.CLIPBOARD_SERVICE);
+            ClipData clipData = ClipData.newPlainText("pix_key", getString(R.string.link_cobranca));
+            clipboardManager.setPrimaryClip(clipData);
+        });
+
         binding.btnVoltar.setOnClickListener(view1 -> {
             requireActivity().onBackPressed();
         });
 
         binding.btnConfirmar.setOnClickListener(view1 -> {
-            getFragmentManager().popBackStack();
+            requireActivity().getSupportFragmentManager().popBackStack();
             replaceHomeFragment();
         });
 
@@ -43,6 +54,6 @@ public class CodigoCobrancaFragment extends Fragment {
 
     private void replaceHomeFragment() {
         FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.frame, new HomeFragment()).addToBackStack(null).commit();
+        fragmentManager.beginTransaction().replace(R.id.frame, new HomeFragment()).commit();
     }
 }
