@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_btn_icons_home"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/nomepagamento_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="pix - pagamento"
+                android:fontFamily="@font/nunito_semibold"
+                android:textSize="17sp"
+                android:layout_weight="4"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R$"
+                android:fontFamily="@font/nunito_semibold"
+                android:textSize="17sp"
+                android:layout_marginTop="25dp"
+                />
+
+            <TextView
+                android:id="@+id/valorpagamento_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9,99"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/nunito_semibold"
+                android:textSize="17sp"
+                android:layout_weight="1"
+                android:layout_marginTop="25dp"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/datapagamento_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="28/06/2022"
+            android:fontFamily="@font/nunito_semibold"
+            android:textSize="17sp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="16dp"/>
+    </LinearLayout>
+
+</LinearLayout>

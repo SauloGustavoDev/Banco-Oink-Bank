@@ -1,6 +1,7 @@
 package saulodev.com.integrationproject.ui.fragment;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -8,6 +9,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +20,7 @@ import android.view.animation.AnimationUtils;
 
 import saulodev.com.integrationproject.R;
 import saulodev.com.integrationproject.databinding.FragmentAreaPixBinding;
+import saulodev.com.integrationproject.ui.adapter.HistoricoAdapter;
 import saulodev.com.integrationproject.ui.fragment.CobrarFragment;
 import saulodev.com.integrationproject.ui.fragment.MinhasChavesFragment;
 import saulodev.com.integrationproject.ui.fragment.PixCopiaColaFragment;
@@ -24,6 +28,7 @@ import saulodev.com.integrationproject.util.MyAlertDialog;
 
 public class AreaPixFragment extends Fragment {
 
+    private RecyclerView recyclerView;
     private FragmentAreaPixBinding bind;
 
     @Override
@@ -38,6 +43,8 @@ public class AreaPixFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        setRecyclerView(requireContext());
 
         bind.btnVisibility.setOnClickListener(view1 -> {
             Animation animation_baixo = AnimationUtils.loadAnimation(getActivity(), R.anim.animation_baixo);
@@ -102,6 +109,17 @@ public class AreaPixFragment extends Fragment {
 
     }
 
+    private void setRecyclerView(Context context){
+
+        recyclerView = getView().findViewById(R.id.RecyclerViewHistorico);
+
+        HistoricoAdapter historicoAdapter = new HistoricoAdapter();
+
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(context);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setAdapter(historicoAdapter);
+    }
 
     private void replaceMinhasChavesFragment() {
         FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
