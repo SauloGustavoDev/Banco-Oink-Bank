@@ -129,6 +129,12 @@
     <string name="email_invalido">E-mail inválido</string>
     <string name="nome_invalido">Nome inválido</string>
 
+    <!-- Transferencia Inserir Valor-->
+    <string name="transferencia_titulo">Transferência</string>
+    <string name="transferencia_inserir_subtitulo">Digite o valor que deseja transferir.</string>
+    <string name="mensagem_texto">Mensagem (Opcional):</string>
+
+
     <!-- Transferencia Recebida-->
     <string name="voltar_btn">Voltar</string>
     <string name="voce_recebeu_transferencia">Você recebeu uma transferência e já está disponível em sua conta</string>

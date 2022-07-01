@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/layout_margin"
+    android:background="@drawable/background_theme"
+    tools:context=".ui.fragment.TransferenciaInserirValorFragment">
+
+
+    <ImageButton
+        android:id="@+id/seta_voltar_img"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_seta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/transferencia_titulo_txt"
+        style="@style/titulo_pagina"
+        android:layout_marginStart="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/transferencia_titulo"
+        app:layout_constraintStart_toEndOf="@+id/seta_voltar_img"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/transfeferencia_subtitulo_txt"
+        style="@style/subtitulo_pagina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/transferencia_inserir_subtitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transferencia_titulo_txt" />
+
+    <TextView
+        style="@style/subtitulo_pagina"
+        android:id="@+id/valor_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/valor_transferencia"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transfeferencia_subtitulo_txt" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/valor_til"
+        style="@style/layout_formulario_erro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/valor_txt">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/valor_edt"
+            style="@style/formulario_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:inputType="numberDecimal"
+            tools:text="teste" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        style="@style/subtitulo_pagina"
+        android:id="@+id/mensagem_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/mensagem_texto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/valor_til" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/mensagem_til"
+        style="@style/layout_formulario_erro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mensagem_txt">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/mensagem_edt"
+            style="@style/formulario_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:inputType="text"
+            tools:text="teste" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <android.widget.Button
+        android:id="@+id/contiunar_btn"
+        style="@style/botao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/continuar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
