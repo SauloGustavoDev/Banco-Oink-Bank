@@ -83,27 +83,9 @@
             android:layout_height="wrap_content"
             android:text="@string/texto_conta_pupanca"
             android:textAlignment="center"
-<<<<<<< HEAD
-            android:textColor="@color/azul_escuro"
-            app:layout_constraintBottom_toTopOf="@+id/cadastrar_btn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/sua_chave_txt"
-            app:layout_constraintTop_toTopOf="@+id/sua_chave_txt"
-            tools:text="Chave Teste" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/cadastrar_btn"
-            style="@style/salvarLimitePix_btn"
-            android:layout_width="0dp"
-            android:text="@string/cadastrar"
-            android:textAllCaps="false"
-=======
->>>>>>> 2bf28f7b8cd821f25341a913e3f410e95e957930
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/conta_poupanca_img_btn"
             app:layout_constraintStart_toStartOf="@+id/conta_poupanca_img_btn" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -21,16 +21,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-<<<<<<< HEAD
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_confirmar"
-        style="@style/salvarLimitePix_btn"
-        android:fontFamily="@font/nunito_semibold"
-        android:text="@string/confirmar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-=======
         <TextView
             android:id="@+id/page_tittle"
             style="@style/titulo_pagina"
@@ -131,7 +121,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/qrcode_img" />
->>>>>>> 2bf28f7b8cd821f25341a913e3f410e95e957930
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

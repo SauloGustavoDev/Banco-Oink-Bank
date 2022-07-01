@@ -23,7 +23,7 @@
 
     <android.widget.Button
         android:id="@+id/confirmar_btn"
-        style="@style/salvarLimitePix_btn"
+        style="@style/botao"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:fontFamily="@font/nunito_semibold"

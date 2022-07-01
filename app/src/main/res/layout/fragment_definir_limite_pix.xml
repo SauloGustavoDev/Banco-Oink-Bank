@@ -78,7 +78,7 @@
         app:layout_constraintTop_toBottomOf="@+id/limiteNoturno_txt" />
 
     <androidx.appcompat.widget.AppCompatButton
-        style="@style/salvarLimitePix_btn"
+        style="@style/botao"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Salvar"

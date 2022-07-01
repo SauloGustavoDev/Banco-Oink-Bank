@@ -179,14 +179,11 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-<<<<<<< HEAD
     <!-- Definir Limite Pix -->
     <string name="definir_limite">Definir Limite</string>
     <string name="defina_limite_subtitulo">Defina um limite de gatos para os períodos diurno e noturno</string>
     <string name="limite_diurno">Limite do período diurno:</string>
     <string name="limite_noturno">Limite do período noturno:</string>
-=======
-
     <string name="pix_copia_cola">Pix Copia Cola</string>
     <string name="subtitulo_pix_copia_cola">Digite o código do Pix Copia Cola para efetuar o pagamento.</string>
     <string name="codigo_pix_copia_cola">Código Pix Copia Cola</string>
@@ -194,6 +191,5 @@
 
     <!-- Pix Copia Cola -->
 
->>>>>>> 2bf28f7b8cd821f25341a913e3f410e95e957930
 
 </resources>

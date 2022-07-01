@@ -44,7 +44,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/sair_btn"
-        style="@style/salvarLimitePix_btn"
+        style="@style/botao"
         android:layout_width="match_parent"
         android:text="@string/continuar"
         app:layout_constraintBottom_toBottomOf="parent"
