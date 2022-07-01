@@ -62,14 +62,9 @@
     <string name="excluir">Excluir</string>
     <string name="confirmar_edicao">Confirmar edição</string>
 
-    <!-- Minhas chaves -->
-<<<<<<< HEAD
-    <string name="minhas_chaves">Minhas chaves PIX</string>
-    <string name="visualize">Aqui estão todas as suas chaves. Clique nelas para editá-las ou crie uma nova.</string>
-=======
+
     <string name="minhas_chaves">Minhas Chaves</string>
     <string name="visualize">Visualize, adicione ou exclua chaves Pix:</string>
->>>>>>> 736560f27a90071822b99f866666e387ec1080c5
     <string name="telefone">Telefone</string>
     <string name="chave_aleatoria">Chave Aleatória</string>
     <string name="cadastrar_nova_chave">Cadastrar nova chave</string>
