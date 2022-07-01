@@ -39,7 +39,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/sair_btn"
-        style="@style/botao"
+        style="@style/salvarLimitePix_btn"
         android:layout_width="match_parent"
         android:text="@string/voltar_btn"
         app:layout_constraintBottom_toBottomOf="parent"

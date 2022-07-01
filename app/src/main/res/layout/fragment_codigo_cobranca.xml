@@ -73,7 +73,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_confirmar"
-        style="@style/botao"
+        style="@style/salvarLimitePix_btn"
         android:fontFamily="@font/nunito_semibold"
         android:text="@string/confirmar"
         app:layout_constraintBottom_toBottomOf="parent"

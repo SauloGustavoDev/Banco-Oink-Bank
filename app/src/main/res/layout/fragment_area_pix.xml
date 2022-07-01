@@ -291,7 +291,7 @@
         app:layout_constraintTop_toBottomOf="@+id/pix_receber_linear_btn" />
 
     <androidx.appcompat.widget.AppCompatButton
-        style="@style/botao"
+        style="@style/salvarLimitePix_btn"
         android:id="@+id/minhas_chaves_btn"
         android:layout_width="0dp"
         android:layout_height="40dp"

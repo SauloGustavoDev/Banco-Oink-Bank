@@ -72,7 +72,7 @@
         app:layout_constraintTop_toBottomOf="@+id/layout_til" />
 
     <androidx.appcompat.widget.AppCompatButton
-        style="@style/botao"
+        style="@style/salvarLimitePix_btn"
         android:id="@+id/btn_confirmar"
         android:text="@string/confirmar"
         app:layout_constraintBottom_toBottomOf="parent"
