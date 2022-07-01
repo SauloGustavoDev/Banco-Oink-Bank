@@ -46,6 +46,10 @@
         <item name="android:alpha">0.8</item>
     </style>
 
+    <style name="texto_mais_destaque">
+        <item name="android:textSize">24dp</item>
+    </style>
+
     <style name="texto_claro">
         <item name="android:padding">10dp</item>
         <item name="android:paddingStart">0dp</item>
