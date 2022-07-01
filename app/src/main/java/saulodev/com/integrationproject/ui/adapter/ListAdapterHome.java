@@ -1,28 +1,25 @@
 package saulodev.com.integrationproject.ui.adapter;
 
 import android.content.Context;
-import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import saulodev.com.integrationproject.R;
 import saulodev.com.integrationproject.model.CardOffers;
 
-public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder> {
+public class ListAdapterHome extends RecyclerView.Adapter<ListAdapterHome.ListViewHolder> {
 
     private Context context;
     private List<CardOffers> listOffers;
 
-    public ListAdapter(Context context, List<CardOffers> listOffers){
+    public ListAdapterHome(Context context, List<CardOffers> listOffers){
         this.context = context;
         this.listOffers = listOffers;
     }
