@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -47,9 +48,12 @@ public class ListAdapterCobrar extends RecyclerView.Adapter<ListAdapterCobrar.Li
 
     public class ListViewHolder extends RecyclerView.ViewHolder{
 
+        private final TextView type, description;
+
         public ListViewHolder(@NonNull View itemView) {
             super(itemView);
-
+            type = itemView.findViewById(R.id.tipo_da_chave_txt);
+            description = itemView.findViewById(R.id.conteudo_chave_txt);
         }
 
         public void binds(KeyModel keyModel) {
@@ -57,7 +61,8 @@ public class ListAdapterCobrar extends RecyclerView.Adapter<ListAdapterCobrar.Li
         }
 
         private void fillField(KeyModel keyModel) {
-
+            type.setText(keyModel.getType());
+            description.setText(keyModel.getDescription());
         }
     }
 }
