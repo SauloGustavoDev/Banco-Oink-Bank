@@ -91,6 +91,10 @@ public class AreaPixFragment extends Fragment {
 
         });
 
+        bind.pixTransferirLinearBtn.setOnClickListener(view1 -> {
+            replaceBuscarTransferenciaFragment();
+        });
+
         bind.cobrarBtn.setOnClickListener(view1 -> {
             replaceCobrarFragment();
         });
@@ -138,6 +142,11 @@ public class AreaPixFragment extends Fragment {
     private void replaceCobrarFragment(){
         FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.frame, new CobrarChavesFragment()).addToBackStack(null).commit();
+    }
+
+    private void replaceBuscarTransferenciaFragment(){
+        FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.frame, new BuscarTransferenciaFragment()).addToBackStack(null).commit();
     }
 
 
