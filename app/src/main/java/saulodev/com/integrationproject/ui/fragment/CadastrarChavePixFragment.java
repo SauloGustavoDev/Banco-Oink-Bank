@@ -17,6 +17,7 @@ import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.app.AppCompatDialogFragment;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -48,6 +49,14 @@ public class CadastrarChavePixFragment extends Fragment {
             requireActivity().onBackPressed();
         });
 
+        bind.contaCorrenteImgBtn.setOnClickListener(view1 -> {
+            replaceCadastrarChaveFragment();
+        });
+
+        bind.contaPoupancaImgBtn.setOnClickListener(view1 -> {
+            replaceCadastrarChaveFragment();
+        });
+
     }
 
 
@@ -60,6 +69,9 @@ public class CadastrarChavePixFragment extends Fragment {
     }
 
 
-
+    private void replaceCadastrarChaveFragment() {
+        FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.frame_cadastrar_chave, new CadastrarChaveFragment()).addToBackStack(null).commit();
+    }
 
 }
