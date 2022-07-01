@@ -50,7 +50,6 @@ public class HomeFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         mViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
-        bind.homeLayout.setBackgroundColor(getThemeBackgroundColor());
 
         addList();
 
@@ -129,13 +128,6 @@ public class HomeFragment extends Fragment {
         fragmentManager.beginTransaction().replace(R.id.frame, new EditFragment()).addToBackStack(null).commit();
     }
 
-    public int getThemeBackgroundColor() {
-        TypedArray array = getActivity().getTheme().obtainStyledAttributes(
-                new int[] { android.R.attr.colorBackground });
-        int backgroundColor = array.getColor(0, 0xFF00FF);
-        array.recycle();
-        return backgroundColor;
-    }
 
     public void addList(){
         CardOffers card = new CardOffers();

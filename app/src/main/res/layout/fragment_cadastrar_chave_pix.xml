@@ -21,9 +21,9 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cadastrarChave_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/layout_margin"
+        android:layout_height="200dp"
         android:alpha="1.0"
+        android:padding="@dimen/layout_margin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -33,74 +33,59 @@
             android:id="@+id/cadastrar_chave_titulo_txt"
             style="@style/titulo_pagina"
             android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_marginBottom="32dp"
-            android:text="@string/cadastrar_chave_pix"
-            app:layout_constraintBottom_toTopOf="@+id/selecionar_tipo_chave_subtitulo_txt"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:id="@+id/selecionar_tipo_chave_subtitulo_txt"
-            style="@style/texto"
-            android:layout_width="0sp"
+            android:layout_marginTop="@dimen/layout_margin"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:text="@string/selecionar_tipo_chave"
-            app:layout_constraintBottom_toTopOf="@+id/chave_txt"
-            app:layout_constraintEnd_toStartOf="@+id/selecionar_spinner"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <Spinner
-            android:id="@+id/selecionar_spinner"
-            style="@style/texto"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:entries="@array/tipos_de_chaves"
-            android:textAlignment="center"
-            app:layout_constraintBottom_toBottomOf="@+id/selecionar_tipo_chave_subtitulo_txt"
+            android:layout_marginBottom="32dp"
+            android:text="@string/tipo_de_conta"
+            app:layout_constraintBottom_toTopOf="@+id/conta_corrente_img_btn"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/selecionar_tipo_chave_subtitulo_txt"
-            app:layout_constraintTop_toTopOf="@+id/selecionar_tipo_chave_subtitulo_txt" />
+            app:layout_constraintHorizontal_bias="0.034"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/conta_poupanca_img_btn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_conta_poupanca"
+            android:background="@drawable/btn_redondo_home"
+            app:layout_constraintBottom_toTopOf="@+id/textView8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/conta_corrente_img_btn" />
 
         <TextView
-            android:id="@+id/sua_chave_txt"
-            style="@style/texto"
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            style="@style/subtitulo_pagina"
+            android:layout_height="wrap_content"
+            android:text="@string/texto_conta_corrente"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/conta_corrente_img_btn"
+            app:layout_constraintStart_toStartOf="@+id/conta_corrente_img_btn" />
+
+        <ImageButton
+            android:id="@+id/conta_corrente_img_btn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_conta_corrente"
+            android:background="@drawable/btn_redondo_home"
+            app:layout_constraintBottom_toTopOf="@+id/textView7"
+            app:layout_constraintEnd_toStartOf="@+id/conta_poupanca_img_btn"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView8"
+            style="@style/subtitulo_pagina"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="84dp"
-            android:text="@string/sua_chave"
-            app:layout_constraintBottom_toTopOf="@+id/cadastrar_btn"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:id="@+id/chave_txt"
-            style="@style/texto"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
-            android:layout_marginBottom="84dp"
+            android:text="@string/texto_conta_pupanca"
             android:textAlignment="center"
-            android:textColor="@color/azul_escuro"
-            app:layout_constraintBottom_toTopOf="@+id/cadastrar_btn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/sua_chave_txt"
-            app:layout_constraintTop_toTopOf="@+id/sua_chave_txt"
-            tools:text="Chave Teste" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/cadastrar_btn"
-            style="@style/botao"
-            android:layout_width="0dp"
-            android:text="@string/cadastrar"
-            android:textAllCaps="false"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintEnd_toEndOf="@+id/conta_poupanca_img_btn"
+            app:layout_constraintStart_toStartOf="@+id/conta_poupanca_img_btn" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

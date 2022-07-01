@@ -4,233 +4,128 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragment.MinhasChavesFragment">
+    tools:context=".ui.fragment.MinhasChavesFragment"
+    android:background="@drawable/background_theme">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:padding="@dimen/layout_margin">
-
-        <ImageView
-            android:id="@+id/voltarImg"
-            android:layout_width="wrap_content"
-            android:layout_height="32dp"
-            android:layout_marginTop="4dp"
-            android:src="@drawable/ic_seta"
-
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/txt_minhas_chaves"
-            style="@style/titulo_pagina"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="@string/minhas_chaves"
-            app:layout_constraintStart_toEndOf="@+id/voltarImg"
-            app:layout_constraintTop_toTopOf="@+id/voltarImg" />
-
-        <TextView
-            android:id="@+id/text_visualize_chaves"
-            style="@style/subtitulo_pagina"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/visualize"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/txt_minhas_chaves" />
-
-        <com.google.android.material.divider.MaterialDivider
-            android:id="@+id/divider1"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_marginTop="16dp"
-            android:background="@color/cinzaClaro"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/layout_margin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_visualize_chaves" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/ic_cpf"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:src="@drawable/ic_cpf"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/divider1" />
+            <ImageView
+                android:id="@+id/voltarImg"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/ic_seta"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/text_cpf"
-            style="@style/texto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="@string/cpf"
-            app:layout_constraintEnd_toEndOf="@id/ic_cpf"
-            app:layout_constraintStart_toStartOf="@id/ic_cpf"
-            app:layout_constraintTop_toBottomOf="@id/ic_cpf" />
+            <TextView
+                android:id="@+id/txt_minhas_chaves"
+                style="@style/titulo_pagina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/layout_margin"
+                android:text="@string/minhas_chaves"
+                app:layout_constraintStart_toEndOf="@+id/voltarImg"
+                app:layout_constraintTop_toTopOf="@+id/voltarImg" />
 
-        <TextView
-            style="@style/texto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="64dp"
-            android:text="@string/sem_cadastro"
-            app:layout_constraintBottom_toBottomOf="@+id/text_cpf"
-            app:layout_constraintStart_toEndOf="@id/ic_cpf"
-            app:layout_constraintTop_toTopOf="@+id/ic_cpf" />
+            <TextView
+                android:id="@+id/text_visualize_chaves"
+                style="@style/subtitulo_pagina"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/visualize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txt_minhas_chaves" />
 
+            <TextView
+                android:id="@+id/pesquisa_text"
+                style="@style/subtitulo_pagina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margin"
+                android:text="@string/titulo_pesquisa"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_visualize_chaves" />
 
-        <com.google.android.material.divider.MaterialDivider
-            android:id="@+id/divider2"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_marginTop="10dp"
-            android:background="@color/cinzaClaro"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_cpf" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/pesquisa_til"
+                style="@style/layout_formulario_erro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_between_edt_and_tittle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pesquisa_text">
 
-        <ImageView
-            android:id="@+id/ic_aleatorio"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:src="@drawable/ic_key"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/divider2" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/pesquisa_edt"
+                    style="@style/formulario_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:inputType="text"
+                    tools:text="@string/hint_pesquisa" />
 
-        <TextView
-            android:id="@+id/text_chave_aleatoria"
-            style="@style/texto"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="@string/chave_aleatoria"
-            android:textAlignment="center"
-            app:layout_constraintEnd_toEndOf="@id/ic_aleatorio"
-            app:layout_constraintStart_toStartOf="@id/ic_aleatorio"
-            app:layout_constraintTop_toBottomOf="@id/ic_aleatorio" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            style="@style/texto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="64dp"
-            android:text="@string/sem_cadastro"
-            app:layout_constraintBottom_toBottomOf="@+id/text_chave_aleatoria"
-            app:layout_constraintStart_toEndOf="@id/ic_aleatorio"
-            app:layout_constraintTop_toTopOf="@+id/ic_aleatorio" />
+            <ImageButton
+                android:id="@+id/pesquisa_img_ic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_pesquisar"
+                app:layout_constraintBottom_toBottomOf="@+id/pesquisa_til"
+                app:layout_constraintEnd_toEndOf="@+id/pesquisa_til"
+                app:layout_constraintTop_toTopOf="@+id/pesquisa_til" />
 
+            <TextView
+                android:id="@+id/txt_selecionar_chave"
+                style="@style/subtitulo_pagina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/titulo_selecionar_chave"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pesquisa_til" />
 
-        <com.google.android.material.divider.MaterialDivider
-            android:id="@+id/divider3"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_marginTop="10dp"
-            android:background="@color/cinzaClaro"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_chave_aleatoria" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_minhas_chaves"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="@dimen/layout_margin"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_selecionar_chave" />
 
-        <ImageView
-            android:id="@+id/ic_telefone"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="8dp"
-            android:src="@drawable/ic_celular"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/divider3" />
-
-        <TextView
-            android:id="@+id/text_telefone"
-            style="@style/texto"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="@string/telefone"
-            android:textAlignment="center"
-            app:layout_constraintEnd_toEndOf="@id/ic_telefone"
-            app:layout_constraintStart_toStartOf="@id/ic_telefone"
-            app:layout_constraintTop_toBottomOf="@id/ic_telefone" />
-
-        <TextView
-            style="@style/texto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="64dp"
-            android:text="@string/sem_cadastro"
-            app:layout_constraintBottom_toBottomOf="@+id/text_telefone"
-            app:layout_constraintStart_toEndOf="@id/ic_telefone"
-            app:layout_constraintTop_toTopOf="@+id/ic_telefone" />
-
-        <com.google.android.material.divider.MaterialDivider
-            android:id="@+id/divider4"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_marginTop="10dp"
-            android:background="@color/cinzaClaro"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text_telefone" />
-
-        <ImageView
-            android:id="@+id/ic_email"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:src="@drawable/ic_email"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/divider4" />
-
-        <TextView
-            android:id="@+id/text_email"
-            style="@style/texto"
-            android:layout_width="70dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="Email"
-            android:textAlignment="center"
-            app:layout_constraintEnd_toEndOf="@id/ic_email"
-            app:layout_constraintStart_toStartOf="@id/ic_email"
-            app:layout_constraintTop_toBottomOf="@id/ic_email" />
-
-        <TextView
-            style="@style/texto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="64dp"
-            android:text="@string/sem_cadastro"
-            app:layout_constraintBottom_toBottomOf="@+id/text_email"
-            app:layout_constraintStart_toEndOf="@id/ic_email"
-            app:layout_constraintTop_toTopOf="@+id/ic_email" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/cadastrarChaveBtn"
-            style="@style/botao"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="32dp"
-            android:text="@string/cadastrar_nova_chave"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_email" />
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageButton
+                android:id="@+id/cadastrarChaveBtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/layout_margin"
+                android:background="@drawable/btn_redondo_transparente"
+                android:src="@drawable/ic_add"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recycler_view_minhas_chaves" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     <FrameLayout
         android:id="@+id/frame_cadastrar_chave"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

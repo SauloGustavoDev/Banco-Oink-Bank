@@ -62,17 +62,22 @@
     <string name="excluir">Excluir</string>
     <string name="confirmar_edicao">Confirmar edição</string>
 
-    <!-- Minhas chaves -->
-    <string name="minhas_chaves">Minhas chaves PIX</string>
+
+    <string name="minhas_chaves">Minhas Chaves</string>
     <string name="visualize">Visualize, adicione ou exclua chaves Pix:</string>
     <string name="telefone">Telefone</string>
     <string name="chave_aleatoria">Chave Aleatória</string>
     <string name="cadastrar_nova_chave">Cadastrar nova chave</string>
     <string name="sem_cadastro">S/Cadastro</string>
+    <string name="titulo_pesquisa">Pesquisar por pessoa</string>
+    <string name="hint_pesquisa">Nome, CPF, telefone</string>
+    <string name="titulo_selecionar_chave">Selecionar Chave</string>
 
 
     <!-- Cadastrar Chave Pix -->
-    <string name="cadastrar_chave_pix">Cadastrar Chave PIX</string>
+    <string name="texto_conta_corrente">Conta\nCorrente</string>
+    <string name="texto_conta_pupanca">Conta\nPoupança</string>
+    <string name="tipo_de_conta">Tipo de Conta</string>
     <string name="selecionar_tipo_chave">Selecionar o tipo de chave desejada:</string>
     <string name="sua_chave">Sua chave:</string>
     <string name="tipo_chave">Tipo de Chave:</string>
@@ -106,11 +111,16 @@
 
     <!-- Confirmar Pix -->
     <string name="confirmacao">Confirmação</string>
-    <string name="texto_confirmacao_pix">Confirme os dados de quem ira receber o pix:</string>
+    <string name="texto_confirmacao_pix">Verifique os dados para efeturar a transferência.</string>
     <string name="chave_pix">Chave Pix</string>
     <string name="confirmar_pix">Confirmar Pix</string>
+    <string name="mensagem_confirmar">Mensgem:</string>
+    <string name="nome_confirmar">Nome:</string>
+    <string name="data_transferencia">Data de transferência:</string>
+    <string name="valor_transferencia">Valor:</string>
 
-    <!-- Cobrar -->
+
+    <!-- Cobrar 1 -->
     <string name="titulo_cobrar">Cobrar</string>
     <string name="subtexto_cobrar">Qual valor você quer receber?</string>
     <string name="nao_especificar">Não especificar valor</string>
@@ -118,8 +128,11 @@
     <string name="hint_valor">R$ 0,00</string>
     <string name="texto_erro_cobrar">Preencha o valor</string>
 
-    <string name="titulo_cod_cobrar">Código de cobrança</string>
+    <!-- Cobrar 2 -->
+    <string name="valor">Valor</string>
+    <string name="titulo_cod_cobrar">Cobrar</string>
     <string name="subtexto_cod_cobrar">Esse é seu pix copia e cola</string>
+    <string name="link_cobranca">bankapp.com//pagar/1ghDfD2Xx2/Tnf2552XdsS</string>
 
     <!-- Editar -->
     <string name="cpf_invalido">CPF inválido</string>
@@ -127,6 +140,12 @@
     <string name="data_invalida_2">Menor de 18 anos</string>
     <string name="email_invalido">E-mail inválido</string>
     <string name="nome_invalido">Nome inválido</string>
+
+    <!-- Transferencia Inserir Valor-->
+    <string name="transferencia_titulo">Transferência</string>
+    <string name="transferencia_inserir_subtitulo">Digite o valor que deseja transferir.</string>
+    <string name="mensagem_texto">Mensagem (Opcional):</string>
+
 
     <!-- Transferencia Recebida-->
     <string name="voltar_btn">Voltar</string>
@@ -163,4 +182,18 @@
     <string name="continuar">Continuar</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Definir Limite Pix -->
+    <string name="definir_limite">Definir Limite</string>
+    <string name="defina_limite_subtitulo">Defina um limite de gatos para os períodos diurno e noturno</string>
+    <string name="limite_diurno">Limite do período diurno:</string>
+    <string name="limite_noturno">Limite do período noturno:</string>
+    <string name="pix_copia_cola">Pix Copia Cola</string>
+    <string name="subtitulo_pix_copia_cola">Digite o código do Pix Copia Cola para efetuar o pagamento.</string>
+    <string name="codigo_pix_copia_cola">Código Pix Copia Cola</string>
+    <string name="voltar_pix_copia_cola">Voltar</string>
+
+    <!-- Pix Copia Cola -->
+
+
 </resources>
