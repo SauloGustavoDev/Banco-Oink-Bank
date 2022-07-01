@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/layout_margin"
     android:background="?android:attr/colorBackground"
+    android:padding="@dimen/layout_margin"
     tools:context=".ui.fragment.CobrarFragment">
 
     <ImageView
@@ -29,8 +28,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        style="@style/subtitulo_pagina"
         android:id="@+id/txt_qual_valor_receber"
+        style="@style/subtitulo_pagina"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -40,40 +39,40 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/layout_til"
+        style="@style/layout_formulario_erro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/layout_formulario_erro"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_qual_valor_receber" >
+        app:layout_constraintTop_toBottomOf="@+id/txt_qual_valor_receber">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/valor_edit_text"
             style="@style/formulario_edit_text"
-            tools:text="@string/hint_valor"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@android:color/transparent"
             android:inputType="number"
-            android:background="@android:color/transparent"/>
+            tools:text="@string/hint_valor" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        style="@style/texto_azul"
         android:id="@+id/txt_especificar_valor"
+        style="@style/texto_azul"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:textAlignment="center"
         android:text="@string/nao_especificar"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layout_til" />
 
     <androidx.appcompat.widget.AppCompatButton
-        style="@style/botao"
         android:id="@+id/btn_confirmar"
+        style="@style/botao"
         android:text="@string/confirmar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
