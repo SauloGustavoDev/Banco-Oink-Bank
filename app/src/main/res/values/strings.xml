@@ -80,8 +80,12 @@
     <string name="tipo_de_conta">Tipo de Conta</string>
     <string name="selecionar_tipo_chave">Selecionar o tipo de chave desejada:</string>
     <string name="sua_chave">Sua chave:</string>
+    <string name="tipo_chave">Tipo de Chave:</string>
+    <string name="chave">Chave:</string>
+    <string name="cadastrar_chave">Cadastrar Chave</string>
+    <string name="selecione_tipo_chave">Selecione o tipo de Chave para poder cria-la.</string>
     <string-array name="tipos_de_chaves">
-        <item>Selecionar</item>
+        <item>CPF</item>
         <item>Email</item>
         <item>CPF</item>
         <item>Celular</item>
