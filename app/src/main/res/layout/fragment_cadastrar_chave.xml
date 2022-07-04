@@ -4,7 +4,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:padding="@dimen/layout_margin"
     android:background="?android:attr/colorBackground"
     android:layout_height="match_parent"
     tools:context=".ui.fragment.CadastrarChaveFragment">
@@ -14,6 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
+        android:layout_marginStart="16dp"
         android:src="@drawable/ic_seta"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -34,6 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
         android:text="@string/selecione_tipo_chave"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -46,6 +47,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
         android:text="@string/tipo_chave"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/selecione_tipo_chave_subtitulo_txt" />
@@ -56,6 +58,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="0dp"
+        android:layout_marginStart="8dp"
         android:entries="@array/tipos_de_chaves"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -77,6 +80,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/chave"
+        android:layout_marginStart="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider" />
 
@@ -87,6 +91,7 @@
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
         android:inputType="number"
+        android:layout_marginStart="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chave_text"
@@ -107,6 +112,9 @@
         android:layout_width="match_parent"
         android:text="@string/cadastrar_chave"
         android:textAllCaps="false"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
