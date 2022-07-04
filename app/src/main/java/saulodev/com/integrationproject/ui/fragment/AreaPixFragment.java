@@ -1,10 +1,7 @@
 package saulodev.com.integrationproject.ui.fragment;
 
-import static android.R.attr.backgroundStacked;
-import static android.R.attr.colorBackground;
-
 import android.annotation.SuppressLint;
-import android.content.res.Resources;
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -12,18 +9,26 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
 import saulodev.com.integrationproject.R;
 import saulodev.com.integrationproject.databinding.FragmentAreaPixBinding;
+import saulodev.com.integrationproject.ui.adapter.HistoricoAdapter;
+import saulodev.com.integrationproject.ui.fragment.CobrarFragment;
+import saulodev.com.integrationproject.ui.fragment.MinhasChavesFragment;
+import saulodev.com.integrationproject.ui.fragment.PixCopiaColaFragment;
 import saulodev.com.integrationproject.util.MyAlertDialog;
-
 
 public class AreaPixFragment extends Fragment {
 
+    private RecyclerView recyclerView;
     private FragmentAreaPixBinding bind;
 
     @Override
@@ -39,10 +44,31 @@ public class AreaPixFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        setRecyclerView(requireContext());
+
+        bind.btnVisibility.setOnClickListener(view1 -> {
+            Animation animation_baixo = AnimationUtils.loadAnimation(getActivity(), R.anim.animation_baixo);
+            Animation animation_cima = AnimationUtils.loadAnimation(getActivity(), R.anim.animation_cima);
+            Animation animation_btn = AnimationUtils.loadAnimation(getActivity(), R.anim.animation_btn);
+
+            if (bind.layoutGone.getVisibility() == View.GONE){
+                bind.layoutGone.setVisibility(View.VISIBLE);
+                bind.layoutGone.startAnimation(animation_baixo);
+                bind.btnVisibility.startAnimation(animation_btn);
+                bind.btnVisibility.setImageResource(R.drawable.ic_seta_cima);
+            }else {
+                bind.layoutGone.startAnimation(animation_cima);
+                bind.layoutGone.setVisibility(View.GONE);
+                bind.btnVisibility.startAnimation(animation_btn);
+                bind.btnVisibility.setImageResource(R.drawable.ic_seta_baixo);
+            }
+
+        });
+
         bind.pixQrcodeLinearBtn.setOnClickListener(view1 ->{
             MyAlertDialog myAlertDialog = new MyAlertDialog(R.layout.fragment_erro_inesperado);
-        DialogFragment dialog = myAlertDialog;
-        dialog.show(requireActivity().getSupportFragmentManager(),"fragment");
+            DialogFragment dialog = myAlertDialog;
+            dialog.show(requireActivity().getSupportFragmentManager(),"fragment");
 
         });
 
@@ -77,12 +103,23 @@ public class AreaPixFragment extends Fragment {
             replaceCobrarFragment();
         });
 
-        bind.voltarImgBtn.setOnClickListener(view1 -> {
+        bind.btnVoltar.setOnClickListener(view1 -> {
             requireActivity().onBackPressed();
         });
 
     }
 
+    private void setRecyclerView(Context context){
+
+        recyclerView = getView().findViewById(R.id.RecyclerViewHistorico);
+
+        HistoricoAdapter historicoAdapter = new HistoricoAdapter();
+
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(context);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setAdapter(historicoAdapter);
+    }
 
     private void replaceMinhasChavesFragment() {
         FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
@@ -101,4 +138,3 @@ public class AreaPixFragment extends Fragment {
 
 
 }
-
