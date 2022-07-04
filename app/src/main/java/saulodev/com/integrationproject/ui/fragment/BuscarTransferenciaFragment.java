@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -37,6 +38,14 @@ public class BuscarTransferenciaFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        binding.voltarImgBtn.setOnClickListener(view1 -> {
+            requireActivity().onBackPressed();
+        });
+
+        binding.cadastrarChaveBtn.setOnClickListener(view1 -> {
+            //replaceTransferenciaValorFragment();
+        });
+
         criarContato();
         ContatosPixAdapter adapter = new ContatosPixAdapter(listaContato);
 
@@ -52,4 +61,6 @@ public class BuscarTransferenciaFragment extends Fragment {
         contato = new Contato("Fernando oliveira", "123.321.456-65");
         this.listaContato.add(contato);
     }
+
+
 }
