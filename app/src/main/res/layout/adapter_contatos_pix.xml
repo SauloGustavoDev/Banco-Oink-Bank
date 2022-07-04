@@ -11,28 +11,25 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@color/white">
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/nome_txt"
-            android:textSize="17sp"
-            android:fontFamily="@font/nunito_regular"
+            style="@style/texto"
             android:layout_marginStart="16dp"
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="nome" />
+            android:text="@string/nome_adapter_pix_transferencia" />
 
         <TextView
             android:id="@+id/chave_txt"
-            android:textSize="17sp"
-            android:fontFamily="@font/nunito_regular"
+            style="@style/texto"
             android:layout_marginStart="16dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="chave" />
+            android:text="@string/chave_adapter_pix_transferencia" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

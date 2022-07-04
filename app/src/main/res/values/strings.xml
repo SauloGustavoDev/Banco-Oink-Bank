@@ -192,6 +192,8 @@
     <string name="subtitulo_pix_copia_cola">Digite o código do Pix Copia Cola para efetuar o pagamento.</string>
     <string name="codigo_pix_copia_cola">Código Pix Copia Cola</string>
     <string name="voltar_pix_copia_cola">Voltar</string>
+    <string name="chave_adapter_pix_transferencia">chave</string>
+    <string name="nome_adapter_pix_transferencia">nome</string>
 
     <!-- Pix Copia Cola -->
 
