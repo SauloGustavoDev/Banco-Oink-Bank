@@ -85,7 +85,7 @@
     <string name="cadastrar_chave">Cadastrar Chave</string>
     <string name="selecione_tipo_chave">Selecione o tipo de Chave para poder cria-la.</string>
     <string-array name="tipos_de_chaves">
-        <item>CPF</item>
+        <item>Selecionar chave</item>
         <item>Email</item>
         <item>CPF</item>
         <item>Celular</item>
