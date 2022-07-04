@@ -131,22 +131,22 @@ public class AreaPixFragment extends Fragment {
 
     private void replaceMinhasChavesFragment() {
         FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.frame, new MinhasChavesFragment()).addToBackStack(null).commit();
+        fragmentManager.beginTransaction().replace(R.id.frame_pix, new MinhasChavesFragment()).addToBackStack(null).commit();
     }
 
     private void replacePixCopiaColaFragment(){
         FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.frame, new PixCopiaColaFragment()).addToBackStack(null).commit();
+        fragmentManager.beginTransaction().replace(R.id.frame_pix, new PixCopiaColaFragment()).addToBackStack(null).commit();
     }
 
     private void replaceCobrarFragment(){
         FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.frame, new CobrarChavesFragment()).addToBackStack(null).commit();
+        fragmentManager.beginTransaction().replace(R.id.frame_pix, new CobrarChavesFragment()).addToBackStack(null).commit();
     }
 
     private void replaceBuscarTransferenciaFragment(){
         FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.frame, new BuscarTransferenciaFragment()).addToBackStack(null).commit();
+        fragmentManager.beginTransaction().replace(R.id.frame_pix, new BuscarTransferenciaFragment()).addToBackStack(null).commit();
     }
 
 

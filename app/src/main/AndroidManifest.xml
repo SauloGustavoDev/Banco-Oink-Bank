@@ -13,6 +13,9 @@
         android:theme="@style/Theme.IntegrationProject"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ui.activity.AreaPixActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activity.CadastroConcluidoActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
