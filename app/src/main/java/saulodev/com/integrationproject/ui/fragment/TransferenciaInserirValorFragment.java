@@ -13,9 +13,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.Locale;
+
 import saulodev.com.integrationproject.R;
 import saulodev.com.integrationproject.databinding.FragmentPixCopiaColaBinding;
 import saulodev.com.integrationproject.databinding.FragmentTransferenciaInserirValorBinding;
+import saulodev.com.integrationproject.util.MaskMoney;
 
 public class TransferenciaInserirValorFragment extends Fragment {
 
@@ -31,7 +34,9 @@ public class TransferenciaInserirValorFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+
+        maskMoney();
+
         bind = FragmentTransferenciaInserirValorBinding.inflate(inflater, container, false);
         return bind.getRoot();
     }
@@ -77,4 +82,12 @@ public class TransferenciaInserirValorFragment extends Fragment {
         FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.frame, new ConfirmaPixFragment()).addToBackStack(null).commit();
     }
+
+    private void maskMoney() {
+        Locale locale = new Locale("pt", "BR");
+        bind.valorEdt.addTextChangedListener(new MaskMoney(bind.valorEdt, locale));
+    }
+
+
+
 }
