@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_theme"
     android:padding="@dimen/layout_margin">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/seta_voltar_img"
@@ -55,21 +59,13 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/layout_margin"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toTopOf="@id/guidelineInferior"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/selecao_txt"
         tools:listitem="@layout/layout_card_cobrar" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineInferior"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.60" />
 
     <TextView
         android:id="@+id/valor_txt"
@@ -79,7 +75,7 @@
         android:layout_marginTop="@dimen/layout_margin"
         android:text="Valor:"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guidelineInferior" />
+        app:layout_constraintTop_toBottomOf="@id/recycler_view" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/valor_fil"
@@ -136,8 +132,13 @@
         style="@style/botao"
         android:layout_width="match_parent"
         android:text="Continuar"
+        android:layout_marginTop="@dimen/layout_margin"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mensagem_til"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

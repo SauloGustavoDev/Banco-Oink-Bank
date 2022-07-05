@@ -56,7 +56,12 @@ public class MinhasChavesFragment extends Fragment {
     }
 
     private void recyclerView() {
-        bind.recyclerViewMinhasChaves.setAdapter(new ListAdapterCobrar(getContext(), keyList));
+        bind.recyclerViewMinhasChaves.setAdapter(new ListAdapterCobrar(getContext(), keyList, new ListAdapterCobrar.OnItemClickListener() {
+            @Override
+            public void onItemClick(KeyModel keyModel) {
+                //TODO
+            }
+        }));
     }
 
     private void replaceCadastrarChaveFragment() {
