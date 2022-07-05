@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_theme"
+        android:padding="16dp"
+        >
+
+        <ImageView
+            android:id="@+id/voltar_img_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/ic_seta"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView7"
+            style="@style/titulo_pagina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Transfêrencia"
+            app:layout_constraintStart_toEndOf="@+id/voltar_img_btn"
+            app:layout_constraintTop_toTopOf="@+id/voltar_img_btn" />
+
+        <TextView
+            android:id="@+id/textView8"
+            style="@style/subtitulo_pagina"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Aqui você poderá realizar transferência para outras pessoas"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/voltar_img_btn" />
+
+        <TextView
+            android:id="@+id/textView11"
+            style="@style/subtitulo_pagina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Pesquisar por pessoa"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/pesquisa_txt"
+            style="@style/layout_formulario_erro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/pesquisa_edt_txt"
+            style="@style/formulario_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:inputType="text"
+            app:layout_constraintTop_toBottomOf="@+id/textView11"
+            tools:layout_editor_absoluteX="16dp"
+            tools:text="@string/hint_pesquisa" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageButton
+            android:id="@+id/pesquisar_img_ic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_pesquisar"
+            app:layout_constraintBottom_toBottomOf="@+id/pesquisa_txt"
+            app:layout_constraintEnd_toEndOf="@+id/pesquisa_txt"
+            app:layout_constraintTop_toTopOf="@+id/pesquisa_txt" />
+
+        <TextView
+            android:id="@+id/textView12"
+            style="@style/subtitulo_pagina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Meus Contatos"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pesquisa_txt" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        <ImageButton
+            android:id="@+id/cadastrarChaveBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/btn_redondo_transparente"
+            android:src="@drawable/ic_add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

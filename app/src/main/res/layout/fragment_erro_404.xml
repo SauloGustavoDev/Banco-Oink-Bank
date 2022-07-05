@@ -58,7 +58,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/sair_btn"
-        style="@style/salvarLimitePix_btn"
+        style="@style/botao"
         android:layout_width="match_parent"
         android:layout_margin="16dp"
         android:text="@string/tente_novamente"

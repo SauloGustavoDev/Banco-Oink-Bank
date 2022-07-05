@@ -14,13 +14,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/background_theme"
-        android:paddingBottom="32dp"
+        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout2"
@@ -28,6 +26,7 @@
             android:layout_height="180dp"
             android:background="?android:attr/colorBackground"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -169,18 +168,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/transferir"
-                app:layout_constraintEnd_toEndOf="@+id/imageButton3"
-                app:layout_constraintStart_toStartOf="@+id/imageButton3"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
+                app:layout_constraintEnd_toEndOf="@+id/cobrar_btn"
+                app:layout_constraintStart_toStartOf="@+id/cobrar_btn"
+                app:layout_constraintTop_toBottomOf="@+id/cobrar_btn" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/pagar"
-                app:layout_constraintEnd_toEndOf="@+id/imageButton"
-                app:layout_constraintStart_toStartOf="@+id/imageButton"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+                app:layout_constraintEnd_toEndOf="@+id/pixPagarBtn"
+                app:layout_constraintStart_toStartOf="@+id/pixPagarBtn"
+                app:layout_constraintTop_toBottomOf="@+id/pixPagarBtn" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -192,12 +191,12 @@
                 app:layout_constraintTop_toBottomOf="@+id/pixBtn" />
 
             <android.widget.ImageButton
-                android:id="@+id/imageButton"
+                android:id="@+id/pixPagarBtn"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:background="@drawable/btn_redondo_home"
                 android:src="@drawable/ic_barcode"
-                app:layout_constraintEnd_toStartOf="@+id/imageButton3"
+                app:layout_constraintEnd_toStartOf="@+id/cobrar_btn"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/pixBtn"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -208,19 +207,19 @@
                 android:layout_height="70dp"
                 android:background="@drawable/btn_redondo_home"
                 android:src="@drawable/ic_pix"
-                app:layout_constraintEnd_toStartOf="@+id/imageButton"
+                app:layout_constraintEnd_toStartOf="@+id/pixPagarBtn"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <android.widget.ImageButton
-                android:id="@+id/imageButton3"
+                android:id="@+id/cobrar_btn"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:background="@drawable/btn_redondo_home"
                 android:src="@drawable/ic_transfer"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/imageButton"
+                app:layout_constraintStart_toEndOf="@+id/pixPagarBtn"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -231,6 +230,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:visibility="gone"
+            tools:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
@@ -240,59 +240,59 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/recarga_celular"
-                app:layout_constraintEnd_toEndOf="@+id/imageButton6"
-                app:layout_constraintStart_toStartOf="@+id/imageButton6"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton6" />
+                app:layout_constraintEnd_toEndOf="@+id/recargaCelularBtn"
+                app:layout_constraintStart_toStartOf="@+id/recargaCelularBtn"
+                app:layout_constraintTop_toBottomOf="@+id/recargaCelularBtn" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/fourshopping"
-                app:layout_constraintEnd_toEndOf="@+id/imageButton5"
-                app:layout_constraintStart_toStartOf="@+id/imageButton5"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton5" />
+                app:layout_constraintEnd_toEndOf="@+id/fourShoppingBtn"
+                app:layout_constraintStart_toStartOf="@+id/fourShoppingBtn"
+                app:layout_constraintTop_toBottomOf="@+id/fourShoppingBtn" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/emprestimo"
-                app:layout_constraintEnd_toEndOf="@+id/imageButton4"
-                app:layout_constraintStart_toStartOf="@+id/imageButton4"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
+                app:layout_constraintEnd_toEndOf="@+id/pixEmprestimoBtn"
+                app:layout_constraintStart_toStartOf="@+id/pixEmprestimoBtn"
+                app:layout_constraintTop_toBottomOf="@+id/pixEmprestimoBtn" />
 
             <android.widget.ImageButton
-                android:id="@+id/imageButton5"
+                android:id="@+id/fourShoppingBtn"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:background="@drawable/btn_redondo_home"
                 android:src="@drawable/ic_fourshopping"
-                app:layout_constraintEnd_toStartOf="@+id/imageButton6"
+                app:layout_constraintEnd_toStartOf="@+id/recargaCelularBtn"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/imageButton4"
+                app:layout_constraintStart_toEndOf="@+id/pixEmprestimoBtn"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <android.widget.ImageButton
-                android:id="@+id/imageButton4"
+                android:id="@+id/pixEmprestimoBtn"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:background="@drawable/btn_redondo_home"
                 android:src="@drawable/ic_emprestimo"
-                app:layout_constraintEnd_toStartOf="@+id/imageButton5"
+                app:layout_constraintEnd_toStartOf="@+id/fourShoppingBtn"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <android.widget.ImageButton
-                android:id="@+id/imageButton6"
+                android:id="@+id/recargaCelularBtn"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:background="@drawable/btn_redondo_home"
                 android:src="@drawable/ic_celular"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/imageButton5"
+                app:layout_constraintStart_toEndOf="@+id/fourShoppingBtn"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -309,7 +309,7 @@
             app:layout_constraintTop_toBottomOf="@+id/layout_gone" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/meus_cartoes_campo"
+            android:id="@+id/minhas_chaves_btn"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginStart="16dp"
@@ -341,7 +341,7 @@
             android:textSize="24sp"
             app:layout_constraintBottom_toTopOf="@+id/guideline5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/meus_cartoes_campo" />
+            app:layout_constraintTop_toBottomOf="@+id/minhas_chaves_btn" />
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/container"

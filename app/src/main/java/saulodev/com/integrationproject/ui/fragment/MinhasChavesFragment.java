@@ -10,12 +10,17 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import java.util.ArrayList;
+
 import saulodev.com.integrationproject.R;
 import saulodev.com.integrationproject.databinding.FragmentMinhasChavesBinding;
+import saulodev.com.integrationproject.model.KeyModel;
+import saulodev.com.integrationproject.ui.adapter.ListAdapterCobrar;
 
 public class MinhasChavesFragment extends Fragment {
 
     private FragmentMinhasChavesBinding bind;
+    private ArrayList<KeyModel> keyList;
 
     @Nullable
     @Override
@@ -28,20 +33,40 @@ public class MinhasChavesFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        // CRIAÇÃO DA LISTA (mock) ///////////////////////////////////////////////////////
+        keyList = new ArrayList<KeyModel>();
+        for (int i = 0; i < 3; i++) {
+            KeyModel keyModel = new KeyModel("Chave CPF", "111.444.777-35");
+            keyList.add(keyModel);
+        }
+        //////////////////////////////////////////////////////////////////////////////////
+
+        recyclerView();
+
         bind.voltarImg.setOnClickListener(view1 -> {
             requireActivity().onBackPressed();
         });
 
         bind.cadastrarChaveBtn.setOnClickListener(view1 -> {
             replaceCadastrarChaveFragment();
-            //bind.frameCadastrarChave.requestFocus();
+            bind.frameCadastrarChave.requestFocus();
         });
 
 
+    }
+
+    private void recyclerView() {
+        bind.recyclerViewMinhasChaves.setAdapter(new ListAdapterCobrar(getContext(), keyList, new ListAdapterCobrar.OnItemClickListener() {
+            @Override
+            public void onItemClick(KeyModel keyModel) {
+                //TODO
+            }
+        }));
     }
 
     private void replaceCadastrarChaveFragment() {
         FragmentManager fragmentManager = requireActivity().getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.frame_cadastrar_chave, new CadastrarChavePixFragment()).addToBackStack(null).commit();
     }
+
 }
