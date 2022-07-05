@@ -2,6 +2,7 @@ package saulodev.com.integrationproject.ui.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -9,10 +10,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.Locale;
 
+import saulodev.com.integrationproject.R;
 import saulodev.com.integrationproject.databinding.FragmentCobrarChavesBinding;
 import saulodev.com.integrationproject.model.KeyModel;
 import saulodev.com.integrationproject.ui.adapter.ListAdapterCobrar;
@@ -42,14 +45,25 @@ public class CobrarChavesFragment extends Fragment {
         }
         //////////////////////////////////////////////////////////////////////////////////
 
-        recyclerView();
-
         maskMoney();
+        setAdapter();
         replacePixFragment();
+        btnBack();
     }
 
-    private void recyclerView() {
-        binding.recyclerView.setAdapter(new ListAdapterCobrar(getContext(), keyList));
+    private void btnBack() {
+        binding.setaVoltarImg.setOnClickListener(view ->
+                requireActivity().onBackPressed());
+    }
+
+
+    private void setAdapter() {
+        binding.recyclerView.setAdapter(new ListAdapterCobrar(getContext(), keyList, new ListAdapterCobrar.OnItemClickListener() {
+            @Override
+            public void onItemClick(KeyModel keyModel) {
+                //TODO
+            }
+        }));
     }
 
     private void maskMoney() {
